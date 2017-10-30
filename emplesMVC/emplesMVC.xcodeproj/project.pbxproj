@@ -1,0 +1,1077 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19584AD3AF04B4CCA56FABC4 /* libPods-emplesMVC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F00352810FA79A9E4C0C31 /* libPods-emplesMVC.a */; };
+		F00304341FA5D2860060C82D /* EmplesMenuTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F00304331FA5D2860060C82D /* EmplesMenuTableViewManager.m */; };
+		F003043D1FA5DFE40060C82D /* EmplesMenuModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F003043C1FA5DFE40060C82D /* EmplesMenuModelDecorator.m */; };
+		F00489501FA3BE6A00206987 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F004894F1FA3BE6A00206987 /* AppDelegate.m */; };
+		F00489531FA3BE6A00206987 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489521FA3BE6A00206987 /* ViewController.m */; };
+		F00489581FA3BE6A00206987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00489571FA3BE6A00206987 /* Assets.xcassets */; };
+		F004895E1FA3BE6A00206987 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F004895D1FA3BE6A00206987 /* main.m */; };
+		F004896D1FA3D12E00206987 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F004896F1FA3D12E00206987 /* Localizable.strings */; };
+		F00489791FA3D36D00206987 /* RecArea.json in Resources */ = {isa = PBXBuildFile; fileRef = F00489761FA3D36D00206987 /* RecArea.json */; };
+		F004897A1FA3D36D00206987 /* RecAreaAddress.json in Resources */ = {isa = PBXBuildFile; fileRef = F00489771FA3D36D00206987 /* RecAreaAddress.json */; };
+		F00489831FA3D9A600206987 /* BaseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489821FA3D9A500206987 /* BaseAppDelegate.m */; };
+		F00489861FA3DA4D00206987 /* EmplesListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489851FA3DA4D00206987 /* EmplesListView.m */; };
+		F00489891FA3DAB500206987 /* EmplesGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489881FA3DAB500206987 /* EmplesGridView.m */; };
+		F004898C1FA3DAD700206987 /* EmplesStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F004898B1FA3DAD700206987 /* EmplesStackedView.m */; };
+		F004898F1FA3DBDF00206987 /* EmplesGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F004898E1FA3DBDF00206987 /* EmplesGalleryView.m */; };
+		F00489921FA3DC0F00206987 /* EmplesCaruselView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489911FA3DC0F00206987 /* EmplesCaruselView.m */; };
+		F00489951FA3DD2C00206987 /* EmplesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489941FA3DD2C00206987 /* EmplesMenuView.m */; };
+		F00489981FA3DD5200206987 /* EmplesDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489971FA3DD5200206987 /* EmplesDetailView.m */; };
+		F004899C1FA3E03900206987 /* LocalizedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F004899B1FA3E03900206987 /* LocalizedStrings.m */; };
+		F00489A41FA3E48C00206987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00489A21FA3E48B00206987 /* LaunchScreen.storyboard */; };
+		F00D88491FA49C5500AC2887 /* EmplesFileNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88481FA49C5500AC2887 /* EmplesFileNames.m */; };
+		F00D884E1FA4A0F600AC2887 /* NSString+Localizable.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D884D1FA4A0F600AC2887 /* NSString+Localizable.m */; };
+		F00D88581FA4BF7000AC2887 /* EmplesMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88571FA4BF7000AC2887 /* EmplesMenuController.m */; };
+		F00D885B1FA4BF9700AC2887 /* EmplesMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D885A1FA4BF9700AC2887 /* EmplesMenuModel.m */; };
+		F00D885F1FA4FE2A00AC2887 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D885E1FA4FE2A00AC2887 /* UIColor+Hex.m */; };
+		F00D88661FA5020700AC2887 /* GenericTableViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88651FA5020700AC2887 /* GenericTableViewSource.m */; };
+		F00D88691FA5053400AC2887 /* DataSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88681FA5053400AC2887 /* DataSourceItem.m */; };
+		F00D88721FA5076100AC2887 /* UIView+Reusable.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88711FA5076100AC2887 /* UIView+Reusable.m */; };
+		F00D88751FA5082500AC2887 /* UITableView+Reusable.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88741FA5082500AC2887 /* UITableView+Reusable.m */; };
+		F00D88781FA5088A00AC2887 /* UICollectionView+Reusable.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88771FA5088A00AC2887 /* UICollectionView+Reusable.m */; };
+		F00D887C1FA511FC00AC2887 /* GenericTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D887B1FA511FC00AC2887 /* GenericTableViewManager.m */; };
+		F00D88811FA5212700AC2887 /* EmplesMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D887F1FA5212700AC2887 /* EmplesMenuViewCell.m */; };
+		F00D88821FA5212700AC2887 /* EmplesMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00D88801FA5212700AC2887 /* EmplesMenuViewCell.xib */; };
+		F00D88851FA5214300AC2887 /* EmplesMenuCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88841FA5214300AC2887 /* EmplesMenuCellModel.m */; };
+		F0C71FC61FA4781600B42976 /* EmplesFSJsonReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C71FC51FA4781600B42976 /* EmplesFSJsonReader.m */; };
+		F0C71FCD1FA47CEC00B42976 /* EmplesRecAreaJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C71FCC1FA47CEC00B42976 /* EmplesRecAreaJSONModel.m */; };
+		F0C71FD11FA48A5A00B42976 /* DataAreaRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C71FD01FA48A5A00B42976 /* DataAreaRequestClient.m */; };
+		F0F2D7911FA61D8600E469DB /* EmplesMenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */; };
+		F0F2D7951FA61DB600E469DB /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7941FA61DB600E469DB /* BaseRouter.m */; };
+		F0F2D79A1FA62E1500E469DB /* EmplesAreasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7991FA62E1500E469DB /* EmplesAreasModel.m */; };
+		F0F2D79D1FA62E6600E469DB /* EmplesListModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D79C1FA62E6600E469DB /* EmplesListModelDecorator.m */; };
+		F0F2D7A11FA62FA700E469DB /* EmplesListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7A01FA62FA700E469DB /* EmplesListController.m */; };
+		F0F2D7A51FA63DE700E469DB /* EmplesListTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7A41FA63DE700E469DB /* EmplesListTableViewManager.m */; };
+		F0F2D7AA1FA64DBC00E469DB /* EmplesProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7A91FA64DBC00E469DB /* EmplesProgressView.m */; };
+		F0F2D7AE1FA6605700E469DB /* EmplesNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7AD1FA6605700E469DB /* EmplesNavigationController.m */; };
+		F0F2D7B11FA663AD00E469DB /* EmplesAppearanceService.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7B01FA663AD00E469DB /* EmplesAppearanceService.m */; };
+		F0F2D7B41FA665FE00E469DB /* ColorStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7B31FA665FE00E469DB /* ColorStrings.m */; };
+		F0F2D7B91FA6697F00E469DB /* EmplesListCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7B71FA6697F00E469DB /* EmplesListCellView.m */; };
+		F0F2D7BA1FA6697F00E469DB /* EmplesListCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F2D7B81FA6697F00E469DB /* EmplesListCellView.xib */; };
+		F0F2D7BD1FA6699200E469DB /* EmplesListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7BC1FA6699200E469DB /* EmplesListCellModel.m */; };
+		F0F2D7C31FA67D8000E469DB /* EmplesDetailAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7C21FA67D8000E469DB /* EmplesDetailAreaModel.m */; };
+		F0F2D7C81FA6802600E469DB /* EmplesDetailTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7C71FA6802600E469DB /* EmplesDetailTableViewManager.m */; };
+		F0F2D7CB1FA680F900E469DB /* EmplesDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7CA1FA680F900E469DB /* EmplesDetailController.m */; };
+		F0F2D7CE1FA6859900E469DB /* EmplesItemRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7CD1FA6859900E469DB /* EmplesItemRouter.m */; };
+		F0F2D7D41FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7D21FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.m */; };
+		F0F2D7D51FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F2D7D31FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.xib */; };
+		F0F2D7DC1FA68DC200E469DB /* EmplesDeatilMapViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7DA1FA68DC200E469DB /* EmplesDeatilMapViewCell.m */; };
+		F0F2D7E11FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7DF1FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.m */; };
+		F0F2D7E21FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F2D7E01FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.xib */; };
+		F0F2D7E51FA68E2300E469DB /* EmplesDetailDescriptionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7E41FA68E2300E469DB /* EmplesDetailDescriptionCellModel.m */; };
+		F0F2D7E81FA68E3400E469DB /* EmplesDetailMapCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7E71FA68E3400E469DB /* EmplesDetailMapCellModel.m */; };
+		F0F2D7EB1FA68E4100E469DB /* EmplesDetailDirectionsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7EA1FA68E4100E469DB /* EmplesDetailDirectionsCellModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E136354294F9FE45F44EA38 /* Pods-emplesMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesMVC.release.xcconfig"; path = "Pods/Target Support Files/Pods-emplesMVC/Pods-emplesMVC.release.xcconfig"; sourceTree = "<group>"; };
+		55F00352810FA79A9E4C0C31 /* libPods-emplesMVC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emplesMVC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B845905A3D931BE3F47F5C54 /* Pods-emplesMVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesMVC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emplesMVC/Pods-emplesMVC.debug.xcconfig"; sourceTree = "<group>"; };
+		F00304321FA5D2860060C82D /* EmplesMenuTableViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuTableViewManager.h; sourceTree = "<group>"; };
+		F00304331FA5D2860060C82D /* EmplesMenuTableViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuTableViewManager.m; sourceTree = "<group>"; };
+		F003043B1FA5DFE40060C82D /* EmplesMenuModelDecorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuModelDecorator.h; sourceTree = "<group>"; };
+		F003043C1FA5DFE40060C82D /* EmplesMenuModelDecorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuModelDecorator.m; sourceTree = "<group>"; };
+		F004894B1FA3BE6A00206987 /* emplesMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emplesMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F004894E1FA3BE6A00206987 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F004894F1FA3BE6A00206987 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F00489511FA3BE6A00206987 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F00489521FA3BE6A00206987 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F00489571FA3BE6A00206987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F004895C1FA3BE6A00206987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F004895D1FA3BE6A00206987 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F004896E1FA3D12E00206987 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F00489721FA3D14100206987 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F00489761FA3D36D00206987 /* RecArea.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecArea.json; sourceTree = "<group>"; };
+		F00489771FA3D36D00206987 /* RecAreaAddress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecAreaAddress.json; sourceTree = "<group>"; };
+		F00489811FA3D9A500206987 /* BaseAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppDelegate.h; sourceTree = "<group>"; };
+		F00489821FA3D9A500206987 /* BaseAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppDelegate.m; sourceTree = "<group>"; };
+		F00489841FA3DA4D00206987 /* EmplesListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesListView.h; sourceTree = "<group>"; };
+		F00489851FA3DA4D00206987 /* EmplesListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesListView.m; sourceTree = "<group>"; };
+		F00489871FA3DAB500206987 /* EmplesGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGridView.h; sourceTree = "<group>"; };
+		F00489881FA3DAB500206987 /* EmplesGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGridView.m; sourceTree = "<group>"; };
+		F004898A1FA3DAD700206987 /* EmplesStackedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesStackedView.h; sourceTree = "<group>"; };
+		F004898B1FA3DAD700206987 /* EmplesStackedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedView.m; sourceTree = "<group>"; };
+		F004898D1FA3DBDF00206987 /* EmplesGalleryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryView.h; sourceTree = "<group>"; };
+		F004898E1FA3DBDF00206987 /* EmplesGalleryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryView.m; sourceTree = "<group>"; };
+		F00489901FA3DC0F00206987 /* EmplesCaruselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesCaruselView.h; sourceTree = "<group>"; };
+		F00489911FA3DC0F00206987 /* EmplesCaruselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesCaruselView.m; sourceTree = "<group>"; };
+		F00489931FA3DD2C00206987 /* EmplesMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuView.h; sourceTree = "<group>"; };
+		F00489941FA3DD2C00206987 /* EmplesMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuView.m; sourceTree = "<group>"; };
+		F00489961FA3DD5200206987 /* EmplesDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailView.h; sourceTree = "<group>"; };
+		F00489971FA3DD5200206987 /* EmplesDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailView.m; sourceTree = "<group>"; };
+		F004899A1FA3E03900206987 /* LocalizedStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizedStrings.h; sourceTree = "<group>"; };
+		F004899B1FA3E03900206987 /* LocalizedStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizedStrings.m; sourceTree = "<group>"; };
+		F004899F1FA3E40400206987 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F00489A51FA3E50600206987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F00D88451FA498F800AC2887 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = "emplesMVC/Supporting files/PrefixHeader.pch"; sourceTree = SOURCE_ROOT; };
+		F00D88471FA49BF400AC2887 /* EmplesFileNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesFileNames.h; sourceTree = "<group>"; };
+		F00D88481FA49C5500AC2887 /* EmplesFileNames.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesFileNames.m; sourceTree = "<group>"; };
+		F00D884C1FA4A0F600AC2887 /* NSString+Localizable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Localizable.h"; sourceTree = "<group>"; };
+		F00D884D1FA4A0F600AC2887 /* NSString+Localizable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Localizable.m"; sourceTree = "<group>"; };
+		F00D88561FA4BF7000AC2887 /* EmplesMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuController.h; sourceTree = "<group>"; };
+		F00D88571FA4BF7000AC2887 /* EmplesMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuController.m; sourceTree = "<group>"; };
+		F00D88591FA4BF9700AC2887 /* EmplesMenuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuModel.h; sourceTree = "<group>"; };
+		F00D885A1FA4BF9700AC2887 /* EmplesMenuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuModel.m; sourceTree = "<group>"; };
+		F00D885D1FA4FE2A00AC2887 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		F00D885E1FA4FE2A00AC2887 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		F00D88641FA5020700AC2887 /* GenericTableViewSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericTableViewSource.h; sourceTree = "<group>"; };
+		F00D88651FA5020700AC2887 /* GenericTableViewSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericTableViewSource.m; sourceTree = "<group>"; };
+		F00D88671FA5053400AC2887 /* DataSourceItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourceItem.h; sourceTree = "<group>"; };
+		F00D88681FA5053400AC2887 /* DataSourceItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataSourceItem.m; sourceTree = "<group>"; };
+		F00D886A1FA505AF00AC2887 /* ViewCellModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewCellModelProtocol.h; sourceTree = "<group>"; };
+		F00D886C1FA5069700AC2887 /* ReusableViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReusableViewProtocol.h; sourceTree = "<group>"; };
+		F00D88701FA5076100AC2887 /* UIView+Reusable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Reusable.h"; sourceTree = "<group>"; };
+		F00D88711FA5076100AC2887 /* UIView+Reusable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Reusable.m"; sourceTree = "<group>"; };
+		F00D88731FA5082500AC2887 /* UITableView+Reusable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Reusable.h"; sourceTree = "<group>"; };
+		F00D88741FA5082500AC2887 /* UITableView+Reusable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Reusable.m"; sourceTree = "<group>"; };
+		F00D88761FA5088A00AC2887 /* UICollectionView+Reusable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Reusable.h"; sourceTree = "<group>"; };
+		F00D88771FA5088A00AC2887 /* UICollectionView+Reusable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Reusable.m"; sourceTree = "<group>"; };
+		F00D88791FA5095A00AC2887 /* ViewCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewCellProtocol.h; sourceTree = "<group>"; };
+		F00D887A1FA511FC00AC2887 /* GenericTableViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericTableViewManager.h; sourceTree = "<group>"; };
+		F00D887B1FA511FC00AC2887 /* GenericTableViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericTableViewManager.m; sourceTree = "<group>"; };
+		F00D887E1FA5212700AC2887 /* EmplesMenuViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuViewCell.h; sourceTree = "<group>"; };
+		F00D887F1FA5212700AC2887 /* EmplesMenuViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuViewCell.m; sourceTree = "<group>"; };
+		F00D88801FA5212700AC2887 /* EmplesMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmplesMenuViewCell.xib; sourceTree = "<group>"; };
+		F00D88831FA5214300AC2887 /* EmplesMenuCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuCellModel.h; sourceTree = "<group>"; };
+		F00D88841FA5214300AC2887 /* EmplesMenuCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuCellModel.m; sourceTree = "<group>"; };
+		F0C71FC41FA4781600B42976 /* EmplesFSJsonReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesFSJsonReader.h; sourceTree = "<group>"; };
+		F0C71FC51FA4781600B42976 /* EmplesFSJsonReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesFSJsonReader.m; sourceTree = "<group>"; };
+		F0C71FCB1FA47CEC00B42976 /* EmplesRecAreaJSONModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesRecAreaJSONModel.h; sourceTree = "<group>"; };
+		F0C71FCC1FA47CEC00B42976 /* EmplesRecAreaJSONModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesRecAreaJSONModel.m; sourceTree = "<group>"; };
+		F0C71FCE1FA489ED00B42976 /* DataRequestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataRequestProtocol.h; sourceTree = "<group>"; };
+		F0C71FCF1FA48A5A00B42976 /* DataAreaRequestClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataAreaRequestClient.h; sourceTree = "<group>"; };
+		F0C71FD01FA48A5A00B42976 /* DataAreaRequestClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataAreaRequestClient.m; sourceTree = "<group>"; };
+		F0F2D78F1FA61D8600E469DB /* EmplesMenuRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuRouter.h; sourceTree = "<group>"; };
+		F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuRouter.m; sourceTree = "<group>"; };
+		F0F2D7931FA61DB600E469DB /* BaseRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRouter.h; sourceTree = "<group>"; };
+		F0F2D7941FA61DB600E469DB /* BaseRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRouter.m; sourceTree = "<group>"; };
+		F0F2D7981FA62E1500E469DB /* EmplesAreasModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesAreasModel.h; sourceTree = "<group>"; };
+		F0F2D7991FA62E1500E469DB /* EmplesAreasModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesAreasModel.m; sourceTree = "<group>"; };
+		F0F2D79B1FA62E6600E469DB /* EmplesListModelDecorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesListModelDecorator.h; sourceTree = "<group>"; };
+		F0F2D79C1FA62E6600E469DB /* EmplesListModelDecorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesListModelDecorator.m; sourceTree = "<group>"; };
+		F0F2D79F1FA62FA700E469DB /* EmplesListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesListController.h; sourceTree = "<group>"; };
+		F0F2D7A01FA62FA700E469DB /* EmplesListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesListController.m; sourceTree = "<group>"; };
+		F0F2D7A31FA63DE700E469DB /* EmplesListTableViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesListTableViewManager.h; sourceTree = "<group>"; };
+		F0F2D7A41FA63DE700E469DB /* EmplesListTableViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesListTableViewManager.m; sourceTree = "<group>"; };
+		F0F2D7A81FA64DBC00E469DB /* EmplesProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesProgressView.h; sourceTree = "<group>"; };
+		F0F2D7A91FA64DBC00E469DB /* EmplesProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesProgressView.m; sourceTree = "<group>"; };
+		F0F2D7AC1FA6605700E469DB /* EmplesNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesNavigationController.h; sourceTree = "<group>"; };
+		F0F2D7AD1FA6605700E469DB /* EmplesNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesNavigationController.m; sourceTree = "<group>"; };
+		F0F2D7AF1FA663AD00E469DB /* EmplesAppearanceService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesAppearanceService.h; sourceTree = "<group>"; };
+		F0F2D7B01FA663AD00E469DB /* EmplesAppearanceService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesAppearanceService.m; sourceTree = "<group>"; };
+		F0F2D7B21FA665FE00E469DB /* ColorStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorStrings.h; sourceTree = "<group>"; };
+		F0F2D7B31FA665FE00E469DB /* ColorStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorStrings.m; sourceTree = "<group>"; };
+		F0F2D7B61FA6697F00E469DB /* EmplesListCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesListCellView.h; sourceTree = "<group>"; };
+		F0F2D7B71FA6697F00E469DB /* EmplesListCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesListCellView.m; sourceTree = "<group>"; };
+		F0F2D7B81FA6697F00E469DB /* EmplesListCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmplesListCellView.xib; sourceTree = "<group>"; };
+		F0F2D7BB1FA6699200E469DB /* EmplesListCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesListCellModel.h; sourceTree = "<group>"; };
+		F0F2D7BC1FA6699200E469DB /* EmplesListCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesListCellModel.m; sourceTree = "<group>"; };
+		F0F2D7BE1FA66A9700E469DB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0F2D7C01FA6726E00E469DB /* EnumMenuSelectedItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumMenuSelectedItem.h; sourceTree = "<group>"; };
+		F0F2D7C11FA67D8000E469DB /* EmplesDetailAreaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailAreaModel.h; sourceTree = "<group>"; };
+		F0F2D7C21FA67D8000E469DB /* EmplesDetailAreaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailAreaModel.m; sourceTree = "<group>"; };
+		F0F2D7C41FA67EC700E469DB /* DecoratorModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoratorModelProtocol.h; sourceTree = "<group>"; };
+		F0F2D7C61FA6802600E469DB /* EmplesDetailTableViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailTableViewManager.h; sourceTree = "<group>"; };
+		F0F2D7C71FA6802600E469DB /* EmplesDetailTableViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailTableViewManager.m; sourceTree = "<group>"; };
+		F0F2D7C91FA680F900E469DB /* EmplesDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailController.h; sourceTree = "<group>"; };
+		F0F2D7CA1FA680F900E469DB /* EmplesDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailController.m; sourceTree = "<group>"; };
+		F0F2D7CC1FA6859900E469DB /* EmplesItemRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesItemRouter.h; sourceTree = "<group>"; };
+		F0F2D7CD1FA6859900E469DB /* EmplesItemRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesItemRouter.m; sourceTree = "<group>"; };
+		F0F2D7D11FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailTextViewWithImageViewCell.h; sourceTree = "<group>"; };
+		F0F2D7D21FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailTextViewWithImageViewCell.m; sourceTree = "<group>"; };
+		F0F2D7D31FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmplesDetailTextViewWithImageViewCell.xib; sourceTree = "<group>"; };
+		F0F2D7D91FA68DC200E469DB /* EmplesDeatilMapViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDeatilMapViewCell.h; sourceTree = "<group>"; };
+		F0F2D7DA1FA68DC200E469DB /* EmplesDeatilMapViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDeatilMapViewCell.m; sourceTree = "<group>"; };
+		F0F2D7DE1FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDirectionTextViewCell.h; sourceTree = "<group>"; };
+		F0F2D7DF1FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDirectionTextViewCell.m; sourceTree = "<group>"; };
+		F0F2D7E01FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmplesDetailDirectionTextViewCell.xib; sourceTree = "<group>"; };
+		F0F2D7E31FA68E2300E469DB /* EmplesDetailDescriptionCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDescriptionCellModel.h; sourceTree = "<group>"; };
+		F0F2D7E41FA68E2300E469DB /* EmplesDetailDescriptionCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDescriptionCellModel.m; sourceTree = "<group>"; };
+		F0F2D7E61FA68E3400E469DB /* EmplesDetailMapCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailMapCellModel.h; sourceTree = "<group>"; };
+		F0F2D7E71FA68E3400E469DB /* EmplesDetailMapCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailMapCellModel.m; sourceTree = "<group>"; };
+		F0F2D7E91FA68E4100E469DB /* EmplesDetailDirectionsCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDirectionsCellModel.h; sourceTree = "<group>"; };
+		F0F2D7EA1FA68E4100E469DB /* EmplesDetailDirectionsCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDirectionsCellModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F00489481FA3BE6A00206987 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19584AD3AF04B4CCA56FABC4 /* libPods-emplesMVC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A486B89A8D5BD8E263164A64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B845905A3D931BE3F47F5C54 /* Pods-emplesMVC.debug.xcconfig */,
+				2E136354294F9FE45F44EA38 /* Pods-emplesMVC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F00304351FA5D28D0060C82D /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F00304321FA5D2860060C82D /* EmplesMenuTableViewManager.h */,
+				F00304331FA5D2860060C82D /* EmplesMenuTableViewManager.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F003043A1FA5DFA70060C82D /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				F003043B1FA5DFE40060C82D /* EmplesMenuModelDecorator.h */,
+				F003043C1FA5DFE40060C82D /* EmplesMenuModelDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		F00489421FA3BE6A00206987 = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7BE1FA66A9700E469DB /* README.md */,
+				F004894D1FA3BE6A00206987 /* emplesMVC */,
+				F004894C1FA3BE6A00206987 /* Products */,
+				F00489641FA3C06300206987 /* Frameworks */,
+				A486B89A8D5BD8E263164A64 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		F004894C1FA3BE6A00206987 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F004894B1FA3BE6A00206987 /* emplesMVC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F004894D1FA3BE6A00206987 /* emplesMVC */ = {
+			isa = PBXGroup;
+			children = (
+				F004897C1FA3D3AE00206987 /* Classes */,
+				F00489681FA3D05800206987 /* Resources */,
+				F00489671FA3D01E00206987 /* Supporting files */,
+				F00489511FA3BE6A00206987 /* ViewController.h */,
+				F00489521FA3BE6A00206987 /* ViewController.m */,
+			);
+			path = emplesMVC;
+			sourceTree = "<group>";
+		};
+		F00489641FA3C06300206987 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55F00352810FA79A9E4C0C31 /* libPods-emplesMVC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F00489671FA3D01E00206987 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				F00489A21FA3E48B00206987 /* LaunchScreen.storyboard */,
+				F004895D1FA3BE6A00206987 /* main.m */,
+				F00D88451FA498F800AC2887 /* PrefixHeader.pch */,
+				F004895C1FA3BE6A00206987 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		F00489681FA3D05800206987 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F004897B1FA3D37C00206987 /* Strings */,
+				F00489741FA3D21700206987 /* fakeJsons */,
+				F00489571FA3BE6A00206987 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F00489741FA3D21700206987 /* fakeJsons */ = {
+			isa = PBXGroup;
+			children = (
+				F00489761FA3D36D00206987 /* RecArea.json */,
+				F00489771FA3D36D00206987 /* RecAreaAddress.json */,
+			);
+			path = fakeJsons;
+			sourceTree = "<group>";
+		};
+		F004897B1FA3D37C00206987 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				F004896F1FA3D12E00206987 /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		F004897C1FA3D3AE00206987 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7A71FA64D9B00E469DB /* Common */,
+				F004897E1FA3D40200206987 /* AppDelegate */,
+				F004897F1FA3D41700206987 /* PresentationLayer */,
+				F00489801FA3D42000206987 /* BusinessLogicLayer */,
+				F00D884A1FA4A08300AC2887 /* Extensions */,
+				F00489991FA3E02100206987 /* Constants */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F004897E1FA3D40200206987 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F00489811FA3D9A500206987 /* BaseAppDelegate.h */,
+				F00489821FA3D9A500206987 /* BaseAppDelegate.m */,
+				F004894E1FA3BE6A00206987 /* AppDelegate.h */,
+				F004894F1FA3BE6A00206987 /* AppDelegate.m */,
+				F0F2D7AF1FA663AD00E469DB /* EmplesAppearanceService.h */,
+				F0F2D7B01FA663AD00E469DB /* EmplesAppearanceService.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F004897F1FA3D41700206987 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7CF1FA6865C00E469DB /* Common */,
+				F00D88551FA4B84200AC2887 /* Detail */,
+				F00D88541FA4B82F00AC2887 /* Carusel */,
+				F00D88531FA4B82400AC2887 /* Gallery */,
+				F00D88521FA4B81B00AC2887 /* Stack */,
+				F00D88511FA4B81300AC2887 /* Grid */,
+				F00D88501FA4B80A00AC2887 /* List */,
+				F00D884F1FA4B7FF00AC2887 /* Menu */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		F00489801FA3D42000206987 /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F0C71FCA1FA47C5E00B42976 /* JSONModel */,
+				F0C71FC81FA4782700B42976 /* DataBase */,
+				F0C71FC91FA4783000B42976 /* Network */,
+				F0C71FC71FA4781A00B42976 /* Filesystem */,
+				F0C71FCE1FA489ED00B42976 /* DataRequestProtocol.h */,
+				F0C71FCF1FA48A5A00B42976 /* DataAreaRequestClient.h */,
+				F0C71FD01FA48A5A00B42976 /* DataAreaRequestClient.m */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		F00489991FA3E02100206987 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F004899A1FA3E03900206987 /* LocalizedStrings.h */,
+				F004899B1FA3E03900206987 /* LocalizedStrings.m */,
+				F00D88471FA49BF400AC2887 /* EmplesFileNames.h */,
+				F00D88481FA49C5500AC2887 /* EmplesFileNames.m */,
+				F0F2D7B21FA665FE00E469DB /* ColorStrings.h */,
+				F0F2D7B31FA665FE00E469DB /* ColorStrings.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F00D884A1FA4A08300AC2887 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F00D884C1FA4A0F600AC2887 /* NSString+Localizable.h */,
+				F00D884D1FA4A0F600AC2887 /* NSString+Localizable.m */,
+				F00D885D1FA4FE2A00AC2887 /* UIColor+Hex.h */,
+				F00D885E1FA4FE2A00AC2887 /* UIColor+Hex.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F00D884F1FA4B7FF00AC2887 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F003043A1FA5DFA70060C82D /* Decorator */,
+				F00304351FA5D28D0060C82D /* TableManager */,
+				F00D887D1FA520F400AC2887 /* Cell */,
+				F00489931FA3DD2C00206987 /* EmplesMenuView.h */,
+				F00489941FA3DD2C00206987 /* EmplesMenuView.m */,
+				F00D88561FA4BF7000AC2887 /* EmplesMenuController.h */,
+				F00D88571FA4BF7000AC2887 /* EmplesMenuController.m */,
+				F00D88591FA4BF9700AC2887 /* EmplesMenuModel.h */,
+				F00D885A1FA4BF9700AC2887 /* EmplesMenuModel.m */,
+				F0F2D78F1FA61D8600E469DB /* EmplesMenuRouter.h */,
+				F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */,
+				F0F2D7C01FA6726E00E469DB /* EnumMenuSelectedItem.h */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		F00D88501FA4B80A00AC2887 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7B51FA6695700E469DB /* Cell */,
+				F0F2D7A21FA63DCB00E469DB /* TableManager */,
+				F0F2D79E1FA62F8600E469DB /* Decorator */,
+				F00489841FA3DA4D00206987 /* EmplesListView.h */,
+				F00489851FA3DA4D00206987 /* EmplesListView.m */,
+				F0F2D7981FA62E1500E469DB /* EmplesAreasModel.h */,
+				F0F2D7991FA62E1500E469DB /* EmplesAreasModel.m */,
+				F0F2D79F1FA62FA700E469DB /* EmplesListController.h */,
+				F0F2D7A01FA62FA700E469DB /* EmplesListController.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		F00D88511FA4B81300AC2887 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				F00489871FA3DAB500206987 /* EmplesGridView.h */,
+				F00489881FA3DAB500206987 /* EmplesGridView.m */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		F00D88521FA4B81B00AC2887 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				F004898A1FA3DAD700206987 /* EmplesStackedView.h */,
+				F004898B1FA3DAD700206987 /* EmplesStackedView.m */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		F00D88531FA4B82400AC2887 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				F004898D1FA3DBDF00206987 /* EmplesGalleryView.h */,
+				F004898E1FA3DBDF00206987 /* EmplesGalleryView.m */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		F00D88541FA4B82F00AC2887 /* Carusel */ = {
+			isa = PBXGroup;
+			children = (
+				F00489901FA3DC0F00206987 /* EmplesCaruselView.h */,
+				F00489911FA3DC0F00206987 /* EmplesCaruselView.m */,
+			);
+			path = Carusel;
+			sourceTree = "<group>";
+		};
+		F00D88551FA4B84200AC2887 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7D01FA6876600E469DB /* Cell */,
+				F0F2D7C51FA6800600E469DB /* TableManager */,
+				F00489961FA3DD5200206987 /* EmplesDetailView.h */,
+				F00489971FA3DD5200206987 /* EmplesDetailView.m */,
+				F0F2D7C11FA67D8000E469DB /* EmplesDetailAreaModel.h */,
+				F0F2D7C21FA67D8000E469DB /* EmplesDetailAreaModel.m */,
+				F0F2D7C91FA680F900E469DB /* EmplesDetailController.h */,
+				F0F2D7CA1FA680F900E469DB /* EmplesDetailController.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F00D886B1FA5067600AC2887 /* GenericDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F00D88641FA5020700AC2887 /* GenericTableViewSource.h */,
+				F00D88651FA5020700AC2887 /* GenericTableViewSource.m */,
+				F00D887A1FA511FC00AC2887 /* GenericTableViewManager.h */,
+				F00D887B1FA511FC00AC2887 /* GenericTableViewManager.m */,
+				F00D886F1FA5074A00AC2887 /* Extensions */,
+				F00D88671FA5053400AC2887 /* DataSourceItem.h */,
+				F00D88681FA5053400AC2887 /* DataSourceItem.m */,
+				F00D886A1FA505AF00AC2887 /* ViewCellModelProtocol.h */,
+				F00D88791FA5095A00AC2887 /* ViewCellProtocol.h */,
+			);
+			path = GenericDataSource;
+			sourceTree = "<group>";
+		};
+		F00D886F1FA5074A00AC2887 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F00D886C1FA5069700AC2887 /* ReusableViewProtocol.h */,
+				F00D88701FA5076100AC2887 /* UIView+Reusable.h */,
+				F00D88711FA5076100AC2887 /* UIView+Reusable.m */,
+				F00D88731FA5082500AC2887 /* UITableView+Reusable.h */,
+				F00D88741FA5082500AC2887 /* UITableView+Reusable.m */,
+				F00D88761FA5088A00AC2887 /* UICollectionView+Reusable.h */,
+				F00D88771FA5088A00AC2887 /* UICollectionView+Reusable.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F00D887D1FA520F400AC2887 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F00D887E1FA5212700AC2887 /* EmplesMenuViewCell.h */,
+				F00D887F1FA5212700AC2887 /* EmplesMenuViewCell.m */,
+				F00D88801FA5212700AC2887 /* EmplesMenuViewCell.xib */,
+				F00D88831FA5214300AC2887 /* EmplesMenuCellModel.h */,
+				F00D88841FA5214300AC2887 /* EmplesMenuCellModel.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F0C71FC71FA4781A00B42976 /* Filesystem */ = {
+			isa = PBXGroup;
+			children = (
+				F0C71FC41FA4781600B42976 /* EmplesFSJsonReader.h */,
+				F0C71FC51FA4781600B42976 /* EmplesFSJsonReader.m */,
+			);
+			path = Filesystem;
+			sourceTree = "<group>";
+		};
+		F0C71FC81FA4782700B42976 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		F0C71FC91FA4783000B42976 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F0C71FCA1FA47C5E00B42976 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0C71FCB1FA47CEC00B42976 /* EmplesRecAreaJSONModel.h */,
+				F0C71FCC1FA47CEC00B42976 /* EmplesRecAreaJSONModel.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		F0F2D7921FA61DA500E469DB /* BaseRouter */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7931FA61DB600E469DB /* BaseRouter.h */,
+				F0F2D7941FA61DB600E469DB /* BaseRouter.m */,
+			);
+			path = BaseRouter;
+			sourceTree = "<group>";
+		};
+		F0F2D79E1FA62F8600E469DB /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D79B1FA62E6600E469DB /* EmplesListModelDecorator.h */,
+				F0F2D79C1FA62E6600E469DB /* EmplesListModelDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		F0F2D7A21FA63DCB00E469DB /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7A31FA63DE700E469DB /* EmplesListTableViewManager.h */,
+				F0F2D7A41FA63DE700E469DB /* EmplesListTableViewManager.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F0F2D7A61FA64D8500E469DB /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7A81FA64DBC00E469DB /* EmplesProgressView.h */,
+				F0F2D7A91FA64DBC00E469DB /* EmplesProgressView.m */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		F0F2D7A71FA64D9B00E469DB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7AB1FA6602C00E469DB /* UINavigationController */,
+				F0F2D7A61FA64D8500E469DB /* ProgressView */,
+				F0F2D7921FA61DA500E469DB /* BaseRouter */,
+				F00D886B1FA5067600AC2887 /* GenericDataSource */,
+				F0F2D7C41FA67EC700E469DB /* DecoratorModelProtocol.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F0F2D7AB1FA6602C00E469DB /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7AC1FA6605700E469DB /* EmplesNavigationController.h */,
+				F0F2D7AD1FA6605700E469DB /* EmplesNavigationController.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		F0F2D7B51FA6695700E469DB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7B61FA6697F00E469DB /* EmplesListCellView.h */,
+				F0F2D7B71FA6697F00E469DB /* EmplesListCellView.m */,
+				F0F2D7B81FA6697F00E469DB /* EmplesListCellView.xib */,
+				F0F2D7BB1FA6699200E469DB /* EmplesListCellModel.h */,
+				F0F2D7BC1FA6699200E469DB /* EmplesListCellModel.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F0F2D7C51FA6800600E469DB /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7C61FA6802600E469DB /* EmplesDetailTableViewManager.h */,
+				F0F2D7C71FA6802600E469DB /* EmplesDetailTableViewManager.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F0F2D7CF1FA6865C00E469DB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7CC1FA6859900E469DB /* EmplesItemRouter.h */,
+				F0F2D7CD1FA6859900E469DB /* EmplesItemRouter.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F0F2D7D01FA6876600E469DB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7D81FA68D8500E469DB /* Directions */,
+				F0F2D7D71FA68D8100E469DB /* Map */,
+				F0F2D7D61FA68D7100E469DB /* Description */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F0F2D7D61FA68D7100E469DB /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7D11FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.h */,
+				F0F2D7D21FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.m */,
+				F0F2D7D31FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.xib */,
+				F0F2D7E31FA68E2300E469DB /* EmplesDetailDescriptionCellModel.h */,
+				F0F2D7E41FA68E2300E469DB /* EmplesDetailDescriptionCellModel.m */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		F0F2D7D71FA68D8100E469DB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7D91FA68DC200E469DB /* EmplesDeatilMapViewCell.h */,
+				F0F2D7DA1FA68DC200E469DB /* EmplesDeatilMapViewCell.m */,
+				F0F2D7E61FA68E3400E469DB /* EmplesDetailMapCellModel.h */,
+				F0F2D7E71FA68E3400E469DB /* EmplesDetailMapCellModel.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F0F2D7D81FA68D8500E469DB /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D7DE1FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.h */,
+				F0F2D7DF1FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.m */,
+				F0F2D7E01FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.xib */,
+				F0F2D7E91FA68E4100E469DB /* EmplesDetailDirectionsCellModel.h */,
+				F0F2D7EA1FA68E4100E469DB /* EmplesDetailDirectionsCellModel.m */,
+			);
+			path = Directions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F004894A1FA3BE6A00206987 /* emplesMVC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00489611FA3BE6A00206987 /* Build configuration list for PBXNativeTarget "emplesMVC" */;
+			buildPhases = (
+				6DEFBE41B358D4E7AAFF734C /* [CP] Check Pods Manifest.lock */,
+				F00489471FA3BE6A00206987 /* Sources */,
+				F00489481FA3BE6A00206987 /* Frameworks */,
+				F00489491FA3BE6A00206987 /* Resources */,
+				91F85E54F125C6E8E7AF4190 /* [CP] Embed Pods Frameworks */,
+				BE3833699D11E4F81FB7FBE6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = emplesMVC;
+			productName = emplesMVC;
+			productReference = F004894B1FA3BE6A00206987 /* emplesMVC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F00489431FA3BE6A00206987 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Vasily Popov";
+				TargetAttributes = {
+					F004894A1FA3BE6A00206987 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F00489461FA3BE6A00206987 /* Build configuration list for PBXProject "emplesMVC" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+				Base,
+			);
+			mainGroup = F00489421FA3BE6A00206987;
+			productRefGroup = F004894C1FA3BE6A00206987 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F004894A1FA3BE6A00206987 /* emplesMVC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F00489491FA3BE6A00206987 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00D88821FA5212700AC2887 /* EmplesMenuViewCell.xib in Resources */,
+				F00489791FA3D36D00206987 /* RecArea.json in Resources */,
+				F004896D1FA3D12E00206987 /* Localizable.strings in Resources */,
+				F00489581FA3BE6A00206987 /* Assets.xcassets in Resources */,
+				F00489A41FA3E48C00206987 /* LaunchScreen.storyboard in Resources */,
+				F0F2D7D51FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.xib in Resources */,
+				F004897A1FA3D36D00206987 /* RecAreaAddress.json in Resources */,
+				F0F2D7BA1FA6697F00E469DB /* EmplesListCellView.xib in Resources */,
+				F0F2D7E21FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DEFBE41B358D4E7AAFF734C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-emplesMVC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91F85E54F125C6E8E7AF4190 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emplesMVC/Pods-emplesMVC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE3833699D11E4F81FB7FBE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-emplesMVC/Pods-emplesMVC-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emplesMVC/Pods-emplesMVC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F00489471FA3BE6A00206987 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00489981FA3DD5200206987 /* EmplesDetailView.m in Sources */,
+				F00D885F1FA4FE2A00AC2887 /* UIColor+Hex.m in Sources */,
+				F00489891FA3DAB500206987 /* EmplesGridView.m in Sources */,
+				F00D88781FA5088A00AC2887 /* UICollectionView+Reusable.m in Sources */,
+				F00489951FA3DD2C00206987 /* EmplesMenuView.m in Sources */,
+				F0F2D7CE1FA6859900E469DB /* EmplesItemRouter.m in Sources */,
+				F0C71FCD1FA47CEC00B42976 /* EmplesRecAreaJSONModel.m in Sources */,
+				F0C71FC61FA4781600B42976 /* EmplesFSJsonReader.m in Sources */,
+				F00D88661FA5020700AC2887 /* GenericTableViewSource.m in Sources */,
+				F0C71FD11FA48A5A00B42976 /* DataAreaRequestClient.m in Sources */,
+				F0F2D7EB1FA68E4100E469DB /* EmplesDetailDirectionsCellModel.m in Sources */,
+				F0F2D7911FA61D8600E469DB /* EmplesMenuRouter.m in Sources */,
+				F0F2D7D41FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.m in Sources */,
+				F00D88491FA49C5500AC2887 /* EmplesFileNames.m in Sources */,
+				F0F2D7E11FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.m in Sources */,
+				F0F2D7AA1FA64DBC00E469DB /* EmplesProgressView.m in Sources */,
+				F0F2D7A51FA63DE700E469DB /* EmplesListTableViewManager.m in Sources */,
+				F0F2D79D1FA62E6600E469DB /* EmplesListModelDecorator.m in Sources */,
+				F0F2D7B41FA665FE00E469DB /* ColorStrings.m in Sources */,
+				F0F2D7C31FA67D8000E469DB /* EmplesDetailAreaModel.m in Sources */,
+				F0F2D7C81FA6802600E469DB /* EmplesDetailTableViewManager.m in Sources */,
+				F00D88851FA5214300AC2887 /* EmplesMenuCellModel.m in Sources */,
+				F00489531FA3BE6A00206987 /* ViewController.m in Sources */,
+				F0F2D7951FA61DB600E469DB /* BaseRouter.m in Sources */,
+				F0F2D7B91FA6697F00E469DB /* EmplesListCellView.m in Sources */,
+				F004895E1FA3BE6A00206987 /* main.m in Sources */,
+				F0F2D7E81FA68E3400E469DB /* EmplesDetailMapCellModel.m in Sources */,
+				F004898C1FA3DAD700206987 /* EmplesStackedView.m in Sources */,
+				F003043D1FA5DFE40060C82D /* EmplesMenuModelDecorator.m in Sources */,
+				F00D88691FA5053400AC2887 /* DataSourceItem.m in Sources */,
+				F0F2D7A11FA62FA700E469DB /* EmplesListController.m in Sources */,
+				F004899C1FA3E03900206987 /* LocalizedStrings.m in Sources */,
+				F00D885B1FA4BF9700AC2887 /* EmplesMenuModel.m in Sources */,
+				F00D887C1FA511FC00AC2887 /* GenericTableViewManager.m in Sources */,
+				F0F2D7BD1FA6699200E469DB /* EmplesListCellModel.m in Sources */,
+				F0F2D7AE1FA6605700E469DB /* EmplesNavigationController.m in Sources */,
+				F00489921FA3DC0F00206987 /* EmplesCaruselView.m in Sources */,
+				F0F2D7E51FA68E2300E469DB /* EmplesDetailDescriptionCellModel.m in Sources */,
+				F0F2D7CB1FA680F900E469DB /* EmplesDetailController.m in Sources */,
+				F00D88721FA5076100AC2887 /* UIView+Reusable.m in Sources */,
+				F00304341FA5D2860060C82D /* EmplesMenuTableViewManager.m in Sources */,
+				F00489861FA3DA4D00206987 /* EmplesListView.m in Sources */,
+				F0F2D7DC1FA68DC200E469DB /* EmplesDeatilMapViewCell.m in Sources */,
+				F00489501FA3BE6A00206987 /* AppDelegate.m in Sources */,
+				F00D88581FA4BF7000AC2887 /* EmplesMenuController.m in Sources */,
+				F00D884E1FA4A0F600AC2887 /* NSString+Localizable.m in Sources */,
+				F00489831FA3D9A600206987 /* BaseAppDelegate.m in Sources */,
+				F00D88811FA5212700AC2887 /* EmplesMenuViewCell.m in Sources */,
+				F00D88751FA5082500AC2887 /* UITableView+Reusable.m in Sources */,
+				F0F2D7B11FA663AD00E469DB /* EmplesAppearanceService.m in Sources */,
+				F004898F1FA3DBDF00206987 /* EmplesGalleryView.m in Sources */,
+				F0F2D79A1FA62E1500E469DB /* EmplesAreasModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F004896F1FA3D12E00206987 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F004896E1FA3D12E00206987 /* ru */,
+				F00489721FA3D14100206987 /* de */,
+				F004899F1FA3E40400206987 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F00489A21FA3E48B00206987 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F00489A51FA3E50600206987 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F004895F1FA3BE6A00206987 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F00489601FA3BE6A00206987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F00489621FA3BE6A00206987 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B845905A3D931BE3F47F5C54 /* Pods-emplesMVC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EB863BHDM;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = "emplesMVC/Supporting files/PrefixHeader.pch";
+				INFOPLIST_FILE = "emplesMVC/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascome.emplesMVC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F00489631FA3BE6A00206987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E136354294F9FE45F44EA38 /* Pods-emplesMVC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EB863BHDM;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = "emplesMVC/Supporting files/PrefixHeader.pch";
+				INFOPLIST_FILE = "emplesMVC/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascome.emplesMVC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F00489461FA3BE6A00206987 /* Build configuration list for PBXProject "emplesMVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F004895F1FA3BE6A00206987 /* Debug */,
+				F00489601FA3BE6A00206987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00489611FA3BE6A00206987 /* Build configuration list for PBXNativeTarget "emplesMVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00489621FA3BE6A00206987 /* Debug */,
+				F00489631FA3BE6A00206987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F00489431FA3BE6A00206987 /* Project object */;
+}
