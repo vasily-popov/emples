@@ -24,6 +24,8 @@
 
 @implementation EmplesCarouselView
 
+@synthesize controller;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = [@"Carousel" uppercaseString];

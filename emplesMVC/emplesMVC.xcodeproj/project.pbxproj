@@ -61,6 +61,7 @@
 		F0E84D6D1FA8CBE3001027CB /* EmplesStackedController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D6C1FA8CBE3001027CB /* EmplesStackedController.m */; };
 		F0E84D711FA8D78E001027CB /* EmplesStackedViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D701FA8D78E001027CB /* EmplesStackedViewManager.m */; };
 		F0E84D741FA8E27E001027CB /* EmplesStackedViewAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D731FA8E27E001027CB /* EmplesStackedViewAnimator.m */; };
+		F0E84D781FA8EBB9001027CB /* EmplesCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D771FA8EBB9001027CB /* EmplesCollectionController.m */; };
 		F0F2D7911FA61D8600E469DB /* EmplesMenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */; };
 		F0F2D7951FA61DB600E469DB /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7941FA61DB600E469DB /* BaseRouter.m */; };
 		F0F2D79A1FA62E1500E469DB /* EmplesAreasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7991FA62E1500E469DB /* EmplesAreasModel.m */; };
@@ -199,6 +200,9 @@
 		F0E84D701FA8D78E001027CB /* EmplesStackedViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedViewManager.m; sourceTree = "<group>"; };
 		F0E84D721FA8E27E001027CB /* EmplesStackedViewAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesStackedViewAnimator.h; sourceTree = "<group>"; };
 		F0E84D731FA8E27E001027CB /* EmplesStackedViewAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedViewAnimator.m; sourceTree = "<group>"; };
+		F0E84D761FA8EBB9001027CB /* EmplesCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionController.h; sourceTree = "<group>"; };
+		F0E84D771FA8EBB9001027CB /* EmplesCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesCollectionController.m; sourceTree = "<group>"; };
+		F0E84D791FA8EC08001027CB /* EmplesCollectionViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionViewProtocol.h; sourceTree = "<group>"; };
 		F0F2D78F1FA61D8600E469DB /* EmplesMenuRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuRouter.h; sourceTree = "<group>"; };
 		F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuRouter.m; sourceTree = "<group>"; };
 		F0F2D7931FA61DB600E469DB /* BaseRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRouter.h; sourceTree = "<group>"; };
@@ -545,20 +549,17 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		F00D886B1FA5067600AC2887 /* GenericDataSource */ = {
+		F00D886B1FA5067600AC2887 /* GenericTableSource */ = {
 			isa = PBXGroup;
 			children = (
 				F00D88641FA5020700AC2887 /* GenericTableViewSource.h */,
 				F00D88651FA5020700AC2887 /* GenericTableViewSource.m */,
 				F00D887A1FA511FC00AC2887 /* GenericTableViewManager.h */,
 				F00D887B1FA511FC00AC2887 /* GenericTableViewManager.m */,
-				F00D886F1FA5074A00AC2887 /* Extensions */,
 				F00D88671FA5053400AC2887 /* DataSourceItem.h */,
 				F00D88681FA5053400AC2887 /* DataSourceItem.m */,
-				F00D886A1FA505AF00AC2887 /* ViewCellModelProtocol.h */,
-				F00D88791FA5095A00AC2887 /* ViewCellProtocol.h */,
 			);
-			path = GenericDataSource;
+			path = GenericTableSource;
 			sourceTree = "<group>";
 		};
 		F00D886F1FA5074A00AC2887 /* Extensions */ = {
@@ -601,10 +602,6 @@
 			children = (
 				F09225991FA760FD001A3EDE /* EmplesGridCollectionViewManager.h */,
 				F092259A1FA760FD001A3EDE /* EmplesGridCollectionViewManager.m */,
-				F092259C1FA766BE001A3EDE /* GenericGridViewSource.h */,
-				F092259D1FA766BE001A3EDE /* GenericGridViewSource.m */,
-				F092259F1FA767F4001A3EDE /* DataGridSourceItem.h */,
-				F09225A01FA767F4001A3EDE /* DataGridSourceItem.m */,
 			);
 			path = GridManager;
 			sourceTree = "<group>";
@@ -712,6 +709,17 @@
 			path = Animator;
 			sourceTree = "<group>";
 		};
+		F0E84D7A1FA8F42E001027CB /* GenericCollectionSource */ = {
+			isa = PBXGroup;
+			children = (
+				F092259C1FA766BE001A3EDE /* GenericGridViewSource.h */,
+				F092259D1FA766BE001A3EDE /* GenericGridViewSource.m */,
+				F092259F1FA767F4001A3EDE /* DataGridSourceItem.h */,
+				F09225A01FA767F4001A3EDE /* DataGridSourceItem.m */,
+			);
+			path = GenericCollectionSource;
+			sourceTree = "<group>";
+		};
 		F0F2D7921FA61DA500E469DB /* BaseRouter */ = {
 			isa = PBXGroup;
 			children = (
@@ -751,9 +759,13 @@
 		F0F2D7A71FA64D9B00E469DB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F0E84D7A1FA8F42E001027CB /* GenericCollectionSource */,
 				F0F2D7A61FA64D8500E469DB /* ProgressView */,
 				F0F2D7921FA61DA500E469DB /* BaseRouter */,
-				F00D886B1FA5067600AC2887 /* GenericDataSource */,
+				F00D886B1FA5067600AC2887 /* GenericTableSource */,
+				F00D886F1FA5074A00AC2887 /* Extensions */,
+				F00D886A1FA505AF00AC2887 /* ViewCellModelProtocol.h */,
+				F00D88791FA5095A00AC2887 /* ViewCellProtocol.h */,
 				F0F2D7C41FA67EC700E469DB /* DecoratorModelProtocol.h */,
 			);
 			path = Common;
@@ -794,6 +806,9 @@
 			children = (
 				F0F2D7CC1FA6859900E469DB /* EmplesItemRouter.h */,
 				F0F2D7CD1FA6859900E469DB /* EmplesItemRouter.m */,
+				F0E84D761FA8EBB9001027CB /* EmplesCollectionController.h */,
+				F0E84D771FA8EBB9001027CB /* EmplesCollectionController.m */,
+				F0E84D791FA8EC08001027CB /* EmplesCollectionViewProtocol.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1021,6 +1036,7 @@
 				F0F2D7951FA61DB600E469DB /* BaseRouter.m in Sources */,
 				F0F2D7B91FA6697F00E469DB /* EmplesListCellView.m in Sources */,
 				F004895E1FA3BE6A00206987 /* main.m in Sources */,
+				F0E84D781FA8EBB9001027CB /* EmplesCollectionController.m in Sources */,
 				F09225A91FA76A5B001A3EDE /* EmplesGridViewCell.m in Sources */,
 				F0F2D7E81FA68E3400E469DB /* EmplesDetailMapCellModel.m in Sources */,
 				F004898C1FA3DAD700206987 /* EmplesStackedView.m in Sources */,

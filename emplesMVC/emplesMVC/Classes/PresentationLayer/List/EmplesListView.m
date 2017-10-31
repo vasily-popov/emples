@@ -22,6 +22,8 @@
 
 @implementation EmplesListView
 
+@synthesize controller;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = [@"List" uppercaseString];

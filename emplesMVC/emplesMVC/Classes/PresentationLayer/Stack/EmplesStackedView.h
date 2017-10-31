@@ -8,15 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "EmplesListModelDecorator.h"
+#import "EmplesCollectionViewProtocol.h"
 
-@class EmplesStackedController;
-@interface EmplesStackedView : UIViewController
+@interface EmplesStackedView : UIViewController<EmplesCollectionViewProtocol>
 
-@property (nonatomic, strong) EmplesStackedController *controller;
 @property (nonatomic, strong) EmplesListModelDecorator *model;
-
--(void)showProgressView;
--(void)hideProgressView;
--(void)showData;
 
 @end

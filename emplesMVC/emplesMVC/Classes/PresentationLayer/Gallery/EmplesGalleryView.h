@@ -8,15 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "EmplesGridModelDecorator.h"
+#import "EmplesCollectionViewProtocol.h"
 
-@class EmplesGalleryController;
-@interface EmplesGalleryView : UIViewController
+@interface EmplesGalleryView : UIViewController<EmplesCollectionViewProtocol>
 
-@property (nonatomic, strong) EmplesGalleryController *controller;
 @property (nonatomic, strong) EmplesGridModelDecorator *model;
-
--(void)showProgressView;
--(void)hideProgressView;
--(void)showData;
 
 @end

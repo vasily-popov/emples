@@ -8,15 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "EmplesListModelDecorator.h"
+#import "EmplesCollectionViewProtocol.h"
 
-@class EmplesCarouselController;
-@interface EmplesCarouselView : UIViewController
+@interface EmplesCarouselView : UIViewController<EmplesCollectionViewProtocol>
 
-@property (nonatomic, strong) EmplesCarouselController *controller;
 @property (nonatomic, strong) EmplesListModelDecorator *model;
 
--(void)showProgressView;
--(void)hideProgressView;
--(void)showData;
 
 @end

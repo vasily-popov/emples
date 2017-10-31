@@ -25,6 +25,8 @@
 
 @implementation EmplesStackedView
 
+@synthesize controller;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = [@"Stack" uppercaseString];

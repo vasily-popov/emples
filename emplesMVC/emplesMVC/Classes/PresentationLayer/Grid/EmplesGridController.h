@@ -7,18 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EmplesAreasModel.h"
-#import "EmplesGridView.h"
-#import "EmplesItemRouter.h"
+#import "EmplesCollectionController.h"
 
-@interface EmplesGridController : NSObject
-
-@property (nonatomic, weak) EmplesGridView *view;
-@property (nonatomic, strong) EmplesItemRouter *router;
-
--(instancetype)init __unavailable;
--(instancetype)initWithModel:(EmplesAreasModel*)model NS_DESIGNATED_INITIALIZER;
-
--(void)viewDidLoad;
+@interface EmplesGridController : EmplesCollectionController
 
 @end

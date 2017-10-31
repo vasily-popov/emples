@@ -23,6 +23,8 @@
 
 @implementation EmplesGalleryView
 
+@synthesize controller;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = [@"Gallery" uppercaseString];

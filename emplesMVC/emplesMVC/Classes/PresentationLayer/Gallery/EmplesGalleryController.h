@@ -7,19 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EmplesAreasModel.h"
-#import "EmplesGalleryView.h"
-#import "EmplesItemRouter.h"
+#import "EmplesCollectionController.h"
 
-@interface EmplesGalleryController : NSObject
+@interface EmplesGalleryController : EmplesCollectionController
 
-@property (nonatomic, weak) EmplesGalleryView *view;
-@property (nonatomic, strong) EmplesItemRouter *router;
-
--(instancetype)init __unavailable;
--(instancetype)initWithModel:(EmplesAreasModel*)model NS_DESIGNATED_INITIALIZER;
-
--(void)viewDidLoad;
 
 @end
 
