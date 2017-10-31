@@ -4,7 +4,8 @@
 ###### As you may see in project, I use classic mvc where
      - view is UIViewcontroller,
      - controller is separated class based on NSObject and have nothing with UI.
-     - Model presents interface to fetch data from file system (as example). I use Decorator pattern to prepare model for showing data, but we also could use separate model for it.
+     - Model presents interface to fetch data from file system (as example). 
+        I use Decorator pattern to prepare model for showing data, but we also could use separate model for it.
      - Controller have link to router (in some article it calls as flow controller) to navigate beetwen screens.
      - it's easy to add DI framework like Typhoon.
 
