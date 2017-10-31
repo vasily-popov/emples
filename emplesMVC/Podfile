@@ -9,4 +9,5 @@ target 'emplesMVC' do
     pod 'SDWebImage', '~>3.8.2'
     pod 'GoogleMaps'
     pod 'iCarousel'
+    pod 'ZLSwipeableView'
 end

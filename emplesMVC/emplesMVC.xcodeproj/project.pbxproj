@@ -58,6 +58,9 @@
 		F0E84D601FA8AD98001027CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E84D621FA8AD98001027CB /* LaunchScreen.storyboard */; };
 		F0E84D661FA8BE73001027CB /* EmplesGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D651FA8BE73001027CB /* EmplesGalleryController.m */; };
 		F0E84D691FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D681FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.m */; };
+		F0E84D6D1FA8CBE3001027CB /* EmplesStackedController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D6C1FA8CBE3001027CB /* EmplesStackedController.m */; };
+		F0E84D711FA8D78E001027CB /* EmplesStackedViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D701FA8D78E001027CB /* EmplesStackedViewManager.m */; };
+		F0E84D741FA8E27E001027CB /* EmplesStackedViewAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D731FA8E27E001027CB /* EmplesStackedViewAnimator.m */; };
 		F0F2D7911FA61D8600E469DB /* EmplesMenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */; };
 		F0F2D7951FA61DB600E469DB /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7941FA61DB600E469DB /* BaseRouter.m */; };
 		F0F2D79A1FA62E1500E469DB /* EmplesAreasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7991FA62E1500E469DB /* EmplesAreasModel.m */; };
@@ -190,6 +193,12 @@
 		F0E84D651FA8BE73001027CB /* EmplesGalleryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryController.m; sourceTree = "<group>"; };
 		F0E84D671FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryCollectionFlowLayout.h; sourceTree = "<group>"; };
 		F0E84D681FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryCollectionFlowLayout.m; sourceTree = "<group>"; };
+		F0E84D6B1FA8CBE3001027CB /* EmplesStackedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesStackedController.h; sourceTree = "<group>"; };
+		F0E84D6C1FA8CBE3001027CB /* EmplesStackedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedController.m; sourceTree = "<group>"; };
+		F0E84D6F1FA8D78E001027CB /* EmplesStackedViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesStackedViewManager.h; sourceTree = "<group>"; };
+		F0E84D701FA8D78E001027CB /* EmplesStackedViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedViewManager.m; sourceTree = "<group>"; };
+		F0E84D721FA8E27E001027CB /* EmplesStackedViewAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesStackedViewAnimator.h; sourceTree = "<group>"; };
+		F0E84D731FA8E27E001027CB /* EmplesStackedViewAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedViewAnimator.m; sourceTree = "<group>"; };
 		F0F2D78F1FA61D8600E469DB /* EmplesMenuRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuRouter.h; sourceTree = "<group>"; };
 		F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuRouter.m; sourceTree = "<group>"; };
 		F0F2D7931FA61DB600E469DB /* BaseRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRouter.h; sourceTree = "<group>"; };
@@ -486,8 +495,12 @@
 		F00D88521FA4B81B00AC2887 /* Stack */ = {
 			isa = PBXGroup;
 			children = (
+				F0E84D751FA8E281001027CB /* Animator */,
+				F0E84D6E1FA8D77B001027CB /* StackedManager */,
 				F004898A1FA3DAD700206987 /* EmplesStackedView.h */,
 				F004898B1FA3DAD700206987 /* EmplesStackedView.m */,
+				F0E84D6B1FA8CBE3001027CB /* EmplesStackedController.h */,
+				F0E84D6C1FA8CBE3001027CB /* EmplesStackedController.m */,
 			);
 			path = Stack;
 			sourceTree = "<group>";
@@ -679,6 +692,24 @@
 				F0E84D681FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.m */,
 			);
 			path = FlowLayout;
+			sourceTree = "<group>";
+		};
+		F0E84D6E1FA8D77B001027CB /* StackedManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0E84D6F1FA8D78E001027CB /* EmplesStackedViewManager.h */,
+				F0E84D701FA8D78E001027CB /* EmplesStackedViewManager.m */,
+			);
+			path = StackedManager;
+			sourceTree = "<group>";
+		};
+		F0E84D751FA8E281001027CB /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				F0E84D721FA8E27E001027CB /* EmplesStackedViewAnimator.h */,
+				F0E84D731FA8E27E001027CB /* EmplesStackedViewAnimator.m */,
+			);
+			path = Animator;
 			sourceTree = "<group>";
 		};
 		F0F2D7921FA61DA500E469DB /* BaseRouter */ = {
@@ -1009,11 +1040,14 @@
 				F0F2D7CB1FA680F900E469DB /* EmplesDetailController.m in Sources */,
 				F00D88721FA5076100AC2887 /* UIView+Reusable.m in Sources */,
 				F00304341FA5D2860060C82D /* EmplesMenuTableViewManager.m in Sources */,
+				F0E84D741FA8E27E001027CB /* EmplesStackedViewAnimator.m in Sources */,
 				F00489861FA3DA4D00206987 /* EmplesListView.m in Sources */,
 				F0F2D7DC1FA68DC200E469DB /* EmplesDeatilMapViewCell.m in Sources */,
 				F00489501FA3BE6A00206987 /* AppDelegate.m in Sources */,
+				F0E84D6D1FA8CBE3001027CB /* EmplesStackedController.m in Sources */,
 				F09225AD1FA76C5D001A3EDE /* EmplesGridCellModel.m in Sources */,
 				F00D88581FA4BF7000AC2887 /* EmplesMenuController.m in Sources */,
+				F0E84D711FA8D78E001027CB /* EmplesStackedViewManager.m in Sources */,
 				F00D884E1FA4A0F600AC2887 /* NSString+Localizable.m in Sources */,
 				F00489831FA3D9A600206987 /* BaseAppDelegate.m in Sources */,
 				F00D88811FA5212700AC2887 /* EmplesMenuViewCell.m in Sources */,

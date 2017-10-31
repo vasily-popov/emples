@@ -33,6 +33,11 @@
 #import "EmplesGalleryView.h"
 #import "EmplesGalleryController.h"
 
+//stack
+
+#import "EmplesStackedView.h"
+#import "EmplesStackedController.h"
+
 @implementation EmplesMenuRouter
 
 -(void)navigateToSelectedItem:(EnumMenuSelectedItem)item
@@ -68,7 +73,15 @@
         }
         case EnumMenuSelectedItemStack:
         {
-            
+            EmplesListModelDecorator *decorator = [[EmplesListModelDecorator alloc] initWithModel:model];
+            EmplesStackedController *controller = [[EmplesStackedController alloc] initWithModel:model];
+            EmplesStackedView *view = [EmplesStackedView new];
+            view.model = decorator;
+            view.controller = controller;
+            controller.view = view;
+            controller.router = router;
+            [self.viewController pushViewController:view animated:YES];
+            break;
         }
         case EnumMenuSelectedItemGallery:
         {
