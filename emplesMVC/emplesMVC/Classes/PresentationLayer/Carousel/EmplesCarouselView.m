@@ -1,32 +1,33 @@
 //
-//  EmplesGalleryView.m
+//  EmplesCaruselView.m
 //  emplesMVC
 //
 //  Created by Vasily Popov on 10/28/17.
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import "EmplesGalleryView.h"
-#import "EmplesGridCollectionViewManager.h"
+#import "EmplesCarouselView.h"
 #import "EmplesProgressView.h"
-#import "EmplesGalleryController.h"
 #import "ColorStrings.h"
-#import "EmplesGalleryCollectionFlowLayout.h"
 
-@interface EmplesGalleryView ()
+#import "EmplesCarouselViewManager.h"
+#import "EmplesCarouselController.h"
+#import <iCarousel/iCarousel.h>
 
-@property (strong, nonatomic) UICollectionView *collection;
-@property (strong, nonatomic) EmplesGridCollectionViewManager *sourceManager;
+@interface EmplesCarouselView ()
+
+@property (strong, nonatomic) iCarousel *carousel;
+@property (strong, nonatomic) EmplesCarouselViewManager *sourceManager;
 @property (strong, nonatomic) EmplesProgressView *progressView;
 
 @end
 
-@implementation EmplesGalleryView
+@implementation EmplesCarouselView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = [@"Gallery" uppercaseString];
-    [self createCollectionView];
+    self.title = [@"Carousel" uppercaseString];
+    [self createCarusel];
     self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
     [self.navigationController.view addSubview:self.progressView];
     [self setupConstraints];
@@ -47,18 +48,18 @@
     [self.progressView.bottomAnchor constraintEqualToAnchor:self.navigationController.view.bottomAnchor constant:0].active = YES;
 }
 
--(void)createCollectionView
+-(void)createCarusel
 {
-    EmplesGalleryCollectionFlowLayout *layout = [[EmplesGalleryCollectionFlowLayout alloc] init];
-    self.collection = [[UICollectionView alloc] initWithFrame:self.view.bounds
-                                         collectionViewLayout:layout];
-    self.collection.dragInteractionEnabled = NO;
-    self.collection.backgroundColor = [UIColor colorNamed:emplesGreenColor];
-    [self.collection setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    [self.view addSubview:self.collection];
-    self.sourceManager = [[EmplesGridCollectionViewManager alloc] init];
-    self.collection.dataSource = [self.sourceManager dataSourceForCollectionView:self.collection];
-    self.collection.delegate = [self.sourceManager delegateForCollectionView:self.collection];
+    [self.view setBackgroundColor: [UIColor colorNamed:emplesGreenColor]];
+    self.carousel = [[iCarousel alloc] initWithFrame:self.view.bounds];
+    self.carousel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.carousel.type = iCarouselTypeCoverFlow2;
+    self.sourceManager = [[EmplesCarouselViewManager alloc] init];
+    self.carousel.dataSource = [self.sourceManager dataSourceForCarouselView:self.carousel];
+    self.carousel.delegate = [self.sourceManager delegateForCarouselView:self.carousel];
+    
+    //add carousel to view
+    [self.view addSubview:self.carousel];
 }
 
 -(void)showProgressView
@@ -74,7 +75,7 @@
 -(void)showData
 {
     [self.sourceManager updateDataSource:self.model.dataSource];
-    [self.collection reloadData];
+    [self.carousel reloadData];
 }
 
 @end

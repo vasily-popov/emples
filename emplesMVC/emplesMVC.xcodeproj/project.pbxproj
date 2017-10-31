@@ -22,11 +22,10 @@
 		F00489891FA3DAB500206987 /* EmplesGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489881FA3DAB500206987 /* EmplesGridView.m */; };
 		F004898C1FA3DAD700206987 /* EmplesStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F004898B1FA3DAD700206987 /* EmplesStackedView.m */; };
 		F004898F1FA3DBDF00206987 /* EmplesGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F004898E1FA3DBDF00206987 /* EmplesGalleryView.m */; };
-		F00489921FA3DC0F00206987 /* EmplesCaruselView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489911FA3DC0F00206987 /* EmplesCaruselView.m */; };
+		F00489921FA3DC0F00206987 /* EmplesCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489911FA3DC0F00206987 /* EmplesCarouselView.m */; };
 		F00489951FA3DD2C00206987 /* EmplesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489941FA3DD2C00206987 /* EmplesMenuView.m */; };
 		F00489981FA3DD5200206987 /* EmplesDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489971FA3DD5200206987 /* EmplesDetailView.m */; };
 		F004899C1FA3E03900206987 /* LocalizedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F004899B1FA3E03900206987 /* LocalizedStrings.m */; };
-		F00489A41FA3E48C00206987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00489A21FA3E48B00206987 /* LaunchScreen.storyboard */; };
 		F00D88491FA49C5500AC2887 /* EmplesFileNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88481FA49C5500AC2887 /* EmplesFileNames.m */; };
 		F00D884E1FA4A0F600AC2887 /* NSString+Localizable.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D884D1FA4A0F600AC2887 /* NSString+Localizable.m */; };
 		F00D88581FA4BF7000AC2887 /* EmplesMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88571FA4BF7000AC2887 /* EmplesMenuController.m */; };
@@ -41,9 +40,24 @@
 		F00D88811FA5212700AC2887 /* EmplesMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D887F1FA5212700AC2887 /* EmplesMenuViewCell.m */; };
 		F00D88821FA5212700AC2887 /* EmplesMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00D88801FA5212700AC2887 /* EmplesMenuViewCell.xib */; };
 		F00D88851FA5214300AC2887 /* EmplesMenuCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D88841FA5214300AC2887 /* EmplesMenuCellModel.m */; };
+		F0617EEA1FA7548400CEE2C2 /* EmplesGridController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0617EE91FA7548400CEE2C2 /* EmplesGridController.m */; };
+		F0617EEE1FA7553C00CEE2C2 /* EmplesGridModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0617EED1FA7553C00CEE2C2 /* EmplesGridModelDecorator.m */; };
+		F092259B1FA760FD001A3EDE /* EmplesGridCollectionViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F092259A1FA760FD001A3EDE /* EmplesGridCollectionViewManager.m */; };
+		F092259E1FA766BE001A3EDE /* GenericGridViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F092259D1FA766BE001A3EDE /* GenericGridViewSource.m */; };
+		F09225A11FA767F4001A3EDE /* DataGridSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F09225A01FA767F4001A3EDE /* DataGridSourceItem.m */; };
+		F09225A91FA76A5B001A3EDE /* EmplesGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09225A71FA76A5B001A3EDE /* EmplesGridViewCell.m */; };
+		F09225AA1FA76A5B001A3EDE /* EmplesGridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F09225A81FA76A5B001A3EDE /* EmplesGridViewCell.xib */; };
+		F09225AD1FA76C5D001A3EDE /* EmplesGridCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F09225AC1FA76C5D001A3EDE /* EmplesGridCellModel.m */; };
 		F0C71FC61FA4781600B42976 /* EmplesFSJsonReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C71FC51FA4781600B42976 /* EmplesFSJsonReader.m */; };
 		F0C71FCD1FA47CEC00B42976 /* EmplesRecAreaJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C71FCC1FA47CEC00B42976 /* EmplesRecAreaJSONModel.m */; };
 		F0C71FD11FA48A5A00B42976 /* DataAreaRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C71FD01FA48A5A00B42976 /* DataAreaRequestClient.m */; };
+		F0E84D4A1FA86F59001027CB /* EmplesCarouselViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D491FA86F59001027CB /* EmplesCarouselViewManager.m */; };
+		F0E84D551FA8A05D001027CB /* EmplesItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D541FA8A05D001027CB /* EmplesItemView.m */; };
+		F0E84D571FA8A069001027CB /* EmplesItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E84D561FA8A069001027CB /* EmplesItemView.xib */; };
+		F0E84D5A1FA8A239001027CB /* EmplesCarouselController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D591FA8A239001027CB /* EmplesCarouselController.m */; };
+		F0E84D601FA8AD98001027CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E84D621FA8AD98001027CB /* LaunchScreen.storyboard */; };
+		F0E84D661FA8BE73001027CB /* EmplesGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D651FA8BE73001027CB /* EmplesGalleryController.m */; };
+		F0E84D691FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D681FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.m */; };
 		F0F2D7911FA61D8600E469DB /* EmplesMenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */; };
 		F0F2D7951FA61DB600E469DB /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7941FA61DB600E469DB /* BaseRouter.m */; };
 		F0F2D79A1FA62E1500E469DB /* EmplesAreasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7991FA62E1500E469DB /* EmplesAreasModel.m */; };
@@ -101,8 +115,8 @@
 		F004898B1FA3DAD700206987 /* EmplesStackedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedView.m; sourceTree = "<group>"; };
 		F004898D1FA3DBDF00206987 /* EmplesGalleryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryView.h; sourceTree = "<group>"; };
 		F004898E1FA3DBDF00206987 /* EmplesGalleryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryView.m; sourceTree = "<group>"; };
-		F00489901FA3DC0F00206987 /* EmplesCaruselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesCaruselView.h; sourceTree = "<group>"; };
-		F00489911FA3DC0F00206987 /* EmplesCaruselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesCaruselView.m; sourceTree = "<group>"; };
+		F00489901FA3DC0F00206987 /* EmplesCarouselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselView.h; sourceTree = "<group>"; };
+		F00489911FA3DC0F00206987 /* EmplesCarouselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselView.m; sourceTree = "<group>"; };
 		F00489931FA3DD2C00206987 /* EmplesMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuView.h; sourceTree = "<group>"; };
 		F00489941FA3DD2C00206987 /* EmplesMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuView.m; sourceTree = "<group>"; };
 		F00489961FA3DD5200206987 /* EmplesDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesDetailView.h; sourceTree = "<group>"; };
@@ -110,7 +124,6 @@
 		F004899A1FA3E03900206987 /* LocalizedStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizedStrings.h; sourceTree = "<group>"; };
 		F004899B1FA3E03900206987 /* LocalizedStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizedStrings.m; sourceTree = "<group>"; };
 		F004899F1FA3E40400206987 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F00489A51FA3E50600206987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F00D88451FA498F800AC2887 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = "emplesMVC/Supporting files/PrefixHeader.pch"; sourceTree = SOURCE_ROOT; };
 		F00D88471FA49BF400AC2887 /* EmplesFileNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesFileNames.h; sourceTree = "<group>"; };
 		F00D88481FA49C5500AC2887 /* EmplesFileNames.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesFileNames.m; sourceTree = "<group>"; };
@@ -142,6 +155,21 @@
 		F00D88801FA5212700AC2887 /* EmplesMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmplesMenuViewCell.xib; sourceTree = "<group>"; };
 		F00D88831FA5214300AC2887 /* EmplesMenuCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuCellModel.h; sourceTree = "<group>"; };
 		F00D88841FA5214300AC2887 /* EmplesMenuCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuCellModel.m; sourceTree = "<group>"; };
+		F0617EE81FA7548400CEE2C2 /* EmplesGridController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGridController.h; sourceTree = "<group>"; };
+		F0617EE91FA7548400CEE2C2 /* EmplesGridController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGridController.m; sourceTree = "<group>"; };
+		F0617EEC1FA7553C00CEE2C2 /* EmplesGridModelDecorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGridModelDecorator.h; sourceTree = "<group>"; };
+		F0617EED1FA7553C00CEE2C2 /* EmplesGridModelDecorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGridModelDecorator.m; sourceTree = "<group>"; };
+		F09225991FA760FD001A3EDE /* EmplesGridCollectionViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGridCollectionViewManager.h; sourceTree = "<group>"; };
+		F092259A1FA760FD001A3EDE /* EmplesGridCollectionViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGridCollectionViewManager.m; sourceTree = "<group>"; };
+		F092259C1FA766BE001A3EDE /* GenericGridViewSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericGridViewSource.h; sourceTree = "<group>"; };
+		F092259D1FA766BE001A3EDE /* GenericGridViewSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericGridViewSource.m; sourceTree = "<group>"; };
+		F092259F1FA767F4001A3EDE /* DataGridSourceItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataGridSourceItem.h; sourceTree = "<group>"; };
+		F09225A01FA767F4001A3EDE /* DataGridSourceItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataGridSourceItem.m; sourceTree = "<group>"; };
+		F09225A61FA76A5B001A3EDE /* EmplesGridViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGridViewCell.h; sourceTree = "<group>"; };
+		F09225A71FA76A5B001A3EDE /* EmplesGridViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGridViewCell.m; sourceTree = "<group>"; };
+		F09225A81FA76A5B001A3EDE /* EmplesGridViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmplesGridViewCell.xib; sourceTree = "<group>"; };
+		F09225AB1FA76C5D001A3EDE /* EmplesGridCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGridCellModel.h; sourceTree = "<group>"; };
+		F09225AC1FA76C5D001A3EDE /* EmplesGridCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGridCellModel.m; sourceTree = "<group>"; };
 		F0C71FC41FA4781600B42976 /* EmplesFSJsonReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesFSJsonReader.h; sourceTree = "<group>"; };
 		F0C71FC51FA4781600B42976 /* EmplesFSJsonReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesFSJsonReader.m; sourceTree = "<group>"; };
 		F0C71FCB1FA47CEC00B42976 /* EmplesRecAreaJSONModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesRecAreaJSONModel.h; sourceTree = "<group>"; };
@@ -149,6 +177,19 @@
 		F0C71FCE1FA489ED00B42976 /* DataRequestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataRequestProtocol.h; sourceTree = "<group>"; };
 		F0C71FCF1FA48A5A00B42976 /* DataAreaRequestClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataAreaRequestClient.h; sourceTree = "<group>"; };
 		F0C71FD01FA48A5A00B42976 /* DataAreaRequestClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataAreaRequestClient.m; sourceTree = "<group>"; };
+		F0E84D481FA86F59001027CB /* EmplesCarouselViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselViewManager.h; sourceTree = "<group>"; };
+		F0E84D491FA86F59001027CB /* EmplesCarouselViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselViewManager.m; sourceTree = "<group>"; };
+		F0E84D531FA8A05D001027CB /* EmplesItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesItemView.h; sourceTree = "<group>"; };
+		F0E84D541FA8A05D001027CB /* EmplesItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesItemView.m; sourceTree = "<group>"; };
+		F0E84D561FA8A069001027CB /* EmplesItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmplesItemView.xib; sourceTree = "<group>"; };
+		F0E84D581FA8A239001027CB /* EmplesCarouselController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselController.h; sourceTree = "<group>"; };
+		F0E84D591FA8A239001027CB /* EmplesCarouselController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselController.m; sourceTree = "<group>"; };
+		F0E84D5F1FA8ABCC001027CB /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		F0E84D611FA8AD98001027CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0E84D641FA8BE73001027CB /* EmplesGalleryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryController.h; sourceTree = "<group>"; };
+		F0E84D651FA8BE73001027CB /* EmplesGalleryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryController.m; sourceTree = "<group>"; };
+		F0E84D671FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryCollectionFlowLayout.h; sourceTree = "<group>"; };
+		F0E84D681FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryCollectionFlowLayout.m; sourceTree = "<group>"; };
 		F0F2D78F1FA61D8600E469DB /* EmplesMenuRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuRouter.h; sourceTree = "<group>"; };
 		F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuRouter.m; sourceTree = "<group>"; };
 		F0F2D7931FA61DB600E469DB /* BaseRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRouter.h; sourceTree = "<group>"; };
@@ -282,10 +323,11 @@
 		F00489671FA3D01E00206987 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				F00489A21FA3E48B00206987 /* LaunchScreen.storyboard */,
 				F004895D1FA3BE6A00206987 /* main.m */,
 				F00D88451FA498F800AC2887 /* PrefixHeader.pch */,
 				F004895C1FA3BE6A00206987 /* Info.plist */,
+				F0E84D5F1FA8ABCC001027CB /* background.png */,
+				F0E84D621FA8AD98001027CB /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -321,7 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F2D7A71FA64D9B00E469DB /* Common */,
-				F004897E1FA3D40200206987 /* AppDelegate */,
+				F004897E1FA3D40200206987 /* ApplicationLayer */,
 				F004897F1FA3D41700206987 /* PresentationLayer */,
 				F00489801FA3D42000206987 /* BusinessLogicLayer */,
 				F00D884A1FA4A08300AC2887 /* Extensions */,
@@ -330,17 +372,13 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		F004897E1FA3D40200206987 /* AppDelegate */ = {
+		F004897E1FA3D40200206987 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				F00489811FA3D9A500206987 /* BaseAppDelegate.h */,
-				F00489821FA3D9A500206987 /* BaseAppDelegate.m */,
-				F004894E1FA3BE6A00206987 /* AppDelegate.h */,
-				F004894F1FA3BE6A00206987 /* AppDelegate.m */,
-				F0F2D7AF1FA663AD00E469DB /* EmplesAppearanceService.h */,
-				F0F2D7B01FA663AD00E469DB /* EmplesAppearanceService.m */,
+				F0F2D7AB1FA6602C00E469DB /* UINavigationController */,
+				F0E84D631FA8AE21001027CB /* AppDelegate */,
 			);
-			path = AppDelegate;
+			path = ApplicationLayer;
 			sourceTree = "<group>";
 		};
 		F004897F1FA3D41700206987 /* PresentationLayer */ = {
@@ -348,7 +386,7 @@
 			children = (
 				F0F2D7CF1FA6865C00E469DB /* Common */,
 				F00D88551FA4B84200AC2887 /* Detail */,
-				F00D88541FA4B82F00AC2887 /* Carusel */,
+				F00D88541FA4B82F00AC2887 /* Carousel */,
 				F00D88531FA4B82400AC2887 /* Gallery */,
 				F00D88521FA4B81B00AC2887 /* Stack */,
 				F00D88511FA4B81300AC2887 /* Grid */,
@@ -434,8 +472,13 @@
 		F00D88511FA4B81300AC2887 /* Grid */ = {
 			isa = PBXGroup;
 			children = (
+				F09225A21FA769BF001A3EDE /* Cell */,
+				F0617EEF1FA755FE00CEE2C2 /* GridManager */,
+				F0617EEB1FA7552C00CEE2C2 /* Decorator */,
 				F00489871FA3DAB500206987 /* EmplesGridView.h */,
 				F00489881FA3DAB500206987 /* EmplesGridView.m */,
+				F0617EE81FA7548400CEE2C2 /* EmplesGridController.h */,
+				F0617EE91FA7548400CEE2C2 /* EmplesGridController.m */,
 			);
 			path = Grid;
 			sourceTree = "<group>";
@@ -452,19 +495,26 @@
 		F00D88531FA4B82400AC2887 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				F0E84D6A1FA8C234001027CB /* FlowLayout */,
 				F004898D1FA3DBDF00206987 /* EmplesGalleryView.h */,
 				F004898E1FA3DBDF00206987 /* EmplesGalleryView.m */,
+				F0E84D641FA8BE73001027CB /* EmplesGalleryController.h */,
+				F0E84D651FA8BE73001027CB /* EmplesGalleryController.m */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
 		};
-		F00D88541FA4B82F00AC2887 /* Carusel */ = {
+		F00D88541FA4B82F00AC2887 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				F00489901FA3DC0F00206987 /* EmplesCaruselView.h */,
-				F00489911FA3DC0F00206987 /* EmplesCaruselView.m */,
+				F0E84D4F1FA8A00B001027CB /* ItemView */,
+				F0E84D471FA86F43001027CB /* CarouselManager */,
+				F00489901FA3DC0F00206987 /* EmplesCarouselView.h */,
+				F00489911FA3DC0F00206987 /* EmplesCarouselView.m */,
+				F0E84D581FA8A239001027CB /* EmplesCarouselController.h */,
+				F0E84D591FA8A239001027CB /* EmplesCarouselController.m */,
 			);
-			path = Carusel;
+			path = Carousel;
 			sourceTree = "<group>";
 		};
 		F00D88551FA4B84200AC2887 /* Detail */ = {
@@ -524,6 +574,40 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F0617EEB1FA7552C00CEE2C2 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				F0617EEC1FA7553C00CEE2C2 /* EmplesGridModelDecorator.h */,
+				F0617EED1FA7553C00CEE2C2 /* EmplesGridModelDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		F0617EEF1FA755FE00CEE2C2 /* GridManager */ = {
+			isa = PBXGroup;
+			children = (
+				F09225991FA760FD001A3EDE /* EmplesGridCollectionViewManager.h */,
+				F092259A1FA760FD001A3EDE /* EmplesGridCollectionViewManager.m */,
+				F092259C1FA766BE001A3EDE /* GenericGridViewSource.h */,
+				F092259D1FA766BE001A3EDE /* GenericGridViewSource.m */,
+				F092259F1FA767F4001A3EDE /* DataGridSourceItem.h */,
+				F09225A01FA767F4001A3EDE /* DataGridSourceItem.m */,
+			);
+			path = GridManager;
+			sourceTree = "<group>";
+		};
+		F09225A21FA769BF001A3EDE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F09225A61FA76A5B001A3EDE /* EmplesGridViewCell.h */,
+				F09225A71FA76A5B001A3EDE /* EmplesGridViewCell.m */,
+				F09225A81FA76A5B001A3EDE /* EmplesGridViewCell.xib */,
+				F09225AB1FA76C5D001A3EDE /* EmplesGridCellModel.h */,
+				F09225AC1FA76C5D001A3EDE /* EmplesGridCellModel.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F0C71FC71FA4781A00B42976 /* Filesystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +638,47 @@
 				F0C71FCC1FA47CEC00B42976 /* EmplesRecAreaJSONModel.m */,
 			);
 			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		F0E84D471FA86F43001027CB /* CarouselManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0E84D481FA86F59001027CB /* EmplesCarouselViewManager.h */,
+				F0E84D491FA86F59001027CB /* EmplesCarouselViewManager.m */,
+			);
+			path = CarouselManager;
+			sourceTree = "<group>";
+		};
+		F0E84D4F1FA8A00B001027CB /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				F0E84D531FA8A05D001027CB /* EmplesItemView.h */,
+				F0E84D541FA8A05D001027CB /* EmplesItemView.m */,
+				F0E84D561FA8A069001027CB /* EmplesItemView.xib */,
+			);
+			path = ItemView;
+			sourceTree = "<group>";
+		};
+		F0E84D631FA8AE21001027CB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F00489811FA3D9A500206987 /* BaseAppDelegate.h */,
+				F00489821FA3D9A500206987 /* BaseAppDelegate.m */,
+				F004894E1FA3BE6A00206987 /* AppDelegate.h */,
+				F004894F1FA3BE6A00206987 /* AppDelegate.m */,
+				F0F2D7AF1FA663AD00E469DB /* EmplesAppearanceService.h */,
+				F0F2D7B01FA663AD00E469DB /* EmplesAppearanceService.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F0E84D6A1FA8C234001027CB /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F0E84D671FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.h */,
+				F0E84D681FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.m */,
+			);
+			path = FlowLayout;
 			sourceTree = "<group>";
 		};
 		F0F2D7921FA61DA500E469DB /* BaseRouter */ = {
@@ -595,7 +720,6 @@
 		F0F2D7A71FA64D9B00E469DB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F0F2D7AB1FA6602C00E469DB /* UINavigationController */,
 				F0F2D7A61FA64D8500E469DB /* ProgressView */,
 				F0F2D7921FA61DA500E469DB /* BaseRouter */,
 				F00D886B1FA5067600AC2887 /* GenericDataSource */,
@@ -761,11 +885,13 @@
 				F00D88821FA5212700AC2887 /* EmplesMenuViewCell.xib in Resources */,
 				F00489791FA3D36D00206987 /* RecArea.json in Resources */,
 				F004896D1FA3D12E00206987 /* Localizable.strings in Resources */,
+				F0E84D571FA8A069001027CB /* EmplesItemView.xib in Resources */,
 				F00489581FA3BE6A00206987 /* Assets.xcassets in Resources */,
-				F00489A41FA3E48C00206987 /* LaunchScreen.storyboard in Resources */,
 				F0F2D7D51FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.xib in Resources */,
+				F09225AA1FA76A5B001A3EDE /* EmplesGridViewCell.xib in Resources */,
 				F004897A1FA3D36D00206987 /* RecAreaAddress.json in Resources */,
 				F0F2D7BA1FA6697F00E469DB /* EmplesListCellView.xib in Resources */,
+				F0E84D601FA8AD98001027CB /* LaunchScreen.storyboard in Resources */,
 				F0F2D7E21FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -832,21 +958,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F00489981FA3DD5200206987 /* EmplesDetailView.m in Sources */,
+				F09225A11FA767F4001A3EDE /* DataGridSourceItem.m in Sources */,
 				F00D885F1FA4FE2A00AC2887 /* UIColor+Hex.m in Sources */,
 				F00489891FA3DAB500206987 /* EmplesGridView.m in Sources */,
+				F0E84D4A1FA86F59001027CB /* EmplesCarouselViewManager.m in Sources */,
 				F00D88781FA5088A00AC2887 /* UICollectionView+Reusable.m in Sources */,
+				F0E84D691FA8C230001027CB /* EmplesGalleryCollectionFlowLayout.m in Sources */,
 				F00489951FA3DD2C00206987 /* EmplesMenuView.m in Sources */,
 				F0F2D7CE1FA6859900E469DB /* EmplesItemRouter.m in Sources */,
 				F0C71FCD1FA47CEC00B42976 /* EmplesRecAreaJSONModel.m in Sources */,
 				F0C71FC61FA4781600B42976 /* EmplesFSJsonReader.m in Sources */,
 				F00D88661FA5020700AC2887 /* GenericTableViewSource.m in Sources */,
 				F0C71FD11FA48A5A00B42976 /* DataAreaRequestClient.m in Sources */,
+				F0E84D551FA8A05D001027CB /* EmplesItemView.m in Sources */,
+				F0E84D661FA8BE73001027CB /* EmplesGalleryController.m in Sources */,
 				F0F2D7EB1FA68E4100E469DB /* EmplesDetailDirectionsCellModel.m in Sources */,
 				F0F2D7911FA61D8600E469DB /* EmplesMenuRouter.m in Sources */,
 				F0F2D7D41FA68D6200E469DB /* EmplesDetailTextViewWithImageViewCell.m in Sources */,
 				F00D88491FA49C5500AC2887 /* EmplesFileNames.m in Sources */,
 				F0F2D7E11FA68DF600E469DB /* EmplesDetailDirectionTextViewCell.m in Sources */,
+				F092259B1FA760FD001A3EDE /* EmplesGridCollectionViewManager.m in Sources */,
 				F0F2D7AA1FA64DBC00E469DB /* EmplesProgressView.m in Sources */,
+				F0E84D5A1FA8A239001027CB /* EmplesCarouselController.m in Sources */,
 				F0F2D7A51FA63DE700E469DB /* EmplesListTableViewManager.m in Sources */,
 				F0F2D79D1FA62E6600E469DB /* EmplesListModelDecorator.m in Sources */,
 				F0F2D7B41FA665FE00E469DB /* ColorStrings.m in Sources */,
@@ -857,24 +990,29 @@
 				F0F2D7951FA61DB600E469DB /* BaseRouter.m in Sources */,
 				F0F2D7B91FA6697F00E469DB /* EmplesListCellView.m in Sources */,
 				F004895E1FA3BE6A00206987 /* main.m in Sources */,
+				F09225A91FA76A5B001A3EDE /* EmplesGridViewCell.m in Sources */,
 				F0F2D7E81FA68E3400E469DB /* EmplesDetailMapCellModel.m in Sources */,
 				F004898C1FA3DAD700206987 /* EmplesStackedView.m in Sources */,
 				F003043D1FA5DFE40060C82D /* EmplesMenuModelDecorator.m in Sources */,
+				F0617EEA1FA7548400CEE2C2 /* EmplesGridController.m in Sources */,
 				F00D88691FA5053400AC2887 /* DataSourceItem.m in Sources */,
 				F0F2D7A11FA62FA700E469DB /* EmplesListController.m in Sources */,
 				F004899C1FA3E03900206987 /* LocalizedStrings.m in Sources */,
+				F0617EEE1FA7553C00CEE2C2 /* EmplesGridModelDecorator.m in Sources */,
 				F00D885B1FA4BF9700AC2887 /* EmplesMenuModel.m in Sources */,
 				F00D887C1FA511FC00AC2887 /* GenericTableViewManager.m in Sources */,
 				F0F2D7BD1FA6699200E469DB /* EmplesListCellModel.m in Sources */,
 				F0F2D7AE1FA6605700E469DB /* EmplesNavigationController.m in Sources */,
-				F00489921FA3DC0F00206987 /* EmplesCaruselView.m in Sources */,
+				F00489921FA3DC0F00206987 /* EmplesCarouselView.m in Sources */,
 				F0F2D7E51FA68E2300E469DB /* EmplesDetailDescriptionCellModel.m in Sources */,
+				F092259E1FA766BE001A3EDE /* GenericGridViewSource.m in Sources */,
 				F0F2D7CB1FA680F900E469DB /* EmplesDetailController.m in Sources */,
 				F00D88721FA5076100AC2887 /* UIView+Reusable.m in Sources */,
 				F00304341FA5D2860060C82D /* EmplesMenuTableViewManager.m in Sources */,
 				F00489861FA3DA4D00206987 /* EmplesListView.m in Sources */,
 				F0F2D7DC1FA68DC200E469DB /* EmplesDeatilMapViewCell.m in Sources */,
 				F00489501FA3BE6A00206987 /* AppDelegate.m in Sources */,
+				F09225AD1FA76C5D001A3EDE /* EmplesGridCellModel.m in Sources */,
 				F00D88581FA4BF7000AC2887 /* EmplesMenuController.m in Sources */,
 				F00D884E1FA4A0F600AC2887 /* NSString+Localizable.m in Sources */,
 				F00489831FA3D9A600206987 /* BaseAppDelegate.m in Sources */,
@@ -899,10 +1037,10 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		F00489A21FA3E48B00206987 /* LaunchScreen.storyboard */ = {
+		F0E84D621FA8AD98001027CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F00489A51FA3E50600206987 /* Base */,
+				F0E84D611FA8AD98001027CB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

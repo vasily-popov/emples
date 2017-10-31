@@ -8,6 +8,8 @@
 
 #import "EmplesMenuController.h"
 #import "EnumMenuSelectedItem.h"
+#import <GoogleMaps/GoogleMaps.h>
+#define GOOGLE_MAPS_APIKEY @"AIzaSyBq67F_e2PQEWtKgCDDkHBpnVH1r383nQo"
 
 @interface EmplesMenuController () <EmplesMenuSelectProtocol>
 
@@ -23,6 +25,7 @@
     if (self) {
         self.model = model;
         self.model.delegate = self;
+        [GMSServices provideAPIKey:GOOGLE_MAPS_APIKEY];
     }
     return self;
 }

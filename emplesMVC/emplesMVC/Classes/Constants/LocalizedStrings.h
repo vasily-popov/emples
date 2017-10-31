@@ -13,4 +13,4 @@ extern NSString *const kListString;
 extern NSString *const kGridString;
 extern NSString *const kStackString;
 extern NSString *const kGalleryString;
-extern NSString *const kCaruselString;
+extern NSString *const kCarouselString;

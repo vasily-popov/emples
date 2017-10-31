@@ -36,7 +36,7 @@
                        [kGridString localizedString],
                        [kStackString localizedString],
                        [kGalleryString localizedString],
-                       [kCaruselString localizedString],
+                       [kCarouselString localizedString],
                        nil];
 }
 

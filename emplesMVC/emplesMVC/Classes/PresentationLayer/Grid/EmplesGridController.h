@@ -1,19 +1,19 @@
 //
-//  EmplesListController.h
+//  EmplesGridController.h
 //  emplesMVC
 //
-//  Created by Vasily Popov on 10/29/17.
+//  Created by Vasily Popov on 10/30/17.
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "EmplesAreasModel.h"
-#import "EmplesListView.h"
+#import "EmplesGridView.h"
 #import "EmplesItemRouter.h"
 
-@interface EmplesListController : NSObject
+@interface EmplesGridController : NSObject
 
-@property (nonatomic, weak) EmplesListView *view;
+@property (nonatomic, weak) EmplesGridView *view;
 @property (nonatomic, strong) EmplesItemRouter *router;
 
 -(instancetype)init __unavailable;

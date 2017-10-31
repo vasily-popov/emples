@@ -13,4 +13,4 @@ NSString *const kListString = @"kListString";
 NSString *const kGridString = @"kGridString";
 NSString *const kStackString = @"kStackString";
 NSString *const kGalleryString = @"kGalleryString";
-NSString *const kCaruselString = @"kCaruselString";
+NSString *const kCarouselString = @"kCarouselString";
