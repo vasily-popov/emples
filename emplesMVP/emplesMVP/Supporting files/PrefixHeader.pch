@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  emplesMVC
+//
+//  Created by Vasily Popov on 10/28/17.
+//  Copyright © 2017 Vasily Popov. All rights reserved.
+//
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+typedef void(^ContentResponseBlock)(id response, NSError *error);
+
