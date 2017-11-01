@@ -11,7 +11,6 @@
 		F00304341FA5D2860060C82D /* EmplesMenuTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F00304331FA5D2860060C82D /* EmplesMenuTableViewManager.m */; };
 		F003043D1FA5DFE40060C82D /* EmplesMenuModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F003043C1FA5DFE40060C82D /* EmplesMenuModelDecorator.m */; };
 		F00489501FA3BE6A00206987 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F004894F1FA3BE6A00206987 /* AppDelegate.m */; };
-		F00489531FA3BE6A00206987 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00489521FA3BE6A00206987 /* ViewController.m */; };
 		F00489581FA3BE6A00206987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00489571FA3BE6A00206987 /* Assets.xcassets */; };
 		F004895E1FA3BE6A00206987 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F004895D1FA3BE6A00206987 /* main.m */; };
 		F004896D1FA3D12E00206987 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F004896F1FA3D12E00206987 /* Localizable.strings */; };
@@ -62,6 +61,7 @@
 		F0E84D711FA8D78E001027CB /* EmplesStackedViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D701FA8D78E001027CB /* EmplesStackedViewManager.m */; };
 		F0E84D741FA8E27E001027CB /* EmplesStackedViewAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D731FA8E27E001027CB /* EmplesStackedViewAnimator.m */; };
 		F0E84D781FA8EBB9001027CB /* EmplesCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E84D771FA8EBB9001027CB /* EmplesCollectionController.m */; };
+		F0E84ED41FAA03E3001027CB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E84D5F1FA8ABCC001027CB /* background.png */; };
 		F0F2D7911FA61D8600E469DB /* EmplesMenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7901FA61D8600E469DB /* EmplesMenuRouter.m */; };
 		F0F2D7951FA61DB600E469DB /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7941FA61DB600E469DB /* BaseRouter.m */; };
 		F0F2D79A1FA62E1500E469DB /* EmplesAreasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D7991FA62E1500E469DB /* EmplesAreasModel.m */; };
@@ -100,8 +100,6 @@
 		F004894B1FA3BE6A00206987 /* emplesMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emplesMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F004894E1FA3BE6A00206987 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F004894F1FA3BE6A00206987 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F00489511FA3BE6A00206987 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F00489521FA3BE6A00206987 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F00489571FA3BE6A00206987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F004895C1FA3BE6A00206987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F004895D1FA3BE6A00206987 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -319,8 +317,6 @@
 				F004897C1FA3D3AE00206987 /* Classes */,
 				F00489681FA3D05800206987 /* Resources */,
 				F00489671FA3D01E00206987 /* Supporting files */,
-				F00489511FA3BE6A00206987 /* ViewController.h */,
-				F00489521FA3BE6A00206987 /* ViewController.m */,
 			);
 			path = emplesMVC;
 			sourceTree = "<group>";
@@ -928,6 +924,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0E84ED41FAA03E3001027CB /* background.png in Resources */,
 				F00D88821FA5212700AC2887 /* EmplesMenuViewCell.xib in Resources */,
 				F00489791FA3D36D00206987 /* RecArea.json in Resources */,
 				F004896D1FA3D12E00206987 /* Localizable.strings in Resources */,
@@ -1032,7 +1029,6 @@
 				F0F2D7C31FA67D8000E469DB /* EmplesDetailAreaModel.m in Sources */,
 				F0F2D7C81FA6802600E469DB /* EmplesDetailTableViewManager.m in Sources */,
 				F00D88851FA5214300AC2887 /* EmplesMenuCellModel.m in Sources */,
-				F00489531FA3BE6A00206987 /* ViewController.m in Sources */,
 				F0F2D7951FA61DB600E469DB /* BaseRouter.m in Sources */,
 				F0F2D7B91FA6697F00E469DB /* EmplesListCellView.m in Sources */,
 				F004895E1FA3BE6A00206987 /* main.m in Sources */,

@@ -59,7 +59,6 @@
     layout.itemSize = CGSizeMake((screenSize.size.width-8)/2,150);
     self.collection = [[UICollectionView alloc] initWithFrame:self.view.bounds
                                          collectionViewLayout:layout];
-    self.collection.dragInteractionEnabled = NO;
     self.collection.backgroundColor = [UIColor colorNamed:emplesGreenColor];
     [self.collection setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [self.view addSubview:self.collection];

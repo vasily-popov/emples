@@ -13,14 +13,3 @@
 
 typedef void(^ContentResponseBlock)(id response, NSError *error);
 
-typedef void(^SuccessBlock)(id response);
-typedef void(^FailureBlock)(NSError *error);
-typedef void(^SLVoidBlock)(void);
-//typedef void(^SLBoolBlock)(BOOL value);
-//typedef void(^SLResultBlock)(NSError *error);
-//typedef void(^SLErrorStringBlock)(BOOL ok, NSString *errorString);
-
-//typedef void(^SuccessEmptyBlock)(void);
-
-//typedef void(^SLStringBlock)(NSString *string);
-
