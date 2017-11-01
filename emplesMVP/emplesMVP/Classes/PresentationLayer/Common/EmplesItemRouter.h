@@ -7,9 +7,12 @@
 //
 
 #import "BaseRouter.h"
+#import "EmplesCollectionsAssembly.h"
 
 @class EmplesRecAreaJSONModel;
 @interface EmplesItemRouter : BaseRouter
+
+@property (nonatomic, strong) EmplesCollectionsAssembly *collectionsAssembly;
 
 -(void)navigateToItemDetail:(EmplesRecAreaJSONModel*)item;
 

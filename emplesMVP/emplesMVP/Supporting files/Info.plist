@@ -22,12 +22,17 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+    <key>TyphoonInitialAssemblies</key>
+    <array>
+        <string>ApplicationAssembly</string>
+        <string>EmplesMenuAssembly</string>
+        <string>EmplesCollectionsAssembly</string>
+        <string>DataLayerAssembly</string>
+    </array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

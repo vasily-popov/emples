@@ -10,4 +10,5 @@ target 'emplesMVP' do
     pod 'GoogleMaps'
     pod 'iCarousel'
     pod 'ZLSwipeableView'
+    pod 'Typhoon'
 end

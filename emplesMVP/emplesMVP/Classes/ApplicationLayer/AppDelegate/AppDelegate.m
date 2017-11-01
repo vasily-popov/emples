@@ -7,39 +7,34 @@
 //
 
 #import "AppDelegate.h"
-#import "EmplesMenuView.h"
-#import "EmplesMenuPresenter.h"
-#import "EmplesMenuRouter.h"
-#import "EmplesNavigationController.h"
-#import "EmplesAppearanceService.h"
+#import "EmplesMenuAssembly.h"
+#import "EmplesCollectionsAssembly.h"
+#import "DataLayerAssembly.h"
+
+@interface AppDelegate()
+
+@end
 
 @implementation AppDelegate
 
--(instancetype)init
+/**
+ 
+ ** uncomment function below if you want to use Typhoon AppDelegate integration
+ ** don't forget to remove TyphoonInitialAssemblies keys from plist
+ 
+- (NSArray *)initialAssemblies
 {
-    self = [super init];
-    if(self)
-    {
-        self.services = @[[EmplesAppearanceService new]];
-    }
-    return self;
+    return @[[ApplicationAssembly class],
+             [EmplesMenuAssembly class],
+             [EmplesCollectionsAssembly class],
+             [DataLayerAssembly class]
+             ];
 }
+ */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [super application:application didFinishLaunchingWithOptions:launchOptions];
-    
-    EmplesMenuModel *model = [EmplesMenuModel new];
-    EmplesMenuPresenter *presenter = [[EmplesMenuPresenter alloc] initWithModel:model];
-    EmplesMenuView *view = [EmplesMenuView new];
-    view.presenter = presenter;
-    presenter.view = view;
-    EmplesNavigationController *navVC = [[EmplesNavigationController alloc] initWithRootViewController:view];
-    EmplesMenuRouter *router = [[EmplesMenuRouter alloc] initWithNavigationVC:navVC andWindow:self.window];
-    presenter.router = router;
-    
-    self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
     return YES;
 }

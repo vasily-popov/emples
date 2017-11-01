@@ -8,8 +8,10 @@
 
 #import "BaseRouter.h"
 #import "EnumMenuSelectedItem.h"
-
+#import "EmplesCollectionsAssembly.h"
 @interface EmplesMenuRouter : BaseRouter
+
+@property (nonatomic, strong) EmplesCollectionsAssembly *collectionsAssembly;
 
 -(void)navigateToSelectedItem:(EnumMenuSelectedItem)item;
 
