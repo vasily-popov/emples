@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class EmplesCollectionController;
+@class EmplesCollectionPresenter;
 
 @protocol EmplesCollectionViewProtocol <NSObject>
 
-@property (nonatomic, strong) EmplesCollectionController *controller;
+@property (nonatomic, strong) EmplesCollectionPresenter *presenter;
 
 -(void)showProgressView;
 -(void)hideProgressView;
--(void)showData;
+-(void)updateCollectionItems:(NSArray*)array;
 
 @end

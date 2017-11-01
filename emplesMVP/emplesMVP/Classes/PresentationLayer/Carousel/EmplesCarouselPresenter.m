@@ -6,8 +6,8 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import "EmplesCarouselController.h"
+#import "EmplesCarouselPresenter.h"
 
-@implementation EmplesCarouselController
+@implementation EmplesCarouselPresenter
 
 @end

@@ -9,7 +9,7 @@
 #import "EmplesListView.h"
 #import "EmplesListTableViewManager.h"
 #import "EmplesProgressView.h"
-#import "EmplesListController.h"
+#import "EmplesListPresenter.h"
 #import "ColorStrings.h"
 
 @interface EmplesListView ()
@@ -22,7 +22,7 @@
 
 @implementation EmplesListView
 
-@synthesize controller;
+@synthesize presenter;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +31,7 @@
     self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
     [self.navigationController.view addSubview:self.progressView];
     [self setupConstraints];
-    [self.controller viewDidLoad];
+    [self.presenter viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
@@ -77,9 +77,9 @@
     [self.progressView hide];
 }
 
--(void)showData
+-(void)updateCollectionItems:(NSArray*)array
 {
-    [self.sourceManager updateDataSource:self.model.dataSource];
+    [self.sourceManager updateDataSource:array];
     [self.table reloadData];
 }
 @end

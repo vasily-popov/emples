@@ -6,15 +6,15 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import "EmplesDetailController.h"
+#import "EmplesDetailPresenter.h"
 
-@interface EmplesDetailController ()
+@interface EmplesDetailPresenter ()
 
 @property (nonatomic, strong) EmplesDetailAreaModel *model;
 
 @end
 
-@implementation EmplesDetailController
+@implementation EmplesDetailPresenter
 
 -(instancetype)initWithModel:(EmplesDetailAreaModel*)model
 {
@@ -23,6 +23,12 @@
         self.model = model;
     }
     return self;
+}
+
+-(void)viewDidLoad
+{
+    [self.view setViewTitle:[[self.model titleName] uppercaseString]];
+    [self.view setSourceArray:self.model.dataSource];
 }
 
 @end

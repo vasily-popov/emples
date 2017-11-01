@@ -9,7 +9,7 @@
 #import "EmplesGridView.h"
 #import "EmplesGridCollectionViewManager.h"
 #import "EmplesProgressView.h"
-#import "EmplesCollectionController.h"
+#import "EmplesCollectionPresenter.h"
 #import "ColorStrings.h"
 
 @interface EmplesGridView ()
@@ -22,7 +22,7 @@
 
 @implementation EmplesGridView
 
-@synthesize controller;
+@synthesize presenter;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +31,7 @@
     self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
     [self.navigationController.view addSubview:self.progressView];
     [self setupConstraints];
-    [controller viewDidLoad];
+    [self.presenter viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,9 +78,9 @@
     [self.progressView hide];
 }
 
--(void)showData
+-(void)updateCollectionItems:(NSArray *)array
 {
-    [self.sourceManager updateDataSource:self.model.dataSource];
+    [self.sourceManager updateDataSource:array];
     [self.collection reloadData];
 }
 @end

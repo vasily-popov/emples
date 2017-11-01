@@ -13,31 +13,28 @@
 #import "EmplesItemRouter.h"
 
 //list
-#import "EmplesListModelDecorator.h"
-#import "EmplesListController.h"
+#import "EmplesListPresenter.h"
 #import "EmplesListView.h"
 
 
 //grid
-#import "EmplesGridModelDecorator.h"
 #import "EmplesGridView.h"
+#import "EmplesGridPresenter.h"
 
 //carousel
 
 #import "EmplesCarouselView.h"
-#import "EmplesCarouselController.h"
+#import "EmplesCarouselPresenter.h"
 
 //gallery
 
 #import "EmplesGalleryView.h"
-#import "EmplesGalleryController.h"
+#import "EmplesGalleryPresenter.h"
 
 //stack
 
 #import "EmplesStackedView.h"
-#import "EmplesStackedController.h"
-
-#import "EmplesCollectionController.h"
+#import "EmplesStackedPresenter.h"
 
 @implementation EmplesMenuRouter
 
@@ -46,57 +43,56 @@
     DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:[EmplesFSJsonReader new]];
     EmplesAreasModel *model = [[EmplesAreasModel alloc] initWithClient:client];
     EmplesItemRouter *router = [[EmplesItemRouter alloc] initWithNavigationVC:self.viewController andWindow:self.window];
-    EmplesCollectionController *controller = [[EmplesCollectionController alloc] initWithModel:model];
-    controller.router = router;
     switch (item)
     {
         case EnumMenuSelectedItemList:
         {
-            EmplesListModelDecorator *decorator = [[EmplesListModelDecorator alloc] initWithModel:model];
+            EmplesListPresenter *presenter = [[EmplesListPresenter alloc] initWithModel:model];
             EmplesListView *view = [EmplesListView new];
-            view.model = decorator;
-            view.controller = controller;
-            controller.view = view;
+            view.presenter = presenter;
+            presenter.view = view;
+            presenter.router = router;
             [self.viewController pushViewController:view animated:YES];
             break;
         }
         case EnumMenuSelectedItemGrid:
         {
-            EmplesGridModelDecorator *decorator = [[EmplesGridModelDecorator alloc] initWithModel:model];
+            EmplesGridPresenter *presenter = [[EmplesGridPresenter alloc] initWithModel:model];
             EmplesGridView *view = [EmplesGridView new];
-            view.model = decorator;
-            view.controller = controller;
-            controller.view = view;
+            view.presenter = presenter;
+            presenter.view = view;
+            presenter.router = router;
             [self.viewController pushViewController:view animated:YES];
             break;
         }
         case EnumMenuSelectedItemStack:
         {
-            EmplesListModelDecorator *decorator = [[EmplesListModelDecorator alloc] initWithModel:model];
+            EmplesStackedPresenter *presenter = [[EmplesStackedPresenter alloc] initWithModel:model];
             EmplesStackedView *view = [EmplesStackedView new];
-            view.model = decorator;
-            view.controller = controller;
-            controller.view = view;
+            view.presenter = presenter;
+            presenter.view = view;
+            presenter.router = router;
             [self.viewController pushViewController:view animated:YES];
             break;
         }
         case EnumMenuSelectedItemGallery:
         {
-            EmplesGridModelDecorator *decorator = [[EmplesGridModelDecorator alloc] initWithModel:model];
+            EmplesGalleryPresenter *presenter = [[EmplesGalleryPresenter alloc] initWithModel:model];
             EmplesGalleryView *view = [EmplesGalleryView new];
-            view.model = decorator;
-            view.controller = controller;
-            controller.view = view;
+            view.presenter = presenter;
+            presenter.view = view;
+            presenter.router = router;
             [self.viewController pushViewController:view animated:YES];
             break;
         }
         case EnumMenuSelectedItemCarusel:
         {
-            EmplesListModelDecorator *decorator = [[EmplesListModelDecorator alloc] initWithModel:model];
+            EmplesCarouselPresenter *presenter = [[EmplesCarouselPresenter alloc] initWithModel:model];
             EmplesCarouselView *view = [EmplesCarouselView new];
-            view.model = decorator;
-            view.controller = controller;
-            controller.view = view;
+            view.presenter = presenter;
+            presenter.view = view;
+            presenter.router = router;
+            
             [self.viewController pushViewController:view animated:YES];
             break;
         }

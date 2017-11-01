@@ -8,8 +8,8 @@
 
 #import "EmplesStackedView.h"
 #import "EmplesStackedViewManager.h"
+#import "EmplesCollectionPresenter.h"
 #import "EmplesProgressView.h"
-#import "EmplesStackedController.h"
 #import "ColorStrings.h"
 #import "EmplesStackedViewAnimator.h"
 #import <ZLSwipeableView/ZLSwipeableView.h>
@@ -25,7 +25,7 @@
 
 @implementation EmplesStackedView
 
-@synthesize controller;
+@synthesize presenter;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,7 +35,7 @@
     self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
     [self.navigationController.view addSubview:self.progressView];
     [self setupConstraints];
-    [self.controller viewDidLoad];
+    [self.presenter viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
@@ -91,9 +91,9 @@
     [self.progressView hide];
 }
 
--(void)showData
+-(void)updateCollectionItems:(NSArray *)array
 {
-    [self.sourceManager updateDataSource:self.model.dataSource];
+    [self.sourceManager updateDataSource:array];
     [self.swipeableView loadViewsIfNeeded];
 }
 

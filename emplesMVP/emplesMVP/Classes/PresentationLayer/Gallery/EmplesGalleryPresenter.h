@@ -1,5 +1,5 @@
 //
-//  EmplesStackedController.h
+//  EmplesGalleryController.h
 //  emplesMVC
 //
 //  Created by Vasily Popov on 10/31/17.
@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EmplesCollectionController.h"
+#import "EmplesGridPresenter.h"
 
-@interface EmplesStackedController : EmplesCollectionController
+@interface EmplesGalleryPresenter : EmplesGridPresenter
+
 
 @end
+

@@ -1,5 +1,5 @@
 //
-//  EmplesGalleryController.h
+//  EmplesCarouselController.h
 //  emplesMVC
 //
 //  Created by Vasily Popov on 10/31/17.
@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EmplesCollectionController.h"
+#import "EmplesListPresenter.h"
 
-@interface EmplesGalleryController : EmplesCollectionController
-
+@interface EmplesCarouselPresenter : EmplesListPresenter
 
 @end
-

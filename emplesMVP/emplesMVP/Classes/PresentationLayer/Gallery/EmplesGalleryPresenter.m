@@ -6,10 +6,8 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import "EmplesGalleryController.h"
+#import "EmplesGalleryPresenter.h"
 
-@class EmplesRecAreaJSONModel;
-
-@implementation EmplesGalleryController
+@implementation EmplesGalleryPresenter
 
 @end

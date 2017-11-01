@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EmplesGridModelDecorator.h"
 #import "EmplesCollectionViewProtocol.h"
 
 @interface EmplesGridView : UIViewController<EmplesCollectionViewProtocol>
-
-@property (nonatomic, strong) EmplesGridModelDecorator *model;
-
 
 @end

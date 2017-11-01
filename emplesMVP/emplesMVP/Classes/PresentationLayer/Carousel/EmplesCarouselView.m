@@ -10,8 +10,8 @@
 #import "EmplesProgressView.h"
 #import "ColorStrings.h"
 
+#import "EmplesCollectionPresenter.h"
 #import "EmplesCarouselViewManager.h"
-#import "EmplesCarouselController.h"
 #import <iCarousel/iCarousel.h>
 
 @interface EmplesCarouselView ()
@@ -24,7 +24,7 @@
 
 @implementation EmplesCarouselView
 
-@synthesize controller;
+@synthesize presenter;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,7 +33,7 @@
     self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
     [self.navigationController.view addSubview:self.progressView];
     [self setupConstraints];
-    [self.controller viewDidLoad];
+    [self.presenter viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,9 +74,9 @@
     [self.progressView hide];
 }
 
--(void)showData
+-(void)updateCollectionItems:(NSArray *)array
 {
-    [self.sourceManager updateDataSource:self.model.dataSource];
+    [self.sourceManager updateDataSource:array];
     [self.carousel reloadData];
 }
 

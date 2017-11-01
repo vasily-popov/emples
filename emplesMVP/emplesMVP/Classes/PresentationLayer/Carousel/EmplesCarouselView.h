@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EmplesListModelDecorator.h"
 #import "EmplesCollectionViewProtocol.h"
 
 @interface EmplesCarouselView : UIViewController<EmplesCollectionViewProtocol>
-
-@property (nonatomic, strong) EmplesListModelDecorator *model;
-
 
 @end

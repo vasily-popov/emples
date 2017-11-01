@@ -11,12 +11,14 @@
 #import "EmplesMenuView.h"
 #import "EmplesMenuRouter.h"
 
-@interface EmplesMenuController : NSObject
+@interface EmplesMenuPresenter : NSObject
 
-@property (nonatomic, weak) EmplesMenuView *view;
+@property (nonatomic, weak) id<EmplesMenuViewProtocol> view;
 @property (nonatomic, strong) EmplesMenuRouter *router;
 
 -(instancetype)init __unavailable;
 -(instancetype)initWithModel:(EmplesMenuModel*)model NS_DESIGNATED_INITIALIZER;
+
+-(void)viewDidLoad;
 
 @end

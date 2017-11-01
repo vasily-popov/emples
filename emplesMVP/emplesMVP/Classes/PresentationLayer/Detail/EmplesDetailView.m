@@ -7,10 +7,9 @@
 //
 
 #import "EmplesDetailView.h"
-#import "EmplesDetailController.h"
+#import "EmplesDetailPresenter.h"
 #import "EmplesDetailTableViewManager.h"
 #import "ColorStrings.h"
-#import "EmplesDeatilMapViewCell.h"
 
 @interface EmplesDetailView ()
 
@@ -23,8 +22,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = [[self.model titleName] uppercaseString];
     [self createTableView];
+    [self.presenter viewDidLoad];
+}
+
+-(void)setViewTitle:(NSString*)title
+{
+    self.title = title;
+}
+
+-(void)setSourceArray:(NSArray*)array
+{
+    [self.sourceManager updateDataSource:array];
+    [self.table reloadData];
 }
 
 -(void)createTableView
@@ -35,10 +45,10 @@
     self.table.backgroundColor = [UIColor colorNamed:emplesGreenColor];
     [self.table setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [self.view addSubview:self.table];
-    self.sourceManager = [[EmplesDetailTableViewManager alloc] initWithSource:self.model.dataSource];
+    self.sourceManager = [[EmplesDetailTableViewManager alloc] init];
     self.table.dataSource = [self.sourceManager dataSourceForTableView:self.table];
     self.table.delegate = [self.sourceManager delegateForTableView:self.table];
-    [self.table reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {

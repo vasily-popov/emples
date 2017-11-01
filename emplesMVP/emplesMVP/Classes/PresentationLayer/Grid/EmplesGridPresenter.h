@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EmplesCollectionController.h"
+#import "EmplesCollectionPresenter.h"
 
-@interface EmplesGridController : EmplesCollectionController
+@interface EmplesGridPresenter : EmplesCollectionPresenter
 
 @end

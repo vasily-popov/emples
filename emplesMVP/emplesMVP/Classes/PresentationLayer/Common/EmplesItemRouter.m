@@ -9,7 +9,7 @@
 #import "EmplesItemRouter.h"
 #import "EmplesRecAreaJSONModel.h"
 #import "EmplesDetailView.h"
-#import "EmplesDetailController.h"
+#import "EmplesDetailPresenter.h"
 #import "EmplesDetailAreaModel.h"
 
 @implementation EmplesItemRouter
@@ -17,11 +17,10 @@
 -(void)navigateToItemDetail:(EmplesRecAreaJSONModel*)item
 {
     EmplesDetailAreaModel *model = [[EmplesDetailAreaModel alloc] initWithItem:item];
-    EmplesDetailController *controller = [[EmplesDetailController alloc] initWithModel:model];
+    EmplesDetailPresenter *presenter = [[EmplesDetailPresenter alloc] initWithModel:model];
     EmplesDetailView *view = [EmplesDetailView new];
-    view.model = model;
-    view.controller = controller;
-    controller.view = view;
+    view.presenter = presenter;
+    presenter.view = view;
     [self.viewController pushViewController:view animated:YES];
 }
 

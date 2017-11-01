@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 #import "EmplesMenuView.h"
-#import "EmplesMenuModelDecorator.h"
-#import "EmplesMenuController.h"
+#import "EmplesMenuPresenter.h"
 #import "EmplesMenuRouter.h"
 #import "EmplesNavigationController.h"
 #import "EmplesAppearanceService.h"
@@ -32,15 +31,13 @@
     [super application:application didFinishLaunchingWithOptions:launchOptions];
     
     EmplesMenuModel *model = [EmplesMenuModel new];
-    EmplesMenuModelDecorator *decorator = [[EmplesMenuModelDecorator alloc] initWithModel:model];
-    EmplesMenuController *controller = [[EmplesMenuController alloc] initWithModel:model];
+    EmplesMenuPresenter *presenter = [[EmplesMenuPresenter alloc] initWithModel:model];
     EmplesMenuView *view = [EmplesMenuView new];
-    view.model = decorator;
-    view.controller = controller;
-    controller.view = view;
+    view.presenter = presenter;
+    presenter.view = view;
     EmplesNavigationController *navVC = [[EmplesNavigationController alloc] initWithRootViewController:view];
     EmplesMenuRouter *router = [[EmplesMenuRouter alloc] initWithNavigationVC:navVC andWindow:self.window];
-    controller.router = router;
+    presenter.router = router;
     
     self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];

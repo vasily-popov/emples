@@ -6,16 +6,16 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import "EmplesCollectionController.h"
+#import "EmplesCollectionPresenter.h"
 @class EmplesRecAreaJSONModel;
 
-@interface EmplesCollectionController () <EmplesAreasProtocolDelegate>
+@interface EmplesCollectionPresenter () <EmplesAreasProtocolDelegate>
 
 @property (nonatomic, strong) EmplesAreasModel *model;
 
 @end
 
-@implementation EmplesCollectionController
+@implementation EmplesCollectionPresenter
 
 -(instancetype)initWithModel:(EmplesAreasModel*)model
 {
@@ -33,11 +33,18 @@
     [self.model fetchAreas];
 }
 
+-(NSArray*) prepareCollectionArray
+{
+    return nil;
+}
+
 #pragma mark - EmplesAreaProtocolDelegate
 
 -(void)areasModel:(EmplesAreasModel*)model didFinishWithResponse:(id)response
 {
-    [self.view showData];
+    //response ignore here
+    NSArray *array = [self prepareCollectionArray];
+    [self.view updateCollectionItems:array];
     [self.view hideProgressView];
 }
 -(void)areasModel:(EmplesAreasModel*)model didFinishWithError:(NSError*)error

@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "EmplesMenuModelDecorator.h"
 
-@class EmplesMenuController;
-@interface EmplesMenuView : UIViewController
+@class EmplesMenuPresenter;
 
-@property (nonatomic, strong) EmplesMenuController *controller;
-@property (nonatomic, strong) EmplesMenuModelDecorator *model;
+@protocol EmplesMenuViewProtocol
+
+-(void) setTableDataSource:(NSArray*)array;
+
+@end
+
+@interface EmplesMenuView : UIViewController <EmplesMenuViewProtocol>
+
+@property (nonatomic, strong) EmplesMenuPresenter *presenter;
 
 @end

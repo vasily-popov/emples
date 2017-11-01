@@ -6,8 +6,8 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import "EmplesStackedController.h"
-@implementation EmplesStackedController
+#import "EmplesStackedPresenter.h"
 
+@implementation EmplesStackedPresenter
 
 @end

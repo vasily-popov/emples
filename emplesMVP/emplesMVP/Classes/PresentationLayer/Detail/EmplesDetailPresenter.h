@@ -10,12 +10,13 @@
 #import "EmplesDetailView.h"
 #import "EmplesDetailAreaModel.h"
 
-@interface EmplesDetailController : NSObject
+@interface EmplesDetailPresenter : NSObject
 
 //router is not needed here
-@property (nonatomic, weak) EmplesDetailView *view;
+@property (nonatomic, weak) id<EmplesDetailViewProtocol> view;
 
 -(instancetype)init __unavailable;
 -(instancetype)initWithModel:(EmplesDetailAreaModel*)model NS_DESIGNATED_INITIALIZER;
 
+-(void)viewDidLoad;
 @end

@@ -8,8 +8,8 @@
 
 #import "EmplesGalleryView.h"
 #import "EmplesGridCollectionViewManager.h"
+#import "EmplesCollectionPresenter.h"
 #import "EmplesProgressView.h"
-#import "EmplesGalleryController.h"
 #import "ColorStrings.h"
 #import "EmplesGalleryCollectionFlowLayout.h"
 
@@ -23,7 +23,7 @@
 
 @implementation EmplesGalleryView
 
-@synthesize controller;
+@synthesize presenter;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,7 +32,7 @@
     self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
     [self.navigationController.view addSubview:self.progressView];
     [self setupConstraints];
-    [self.controller viewDidLoad];
+    [self.presenter viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,9 +73,9 @@
     [self.progressView hide];
 }
 
--(void)showData
+-(void)updateCollectionItems:(NSArray *)array
 {
-    [self.sourceManager updateDataSource:self.model.dataSource];
+    [self.sourceManager updateDataSource:array];
     [self.collection reloadData];
 }
 

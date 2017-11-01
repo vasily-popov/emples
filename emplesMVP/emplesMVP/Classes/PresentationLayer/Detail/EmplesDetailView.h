@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EmplesDetailAreaModel.h"
 
-@class EmplesDetailController;
+@class EmplesDetailPresenter;
 
-@interface EmplesDetailView : UIViewController
+@protocol EmplesDetailViewProtocol
 
-@property (nonatomic, strong) EmplesDetailController *controller;
-@property (nonatomic, strong) EmplesDetailAreaModel *model;
+-(void)setViewTitle:(NSString*)title;
+-(void)setSourceArray:(NSArray*)array;
+@end
+
+@interface EmplesDetailView : UIViewController <EmplesDetailViewProtocol>
+
+@property (nonatomic, strong) EmplesDetailPresenter *presenter;
 
 @end

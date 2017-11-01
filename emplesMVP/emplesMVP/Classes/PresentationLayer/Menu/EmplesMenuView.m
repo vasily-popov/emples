@@ -8,7 +8,7 @@
 
 #import "EmplesMenuView.h"
 #import "EmplesMenuTableViewManager.h"
-#import "EmplesMenuController.h"
+#import "EmplesMenuPresenter.h"
 #import "ColorStrings.h"
 
 @interface EmplesMenuView ()
@@ -24,6 +24,7 @@
     [super viewDidLoad];
     self.title = [@"Menu" uppercaseString];
     [self createTableView];
+    [self.presenter viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
@@ -35,10 +36,9 @@
     self.table.backgroundColor = [UIColor colorNamed:lightWhiteColor];
     [self.table setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [self.view addSubview:self.table];
-    self.sourceManager = [[EmplesMenuTableViewManager alloc] initWithSource:self.model.dataSource];
+    self.sourceManager = [[EmplesMenuTableViewManager alloc] init];
     self.table.dataSource = [self.sourceManager dataSourceForTableView:self.table];
     self.table.delegate = [self.sourceManager delegateForTableView:self.table];
-    [self.table reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,4 +46,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - EmplesMenuViewProtocol
+
+-(void) setTableDataSource:(NSArray*)array
+{
+    [self.sourceManager updateDataSource:array];
+    [self.table reloadData];
+}
 @end

@@ -11,14 +11,19 @@
 #import "EmplesCollectionViewProtocol.h"
 #import "EmplesItemRouter.h"
 
-@interface EmplesCollectionController : NSObject
+@protocol EmplesCollectionPresenterProtocol
+
+-(NSArray*) prepareCollectionArray;
+-(instancetype)initWithModel:(EmplesAreasModel*)model;
+
+@end
+
+@interface EmplesCollectionPresenter : NSObject <EmplesCollectionPresenterProtocol>
 
 @property (nonatomic, weak) id<EmplesCollectionViewProtocol>view;
 @property (nonatomic, strong) EmplesItemRouter *router;
 
 -(instancetype)init __unavailable;
--(instancetype)initWithModel:(EmplesAreasModel*)model NS_DESIGNATED_INITIALIZER;
-
 -(void)viewDidLoad;
 
 @end
