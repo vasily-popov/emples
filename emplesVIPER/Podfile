@@ -1,0 +1,14 @@
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+# Disable sending stats
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+target 'emplesVIPER' do
+    pod 'JSONModel'
+    pod 'SDWebImage', '~>3.8.2'
+    pod 'GoogleMaps'
+    pod 'iCarousel'
+    pod 'ZLSwipeableView'
+    pod 'Typhoon'
+end

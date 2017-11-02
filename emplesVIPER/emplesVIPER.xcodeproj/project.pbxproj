@@ -1,0 +1,1298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC0509DA0673E9DBCD21F8E6 /* libPods-emplesVIPER.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */; };
+		F0E0E7CD1FABA48C004991D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F41FABA48C004991D2 /* Assets.xcassets */; };
+		F0E0E7CE1FABA48C004991D2 /* RecArea.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F61FABA48C004991D2 /* RecArea.json */; };
+		F0E0E7CF1FABA48C004991D2 /* RecAreaAddress.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F71FABA48C004991D2 /* RecAreaAddress.json */; };
+		F0E0E7D01FABA48C004991D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F91FABA48C004991D2 /* Localizable.strings */; };
+		F0E0E7D11FABA48C004991D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7011FABA48C004991D2 /* AppDelegate.m */; };
+		F0E0E7D21FABA48C004991D2 /* BaseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7031FABA48C004991D2 /* BaseAppDelegate.m */; };
+		F0E0E7D31FABA48C004991D2 /* EmplesAppearanceService.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7051FABA48C004991D2 /* EmplesAppearanceService.m */; };
+		F0E0E7D41FABA48C004991D2 /* ApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7081FABA48C004991D2 /* ApplicationAssembly.m */; };
+		F0E0E7D51FABA48C004991D2 /* EmplesNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E70B1FABA48C004991D2 /* EmplesNavigationController.m */; };
+		F0E0E7D61FABA48C004991D2 /* DataLayerAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E70F1FABA48C004991D2 /* DataLayerAssembly.m */; };
+		F0E0E7D71FABA48C004991D2 /* DataAreaRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7111FABA48C004991D2 /* DataAreaRequestClient.m */; };
+		F0E0E7D81FABA48C004991D2 /* EmplesFSJsonReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7161FABA48C004991D2 /* EmplesFSJsonReader.m */; };
+		F0E0E7D91FABA48C004991D2 /* EmplesRecAreaJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7191FABA48C004991D2 /* EmplesRecAreaJSONModel.m */; };
+		F0E0E7DA1FABA48C004991D2 /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E71E1FABA48C004991D2 /* BaseRouter.m */; };
+		F0E0E7DB1FABA48C004991D2 /* UICollectionView+Reusable.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7231FABA48C004991D2 /* UICollectionView+Reusable.m */; };
+		F0E0E7DC1FABA48C004991D2 /* UITableView+Reusable.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7251FABA48C004991D2 /* UITableView+Reusable.m */; };
+		F0E0E7DD1FABA48C004991D2 /* UIView+Reusable.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7271FABA48C004991D2 /* UIView+Reusable.m */; };
+		F0E0E7DE1FABA48C004991D2 /* DataGridSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E72A1FABA48C004991D2 /* DataGridSourceItem.m */; };
+		F0E0E7DF1FABA48C004991D2 /* GenericGridViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E72C1FABA48C004991D2 /* GenericGridViewSource.m */; };
+		F0E0E7E01FABA48C004991D2 /* DataSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E72F1FABA48C004991D2 /* DataSourceItem.m */; };
+		F0E0E7E11FABA48C004991D2 /* GenericTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7311FABA48C004991D2 /* GenericTableViewManager.m */; };
+		F0E0E7E21FABA48C004991D2 /* GenericTableViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7331FABA48C004991D2 /* GenericTableViewSource.m */; };
+		F0E0E7E31FABA48C004991D2 /* EmplesProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7361FABA48C004991D2 /* EmplesProgressView.m */; };
+		F0E0E7E41FABA48C004991D2 /* ColorStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E73B1FABA48C004991D2 /* ColorStrings.m */; };
+		F0E0E7E51FABA48C004991D2 /* EmplesFileNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E73D1FABA48C004991D2 /* EmplesFileNames.m */; };
+		F0E0E7E61FABA48C004991D2 /* LocalizedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E73F1FABA48C004991D2 /* LocalizedStrings.m */; };
+		F0E0E7E71FABA48C004991D2 /* NSString+Localizable.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7421FABA48C004991D2 /* NSString+Localizable.m */; };
+		F0E0E7E81FABA48C004991D2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7441FABA48C004991D2 /* UIColor+Hex.m */; };
+		F0E0E7E91FABA48C004991D2 /* EmplesCollectionsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7481FABA48C004991D2 /* EmplesCollectionsAssembly.m */; };
+		F0E0E7EA1FABA48C004991D2 /* EmplesMenuAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E74A1FABA48C004991D2 /* EmplesMenuAssembly.m */; };
+		F0E0E7EB1FABA48C004991D2 /* EmplesCarouselViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E74E1FABA48C004991D2 /* EmplesCarouselViewManager.m */; };
+		F0E0E7EC1FABA48C004991D2 /* EmplesCarouselPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7501FABA48C004991D2 /* EmplesCarouselPresenter.m */; };
+		F0E0E7ED1FABA48C004991D2 /* EmplesCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7521FABA48C004991D2 /* EmplesCarouselView.m */; };
+		F0E0E7EE1FABA48C004991D2 /* EmplesItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7551FABA48C004991D2 /* EmplesItemView.m */; };
+		F0E0E7EF1FABA48C004991D2 /* EmplesItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7561FABA48C004991D2 /* EmplesItemView.xib */; };
+		F0E0E7F01FABA48C004991D2 /* EmplesAreasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7591FABA48C004991D2 /* EmplesAreasModel.m */; };
+		F0E0E7F11FABA48C004991D2 /* EmplesCollectionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E75B1FABA48C004991D2 /* EmplesCollectionPresenter.m */; };
+		F0E0E7F21FABA48C004991D2 /* EmplesItemRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E75E1FABA48C004991D2 /* EmplesItemRouter.m */; };
+		F0E0E7F31FABA48C004991D2 /* EmplesDetailDescriptionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7631FABA48C004991D2 /* EmplesDetailDescriptionCellModel.m */; };
+		F0E0E7F41FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7651FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.m */; };
+		F0E0E7F51FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7661FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.xib */; };
+		F0E0E7F61FABA48C004991D2 /* EmplesDetailDirectionsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7691FABA48C004991D2 /* EmplesDetailDirectionsCellModel.m */; };
+		F0E0E7F71FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E76B1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.m */; };
+		F0E0E7F81FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E76C1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib */; };
+		F0E0E7F91FABA48C004991D2 /* EmplesDeatilMapViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E76F1FABA48C004991D2 /* EmplesDeatilMapViewCell.m */; };
+		F0E0E7FA1FABA48C004991D2 /* EmplesDetailMapCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7711FABA48C004991D2 /* EmplesDetailMapCellModel.m */; };
+		F0E0E7FB1FABA48C004991D2 /* EmplesDetailAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7731FABA48C004991D2 /* EmplesDetailAreaModel.m */; };
+		F0E0E7FC1FABA48C004991D2 /* EmplesDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7751FABA48C004991D2 /* EmplesDetailPresenter.m */; };
+		F0E0E7FD1FABA48C004991D2 /* EmplesDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7771FABA48C004991D2 /* EmplesDetailView.m */; };
+		F0E0E7FE1FABA48C004991D2 /* EmplesDetailTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E77A1FABA48C004991D2 /* EmplesDetailTableViewManager.m */; };
+		F0E0E7FF1FABA48C004991D2 /* EmplesGalleryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E77D1FABA48C004991D2 /* EmplesGalleryPresenter.m */; };
+		F0E0E8001FABA48C004991D2 /* EmplesGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E77F1FABA48C004991D2 /* EmplesGalleryView.m */; };
+		F0E0E8011FABA48C004991D2 /* EmplesGalleryCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7821FABA48C004991D2 /* EmplesGalleryCollectionFlowLayout.m */; };
+		F0E0E8021FABA48C004991D2 /* EmplesGridCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7861FABA48C004991D2 /* EmplesGridCellModel.m */; };
+		F0E0E8031FABA48C004991D2 /* EmplesGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7881FABA48C004991D2 /* EmplesGridViewCell.m */; };
+		F0E0E8041FABA48C004991D2 /* EmplesGridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7891FABA48C004991D2 /* EmplesGridViewCell.xib */; };
+		F0E0E8051FABA48C004991D2 /* EmplesGridModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E78C1FABA48C004991D2 /* EmplesGridModelDecorator.m */; };
+		F0E0E8061FABA48C004991D2 /* EmplesGridPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E78E1FABA48C004991D2 /* EmplesGridPresenter.m */; };
+		F0E0E8071FABA48C004991D2 /* EmplesGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7901FABA48C004991D2 /* EmplesGridView.m */; };
+		F0E0E8081FABA48C004991D2 /* EmplesGridCollectionViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7931FABA48C004991D2 /* EmplesGridCollectionViewManager.m */; };
+		F0E0E8091FABA48C004991D2 /* EmplesListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7971FABA48C004991D2 /* EmplesListCellModel.m */; };
+		F0E0E80A1FABA48C004991D2 /* EmplesListCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7991FABA48C004991D2 /* EmplesListCellView.m */; };
+		F0E0E80B1FABA48C004991D2 /* EmplesListCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E79A1FABA48C004991D2 /* EmplesListCellView.xib */; };
+		F0E0E80C1FABA48C004991D2 /* EmplesListModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E79D1FABA48C004991D2 /* EmplesListModelDecorator.m */; };
+		F0E0E80D1FABA48C004991D2 /* EmplesListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E79F1FABA48C004991D2 /* EmplesListPresenter.m */; };
+		F0E0E80E1FABA48C004991D2 /* EmplesListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7A11FABA48C004991D2 /* EmplesListView.m */; };
+		F0E0E80F1FABA48C004991D2 /* EmplesListTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7A41FABA48C004991D2 /* EmplesListTableViewManager.m */; };
+		F0E0E8101FABA48C004991D2 /* EmplesMenuCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7A81FABA48C004991D2 /* EmplesMenuCellModel.m */; };
+		F0E0E8111FABA48C004991D2 /* EmplesMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7AA1FABA48C004991D2 /* EmplesMenuViewCell.m */; };
+		F0E0E8121FABA48C004991D2 /* EmplesMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7AB1FABA48C004991D2 /* EmplesMenuViewCell.xib */; };
+		F0E0E8131FABA48C004991D2 /* EmplesMenuModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7AE1FABA48C004991D2 /* EmplesMenuModelDecorator.m */; };
+		F0E0E8141FABA48D004991D2 /* EmplesMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7B01FABA48C004991D2 /* EmplesMenuModel.m */; };
+		F0E0E8151FABA48D004991D2 /* EmplesMenuPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7B21FABA48C004991D2 /* EmplesMenuPresenter.m */; };
+		F0E0E8161FABA48D004991D2 /* EmplesMenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7B41FABA48C004991D2 /* EmplesMenuRouter.m */; };
+		F0E0E8171FABA48D004991D2 /* EmplesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7B61FABA48C004991D2 /* EmplesMenuView.m */; };
+		F0E0E8181FABA48D004991D2 /* EmplesMenuTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7BA1FABA48C004991D2 /* EmplesMenuTableViewManager.m */; };
+		F0E0E8191FABA48D004991D2 /* EmplesStackedViewAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7BE1FABA48C004991D2 /* EmplesStackedViewAnimator.m */; };
+		F0E0E81A1FABA48D004991D2 /* EmplesStackedPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7C01FABA48C004991D2 /* EmplesStackedPresenter.m */; };
+		F0E0E81B1FABA48D004991D2 /* EmplesStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7C21FABA48C004991D2 /* EmplesStackedView.m */; };
+		F0E0E81C1FABA48D004991D2 /* EmplesStackedViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7C51FABA48C004991D2 /* EmplesStackedViewManager.m */; };
+		F0E0E81D1FABA48D004991D2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7C71FABA48C004991D2 /* background.png */; };
+		F0E0E81E1FABA48D004991D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7C81FABA48C004991D2 /* LaunchScreen.storyboard */; };
+		F0E0E81F1FABA48D004991D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7CA1FABA48C004991D2 /* Info.plist */; };
+		F0E0E8201FABA48D004991D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7CB1FABA48C004991D2 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		438DF27F6427A3F31F872037 /* Pods-emplesVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emplesVIPER.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CE159D9352D29CC15A1AB67 /* Pods-emplesVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER.release.xcconfig"; sourceTree = "<group>"; };
+		F0E0E6DA1FAB99C0004991D2 /* emplesVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emplesVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0E0E6F41FABA48C004991D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0E0E6F61FABA48C004991D2 /* RecArea.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecArea.json; sourceTree = "<group>"; };
+		F0E0E6F71FABA48C004991D2 /* RecAreaAddress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecAreaAddress.json; sourceTree = "<group>"; };
+		F0E0E6FA1FABA48C004991D2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0E0E6FB1FABA48C004991D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0E0E6FC1FABA48C004991D2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0E0E7001FABA48C004991D2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F0E0E7011FABA48C004991D2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F0E0E7021FABA48C004991D2 /* BaseAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppDelegate.h; sourceTree = "<group>"; };
+		F0E0E7031FABA48C004991D2 /* BaseAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppDelegate.m; sourceTree = "<group>"; };
+		F0E0E7041FABA48C004991D2 /* EmplesAppearanceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesAppearanceService.h; sourceTree = "<group>"; };
+		F0E0E7051FABA48C004991D2 /* EmplesAppearanceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesAppearanceService.m; sourceTree = "<group>"; };
+		F0E0E7071FABA48C004991D2 /* ApplicationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationAssembly.h; sourceTree = "<group>"; };
+		F0E0E7081FABA48C004991D2 /* ApplicationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationAssembly.m; sourceTree = "<group>"; };
+		F0E0E70A1FABA48C004991D2 /* EmplesNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesNavigationController.h; sourceTree = "<group>"; };
+		F0E0E70B1FABA48C004991D2 /* EmplesNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesNavigationController.m; sourceTree = "<group>"; };
+		F0E0E70E1FABA48C004991D2 /* DataLayerAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayerAssembly.h; sourceTree = "<group>"; };
+		F0E0E70F1FABA48C004991D2 /* DataLayerAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerAssembly.m; sourceTree = "<group>"; };
+		F0E0E7101FABA48C004991D2 /* DataAreaRequestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAreaRequestClient.h; sourceTree = "<group>"; };
+		F0E0E7111FABA48C004991D2 /* DataAreaRequestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAreaRequestClient.m; sourceTree = "<group>"; };
+		F0E0E7131FABA48C004991D2 /* DataRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestProtocol.h; sourceTree = "<group>"; };
+		F0E0E7151FABA48C004991D2 /* EmplesFSJsonReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesFSJsonReader.h; sourceTree = "<group>"; };
+		F0E0E7161FABA48C004991D2 /* EmplesFSJsonReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesFSJsonReader.m; sourceTree = "<group>"; };
+		F0E0E7181FABA48C004991D2 /* EmplesRecAreaJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesRecAreaJSONModel.h; sourceTree = "<group>"; };
+		F0E0E7191FABA48C004991D2 /* EmplesRecAreaJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesRecAreaJSONModel.m; sourceTree = "<group>"; };
+		F0E0E71D1FABA48C004991D2 /* BaseRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRouter.h; sourceTree = "<group>"; };
+		F0E0E71E1FABA48C004991D2 /* BaseRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRouter.m; sourceTree = "<group>"; };
+		F0E0E71F1FABA48C004991D2 /* DecoratorModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoratorModelProtocol.h; sourceTree = "<group>"; };
+		F0E0E7211FABA48C004991D2 /* ReusableViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableViewProtocol.h; sourceTree = "<group>"; };
+		F0E0E7221FABA48C004991D2 /* UICollectionView+Reusable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Reusable.h"; sourceTree = "<group>"; };
+		F0E0E7231FABA48C004991D2 /* UICollectionView+Reusable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Reusable.m"; sourceTree = "<group>"; };
+		F0E0E7241FABA48C004991D2 /* UITableView+Reusable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Reusable.h"; sourceTree = "<group>"; };
+		F0E0E7251FABA48C004991D2 /* UITableView+Reusable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Reusable.m"; sourceTree = "<group>"; };
+		F0E0E7261FABA48C004991D2 /* UIView+Reusable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Reusable.h"; sourceTree = "<group>"; };
+		F0E0E7271FABA48C004991D2 /* UIView+Reusable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Reusable.m"; sourceTree = "<group>"; };
+		F0E0E7291FABA48C004991D2 /* DataGridSourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataGridSourceItem.h; sourceTree = "<group>"; };
+		F0E0E72A1FABA48C004991D2 /* DataGridSourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataGridSourceItem.m; sourceTree = "<group>"; };
+		F0E0E72B1FABA48C004991D2 /* GenericGridViewSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericGridViewSource.h; sourceTree = "<group>"; };
+		F0E0E72C1FABA48C004991D2 /* GenericGridViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericGridViewSource.m; sourceTree = "<group>"; };
+		F0E0E72E1FABA48C004991D2 /* DataSourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceItem.h; sourceTree = "<group>"; };
+		F0E0E72F1FABA48C004991D2 /* DataSourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceItem.m; sourceTree = "<group>"; };
+		F0E0E7301FABA48C004991D2 /* GenericTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericTableViewManager.h; sourceTree = "<group>"; };
+		F0E0E7311FABA48C004991D2 /* GenericTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericTableViewManager.m; sourceTree = "<group>"; };
+		F0E0E7321FABA48C004991D2 /* GenericTableViewSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericTableViewSource.h; sourceTree = "<group>"; };
+		F0E0E7331FABA48C004991D2 /* GenericTableViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericTableViewSource.m; sourceTree = "<group>"; };
+		F0E0E7351FABA48C004991D2 /* EmplesProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesProgressView.h; sourceTree = "<group>"; };
+		F0E0E7361FABA48C004991D2 /* EmplesProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesProgressView.m; sourceTree = "<group>"; };
+		F0E0E7371FABA48C004991D2 /* ViewCellModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCellModelProtocol.h; sourceTree = "<group>"; };
+		F0E0E7381FABA48C004991D2 /* ViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCellProtocol.h; sourceTree = "<group>"; };
+		F0E0E73A1FABA48C004991D2 /* ColorStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorStrings.h; sourceTree = "<group>"; };
+		F0E0E73B1FABA48C004991D2 /* ColorStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorStrings.m; sourceTree = "<group>"; };
+		F0E0E73C1FABA48C004991D2 /* EmplesFileNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesFileNames.h; sourceTree = "<group>"; };
+		F0E0E73D1FABA48C004991D2 /* EmplesFileNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesFileNames.m; sourceTree = "<group>"; };
+		F0E0E73E1FABA48C004991D2 /* LocalizedStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedStrings.h; sourceTree = "<group>"; };
+		F0E0E73F1FABA48C004991D2 /* LocalizedStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedStrings.m; sourceTree = "<group>"; };
+		F0E0E7411FABA48C004991D2 /* NSString+Localizable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Localizable.h"; sourceTree = "<group>"; };
+		F0E0E7421FABA48C004991D2 /* NSString+Localizable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Localizable.m"; sourceTree = "<group>"; };
+		F0E0E7431FABA48C004991D2 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		F0E0E7441FABA48C004991D2 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		F0E0E7471FABA48C004991D2 /* EmplesCollectionsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionsAssembly.h; sourceTree = "<group>"; };
+		F0E0E7481FABA48C004991D2 /* EmplesCollectionsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCollectionsAssembly.m; sourceTree = "<group>"; };
+		F0E0E7491FABA48C004991D2 /* EmplesMenuAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuAssembly.h; sourceTree = "<group>"; };
+		F0E0E74A1FABA48C004991D2 /* EmplesMenuAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuAssembly.m; sourceTree = "<group>"; };
+		F0E0E74D1FABA48C004991D2 /* EmplesCarouselViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselViewManager.h; sourceTree = "<group>"; };
+		F0E0E74E1FABA48C004991D2 /* EmplesCarouselViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselViewManager.m; sourceTree = "<group>"; };
+		F0E0E74F1FABA48C004991D2 /* EmplesCarouselPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselPresenter.h; sourceTree = "<group>"; };
+		F0E0E7501FABA48C004991D2 /* EmplesCarouselPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselPresenter.m; sourceTree = "<group>"; };
+		F0E0E7511FABA48C004991D2 /* EmplesCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselView.h; sourceTree = "<group>"; };
+		F0E0E7521FABA48C004991D2 /* EmplesCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselView.m; sourceTree = "<group>"; };
+		F0E0E7541FABA48C004991D2 /* EmplesItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesItemView.h; sourceTree = "<group>"; };
+		F0E0E7551FABA48C004991D2 /* EmplesItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesItemView.m; sourceTree = "<group>"; };
+		F0E0E7561FABA48C004991D2 /* EmplesItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesItemView.xib; sourceTree = "<group>"; };
+		F0E0E7581FABA48C004991D2 /* EmplesAreasModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesAreasModel.h; sourceTree = "<group>"; };
+		F0E0E7591FABA48C004991D2 /* EmplesAreasModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesAreasModel.m; sourceTree = "<group>"; };
+		F0E0E75A1FABA48C004991D2 /* EmplesCollectionPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionPresenter.h; sourceTree = "<group>"; };
+		F0E0E75B1FABA48C004991D2 /* EmplesCollectionPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCollectionPresenter.m; sourceTree = "<group>"; };
+		F0E0E75C1FABA48C004991D2 /* EmplesCollectionViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionViewProtocol.h; sourceTree = "<group>"; };
+		F0E0E75D1FABA48C004991D2 /* EmplesItemRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesItemRouter.h; sourceTree = "<group>"; };
+		F0E0E75E1FABA48C004991D2 /* EmplesItemRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesItemRouter.m; sourceTree = "<group>"; };
+		F0E0E7621FABA48C004991D2 /* EmplesDetailDescriptionCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDescriptionCellModel.h; sourceTree = "<group>"; };
+		F0E0E7631FABA48C004991D2 /* EmplesDetailDescriptionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDescriptionCellModel.m; sourceTree = "<group>"; };
+		F0E0E7641FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailTextViewWithImageViewCell.h; sourceTree = "<group>"; };
+		F0E0E7651FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailTextViewWithImageViewCell.m; sourceTree = "<group>"; };
+		F0E0E7661FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesDetailTextViewWithImageViewCell.xib; sourceTree = "<group>"; };
+		F0E0E7681FABA48C004991D2 /* EmplesDetailDirectionsCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDirectionsCellModel.h; sourceTree = "<group>"; };
+		F0E0E7691FABA48C004991D2 /* EmplesDetailDirectionsCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDirectionsCellModel.m; sourceTree = "<group>"; };
+		F0E0E76A1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDirectionTextViewCell.h; sourceTree = "<group>"; };
+		F0E0E76B1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDirectionTextViewCell.m; sourceTree = "<group>"; };
+		F0E0E76C1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesDetailDirectionTextViewCell.xib; sourceTree = "<group>"; };
+		F0E0E76E1FABA48C004991D2 /* EmplesDeatilMapViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDeatilMapViewCell.h; sourceTree = "<group>"; };
+		F0E0E76F1FABA48C004991D2 /* EmplesDeatilMapViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDeatilMapViewCell.m; sourceTree = "<group>"; };
+		F0E0E7701FABA48C004991D2 /* EmplesDetailMapCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailMapCellModel.h; sourceTree = "<group>"; };
+		F0E0E7711FABA48C004991D2 /* EmplesDetailMapCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailMapCellModel.m; sourceTree = "<group>"; };
+		F0E0E7721FABA48C004991D2 /* EmplesDetailAreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailAreaModel.h; sourceTree = "<group>"; };
+		F0E0E7731FABA48C004991D2 /* EmplesDetailAreaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailAreaModel.m; sourceTree = "<group>"; };
+		F0E0E7741FABA48C004991D2 /* EmplesDetailPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailPresenter.h; sourceTree = "<group>"; };
+		F0E0E7751FABA48C004991D2 /* EmplesDetailPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailPresenter.m; sourceTree = "<group>"; };
+		F0E0E7761FABA48C004991D2 /* EmplesDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailView.h; sourceTree = "<group>"; };
+		F0E0E7771FABA48C004991D2 /* EmplesDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailView.m; sourceTree = "<group>"; };
+		F0E0E7791FABA48C004991D2 /* EmplesDetailTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailTableViewManager.h; sourceTree = "<group>"; };
+		F0E0E77A1FABA48C004991D2 /* EmplesDetailTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailTableViewManager.m; sourceTree = "<group>"; };
+		F0E0E77C1FABA48C004991D2 /* EmplesGalleryPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryPresenter.h; sourceTree = "<group>"; };
+		F0E0E77D1FABA48C004991D2 /* EmplesGalleryPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryPresenter.m; sourceTree = "<group>"; };
+		F0E0E77E1FABA48C004991D2 /* EmplesGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryView.h; sourceTree = "<group>"; };
+		F0E0E77F1FABA48C004991D2 /* EmplesGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryView.m; sourceTree = "<group>"; };
+		F0E0E7811FABA48C004991D2 /* EmplesGalleryCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryCollectionFlowLayout.h; sourceTree = "<group>"; };
+		F0E0E7821FABA48C004991D2 /* EmplesGalleryCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryCollectionFlowLayout.m; sourceTree = "<group>"; };
+		F0E0E7851FABA48C004991D2 /* EmplesGridCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridCellModel.h; sourceTree = "<group>"; };
+		F0E0E7861FABA48C004991D2 /* EmplesGridCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridCellModel.m; sourceTree = "<group>"; };
+		F0E0E7871FABA48C004991D2 /* EmplesGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridViewCell.h; sourceTree = "<group>"; };
+		F0E0E7881FABA48C004991D2 /* EmplesGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridViewCell.m; sourceTree = "<group>"; };
+		F0E0E7891FABA48C004991D2 /* EmplesGridViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesGridViewCell.xib; sourceTree = "<group>"; };
+		F0E0E78B1FABA48C004991D2 /* EmplesGridModelDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridModelDecorator.h; sourceTree = "<group>"; };
+		F0E0E78C1FABA48C004991D2 /* EmplesGridModelDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridModelDecorator.m; sourceTree = "<group>"; };
+		F0E0E78D1FABA48C004991D2 /* EmplesGridPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridPresenter.h; sourceTree = "<group>"; };
+		F0E0E78E1FABA48C004991D2 /* EmplesGridPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridPresenter.m; sourceTree = "<group>"; };
+		F0E0E78F1FABA48C004991D2 /* EmplesGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridView.h; sourceTree = "<group>"; };
+		F0E0E7901FABA48C004991D2 /* EmplesGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridView.m; sourceTree = "<group>"; };
+		F0E0E7921FABA48C004991D2 /* EmplesGridCollectionViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridCollectionViewManager.h; sourceTree = "<group>"; };
+		F0E0E7931FABA48C004991D2 /* EmplesGridCollectionViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridCollectionViewManager.m; sourceTree = "<group>"; };
+		F0E0E7961FABA48C004991D2 /* EmplesListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListCellModel.h; sourceTree = "<group>"; };
+		F0E0E7971FABA48C004991D2 /* EmplesListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListCellModel.m; sourceTree = "<group>"; };
+		F0E0E7981FABA48C004991D2 /* EmplesListCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListCellView.h; sourceTree = "<group>"; };
+		F0E0E7991FABA48C004991D2 /* EmplesListCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListCellView.m; sourceTree = "<group>"; };
+		F0E0E79A1FABA48C004991D2 /* EmplesListCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesListCellView.xib; sourceTree = "<group>"; };
+		F0E0E79C1FABA48C004991D2 /* EmplesListModelDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListModelDecorator.h; sourceTree = "<group>"; };
+		F0E0E79D1FABA48C004991D2 /* EmplesListModelDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListModelDecorator.m; sourceTree = "<group>"; };
+		F0E0E79E1FABA48C004991D2 /* EmplesListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListPresenter.h; sourceTree = "<group>"; };
+		F0E0E79F1FABA48C004991D2 /* EmplesListPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListPresenter.m; sourceTree = "<group>"; };
+		F0E0E7A01FABA48C004991D2 /* EmplesListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListView.h; sourceTree = "<group>"; };
+		F0E0E7A11FABA48C004991D2 /* EmplesListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListView.m; sourceTree = "<group>"; };
+		F0E0E7A31FABA48C004991D2 /* EmplesListTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListTableViewManager.h; sourceTree = "<group>"; };
+		F0E0E7A41FABA48C004991D2 /* EmplesListTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListTableViewManager.m; sourceTree = "<group>"; };
+		F0E0E7A71FABA48C004991D2 /* EmplesMenuCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuCellModel.h; sourceTree = "<group>"; };
+		F0E0E7A81FABA48C004991D2 /* EmplesMenuCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuCellModel.m; sourceTree = "<group>"; };
+		F0E0E7A91FABA48C004991D2 /* EmplesMenuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuViewCell.h; sourceTree = "<group>"; };
+		F0E0E7AA1FABA48C004991D2 /* EmplesMenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuViewCell.m; sourceTree = "<group>"; };
+		F0E0E7AB1FABA48C004991D2 /* EmplesMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesMenuViewCell.xib; sourceTree = "<group>"; };
+		F0E0E7AD1FABA48C004991D2 /* EmplesMenuModelDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuModelDecorator.h; sourceTree = "<group>"; };
+		F0E0E7AE1FABA48C004991D2 /* EmplesMenuModelDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuModelDecorator.m; sourceTree = "<group>"; };
+		F0E0E7AF1FABA48C004991D2 /* EmplesMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuModel.h; sourceTree = "<group>"; };
+		F0E0E7B01FABA48C004991D2 /* EmplesMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuModel.m; sourceTree = "<group>"; };
+		F0E0E7B11FABA48C004991D2 /* EmplesMenuPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuPresenter.h; sourceTree = "<group>"; };
+		F0E0E7B21FABA48C004991D2 /* EmplesMenuPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuPresenter.m; sourceTree = "<group>"; };
+		F0E0E7B31FABA48C004991D2 /* EmplesMenuRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuRouter.h; sourceTree = "<group>"; };
+		F0E0E7B41FABA48C004991D2 /* EmplesMenuRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuRouter.m; sourceTree = "<group>"; };
+		F0E0E7B51FABA48C004991D2 /* EmplesMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuView.h; sourceTree = "<group>"; };
+		F0E0E7B61FABA48C004991D2 /* EmplesMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuView.m; sourceTree = "<group>"; };
+		F0E0E7B71FABA48C004991D2 /* EnumMenuSelectedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumMenuSelectedItem.h; sourceTree = "<group>"; };
+		F0E0E7B91FABA48C004991D2 /* EmplesMenuTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuTableViewManager.h; sourceTree = "<group>"; };
+		F0E0E7BA1FABA48C004991D2 /* EmplesMenuTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuTableViewManager.m; sourceTree = "<group>"; };
+		F0E0E7BD1FABA48C004991D2 /* EmplesStackedViewAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesStackedViewAnimator.h; sourceTree = "<group>"; };
+		F0E0E7BE1FABA48C004991D2 /* EmplesStackedViewAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedViewAnimator.m; sourceTree = "<group>"; };
+		F0E0E7BF1FABA48C004991D2 /* EmplesStackedPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesStackedPresenter.h; sourceTree = "<group>"; };
+		F0E0E7C01FABA48C004991D2 /* EmplesStackedPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedPresenter.m; sourceTree = "<group>"; };
+		F0E0E7C11FABA48C004991D2 /* EmplesStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesStackedView.h; sourceTree = "<group>"; };
+		F0E0E7C21FABA48C004991D2 /* EmplesStackedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedView.m; sourceTree = "<group>"; };
+		F0E0E7C41FABA48C004991D2 /* EmplesStackedViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesStackedViewManager.h; sourceTree = "<group>"; };
+		F0E0E7C51FABA48C004991D2 /* EmplesStackedViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedViewManager.m; sourceTree = "<group>"; };
+		F0E0E7C71FABA48C004991D2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		F0E0E7C91FABA48C004991D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0E0E7CA1FABA48C004991D2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0E0E7CB1FABA48C004991D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0E0E7CC1FABA48C004991D2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0E0E6D71FAB99C0004991D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0509DA0673E9DBCD21F8E6 /* libPods-emplesVIPER.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47A2D909AF4DFC57C2A3E79B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				438DF27F6427A3F31F872037 /* Pods-emplesVIPER.debug.xcconfig */,
+				8CE159D9352D29CC15A1AB67 /* Pods-emplesVIPER.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6298A896DF69F22F7D812322 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0E0E6D11FAB99C0004991D2 = {
+			isa = PBXGroup;
+			children = (
+				F0E0E6DC1FAB99C0004991D2 /* emplesVIPER */,
+				F0E0E6DB1FAB99C0004991D2 /* Products */,
+				47A2D909AF4DFC57C2A3E79B /* Pods */,
+				6298A896DF69F22F7D812322 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F0E0E6DB1FAB99C0004991D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E6DA1FAB99C0004991D2 /* emplesVIPER.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0E0E6DC1FAB99C0004991D2 /* emplesVIPER */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E6FD1FABA48C004991D2 /* Classes */,
+				F0E0E6F31FABA48C004991D2 /* Resources */,
+				F0E0E7C61FABA48C004991D2 /* Supporting files */,
+			);
+			path = emplesVIPER;
+			sourceTree = "<group>";
+		};
+		F0E0E6F31FABA48C004991D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E6F41FABA48C004991D2 /* Assets.xcassets */,
+				F0E0E6F51FABA48C004991D2 /* fakeJsons */,
+				F0E0E6F81FABA48C004991D2 /* Strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F0E0E6F51FABA48C004991D2 /* fakeJsons */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E6F61FABA48C004991D2 /* RecArea.json */,
+				F0E0E6F71FABA48C004991D2 /* RecAreaAddress.json */,
+			);
+			path = fakeJsons;
+			sourceTree = "<group>";
+		};
+		F0E0E6F81FABA48C004991D2 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E6F91FABA48C004991D2 /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		F0E0E6FD1FABA48C004991D2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E6FE1FABA48C004991D2 /* ApplicationLayer */,
+				F0E0E70C1FABA48C004991D2 /* BusinessLogicLayer */,
+				F0E0E71B1FABA48C004991D2 /* Common */,
+				F0E0E7391FABA48C004991D2 /* Constants */,
+				F0E0E7401FABA48C004991D2 /* Extensions */,
+				F0E0E7451FABA48C004991D2 /* PresentationLayer */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F0E0E6FE1FABA48C004991D2 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E6FF1FABA48C004991D2 /* AppDelegate */,
+				F0E0E7061FABA48C004991D2 /* Assembly */,
+				F0E0E7091FABA48C004991D2 /* UINavigationController */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		F0E0E6FF1FABA48C004991D2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7001FABA48C004991D2 /* AppDelegate.h */,
+				F0E0E7011FABA48C004991D2 /* AppDelegate.m */,
+				F0E0E7021FABA48C004991D2 /* BaseAppDelegate.h */,
+				F0E0E7031FABA48C004991D2 /* BaseAppDelegate.m */,
+				F0E0E7041FABA48C004991D2 /* EmplesAppearanceService.h */,
+				F0E0E7051FABA48C004991D2 /* EmplesAppearanceService.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F0E0E7061FABA48C004991D2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7071FABA48C004991D2 /* ApplicationAssembly.h */,
+				F0E0E7081FABA48C004991D2 /* ApplicationAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F0E0E7091FABA48C004991D2 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E70A1FABA48C004991D2 /* EmplesNavigationController.h */,
+				F0E0E70B1FABA48C004991D2 /* EmplesNavigationController.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		F0E0E70C1FABA48C004991D2 /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E70D1FABA48C004991D2 /* Assembly */,
+				F0E0E7101FABA48C004991D2 /* DataAreaRequestClient.h */,
+				F0E0E7111FABA48C004991D2 /* DataAreaRequestClient.m */,
+				F0E0E7121FABA48C004991D2 /* DataBase */,
+				F0E0E7131FABA48C004991D2 /* DataRequestProtocol.h */,
+				F0E0E7141FABA48C004991D2 /* Filesystem */,
+				F0E0E7171FABA48C004991D2 /* JSONModel */,
+				F0E0E71A1FABA48C004991D2 /* Network */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		F0E0E70D1FABA48C004991D2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E70E1FABA48C004991D2 /* DataLayerAssembly.h */,
+				F0E0E70F1FABA48C004991D2 /* DataLayerAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F0E0E7121FABA48C004991D2 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		F0E0E7141FABA48C004991D2 /* Filesystem */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7151FABA48C004991D2 /* EmplesFSJsonReader.h */,
+				F0E0E7161FABA48C004991D2 /* EmplesFSJsonReader.m */,
+			);
+			path = Filesystem;
+			sourceTree = "<group>";
+		};
+		F0E0E7171FABA48C004991D2 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7181FABA48C004991D2 /* EmplesRecAreaJSONModel.h */,
+				F0E0E7191FABA48C004991D2 /* EmplesRecAreaJSONModel.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		F0E0E71A1FABA48C004991D2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F0E0E71B1FABA48C004991D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E71C1FABA48C004991D2 /* BaseRouter */,
+				F0E0E71F1FABA48C004991D2 /* DecoratorModelProtocol.h */,
+				F0E0E7201FABA48C004991D2 /* Extensions */,
+				F0E0E7281FABA48C004991D2 /* GenericCollectionSource */,
+				F0E0E72D1FABA48C004991D2 /* GenericTableSource */,
+				F0E0E7341FABA48C004991D2 /* ProgressView */,
+				F0E0E7371FABA48C004991D2 /* ViewCellModelProtocol.h */,
+				F0E0E7381FABA48C004991D2 /* ViewCellProtocol.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F0E0E71C1FABA48C004991D2 /* BaseRouter */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E71D1FABA48C004991D2 /* BaseRouter.h */,
+				F0E0E71E1FABA48C004991D2 /* BaseRouter.m */,
+			);
+			path = BaseRouter;
+			sourceTree = "<group>";
+		};
+		F0E0E7201FABA48C004991D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7211FABA48C004991D2 /* ReusableViewProtocol.h */,
+				F0E0E7221FABA48C004991D2 /* UICollectionView+Reusable.h */,
+				F0E0E7231FABA48C004991D2 /* UICollectionView+Reusable.m */,
+				F0E0E7241FABA48C004991D2 /* UITableView+Reusable.h */,
+				F0E0E7251FABA48C004991D2 /* UITableView+Reusable.m */,
+				F0E0E7261FABA48C004991D2 /* UIView+Reusable.h */,
+				F0E0E7271FABA48C004991D2 /* UIView+Reusable.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F0E0E7281FABA48C004991D2 /* GenericCollectionSource */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7291FABA48C004991D2 /* DataGridSourceItem.h */,
+				F0E0E72A1FABA48C004991D2 /* DataGridSourceItem.m */,
+				F0E0E72B1FABA48C004991D2 /* GenericGridViewSource.h */,
+				F0E0E72C1FABA48C004991D2 /* GenericGridViewSource.m */,
+			);
+			path = GenericCollectionSource;
+			sourceTree = "<group>";
+		};
+		F0E0E72D1FABA48C004991D2 /* GenericTableSource */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E72E1FABA48C004991D2 /* DataSourceItem.h */,
+				F0E0E72F1FABA48C004991D2 /* DataSourceItem.m */,
+				F0E0E7301FABA48C004991D2 /* GenericTableViewManager.h */,
+				F0E0E7311FABA48C004991D2 /* GenericTableViewManager.m */,
+				F0E0E7321FABA48C004991D2 /* GenericTableViewSource.h */,
+				F0E0E7331FABA48C004991D2 /* GenericTableViewSource.m */,
+			);
+			path = GenericTableSource;
+			sourceTree = "<group>";
+		};
+		F0E0E7341FABA48C004991D2 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7351FABA48C004991D2 /* EmplesProgressView.h */,
+				F0E0E7361FABA48C004991D2 /* EmplesProgressView.m */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		F0E0E7391FABA48C004991D2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E73A1FABA48C004991D2 /* ColorStrings.h */,
+				F0E0E73B1FABA48C004991D2 /* ColorStrings.m */,
+				F0E0E73C1FABA48C004991D2 /* EmplesFileNames.h */,
+				F0E0E73D1FABA48C004991D2 /* EmplesFileNames.m */,
+				F0E0E73E1FABA48C004991D2 /* LocalizedStrings.h */,
+				F0E0E73F1FABA48C004991D2 /* LocalizedStrings.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F0E0E7401FABA48C004991D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7411FABA48C004991D2 /* NSString+Localizable.h */,
+				F0E0E7421FABA48C004991D2 /* NSString+Localizable.m */,
+				F0E0E7431FABA48C004991D2 /* UIColor+Hex.h */,
+				F0E0E7441FABA48C004991D2 /* UIColor+Hex.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F0E0E7451FABA48C004991D2 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7461FABA48C004991D2 /* Assembly */,
+				F0E0E74B1FABA48C004991D2 /* Carousel */,
+				F0E0E7571FABA48C004991D2 /* Common */,
+				F0E0E75F1FABA48C004991D2 /* Detail */,
+				F0E0E77B1FABA48C004991D2 /* Gallery */,
+				F0E0E7831FABA48C004991D2 /* Grid */,
+				F0E0E7941FABA48C004991D2 /* List */,
+				F0E0E7A51FABA48C004991D2 /* Menu */,
+				F0E0E7BB1FABA48C004991D2 /* Stack */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		F0E0E7461FABA48C004991D2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7471FABA48C004991D2 /* EmplesCollectionsAssembly.h */,
+				F0E0E7481FABA48C004991D2 /* EmplesCollectionsAssembly.m */,
+				F0E0E7491FABA48C004991D2 /* EmplesMenuAssembly.h */,
+				F0E0E74A1FABA48C004991D2 /* EmplesMenuAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F0E0E74B1FABA48C004991D2 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E74C1FABA48C004991D2 /* CarouselManager */,
+				F0E0E74F1FABA48C004991D2 /* EmplesCarouselPresenter.h */,
+				F0E0E7501FABA48C004991D2 /* EmplesCarouselPresenter.m */,
+				F0E0E7511FABA48C004991D2 /* EmplesCarouselView.h */,
+				F0E0E7521FABA48C004991D2 /* EmplesCarouselView.m */,
+				F0E0E7531FABA48C004991D2 /* ItemView */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		F0E0E74C1FABA48C004991D2 /* CarouselManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E74D1FABA48C004991D2 /* EmplesCarouselViewManager.h */,
+				F0E0E74E1FABA48C004991D2 /* EmplesCarouselViewManager.m */,
+			);
+			path = CarouselManager;
+			sourceTree = "<group>";
+		};
+		F0E0E7531FABA48C004991D2 /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7541FABA48C004991D2 /* EmplesItemView.h */,
+				F0E0E7551FABA48C004991D2 /* EmplesItemView.m */,
+				F0E0E7561FABA48C004991D2 /* EmplesItemView.xib */,
+			);
+			path = ItemView;
+			sourceTree = "<group>";
+		};
+		F0E0E7571FABA48C004991D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7581FABA48C004991D2 /* EmplesAreasModel.h */,
+				F0E0E7591FABA48C004991D2 /* EmplesAreasModel.m */,
+				F0E0E75A1FABA48C004991D2 /* EmplesCollectionPresenter.h */,
+				F0E0E75B1FABA48C004991D2 /* EmplesCollectionPresenter.m */,
+				F0E0E75C1FABA48C004991D2 /* EmplesCollectionViewProtocol.h */,
+				F0E0E75D1FABA48C004991D2 /* EmplesItemRouter.h */,
+				F0E0E75E1FABA48C004991D2 /* EmplesItemRouter.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F0E0E75F1FABA48C004991D2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7601FABA48C004991D2 /* Cell */,
+				F0E0E7721FABA48C004991D2 /* EmplesDetailAreaModel.h */,
+				F0E0E7731FABA48C004991D2 /* EmplesDetailAreaModel.m */,
+				F0E0E7741FABA48C004991D2 /* EmplesDetailPresenter.h */,
+				F0E0E7751FABA48C004991D2 /* EmplesDetailPresenter.m */,
+				F0E0E7761FABA48C004991D2 /* EmplesDetailView.h */,
+				F0E0E7771FABA48C004991D2 /* EmplesDetailView.m */,
+				F0E0E7781FABA48C004991D2 /* TableManager */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F0E0E7601FABA48C004991D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7611FABA48C004991D2 /* Description */,
+				F0E0E7671FABA48C004991D2 /* Directions */,
+				F0E0E76D1FABA48C004991D2 /* Map */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F0E0E7611FABA48C004991D2 /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7621FABA48C004991D2 /* EmplesDetailDescriptionCellModel.h */,
+				F0E0E7631FABA48C004991D2 /* EmplesDetailDescriptionCellModel.m */,
+				F0E0E7641FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.h */,
+				F0E0E7651FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.m */,
+				F0E0E7661FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.xib */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		F0E0E7671FABA48C004991D2 /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7681FABA48C004991D2 /* EmplesDetailDirectionsCellModel.h */,
+				F0E0E7691FABA48C004991D2 /* EmplesDetailDirectionsCellModel.m */,
+				F0E0E76A1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.h */,
+				F0E0E76B1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.m */,
+				F0E0E76C1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib */,
+			);
+			path = Directions;
+			sourceTree = "<group>";
+		};
+		F0E0E76D1FABA48C004991D2 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E76E1FABA48C004991D2 /* EmplesDeatilMapViewCell.h */,
+				F0E0E76F1FABA48C004991D2 /* EmplesDeatilMapViewCell.m */,
+				F0E0E7701FABA48C004991D2 /* EmplesDetailMapCellModel.h */,
+				F0E0E7711FABA48C004991D2 /* EmplesDetailMapCellModel.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F0E0E7781FABA48C004991D2 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7791FABA48C004991D2 /* EmplesDetailTableViewManager.h */,
+				F0E0E77A1FABA48C004991D2 /* EmplesDetailTableViewManager.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F0E0E77B1FABA48C004991D2 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E77C1FABA48C004991D2 /* EmplesGalleryPresenter.h */,
+				F0E0E77D1FABA48C004991D2 /* EmplesGalleryPresenter.m */,
+				F0E0E77E1FABA48C004991D2 /* EmplesGalleryView.h */,
+				F0E0E77F1FABA48C004991D2 /* EmplesGalleryView.m */,
+				F0E0E7801FABA48C004991D2 /* FlowLayout */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		F0E0E7801FABA48C004991D2 /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7811FABA48C004991D2 /* EmplesGalleryCollectionFlowLayout.h */,
+				F0E0E7821FABA48C004991D2 /* EmplesGalleryCollectionFlowLayout.m */,
+			);
+			path = FlowLayout;
+			sourceTree = "<group>";
+		};
+		F0E0E7831FABA48C004991D2 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7841FABA48C004991D2 /* Cell */,
+				F0E0E78A1FABA48C004991D2 /* Decorator */,
+				F0E0E78D1FABA48C004991D2 /* EmplesGridPresenter.h */,
+				F0E0E78E1FABA48C004991D2 /* EmplesGridPresenter.m */,
+				F0E0E78F1FABA48C004991D2 /* EmplesGridView.h */,
+				F0E0E7901FABA48C004991D2 /* EmplesGridView.m */,
+				F0E0E7911FABA48C004991D2 /* GridManager */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		F0E0E7841FABA48C004991D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7851FABA48C004991D2 /* EmplesGridCellModel.h */,
+				F0E0E7861FABA48C004991D2 /* EmplesGridCellModel.m */,
+				F0E0E7871FABA48C004991D2 /* EmplesGridViewCell.h */,
+				F0E0E7881FABA48C004991D2 /* EmplesGridViewCell.m */,
+				F0E0E7891FABA48C004991D2 /* EmplesGridViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F0E0E78A1FABA48C004991D2 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E78B1FABA48C004991D2 /* EmplesGridModelDecorator.h */,
+				F0E0E78C1FABA48C004991D2 /* EmplesGridModelDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		F0E0E7911FABA48C004991D2 /* GridManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7921FABA48C004991D2 /* EmplesGridCollectionViewManager.h */,
+				F0E0E7931FABA48C004991D2 /* EmplesGridCollectionViewManager.m */,
+			);
+			path = GridManager;
+			sourceTree = "<group>";
+		};
+		F0E0E7941FABA48C004991D2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7951FABA48C004991D2 /* Cell */,
+				F0E0E79B1FABA48C004991D2 /* Decorator */,
+				F0E0E79E1FABA48C004991D2 /* EmplesListPresenter.h */,
+				F0E0E79F1FABA48C004991D2 /* EmplesListPresenter.m */,
+				F0E0E7A01FABA48C004991D2 /* EmplesListView.h */,
+				F0E0E7A11FABA48C004991D2 /* EmplesListView.m */,
+				F0E0E7A21FABA48C004991D2 /* TableManager */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		F0E0E7951FABA48C004991D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7961FABA48C004991D2 /* EmplesListCellModel.h */,
+				F0E0E7971FABA48C004991D2 /* EmplesListCellModel.m */,
+				F0E0E7981FABA48C004991D2 /* EmplesListCellView.h */,
+				F0E0E7991FABA48C004991D2 /* EmplesListCellView.m */,
+				F0E0E79A1FABA48C004991D2 /* EmplesListCellView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F0E0E79B1FABA48C004991D2 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E79C1FABA48C004991D2 /* EmplesListModelDecorator.h */,
+				F0E0E79D1FABA48C004991D2 /* EmplesListModelDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		F0E0E7A21FABA48C004991D2 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7A31FABA48C004991D2 /* EmplesListTableViewManager.h */,
+				F0E0E7A41FABA48C004991D2 /* EmplesListTableViewManager.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F0E0E7A51FABA48C004991D2 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7A61FABA48C004991D2 /* Cell */,
+				F0E0E7AC1FABA48C004991D2 /* Decorator */,
+				F0E0E7AF1FABA48C004991D2 /* EmplesMenuModel.h */,
+				F0E0E7B01FABA48C004991D2 /* EmplesMenuModel.m */,
+				F0E0E7B11FABA48C004991D2 /* EmplesMenuPresenter.h */,
+				F0E0E7B21FABA48C004991D2 /* EmplesMenuPresenter.m */,
+				F0E0E7B31FABA48C004991D2 /* EmplesMenuRouter.h */,
+				F0E0E7B41FABA48C004991D2 /* EmplesMenuRouter.m */,
+				F0E0E7B51FABA48C004991D2 /* EmplesMenuView.h */,
+				F0E0E7B61FABA48C004991D2 /* EmplesMenuView.m */,
+				F0E0E7B71FABA48C004991D2 /* EnumMenuSelectedItem.h */,
+				F0E0E7B81FABA48C004991D2 /* TableManager */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		F0E0E7A61FABA48C004991D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7A71FABA48C004991D2 /* EmplesMenuCellModel.h */,
+				F0E0E7A81FABA48C004991D2 /* EmplesMenuCellModel.m */,
+				F0E0E7A91FABA48C004991D2 /* EmplesMenuViewCell.h */,
+				F0E0E7AA1FABA48C004991D2 /* EmplesMenuViewCell.m */,
+				F0E0E7AB1FABA48C004991D2 /* EmplesMenuViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F0E0E7AC1FABA48C004991D2 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7AD1FABA48C004991D2 /* EmplesMenuModelDecorator.h */,
+				F0E0E7AE1FABA48C004991D2 /* EmplesMenuModelDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		F0E0E7B81FABA48C004991D2 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7B91FABA48C004991D2 /* EmplesMenuTableViewManager.h */,
+				F0E0E7BA1FABA48C004991D2 /* EmplesMenuTableViewManager.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F0E0E7BB1FABA48C004991D2 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7BC1FABA48C004991D2 /* Animator */,
+				F0E0E7BF1FABA48C004991D2 /* EmplesStackedPresenter.h */,
+				F0E0E7C01FABA48C004991D2 /* EmplesStackedPresenter.m */,
+				F0E0E7C11FABA48C004991D2 /* EmplesStackedView.h */,
+				F0E0E7C21FABA48C004991D2 /* EmplesStackedView.m */,
+				F0E0E7C31FABA48C004991D2 /* StackedManager */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		F0E0E7BC1FABA48C004991D2 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7BD1FABA48C004991D2 /* EmplesStackedViewAnimator.h */,
+				F0E0E7BE1FABA48C004991D2 /* EmplesStackedViewAnimator.m */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
+		F0E0E7C31FABA48C004991D2 /* StackedManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7C41FABA48C004991D2 /* EmplesStackedViewManager.h */,
+				F0E0E7C51FABA48C004991D2 /* EmplesStackedViewManager.m */,
+			);
+			path = StackedManager;
+			sourceTree = "<group>";
+		};
+		F0E0E7C61FABA48C004991D2 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7C71FABA48C004991D2 /* background.png */,
+				F0E0E7C81FABA48C004991D2 /* LaunchScreen.storyboard */,
+				F0E0E7CA1FABA48C004991D2 /* Info.plist */,
+				F0E0E7CB1FABA48C004991D2 /* main.m */,
+				F0E0E7CC1FABA48C004991D2 /* PrefixHeader.pch */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0E0E6D91FAB99C0004991D2 /* emplesVIPER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0E0E6F01FAB99C0004991D2 /* Build configuration list for PBXNativeTarget "emplesVIPER" */;
+			buildPhases = (
+				F6719628A93682DC78C942F4 /* [CP] Check Pods Manifest.lock */,
+				F0E0E6D61FAB99C0004991D2 /* Sources */,
+				F0E0E6D71FAB99C0004991D2 /* Frameworks */,
+				F0E0E6D81FAB99C0004991D2 /* Resources */,
+				CCC85E03C5E19D162F79E352 /* [CP] Embed Pods Frameworks */,
+				D3CC0EBC34A3EA9CF1AF5BCB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = emplesVIPER;
+			productName = emplesVIPER;
+			productReference = F0E0E6DA1FAB99C0004991D2 /* emplesVIPER.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0E0E6D21FAB99C0004991D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Vasily Popov";
+				TargetAttributes = {
+					F0E0E6D91FAB99C0004991D2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F0E0E6D51FAB99C0004991D2 /* Build configuration list for PBXProject "emplesVIPER" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+				ru,
+			);
+			mainGroup = F0E0E6D11FAB99C0004991D2;
+			productRefGroup = F0E0E6DB1FAB99C0004991D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0E0E6D91FAB99C0004991D2 /* emplesVIPER */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0E0E6D81FAB99C0004991D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0E0E7CD1FABA48C004991D2 /* Assets.xcassets in Resources */,
+				F0E0E7D01FABA48C004991D2 /* Localizable.strings in Resources */,
+				F0E0E7CF1FABA48C004991D2 /* RecAreaAddress.json in Resources */,
+				F0E0E7F51FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.xib in Resources */,
+				F0E0E80B1FABA48C004991D2 /* EmplesListCellView.xib in Resources */,
+				F0E0E8121FABA48C004991D2 /* EmplesMenuViewCell.xib in Resources */,
+				F0E0E7F81FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib in Resources */,
+				F0E0E7CE1FABA48C004991D2 /* RecArea.json in Resources */,
+				F0E0E8041FABA48C004991D2 /* EmplesGridViewCell.xib in Resources */,
+				F0E0E81E1FABA48D004991D2 /* LaunchScreen.storyboard in Resources */,
+				F0E0E81D1FABA48D004991D2 /* background.png in Resources */,
+				F0E0E7EF1FABA48C004991D2 /* EmplesItemView.xib in Resources */,
+				F0E0E81F1FABA48D004991D2 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCC85E03C5E19D162F79E352 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3CC0EBC34A3EA9CF1AF5BCB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6719628A93682DC78C942F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-emplesVIPER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0E0E6D61FAB99C0004991D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0E0E7F11FABA48C004991D2 /* EmplesCollectionPresenter.m in Sources */,
+				F0E0E80F1FABA48C004991D2 /* EmplesListTableViewManager.m in Sources */,
+				F0E0E7DC1FABA48C004991D2 /* UITableView+Reusable.m in Sources */,
+				F0E0E8201FABA48D004991D2 /* main.m in Sources */,
+				F0E0E7DE1FABA48C004991D2 /* DataGridSourceItem.m in Sources */,
+				F0E0E7E11FABA48C004991D2 /* GenericTableViewManager.m in Sources */,
+				F0E0E7F01FABA48C004991D2 /* EmplesAreasModel.m in Sources */,
+				F0E0E7F31FABA48C004991D2 /* EmplesDetailDescriptionCellModel.m in Sources */,
+				F0E0E8021FABA48C004991D2 /* EmplesGridCellModel.m in Sources */,
+				F0E0E7F61FABA48C004991D2 /* EmplesDetailDirectionsCellModel.m in Sources */,
+				F0E0E7FE1FABA48C004991D2 /* EmplesDetailTableViewManager.m in Sources */,
+				F0E0E7D51FABA48C004991D2 /* EmplesNavigationController.m in Sources */,
+				F0E0E8151FABA48D004991D2 /* EmplesMenuPresenter.m in Sources */,
+				F0E0E7EC1FABA48C004991D2 /* EmplesCarouselPresenter.m in Sources */,
+				F0E0E8141FABA48D004991D2 /* EmplesMenuModel.m in Sources */,
+				F0E0E7E61FABA48C004991D2 /* LocalizedStrings.m in Sources */,
+				F0E0E7DA1FABA48C004991D2 /* BaseRouter.m in Sources */,
+				F0E0E7D41FABA48C004991D2 /* ApplicationAssembly.m in Sources */,
+				F0E0E80C1FABA48C004991D2 /* EmplesListModelDecorator.m in Sources */,
+				F0E0E7EB1FABA48C004991D2 /* EmplesCarouselViewManager.m in Sources */,
+				F0E0E7FB1FABA48C004991D2 /* EmplesDetailAreaModel.m in Sources */,
+				F0E0E81C1FABA48D004991D2 /* EmplesStackedViewManager.m in Sources */,
+				F0E0E8131FABA48C004991D2 /* EmplesMenuModelDecorator.m in Sources */,
+				F0E0E8001FABA48C004991D2 /* EmplesGalleryView.m in Sources */,
+				F0E0E7E51FABA48C004991D2 /* EmplesFileNames.m in Sources */,
+				F0E0E7E01FABA48C004991D2 /* DataSourceItem.m in Sources */,
+				F0E0E8011FABA48C004991D2 /* EmplesGalleryCollectionFlowLayout.m in Sources */,
+				F0E0E7FF1FABA48C004991D2 /* EmplesGalleryPresenter.m in Sources */,
+				F0E0E7DF1FABA48C004991D2 /* GenericGridViewSource.m in Sources */,
+				F0E0E8031FABA48C004991D2 /* EmplesGridViewCell.m in Sources */,
+				F0E0E8051FABA48C004991D2 /* EmplesGridModelDecorator.m in Sources */,
+				F0E0E8091FABA48C004991D2 /* EmplesListCellModel.m in Sources */,
+				F0E0E80E1FABA48C004991D2 /* EmplesListView.m in Sources */,
+				F0E0E8101FABA48C004991D2 /* EmplesMenuCellModel.m in Sources */,
+				F0E0E7D71FABA48C004991D2 /* DataAreaRequestClient.m in Sources */,
+				F0E0E7D81FABA48C004991D2 /* EmplesFSJsonReader.m in Sources */,
+				F0E0E7E21FABA48C004991D2 /* GenericTableViewSource.m in Sources */,
+				F0E0E7FA1FABA48C004991D2 /* EmplesDetailMapCellModel.m in Sources */,
+				F0E0E7ED1FABA48C004991D2 /* EmplesCarouselView.m in Sources */,
+				F0E0E7E81FABA48C004991D2 /* UIColor+Hex.m in Sources */,
+				F0E0E8081FABA48C004991D2 /* EmplesGridCollectionViewManager.m in Sources */,
+				F0E0E7F41FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.m in Sources */,
+				F0E0E7EE1FABA48C004991D2 /* EmplesItemView.m in Sources */,
+				F0E0E8171FABA48D004991D2 /* EmplesMenuView.m in Sources */,
+				F0E0E8161FABA48D004991D2 /* EmplesMenuRouter.m in Sources */,
+				F0E0E7E31FABA48C004991D2 /* EmplesProgressView.m in Sources */,
+				F0E0E7D11FABA48C004991D2 /* AppDelegate.m in Sources */,
+				F0E0E7F71FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.m in Sources */,
+				F0E0E7D91FABA48C004991D2 /* EmplesRecAreaJSONModel.m in Sources */,
+				F0E0E8061FABA48C004991D2 /* EmplesGridPresenter.m in Sources */,
+				F0E0E7D61FABA48C004991D2 /* DataLayerAssembly.m in Sources */,
+				F0E0E7D31FABA48C004991D2 /* EmplesAppearanceService.m in Sources */,
+				F0E0E8181FABA48D004991D2 /* EmplesMenuTableViewManager.m in Sources */,
+				F0E0E8111FABA48C004991D2 /* EmplesMenuViewCell.m in Sources */,
+				F0E0E81B1FABA48D004991D2 /* EmplesStackedView.m in Sources */,
+				F0E0E8191FABA48D004991D2 /* EmplesStackedViewAnimator.m in Sources */,
+				F0E0E8071FABA48C004991D2 /* EmplesGridView.m in Sources */,
+				F0E0E7E91FABA48C004991D2 /* EmplesCollectionsAssembly.m in Sources */,
+				F0E0E7F91FABA48C004991D2 /* EmplesDeatilMapViewCell.m in Sources */,
+				F0E0E7FD1FABA48C004991D2 /* EmplesDetailView.m in Sources */,
+				F0E0E7FC1FABA48C004991D2 /* EmplesDetailPresenter.m in Sources */,
+				F0E0E7EA1FABA48C004991D2 /* EmplesMenuAssembly.m in Sources */,
+				F0E0E7D21FABA48C004991D2 /* BaseAppDelegate.m in Sources */,
+				F0E0E80A1FABA48C004991D2 /* EmplesListCellView.m in Sources */,
+				F0E0E80D1FABA48C004991D2 /* EmplesListPresenter.m in Sources */,
+				F0E0E7DD1FABA48C004991D2 /* UIView+Reusable.m in Sources */,
+				F0E0E7E41FABA48C004991D2 /* ColorStrings.m in Sources */,
+				F0E0E81A1FABA48D004991D2 /* EmplesStackedPresenter.m in Sources */,
+				F0E0E7DB1FABA48C004991D2 /* UICollectionView+Reusable.m in Sources */,
+				F0E0E7F21FABA48C004991D2 /* EmplesItemRouter.m in Sources */,
+				F0E0E7E71FABA48C004991D2 /* NSString+Localizable.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F0E0E6F91FABA48C004991D2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0E0E6FA1FABA48C004991D2 /* de */,
+				F0E0E6FB1FABA48C004991D2 /* en */,
+				F0E0E6FC1FABA48C004991D2 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F0E0E7C81FABA48C004991D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0E0E7C91FABA48C004991D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0E0E6EE1FAB99C0004991D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F0E0E6EF1FAB99C0004991D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0E0E6F11FAB99C0004991D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 438DF27F6427A3F31F872037 /* Pods-emplesVIPER.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EB863BHDM;
+				GCC_PREFIX_HEADER = "emplesVIPER/Supporting files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/emplesVIPER/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascome.emplesVIPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0E0E6F21FAB99C0004991D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CE159D9352D29CC15A1AB67 /* Pods-emplesVIPER.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EB863BHDM;
+				GCC_PREFIX_HEADER = "emplesVIPER/Supporting files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/emplesVIPER/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascome.emplesVIPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0E0E6D51FAB99C0004991D2 /* Build configuration list for PBXProject "emplesVIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0E0E6EE1FAB99C0004991D2 /* Debug */,
+				F0E0E6EF1FAB99C0004991D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0E0E6F01FAB99C0004991D2 /* Build configuration list for PBXNativeTarget "emplesVIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0E0E6F11FAB99C0004991D2 /* Debug */,
+				F0E0E6F21FAB99C0004991D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0E0E6D21FAB99C0004991D2 /* Project object */;
+}
