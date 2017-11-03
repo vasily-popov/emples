@@ -444,19 +444,10 @@
 				F0E84DDB1FAA0319001027CB /* DataAreaRequestClient.h */,
 				F0E84DDC1FAA0319001027CB /* DataAreaRequestClient.m */,
 				F0E84DDE1FAA0319001027CB /* DataRequestProtocol.h */,
-				F0E84DDD1FAA0319001027CB /* DataBase */,
 				F0E84DDF1FAA0319001027CB /* Filesystem */,
-				F0E84DE51FAA0319001027CB /* Network */,
 				F0E84DE21FAA0319001027CB /* JSONModel */,
 			);
 			path = BusinessLogicLayer;
-			sourceTree = "<group>";
-		};
-		F0E84DDD1FAA0319001027CB /* DataBase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataBase;
 			sourceTree = "<group>";
 		};
 		F0E84DDF1FAA0319001027CB /* Filesystem */ = {
@@ -475,13 +466,6 @@
 				F0E84DE41FAA0319001027CB /* EmplesRecAreaJSONModel.m */,
 			);
 			path = JSONModel;
-			sourceTree = "<group>";
-		};
-		F0E84DE51FAA0319001027CB /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		F0E84DE61FAA0319001027CB /* Common */ = {
