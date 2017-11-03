@@ -11,9 +11,9 @@
 
 @implementation EmplesItemRouter
 
--(void)navigateToItemDetail:(EmplesRecAreaJSONModel*)item
+-(void)navigateToItemDetail:(EmplesRecreationArea*)item
 {
-    EmplesDetailView *vc = [self.collectionsAssembly detailViewForModel:item];
+    EmplesDetailView *vc = [self.collectionsAssembly detailViewArea:item];
     [self.viewController pushViewController:vc animated:YES];
 }
 

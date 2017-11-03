@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "EnumMenuSelectedItem.h"
-#import "DecoratorModelProtocol.h"
 
 @protocol EmplesMenuSelectProtocol
 
@@ -16,8 +15,10 @@
 
 @end
 
-@interface EmplesMenuModel : NSObject <DecoratorModelProtocol>
+@interface EmplesMenuModel : NSObject
 
 @property (nonatomic, weak) id<EmplesMenuSelectProtocol> delegate;
+
+-(NSArray*)buildSourceModel;
 
 @end

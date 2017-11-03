@@ -7,30 +7,42 @@
 //
 
 #import "DataLayerAssembly.h"
-#import "DataAreaRequestClient.h"
-#import "EmplesFSJsonReader.h"
+#import "DataFilePersistenceGateway.h"
+#import "JsonFileReader.h"
+#import "DisplayAreaCollectionUseCaseImplementation.h"
 
 @implementation DataLayerAssembly
 
-- (DataAreaRequestClient*)client
+- (DataFilePersistenceGateway*)gateway
 {
-    return [TyphoonDefinition withClass:[DataAreaRequestClient class]
+    return [TyphoonDefinition withClass:[DataFilePersistenceGateway class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition useInitializer:@selector(initWithFactory:) parameters:^(TyphoonMethod *initializer)
+                [definition useInitializer:@selector(initWithClient:) parameters:^(TyphoonMethod *initializer)
                  {
-                     [initializer injectParameterWith:[self dataRequestFactory]];
+                     [initializer injectParameterWith:[self fileReader]];
                  }];
-                definition.scope = TyphoonScopeLazySingleton;
+                definition.scope = TyphoonScopeSingleton;
             }];
 }
 
--(id<DataRequestProtocol>)dataRequestFactory
+- (id<DisplayAreaCollectionUseCase>)displayAreaCollectionUseCase
 {
-    return [TyphoonDefinition withClass:[EmplesFSJsonReader class]
+    return [TyphoonDefinition withClass:[DisplayAreaCollectionUseCaseImplementation class]
+                          configuration:^(TyphoonDefinition* definition)
+            {
+                [definition useInitializer:@selector(initWithGateway:) parameters:^(TyphoonMethod *initializer)
+                 {
+                     [initializer injectParameterWith:[self gateway]];
+                 }];
+            }];
+}
+
+-(id<FileReaderClientProtocol>)fileReader
+{
+    return [TyphoonDefinition withClass:[JsonFileReader class]
                           configuration:^(TyphoonDefinition *definition)
     {
-        definition.scope = TyphoonScopeLazySingleton;
     }];
     
 }

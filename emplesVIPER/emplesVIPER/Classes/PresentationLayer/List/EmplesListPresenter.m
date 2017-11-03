@@ -7,28 +7,33 @@
 //
 
 #import "EmplesListPresenter.h"
-#import "EmplesListModelDecorator.h"
-
-@interface EmplesListPresenter ()
-
-@property (nonatomic, strong) EmplesListModelDecorator *decorator;
-
-@end
+#import "EmplesListSourceBuilder.h"
+#import "EmplesListCellModel.h"
+#import "DataSourceItem.h"
 
 @implementation EmplesListPresenter
 
--(instancetype)initWithModel:(EmplesAreasModel*)model
+-(NSArray*) prepareCollectionArrayFromArray:(NSArray *)areas;
 {
-    self = [super initWithModel:model];
-    if(self)
+    NSArray *models = [EmplesListSourceBuilder buildSourceFromItems:areas];
+    
+    NSMutableArray *sourceArray = [NSMutableArray array];
+    __weak typeof(self) weakSelf = self;
+    for (id<ViewCellModelProtocol> model in models)
     {
-        self.decorator = [[EmplesListModelDecorator alloc] initWithModel:model];
+        DataSourceItem *row = [[DataSourceItem alloc] initWithCellModel:model];
+        row.rowHeight = 50;
+        row.selectAction = ^(id<ViewCellModelProtocol> cellModel)
+        {
+            __strong typeof(self) strongSelf = weakSelf;
+            if(strongSelf)
+            {
+                //[strongSelf selectedItem:cellModel.ponsoModel];
+            }
+        };
+        [sourceArray addObject:row];
     }
-    return self;
-}
--(NSArray*) prepareCollectionArray
-{
-    return self.decorator.dataSource;
+    return sourceArray;
 }
 
 @end

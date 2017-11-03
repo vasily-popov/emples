@@ -12,7 +12,7 @@
 
 @class ApplicationAssembly;
 @class DataLayerAssembly;
-@class EmplesRecAreaJSONModel;
+@class EmplesRecreationArea;
 @class EmplesDetailView;
 
 @interface EmplesCollectionsAssembly : TyphoonAssembly
@@ -21,6 +21,6 @@
 @property (nonatomic, strong, readonly) DataLayerAssembly *datalayerAssembly;
 
 - (UIViewController<EmplesCollectionViewProtocol> *)collectionViewFor:(NSNumber *)item;
-- (EmplesDetailView*)detailViewForModel:(EmplesRecAreaJSONModel*)model;
+- (EmplesDetailView*)detailViewArea:(EmplesRecreationArea*)area;
 
 @end

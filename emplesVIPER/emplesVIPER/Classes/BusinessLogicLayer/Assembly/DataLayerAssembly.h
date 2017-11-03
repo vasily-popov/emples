@@ -7,10 +7,11 @@
 //
 
 #import <Typhoon/Typhoon.h>
-@class DataAreaRequestClient;
+@class DataFilePersistenceGateway;
+@protocol DisplayAreaCollectionUseCase;
 
 @interface DataLayerAssembly : TyphoonAssembly
 
-- (DataAreaRequestClient*)client;
+- (id<DisplayAreaCollectionUseCase>)displayAreaCollectionUseCase;
 
 @end

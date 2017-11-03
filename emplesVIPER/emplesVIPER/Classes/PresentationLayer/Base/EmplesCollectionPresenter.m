@@ -7,54 +7,58 @@
 //
 
 #import "EmplesCollectionPresenter.h"
-@class EmplesRecAreaJSONModel;
+#import "EmplesRecreationArea.h"
 
-@interface EmplesCollectionPresenter () <EmplesAreasProtocolDelegate>
-
-@property (nonatomic, strong) EmplesAreasModel *model;
+@interface EmplesCollectionPresenter ()
 
 @end
 
 @implementation EmplesCollectionPresenter
 
--(instancetype)initWithModel:(EmplesAreasModel*)model
-{
-    self = [super init];
-    if (self) {
-        self.model = model;
-        self.model.delegate = self;
-    }
-    return self;
-}
 
 -(void)viewDidLoad
 {
     [self.view showProgressView];
-    [self.model fetchAreas];
+    __weak typeof(self) weakSelf = self;
+    [self.displayCollectionUseCase displayAreaCollection:^(NSArray<EmplesRecreationArea*> *areas,
+                                                           NSError *error)
+     {
+        __strong typeof(self) strongSelf = weakSelf;
+        if(strongSelf)
+        {
+            if(error)
+            {
+                [strongSelf showError:error];
+            }
+            else
+            {
+                [strongSelf displayAreas:areas];
+            }
+        }
+    }];
 }
 
--(NSArray*) prepareCollectionArray
-{
-    return nil;
-}
-
-#pragma mark - EmplesAreaProtocolDelegate
-
--(void)areasModel:(EmplesAreasModel*)model didFinishWithResponse:(id)response
-{
-    //response ignore here
-    NSArray *array = [self prepareCollectionArray];
-    [self.view updateCollectionItems:array];
-    [self.view hideProgressView];
-}
--(void)areasModel:(EmplesAreasModel*)model didFinishWithError:(NSError*)error
+-(void)showError:(NSError*)error
 {
     [self.view hideProgressView];
     [self.router showAlertWithTitle:@"Error" message:error.localizedDescription];
 }
 
+-(void)displayAreas:(NSArray<EmplesRecreationArea*> *)areas
+{
+    NSArray *array = [self prepareCollectionArrayFromArray:areas];
+    [self.view updateCollectionItems:array];
+    [self.view hideProgressView];
+}
 
--(void)selectedItem:(EmplesRecAreaJSONModel*)item
+#pragma mark - EmplesCollectionPresenterProtocol
+
+-(NSArray*) prepareCollectionArrayFromArray:(NSArray *)areas
+{
+    return areas;
+}
+
+-(void)selectedItem:(EmplesRecreationArea*)item
 {
     [self.router navigateToItemDetail:item];
 }

@@ -9,11 +9,11 @@
 #import "BaseRouter.h"
 #import "EmplesCollectionsAssembly.h"
 
-@class EmplesRecAreaJSONModel;
+@class EmplesRecreationArea;
 @interface EmplesItemRouter : BaseRouter
 
 @property (nonatomic, strong) EmplesCollectionsAssembly *collectionsAssembly;
 
--(void)navigateToItemDetail:(EmplesRecAreaJSONModel*)item;
+-(void)navigateToItemDetail:(EmplesRecreationArea*)item;
 
 @end

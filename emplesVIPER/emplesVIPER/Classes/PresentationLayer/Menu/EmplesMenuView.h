@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EmplesMenuModelDecorator.h"
 
 @class EmplesMenuPresenter;
 

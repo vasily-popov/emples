@@ -7,6 +7,7 @@
 //
 
 #import <JSONModel/JSONModel.h>
+@class EmplesRecreationArea;
 
 @interface EmplesRecAreaJSONModel : JSONModel
 
@@ -28,6 +29,7 @@
 @property (strong, nonatomic) NSString* imageURL;
 
 
+-(EmplesRecreationArea*)ponsoObject;
 
 @end
 

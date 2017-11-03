@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EmplesAreasModel.h"
 #import "EmplesCollectionViewProtocol.h"
 #import "EmplesItemRouter.h"
+#import "DisplayAreaCollectionUseCase.h"
 
+@class EmplesRecreationArea;
 @protocol EmplesCollectionPresenterProtocol
 
--(NSArray*) prepareCollectionArray;
--(instancetype)initWithModel:(EmplesAreasModel*)model;
+-(NSArray*) prepareCollectionArrayFromArray:(NSArray *)areas;
+-(void)selectedItem:(EmplesRecreationArea*)item;
 
 @end
 
@@ -22,6 +23,8 @@
 
 @property (nonatomic, weak) id<EmplesCollectionViewProtocol>view;
 @property (nonatomic, strong) EmplesItemRouter *router;
+
+@property (nonatomic, strong) id<DisplayAreaCollectionUseCase> displayCollectionUseCase;
 
 -(instancetype)init __unavailable;
 -(void)viewDidLoad;

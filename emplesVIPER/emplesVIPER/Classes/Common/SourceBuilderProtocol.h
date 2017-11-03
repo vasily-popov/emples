@@ -1,5 +1,5 @@
 //
-//  DecoratorModelProtocol.h
+//  SourceBuilderProtocol.h
 //  emplesMVC
 //
 //  Created by Vasily Popov on 10/30/17.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DecoratorModelProtocol <NSObject>
+@protocol SourceBuilderProtocol <NSObject>
 
-@property (nonatomic, strong, readonly) NSArray *dataSource;
++(NSArray*)buildSourceFromItems:(NSArray*)items;
 
 @end
 

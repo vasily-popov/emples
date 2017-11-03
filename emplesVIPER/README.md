@@ -15,7 +15,7 @@
 * It is usually referenced only by the `Presenter`
 
 
-##### Application Logic
+##### Business Logic
 
 * `UseCase / Interactor` - contains the application / business logic for a specific use case in your application
 * It is referenced by the `Presenter`. The `Presenter` can reference multiple `UseCases` since it's common to have multiple use cases on the same screen

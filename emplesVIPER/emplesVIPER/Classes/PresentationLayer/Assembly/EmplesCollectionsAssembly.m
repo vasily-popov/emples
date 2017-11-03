@@ -57,10 +57,7 @@
     return [TyphoonDefinition withClass:[EmplesGridPresenter class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition useInitializer:@selector(initWithModel:) parameters:^(TyphoonMethod *initializer)
-                 {
-                     [initializer injectParameterWith:[self collectionModel]];
-                 }];
+                [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
                 [definition injectProperty:@selector(view) with:[self gridView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
             }];
@@ -81,10 +78,7 @@
     return [TyphoonDefinition withClass:[EmplesStackedPresenter class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition useInitializer:@selector(initWithModel:) parameters:^(TyphoonMethod *initializer)
-                 {
-                     [initializer injectParameterWith:[self collectionModel]];
-                 }];
+                [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
                 [definition injectProperty:@selector(view) with:[self stackedView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
             }];
@@ -105,10 +99,7 @@
     return [TyphoonDefinition withClass:[EmplesGalleryPresenter class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition useInitializer:@selector(initWithModel:) parameters:^(TyphoonMethod *initializer)
-                 {
-                     [initializer injectParameterWith:[self collectionModel]];
-                 }];
+                [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
                 [definition injectProperty:@selector(view) with:[self galleryView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
             }];
@@ -129,10 +120,7 @@
     return [TyphoonDefinition withClass:[EmplesCarouselPresenter class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition useInitializer:@selector(initWithModel:) parameters:^(TyphoonMethod *initializer)
-                 {
-                     [initializer injectParameterWith:[self collectionModel]];
-                 }];
+                [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
                 [definition injectProperty:@selector(view) with:[self carouselView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
             }];
@@ -153,27 +141,9 @@
     return [TyphoonDefinition withClass:[EmplesListPresenter class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition useInitializer:@selector(initWithModel:) parameters:^(TyphoonMethod *initializer)
-                 {
-                     [initializer injectParameterWith:[self collectionModel]];
-                 }];
+                [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
                 [definition injectProperty:@selector(view) with:[self listView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
-            }];
-}
-
-
-
-- (EmplesAreasModel*)collectionModel
-{
-    return [TyphoonDefinition withClass:[EmplesAreasModel class]
-                          configuration:^(TyphoonDefinition* definition)
-            {
-                [definition useInitializer:@selector(initWithClient:) parameters:^(TyphoonMethod *initializer)
-                 {
-                     [initializer injectParameterWith:[self.datalayerAssembly client]];
-                 }];
-                definition.scope = TyphoonScopeWeakSingleton;
             }];
 }
 
@@ -193,17 +163,17 @@
             }];
 }
 
-- (EmplesDetailView*)detailViewForModel:(EmplesRecAreaJSONModel*)model
+- (EmplesDetailView*)detailViewArea:(EmplesRecreationArea*)area
 {
     return [TyphoonDefinition withClass:[EmplesDetailView class]
                           configuration:^(TyphoonDefinition* definition)
             {
                 [definition injectProperty:@selector(presenter)
-                                      with:[self detailPresenterWithModel:model]];
+                                      with:[self detailPresenterWithArea:area]];
             }];
 }
 
--(EmplesDetailPresenter*)detailPresenterWithModel:(EmplesRecAreaJSONModel*)model
+-(EmplesDetailPresenter*)detailPresenterWithArea:(EmplesRecreationArea*)area
 {
     return [TyphoonDefinition withClass:[EmplesDetailPresenter class]
                           configuration:^(TyphoonDefinition* definition)
@@ -211,14 +181,14 @@
                 [definition useInitializer:@selector(initWithModel:)
                                 parameters:^(TyphoonMethod *initializer)
                  {
-                     [initializer injectParameterWith:[self detailModelWith:model]];
+                     [initializer injectParameterWith:[self detailModelWith:area]];
                  }];
                 [definition injectProperty:@selector(view)
-                                      with:[self detailViewForModel:model]];
+                                      with:[self detailViewArea:area]];
             }];
 }
 
--(EmplesDetailAreaModel*)detailModelWith:(EmplesRecAreaJSONModel*)model
+-(EmplesDetailAreaModel*)detailModelWith:(EmplesRecreationArea*)area
 {
     return [TyphoonDefinition withClass:[EmplesDetailAreaModel class]
                           configuration:^(TyphoonDefinition* definition)
@@ -226,7 +196,7 @@
                 [definition useInitializer:@selector(initWithItem:)
                                 parameters:^(TyphoonMethod *initializer)
                  {
-                     [initializer injectParameterWith:model];
+                     [initializer injectParameterWith:area];
                  }];
             }];
 }

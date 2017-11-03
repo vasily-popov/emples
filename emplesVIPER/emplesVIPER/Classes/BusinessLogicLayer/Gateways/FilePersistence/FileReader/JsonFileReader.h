@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataRequestProtocol.h"
+#import "FileReaderClientProtocol.h"
 
-@interface EmplesFSJsonReader : NSObject <DataRequestProtocol>
+@interface JsonFileReader : NSObject <FileReaderClientProtocol>
 
 @end

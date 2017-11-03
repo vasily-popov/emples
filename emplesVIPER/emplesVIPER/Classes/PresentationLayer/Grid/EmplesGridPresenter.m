@@ -7,28 +7,36 @@
 //
 
 #import "EmplesGridPresenter.h"
-#import "EmplesGridModelDecorator.h"
+#import "EmplesGridSourceBuilder.h"
+#import "DataGridSourceItem.h"
 
 @interface EmplesGridPresenter ()
-
-@property (nonatomic, strong) EmplesGridModelDecorator *decorator;
 
 @end
 
 @implementation EmplesGridPresenter
 
--(instancetype)initWithModel:(EmplesAreasModel*)model
+
+-(NSArray*) prepareCollectionArrayFromArray:(NSArray *)areas;
 {
-    self = [super initWithModel:model];
-    if(self)
+    NSArray *models = [EmplesGridSourceBuilder buildSourceFromItems:areas];
+    
+    NSMutableArray *sourceArray = [NSMutableArray array];
+    __weak typeof(self) weakSelf = self;
+    for (id<ViewCellModelProtocol> model in models)
     {
-        self.decorator = [[EmplesGridModelDecorator alloc] initWithModel:model];
+        DataGridSourceItem *row = [[DataGridSourceItem alloc] initWithCellModel:model];
+        row.selectAction = ^(id<ViewCellModelProtocol> cellModel)
+        {
+            __strong typeof(self) strongSelf = weakSelf;
+            if(strongSelf)
+            {
+                //[strongSelf selectedItem:cellModel.ponsoModel];
+            }
+        };
+        [sourceArray addObject:row];
     }
-    return self;
-}
--(NSArray*) prepareCollectionArray
-{
-    return self.decorator.dataSource;
+    return sourceArray;
 }
 
 @end

@@ -10,9 +10,13 @@
 #import "LocalizedStrings.h"
 #import "NSString+Localizable.h"
 
+#import "EmplesMenuCellModel.h"
+#import "DataSourceItem.h"
+#import "EnumMenuSelectedItem.h"
+
 @interface EmplesMenuModel()
 
-@property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, strong) NSArray *source;
 
 @end
 
@@ -31,7 +35,7 @@
 
 -(void)initializeModel
 {
-    self.dataSource = [NSArray arrayWithObjects:
+    self.source = [NSArray arrayWithObjects:
                        [kListString localizedString],
                        [kGridString localizedString],
                        [kStackString localizedString],
@@ -40,6 +44,30 @@
                        nil];
 }
 
+-(NSArray*)buildSourceModel
+{
+    __weak typeof(self) weakSelf = self;
+    NSMutableArray *sourseItems = [NSMutableArray arrayWithCapacity:self.source.count];
+    for (int index = 0; index < self.source.count; index ++)
+    {
+        NSString *item = self.source[index];
+        EmplesMenuCellModel *model = [EmplesMenuCellModel new];
+        model.text = item;
+        DataSourceItem *row = [[DataSourceItem alloc] initWithCellModel:model];
+        row.rowHeight = 50;
+        row.selectAction = ^(EmplesMenuCellModel *cellModel)
+        {
+            __strong typeof(self) strongSelf = weakSelf;
+            if(strongSelf.delegate)
+            {
+                EnumMenuSelectedItem selectedIndex = index;
+                [strongSelf.delegate selectedItem:selectedIndex];
+            }
+        };
+        [sourseItems addObject:row];
+    }
+    return sourseItems;
+}
 
 
 @end

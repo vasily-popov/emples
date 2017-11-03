@@ -7,7 +7,7 @@
 //
 
 #import "EmplesDetailAreaModel.h"
-#import "EmplesRecAreaJSONModel.h"
+#import "EmplesRecreationArea.h"
 #import "EmplesDetailDirectionsCellModel.h"
 #import "EmplesDetailMapCellModel.h"
 #import "EmplesDetailDescriptionCellModel.h"
@@ -15,18 +15,18 @@
 
 @interface EmplesDetailAreaModel()
 
-@property (nonatomic, strong) EmplesRecAreaJSONModel* model;
+@property (nonatomic, strong) EmplesRecreationArea* area;
 @property (nonatomic, strong) NSArray* dataSource;
 @end
 
 @implementation EmplesDetailAreaModel
 
-- (instancetype)initWithItem:(EmplesRecAreaJSONModel*)model
+- (instancetype)initWithItem:(EmplesRecreationArea*)area
 {
     self = [super init];
     if (self)
     {
-        self.model = model;
+        self.area = area;
         [self createDataSource];
     }
     return self;
@@ -39,7 +39,7 @@
 
 -(NSString*)titleName
 {
-    return self.model.RecAreaName;
+    return self.area.areaName;
 }
 
 -(void)createDataSource
@@ -48,7 +48,7 @@
     NSMutableArray *array = [NSMutableArray array];
     
     {
-        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(self.model.RecAreaLatitude, self.model.RecAreaLongitude);
+        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(self.area.latitude, self.area.longitude);
         EmplesDetailMapCellModel *item = [EmplesDetailMapCellModel new];
         item.coordinate = coordinate;
         DataSourceItem *row = [[DataSourceItem alloc] initWithCellModel:item];
@@ -56,20 +56,20 @@
         [array addObject:row];
     }
     
-    if(self.model.RecAreaDescription.length)
+    if(self.area.areaDescription.length)
     {
         EmplesDetailDescriptionCellModel *item = [EmplesDetailDescriptionCellModel new];
-        item.descriptionText = self.model.RecAreaDescription;
-        item.imageURL = self.model.imageURL;
+        item.descriptionText = self.area.areaDescription;
+        item.imageURL = self.area.imageURL;
         DataSourceItem *row = [[DataSourceItem alloc] initWithCellModel:item];
         row.rowHeight = UITableViewAutomaticDimension;
         [array addObject:row];
     }
     
-    if(self.model.RecAreaDirections.length)
+    if(self.area.areaDirections.length)
     {
         EmplesDetailDirectionsCellModel *item = [EmplesDetailDirectionsCellModel new];
-        item.directionText = self.model.RecAreaDirections;
+        item.directionText = self.area.areaDirections;
         DataSourceItem *row = [[DataSourceItem alloc] initWithCellModel:item];
         row.rowHeight = UITableViewAutomaticDimension;
         [array addObject:row];

@@ -6,22 +6,22 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import "DataAreaRequestClient.h"
+#import "DataFilePersistenceGateway.h"
 #import "EmplesRecAreaJSONModel.h"
 
-@interface DataAreaRequestClient()
+@interface DataFilePersistenceGateway()
 
-@property (nonatomic, strong) id<DataRequestProtocol> factory;
+@property (nonatomic, strong) id<FileReaderClientProtocol> readerClient;
 
 @end
 
-@implementation DataAreaRequestClient
+@implementation DataFilePersistenceGateway
 
--(instancetype)initWithFactory:(id<DataRequestProtocol>)factory
+-(instancetype)initWithClient:(id<FileReaderClientProtocol>)readerClient
 {
     self = [super init];
     if (self) {
-        self.factory = factory;
+        self.readerClient = readerClient;
     }
     return self;
 }
@@ -29,7 +29,7 @@
 -(void) fetchAllAreas:(ContentResponseBlock)block
 {
     __weak typeof(self) weakSelf = self;
-    [self.factory doRequestToFetchAllAreaWithResponseBlock:^(id response, NSError *error)
+    [self.readerClient readAllArea:^(id response, NSError *error)
     {
         __strong typeof(self) strongSelf = weakSelf;
         if(strongSelf)
@@ -47,27 +47,6 @@
         }
     }];
 }
-
--(void) fetchAllAreaAddresses
-{
-    __weak typeof(self) weakSelf = self;
-    [self.factory doRequestToFetchAllAddressWithResponseBlock:^(id response, NSError *error)
-     {
-         __strong typeof(self) strongSelf = weakSelf;
-         if(strongSelf)
-         {
-             if(!error)
-             {
-                 //NSError *parseError = nil;
-             }
-             else
-             {
-                 
-             }
-         }
-     }];
-}
-
 
 -(NSArray* ) parseAreaResponse:(id)response error:(NSError**)error
 {

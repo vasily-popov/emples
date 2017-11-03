@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DecoratorModelProtocol.h"
 
-@class EmplesRecAreaJSONModel;
-@interface EmplesDetailAreaModel : NSObject <DecoratorModelProtocol>
+@class EmplesRecreationArea;
+@interface EmplesDetailAreaModel : NSObject
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithItem:(EmplesRecAreaJSONModel*)model NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithItem:(EmplesRecreationArea*)area NS_DESIGNATED_INITIALIZER;
 
 - (NSString*)titleName;
+- (NSArray*)dataSource;
 
 @end

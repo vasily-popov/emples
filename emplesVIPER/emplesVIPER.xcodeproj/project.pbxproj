@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC0509DA0673E9DBCD21F8E6 /* libPods-emplesVIPER.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */; };
+		F0B886C71FAC5F880016C1CD /* EmplesRecreationArea.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B886C61FAC5F880016C1CD /* EmplesRecreationArea.m */; };
 		F0E0E7CD1FABA48C004991D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F41FABA48C004991D2 /* Assets.xcassets */; };
 		F0E0E7CE1FABA48C004991D2 /* RecArea.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F61FABA48C004991D2 /* RecArea.json */; };
 		F0E0E7CF1FABA48C004991D2 /* RecAreaAddress.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F71FABA48C004991D2 /* RecAreaAddress.json */; };
@@ -18,8 +19,8 @@
 		F0E0E7D41FABA48C004991D2 /* ApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7081FABA48C004991D2 /* ApplicationAssembly.m */; };
 		F0E0E7D51FABA48C004991D2 /* EmplesNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E70B1FABA48C004991D2 /* EmplesNavigationController.m */; };
 		F0E0E7D61FABA48C004991D2 /* DataLayerAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E70F1FABA48C004991D2 /* DataLayerAssembly.m */; };
-		F0E0E7D71FABA48C004991D2 /* DataAreaRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7111FABA48C004991D2 /* DataAreaRequestClient.m */; };
-		F0E0E7D81FABA48C004991D2 /* EmplesFSJsonReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7161FABA48C004991D2 /* EmplesFSJsonReader.m */; };
+		F0E0E7D71FABA48C004991D2 /* DataFilePersistenceGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7111FABA48C004991D2 /* DataFilePersistenceGateway.m */; };
+		F0E0E7D81FABA48C004991D2 /* JsonFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7161FABA48C004991D2 /* JsonFileReader.m */; };
 		F0E0E7D91FABA48C004991D2 /* EmplesRecAreaJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7191FABA48C004991D2 /* EmplesRecAreaJSONModel.m */; };
 		F0E0E7DA1FABA48C004991D2 /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E71E1FABA48C004991D2 /* BaseRouter.m */; };
 		F0E0E7DB1FABA48C004991D2 /* UICollectionView+Reusable.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7231FABA48C004991D2 /* UICollectionView+Reusable.m */; };
@@ -43,7 +44,6 @@
 		F0E0E7ED1FABA48C004991D2 /* EmplesCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7521FABA48C004991D2 /* EmplesCarouselView.m */; };
 		F0E0E7EE1FABA48C004991D2 /* EmplesItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7551FABA48C004991D2 /* EmplesItemView.m */; };
 		F0E0E7EF1FABA48C004991D2 /* EmplesItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7561FABA48C004991D2 /* EmplesItemView.xib */; };
-		F0E0E7F01FABA48C004991D2 /* EmplesAreasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7591FABA48C004991D2 /* EmplesAreasModel.m */; };
 		F0E0E7F11FABA48C004991D2 /* EmplesCollectionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E75B1FABA48C004991D2 /* EmplesCollectionPresenter.m */; };
 		F0E0E7F21FABA48C004991D2 /* EmplesItemRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E75E1FABA48C004991D2 /* EmplesItemRouter.m */; };
 		F0E0E7F31FABA48C004991D2 /* EmplesDetailDescriptionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7631FABA48C004991D2 /* EmplesDetailDescriptionCellModel.m */; };
@@ -64,21 +64,20 @@
 		F0E0E8021FABA48C004991D2 /* EmplesGridCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7861FABA48C004991D2 /* EmplesGridCellModel.m */; };
 		F0E0E8031FABA48C004991D2 /* EmplesGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7881FABA48C004991D2 /* EmplesGridViewCell.m */; };
 		F0E0E8041FABA48C004991D2 /* EmplesGridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7891FABA48C004991D2 /* EmplesGridViewCell.xib */; };
-		F0E0E8051FABA48C004991D2 /* EmplesGridModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E78C1FABA48C004991D2 /* EmplesGridModelDecorator.m */; };
+		F0E0E8051FABA48C004991D2 /* EmplesGridSourceBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E78C1FABA48C004991D2 /* EmplesGridSourceBuilder.m */; };
 		F0E0E8061FABA48C004991D2 /* EmplesGridPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E78E1FABA48C004991D2 /* EmplesGridPresenter.m */; };
 		F0E0E8071FABA48C004991D2 /* EmplesGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7901FABA48C004991D2 /* EmplesGridView.m */; };
 		F0E0E8081FABA48C004991D2 /* EmplesGridCollectionViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7931FABA48C004991D2 /* EmplesGridCollectionViewManager.m */; };
 		F0E0E8091FABA48C004991D2 /* EmplesListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7971FABA48C004991D2 /* EmplesListCellModel.m */; };
 		F0E0E80A1FABA48C004991D2 /* EmplesListCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7991FABA48C004991D2 /* EmplesListCellView.m */; };
 		F0E0E80B1FABA48C004991D2 /* EmplesListCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E79A1FABA48C004991D2 /* EmplesListCellView.xib */; };
-		F0E0E80C1FABA48C004991D2 /* EmplesListModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E79D1FABA48C004991D2 /* EmplesListModelDecorator.m */; };
+		F0E0E80C1FABA48C004991D2 /* EmplesListSourceBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E79D1FABA48C004991D2 /* EmplesListSourceBuilder.m */; };
 		F0E0E80D1FABA48C004991D2 /* EmplesListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E79F1FABA48C004991D2 /* EmplesListPresenter.m */; };
 		F0E0E80E1FABA48C004991D2 /* EmplesListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7A11FABA48C004991D2 /* EmplesListView.m */; };
 		F0E0E80F1FABA48C004991D2 /* EmplesListTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7A41FABA48C004991D2 /* EmplesListTableViewManager.m */; };
 		F0E0E8101FABA48C004991D2 /* EmplesMenuCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7A81FABA48C004991D2 /* EmplesMenuCellModel.m */; };
 		F0E0E8111FABA48C004991D2 /* EmplesMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7AA1FABA48C004991D2 /* EmplesMenuViewCell.m */; };
 		F0E0E8121FABA48C004991D2 /* EmplesMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7AB1FABA48C004991D2 /* EmplesMenuViewCell.xib */; };
-		F0E0E8131FABA48C004991D2 /* EmplesMenuModelDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7AE1FABA48C004991D2 /* EmplesMenuModelDecorator.m */; };
 		F0E0E8141FABA48D004991D2 /* EmplesMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7B01FABA48C004991D2 /* EmplesMenuModel.m */; };
 		F0E0E8151FABA48D004991D2 /* EmplesMenuPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7B21FABA48C004991D2 /* EmplesMenuPresenter.m */; };
 		F0E0E8161FABA48D004991D2 /* EmplesMenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7B41FABA48C004991D2 /* EmplesMenuRouter.m */; };
@@ -92,12 +91,17 @@
 		F0E0E81E1FABA48D004991D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7C81FABA48C004991D2 /* LaunchScreen.storyboard */; };
 		F0E0E8201FABA48D004991D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7CB1FABA48C004991D2 /* main.m */; };
 		F0E0E8221FAC4783004991D2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E8211FAC4783004991D2 /* README.md */; };
+		F0E0E8261FAC4E2F004991D2 /* DisplayAreaCollectionUseCaseImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E8251FAC4E2F004991D2 /* DisplayAreaCollectionUseCaseImplementation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		438DF27F6427A3F31F872037 /* Pods-emplesVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emplesVIPER.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE159D9352D29CC15A1AB67 /* Pods-emplesVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER.release.xcconfig"; sourceTree = "<group>"; };
+		F0B886C11FAC57480016C1CD /* DataAreaGatewayProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataAreaGatewayProtocol.h; sourceTree = "<group>"; };
+		F0B886C51FAC5F880016C1CD /* EmplesRecreationArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesRecreationArea.h; sourceTree = "<group>"; };
+		F0B886C61FAC5F880016C1CD /* EmplesRecreationArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesRecreationArea.m; sourceTree = "<group>"; };
+		F0B886C91FAC6BBA0016C1CD /* DisplayAreaCollectionUseCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayAreaCollectionUseCase.h; sourceTree = "<group>"; };
 		F0E0E6DA1FAB99C0004991D2 /* emplesVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emplesVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E0E6F41FABA48C004991D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0E0E6F61FABA48C004991D2 /* RecArea.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecArea.json; sourceTree = "<group>"; };
@@ -117,16 +121,16 @@
 		F0E0E70B1FABA48C004991D2 /* EmplesNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesNavigationController.m; sourceTree = "<group>"; };
 		F0E0E70E1FABA48C004991D2 /* DataLayerAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayerAssembly.h; sourceTree = "<group>"; };
 		F0E0E70F1FABA48C004991D2 /* DataLayerAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerAssembly.m; sourceTree = "<group>"; };
-		F0E0E7101FABA48C004991D2 /* DataAreaRequestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAreaRequestClient.h; sourceTree = "<group>"; };
-		F0E0E7111FABA48C004991D2 /* DataAreaRequestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAreaRequestClient.m; sourceTree = "<group>"; };
-		F0E0E7131FABA48C004991D2 /* DataRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestProtocol.h; sourceTree = "<group>"; };
-		F0E0E7151FABA48C004991D2 /* EmplesFSJsonReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesFSJsonReader.h; sourceTree = "<group>"; };
-		F0E0E7161FABA48C004991D2 /* EmplesFSJsonReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesFSJsonReader.m; sourceTree = "<group>"; };
+		F0E0E7101FABA48C004991D2 /* DataFilePersistenceGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFilePersistenceGateway.h; sourceTree = "<group>"; };
+		F0E0E7111FABA48C004991D2 /* DataFilePersistenceGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFilePersistenceGateway.m; sourceTree = "<group>"; };
+		F0E0E7131FABA48C004991D2 /* FileReaderClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReaderClientProtocol.h; sourceTree = "<group>"; };
+		F0E0E7151FABA48C004991D2 /* JsonFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonFileReader.h; sourceTree = "<group>"; };
+		F0E0E7161FABA48C004991D2 /* JsonFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonFileReader.m; sourceTree = "<group>"; };
 		F0E0E7181FABA48C004991D2 /* EmplesRecAreaJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesRecAreaJSONModel.h; sourceTree = "<group>"; };
 		F0E0E7191FABA48C004991D2 /* EmplesRecAreaJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesRecAreaJSONModel.m; sourceTree = "<group>"; };
 		F0E0E71D1FABA48C004991D2 /* BaseRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRouter.h; sourceTree = "<group>"; };
 		F0E0E71E1FABA48C004991D2 /* BaseRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRouter.m; sourceTree = "<group>"; };
-		F0E0E71F1FABA48C004991D2 /* DecoratorModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoratorModelProtocol.h; sourceTree = "<group>"; };
+		F0E0E71F1FABA48C004991D2 /* SourceBuilderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceBuilderProtocol.h; sourceTree = "<group>"; };
 		F0E0E7211FABA48C004991D2 /* ReusableViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableViewProtocol.h; sourceTree = "<group>"; };
 		F0E0E7221FABA48C004991D2 /* UICollectionView+Reusable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Reusable.h"; sourceTree = "<group>"; };
 		F0E0E7231FABA48C004991D2 /* UICollectionView+Reusable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Reusable.m"; sourceTree = "<group>"; };
@@ -171,8 +175,6 @@
 		F0E0E7541FABA48C004991D2 /* EmplesItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesItemView.h; sourceTree = "<group>"; };
 		F0E0E7551FABA48C004991D2 /* EmplesItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesItemView.m; sourceTree = "<group>"; };
 		F0E0E7561FABA48C004991D2 /* EmplesItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesItemView.xib; sourceTree = "<group>"; };
-		F0E0E7581FABA48C004991D2 /* EmplesAreasModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesAreasModel.h; sourceTree = "<group>"; };
-		F0E0E7591FABA48C004991D2 /* EmplesAreasModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesAreasModel.m; sourceTree = "<group>"; };
 		F0E0E75A1FABA48C004991D2 /* EmplesCollectionPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionPresenter.h; sourceTree = "<group>"; };
 		F0E0E75B1FABA48C004991D2 /* EmplesCollectionPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCollectionPresenter.m; sourceTree = "<group>"; };
 		F0E0E75C1FABA48C004991D2 /* EmplesCollectionViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionViewProtocol.h; sourceTree = "<group>"; };
@@ -211,8 +213,8 @@
 		F0E0E7871FABA48C004991D2 /* EmplesGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridViewCell.h; sourceTree = "<group>"; };
 		F0E0E7881FABA48C004991D2 /* EmplesGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridViewCell.m; sourceTree = "<group>"; };
 		F0E0E7891FABA48C004991D2 /* EmplesGridViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesGridViewCell.xib; sourceTree = "<group>"; };
-		F0E0E78B1FABA48C004991D2 /* EmplesGridModelDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridModelDecorator.h; sourceTree = "<group>"; };
-		F0E0E78C1FABA48C004991D2 /* EmplesGridModelDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridModelDecorator.m; sourceTree = "<group>"; };
+		F0E0E78B1FABA48C004991D2 /* EmplesGridSourceBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridSourceBuilder.h; sourceTree = "<group>"; };
+		F0E0E78C1FABA48C004991D2 /* EmplesGridSourceBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridSourceBuilder.m; sourceTree = "<group>"; };
 		F0E0E78D1FABA48C004991D2 /* EmplesGridPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridPresenter.h; sourceTree = "<group>"; };
 		F0E0E78E1FABA48C004991D2 /* EmplesGridPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridPresenter.m; sourceTree = "<group>"; };
 		F0E0E78F1FABA48C004991D2 /* EmplesGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridView.h; sourceTree = "<group>"; };
@@ -224,8 +226,8 @@
 		F0E0E7981FABA48C004991D2 /* EmplesListCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListCellView.h; sourceTree = "<group>"; };
 		F0E0E7991FABA48C004991D2 /* EmplesListCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListCellView.m; sourceTree = "<group>"; };
 		F0E0E79A1FABA48C004991D2 /* EmplesListCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesListCellView.xib; sourceTree = "<group>"; };
-		F0E0E79C1FABA48C004991D2 /* EmplesListModelDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListModelDecorator.h; sourceTree = "<group>"; };
-		F0E0E79D1FABA48C004991D2 /* EmplesListModelDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListModelDecorator.m; sourceTree = "<group>"; };
+		F0E0E79C1FABA48C004991D2 /* EmplesListSourceBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListSourceBuilder.h; sourceTree = "<group>"; };
+		F0E0E79D1FABA48C004991D2 /* EmplesListSourceBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListSourceBuilder.m; sourceTree = "<group>"; };
 		F0E0E79E1FABA48C004991D2 /* EmplesListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListPresenter.h; sourceTree = "<group>"; };
 		F0E0E79F1FABA48C004991D2 /* EmplesListPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListPresenter.m; sourceTree = "<group>"; };
 		F0E0E7A01FABA48C004991D2 /* EmplesListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListView.h; sourceTree = "<group>"; };
@@ -237,8 +239,6 @@
 		F0E0E7A91FABA48C004991D2 /* EmplesMenuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuViewCell.h; sourceTree = "<group>"; };
 		F0E0E7AA1FABA48C004991D2 /* EmplesMenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuViewCell.m; sourceTree = "<group>"; };
 		F0E0E7AB1FABA48C004991D2 /* EmplesMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesMenuViewCell.xib; sourceTree = "<group>"; };
-		F0E0E7AD1FABA48C004991D2 /* EmplesMenuModelDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuModelDecorator.h; sourceTree = "<group>"; };
-		F0E0E7AE1FABA48C004991D2 /* EmplesMenuModelDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuModelDecorator.m; sourceTree = "<group>"; };
 		F0E0E7AF1FABA48C004991D2 /* EmplesMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuModel.h; sourceTree = "<group>"; };
 		F0E0E7B01FABA48C004991D2 /* EmplesMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuModel.m; sourceTree = "<group>"; };
 		F0E0E7B11FABA48C004991D2 /* EmplesMenuPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuPresenter.h; sourceTree = "<group>"; };
@@ -264,6 +264,8 @@
 		F0E0E7CB1FABA48C004991D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0E0E7CC1FABA48C004991D2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F0E0E8211FAC4783004991D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0E0E8241FAC4E2F004991D2 /* DisplayAreaCollectionUseCaseImplementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayAreaCollectionUseCaseImplementation.h; sourceTree = "<group>"; };
+		F0E0E8251FAC4E2F004991D2 /* DisplayAreaCollectionUseCaseImplementation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayAreaCollectionUseCaseImplementation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,35 @@
 				5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0B886C21FAC581D0016C1CD /* FilePersistence */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7141FABA48C004991D2 /* FileReader */,
+				F0E0E7101FABA48C004991D2 /* DataFilePersistenceGateway.h */,
+				F0E0E7111FABA48C004991D2 /* DataFilePersistenceGateway.m */,
+			);
+			path = FilePersistence;
+			sourceTree = "<group>";
+		};
+		F0B886C41FAC5F220016C1CD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F0B886C51FAC5F880016C1CD /* EmplesRecreationArea.h */,
+				F0B886C61FAC5F880016C1CD /* EmplesRecreationArea.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F0B886C81FAC5FBF0016C1CD /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7171FABA48C004991D2 /* JSONModel */,
+				F0B886C21FAC581D0016C1CD /* FilePersistence */,
+				F0E0E8271FAC52BF004991D2 /* GatewayProtocol */,
+			);
+			path = Gateways;
 			sourceTree = "<group>";
 		};
 		F0E0E6D11FAB99C0004991D2 = {
@@ -409,11 +440,9 @@
 			isa = PBXGroup;
 			children = (
 				F0E0E70D1FABA48C004991D2 /* Assembly */,
-				F0E0E7101FABA48C004991D2 /* DataAreaRequestClient.h */,
-				F0E0E7111FABA48C004991D2 /* DataAreaRequestClient.m */,
-				F0E0E7131FABA48C004991D2 /* DataRequestProtocol.h */,
-				F0E0E7141FABA48C004991D2 /* Filesystem */,
-				F0E0E7171FABA48C004991D2 /* JSONModel */,
+				F0E0E8231FAC4DFC004991D2 /* UseCase */,
+				F0B886C81FAC5FBF0016C1CD /* Gateways */,
+				F0B886C41FAC5F220016C1CD /* Entity */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -427,13 +456,14 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		F0E0E7141FABA48C004991D2 /* Filesystem */ = {
+		F0E0E7141FABA48C004991D2 /* FileReader */ = {
 			isa = PBXGroup;
 			children = (
-				F0E0E7151FABA48C004991D2 /* EmplesFSJsonReader.h */,
-				F0E0E7161FABA48C004991D2 /* EmplesFSJsonReader.m */,
+				F0E0E7131FABA48C004991D2 /* FileReaderClientProtocol.h */,
+				F0E0E7151FABA48C004991D2 /* JsonFileReader.h */,
+				F0E0E7161FABA48C004991D2 /* JsonFileReader.m */,
 			);
-			path = Filesystem;
+			path = FileReader;
 			sourceTree = "<group>";
 		};
 		F0E0E7171FABA48C004991D2 /* JSONModel */ = {
@@ -449,7 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				F0E0E71C1FABA48C004991D2 /* BaseRouter */,
-				F0E0E71F1FABA48C004991D2 /* DecoratorModelProtocol.h */,
+				F0E0E71F1FABA48C004991D2 /* SourceBuilderProtocol.h */,
 				F0E0E7201FABA48C004991D2 /* Extensions */,
 				F0E0E7281FABA48C004991D2 /* GenericCollectionSource */,
 				F0E0E72D1FABA48C004991D2 /* GenericTableSource */,
@@ -602,8 +632,6 @@
 		F0E0E7571FABA48C004991D2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F0E0E7581FABA48C004991D2 /* EmplesAreasModel.h */,
-				F0E0E7591FABA48C004991D2 /* EmplesAreasModel.m */,
 				F0E0E75A1FABA48C004991D2 /* EmplesCollectionPresenter.h */,
 				F0E0E75B1FABA48C004991D2 /* EmplesCollectionPresenter.m */,
 				F0E0E75C1FABA48C004991D2 /* EmplesCollectionViewProtocol.h */,
@@ -707,7 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				F0E0E7841FABA48C004991D2 /* Cell */,
-				F0E0E78A1FABA48C004991D2 /* Decorator */,
+				F0E0E78A1FABA48C004991D2 /* SourceBuilder */,
 				F0E0E78D1FABA48C004991D2 /* EmplesGridPresenter.h */,
 				F0E0E78E1FABA48C004991D2 /* EmplesGridPresenter.m */,
 				F0E0E78F1FABA48C004991D2 /* EmplesGridView.h */,
@@ -729,13 +757,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		F0E0E78A1FABA48C004991D2 /* Decorator */ = {
+		F0E0E78A1FABA48C004991D2 /* SourceBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				F0E0E78B1FABA48C004991D2 /* EmplesGridModelDecorator.h */,
-				F0E0E78C1FABA48C004991D2 /* EmplesGridModelDecorator.m */,
+				F0E0E78B1FABA48C004991D2 /* EmplesGridSourceBuilder.h */,
+				F0E0E78C1FABA48C004991D2 /* EmplesGridSourceBuilder.m */,
 			);
-			path = Decorator;
+			path = SourceBuilder;
 			sourceTree = "<group>";
 		};
 		F0E0E7911FABA48C004991D2 /* GridManager */ = {
@@ -751,7 +779,7 @@
 			isa = PBXGroup;
 			children = (
 				F0E0E7951FABA48C004991D2 /* Cell */,
-				F0E0E79B1FABA48C004991D2 /* Decorator */,
+				F0E0E79B1FABA48C004991D2 /* SourceBuilder */,
 				F0E0E79E1FABA48C004991D2 /* EmplesListPresenter.h */,
 				F0E0E79F1FABA48C004991D2 /* EmplesListPresenter.m */,
 				F0E0E7A01FABA48C004991D2 /* EmplesListView.h */,
@@ -773,13 +801,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		F0E0E79B1FABA48C004991D2 /* Decorator */ = {
+		F0E0E79B1FABA48C004991D2 /* SourceBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				F0E0E79C1FABA48C004991D2 /* EmplesListModelDecorator.h */,
-				F0E0E79D1FABA48C004991D2 /* EmplesListModelDecorator.m */,
+				F0E0E79C1FABA48C004991D2 /* EmplesListSourceBuilder.h */,
+				F0E0E79D1FABA48C004991D2 /* EmplesListSourceBuilder.m */,
 			);
-			path = Decorator;
+			path = SourceBuilder;
 			sourceTree = "<group>";
 		};
 		F0E0E7A21FABA48C004991D2 /* TableManager */ = {
@@ -795,7 +823,6 @@
 			isa = PBXGroup;
 			children = (
 				F0E0E7A61FABA48C004991D2 /* Cell */,
-				F0E0E7AC1FABA48C004991D2 /* Decorator */,
 				F0E0E7AF1FABA48C004991D2 /* EmplesMenuModel.h */,
 				F0E0E7B01FABA48C004991D2 /* EmplesMenuModel.m */,
 				F0E0E7B11FABA48C004991D2 /* EmplesMenuPresenter.h */,
@@ -820,15 +847,6 @@
 				F0E0E7AB1FABA48C004991D2 /* EmplesMenuViewCell.xib */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		F0E0E7AC1FABA48C004991D2 /* Decorator */ = {
-			isa = PBXGroup;
-			children = (
-				F0E0E7AD1FABA48C004991D2 /* EmplesMenuModelDecorator.h */,
-				F0E0E7AE1FABA48C004991D2 /* EmplesMenuModelDecorator.m */,
-			);
-			path = Decorator;
 			sourceTree = "<group>";
 		};
 		F0E0E7B81FABA48C004991D2 /* TableManager */ = {
@@ -881,6 +899,24 @@
 				F0E0E7CC1FABA48C004991D2 /* PrefixHeader.pch */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		F0E0E8231FAC4DFC004991D2 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F0B886C91FAC6BBA0016C1CD /* DisplayAreaCollectionUseCase.h */,
+				F0E0E8241FAC4E2F004991D2 /* DisplayAreaCollectionUseCaseImplementation.h */,
+				F0E0E8251FAC4E2F004991D2 /* DisplayAreaCollectionUseCaseImplementation.m */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F0E0E8271FAC52BF004991D2 /* GatewayProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				F0B886C11FAC57480016C1CD /* DataAreaGatewayProtocol.h */,
+			);
+			path = GatewayProtocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1025,11 +1061,11 @@
 			files = (
 				F0E0E7F11FABA48C004991D2 /* EmplesCollectionPresenter.m in Sources */,
 				F0E0E80F1FABA48C004991D2 /* EmplesListTableViewManager.m in Sources */,
+				F0E0E8261FAC4E2F004991D2 /* DisplayAreaCollectionUseCaseImplementation.m in Sources */,
 				F0E0E7DC1FABA48C004991D2 /* UITableView+Reusable.m in Sources */,
 				F0E0E8201FABA48D004991D2 /* main.m in Sources */,
 				F0E0E7DE1FABA48C004991D2 /* DataGridSourceItem.m in Sources */,
 				F0E0E7E11FABA48C004991D2 /* GenericTableViewManager.m in Sources */,
-				F0E0E7F01FABA48C004991D2 /* EmplesAreasModel.m in Sources */,
 				F0E0E7F31FABA48C004991D2 /* EmplesDetailDescriptionCellModel.m in Sources */,
 				F0E0E8021FABA48C004991D2 /* EmplesGridCellModel.m in Sources */,
 				F0E0E7F61FABA48C004991D2 /* EmplesDetailDirectionsCellModel.m in Sources */,
@@ -1041,11 +1077,10 @@
 				F0E0E7E61FABA48C004991D2 /* LocalizedStrings.m in Sources */,
 				F0E0E7DA1FABA48C004991D2 /* BaseRouter.m in Sources */,
 				F0E0E7D41FABA48C004991D2 /* ApplicationAssembly.m in Sources */,
-				F0E0E80C1FABA48C004991D2 /* EmplesListModelDecorator.m in Sources */,
+				F0E0E80C1FABA48C004991D2 /* EmplesListSourceBuilder.m in Sources */,
 				F0E0E7EB1FABA48C004991D2 /* EmplesCarouselViewManager.m in Sources */,
 				F0E0E7FB1FABA48C004991D2 /* EmplesDetailAreaModel.m in Sources */,
 				F0E0E81C1FABA48D004991D2 /* EmplesStackedViewManager.m in Sources */,
-				F0E0E8131FABA48C004991D2 /* EmplesMenuModelDecorator.m in Sources */,
 				F0E0E8001FABA48C004991D2 /* EmplesGalleryView.m in Sources */,
 				F0E0E7E51FABA48C004991D2 /* EmplesFileNames.m in Sources */,
 				F0E0E7E01FABA48C004991D2 /* DataSourceItem.m in Sources */,
@@ -1053,12 +1088,13 @@
 				F0E0E7FF1FABA48C004991D2 /* EmplesGalleryPresenter.m in Sources */,
 				F0E0E7DF1FABA48C004991D2 /* GenericGridViewSource.m in Sources */,
 				F0E0E8031FABA48C004991D2 /* EmplesGridViewCell.m in Sources */,
-				F0E0E8051FABA48C004991D2 /* EmplesGridModelDecorator.m in Sources */,
+				F0B886C71FAC5F880016C1CD /* EmplesRecreationArea.m in Sources */,
+				F0E0E8051FABA48C004991D2 /* EmplesGridSourceBuilder.m in Sources */,
 				F0E0E8091FABA48C004991D2 /* EmplesListCellModel.m in Sources */,
 				F0E0E80E1FABA48C004991D2 /* EmplesListView.m in Sources */,
 				F0E0E8101FABA48C004991D2 /* EmplesMenuCellModel.m in Sources */,
-				F0E0E7D71FABA48C004991D2 /* DataAreaRequestClient.m in Sources */,
-				F0E0E7D81FABA48C004991D2 /* EmplesFSJsonReader.m in Sources */,
+				F0E0E7D71FABA48C004991D2 /* DataFilePersistenceGateway.m in Sources */,
+				F0E0E7D81FABA48C004991D2 /* JsonFileReader.m in Sources */,
 				F0E0E7E21FABA48C004991D2 /* GenericTableViewSource.m in Sources */,
 				F0E0E7FA1FABA48C004991D2 /* EmplesDetailMapCellModel.m in Sources */,
 				F0E0E7ED1FABA48C004991D2 /* EmplesCarouselView.m in Sources */,

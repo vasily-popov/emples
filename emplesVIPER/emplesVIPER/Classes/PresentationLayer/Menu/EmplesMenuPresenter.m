@@ -8,13 +8,13 @@
 
 #import "EmplesMenuPresenter.h"
 #import "EnumMenuSelectedItem.h"
+#import "EmplesMenuModel.h"
 #import <GoogleMaps/GoogleMaps.h>
 #define GOOGLE_MAPS_APIKEY @"AIzaSyBq67F_e2PQEWtKgCDDkHBpnVH1r383nQo"
 
 @interface EmplesMenuPresenter () <EmplesMenuSelectProtocol>
 
 @property (nonatomic, strong) EmplesMenuModel *model;
-@property (nonatomic, strong) EmplesMenuModelDecorator *decorator;
 
 @end
 
@@ -26,7 +26,6 @@
     if (self) {
         self.model = model;
         self.model.delegate = self;
-        self.decorator = [[EmplesMenuModelDecorator alloc] initWithModel:self.model];
         [GMSServices provideAPIKey:GOOGLE_MAPS_APIKEY];
     }
     return self;
@@ -44,6 +43,6 @@
 
 -(void)viewDidLoad
 {
-    [self.view setTableDataSource:self.decorator.dataSource];
+    [self.view setTableDataSource:[self.model buildSourceModel]];
 }
 @end

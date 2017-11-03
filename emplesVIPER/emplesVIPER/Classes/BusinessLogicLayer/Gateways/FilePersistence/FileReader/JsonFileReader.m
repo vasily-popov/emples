@@ -6,12 +6,12 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import "EmplesFSJsonReader.h"
+#import "JsonFileReader.h"
 #import "EmplesFileNames.h"
 #import "NSString+Localizable.h"
 #import "LocalizedStrings.h"
 
-@implementation EmplesFSJsonReader
+@implementation JsonFileReader
 
 -(id) readFileWithName:(NSString*)name error:(NSError **)error
 {
@@ -31,7 +31,7 @@
     return nil;
 }
 
--(void) doRequestToFetchAllAreaWithResponseBlock:(ContentResponseBlock)block
+-(void) readAllArea:(ContentResponseBlock)block
 {
     NSError *error = nil;
     id content = [self readFileWithName:kRecAreaFileName error:&error];
@@ -40,14 +40,6 @@
         block(content, error);
     }
 }
--(void) doRequestToFetchAllAddressWithResponseBlock:(ContentResponseBlock)block
-{
-    NSError *error = nil;
-    id content = [self readFileWithName:kRecAreaAdressFileName error:&error];
-    if(block)
-    {
-        block(content, error);
-    }
-}
+
 
 @end
