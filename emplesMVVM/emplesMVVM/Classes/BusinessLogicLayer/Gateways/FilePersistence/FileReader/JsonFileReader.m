@@ -1,0 +1,45 @@
+//
+//  EmplesFSJsonReader.m
+//  emplesMVC
+//
+//  Created by Vasily Popov on 10/28/17.
+//  Copyright © 2017 Vasily Popov. All rights reserved.
+//
+
+#import "JsonFileReader.h"
+#import "EmplesFileNames.h"
+#import "NSString+Localizable.h"
+#import "LocalizedStrings.h"
+
+@implementation JsonFileReader
+
+-(id) readFileWithName:(NSString*)name error:(NSError **)error
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"json"];
+    if(path != nil)
+    {
+        NSString *content = [NSString stringWithContentsOfFile:path
+                                         encoding:NSUTF8StringEncoding
+                                            error:error];
+        NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+        return  [NSJSONSerialization JSONObjectWithData:data options:0 error:error];
+    }
+    
+    *error = [NSError errorWithDomain:@"EmplesFSJsonReader"
+                                 code:0
+                             userInfo:@{NSLocalizedDescriptionKey:[kFileNotFoundString localizedString]}];
+    return nil;
+}
+
+-(void) readAllArea:(ContentResponseBlock)block
+{
+    NSError *error = nil;
+    id content = [self readFileWithName:kRecAreaFileName error:&error];
+    if(block)
+    {
+        block(content, error);
+    }
+}
+
+
+@end
