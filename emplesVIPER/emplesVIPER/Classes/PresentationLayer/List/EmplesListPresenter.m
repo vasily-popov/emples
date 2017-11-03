@@ -10,6 +10,7 @@
 #import "EmplesListSourceBuilder.h"
 #import "EmplesListCellModel.h"
 #import "DataSourceItem.h"
+#import "EmplesViewCellDecorator.h"
 
 @implementation EmplesListPresenter
 
@@ -28,7 +29,7 @@
             __strong typeof(self) strongSelf = weakSelf;
             if(strongSelf)
             {
-                //[strongSelf selectedItem:cellModel.ponsoModel];
+                [strongSelf selectedItem:((EmplesViewCellDecorator*)cellModel).ponsoModel];
             }
         };
         [sourceArray addObject:row];

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC0509DA0673E9DBCD21F8E6 /* libPods-emplesVIPER.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */; };
+		F030C8341FACA8A9007F9C76 /* EmplesViewCellDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8331FACA8A9007F9C76 /* EmplesViewCellDecorator.m */; };
 		F0B886C71FAC5F880016C1CD /* EmplesRecreationArea.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B886C61FAC5F880016C1CD /* EmplesRecreationArea.m */; };
 		F0E0E7CD1FABA48C004991D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F41FABA48C004991D2 /* Assets.xcassets */; };
 		F0E0E7CE1FABA48C004991D2 /* RecArea.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F61FABA48C004991D2 /* RecArea.json */; };
@@ -98,6 +99,8 @@
 		438DF27F6427A3F31F872037 /* Pods-emplesVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emplesVIPER.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE159D9352D29CC15A1AB67 /* Pods-emplesVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER.release.xcconfig"; sourceTree = "<group>"; };
+		F030C8321FACA8A9007F9C76 /* EmplesViewCellDecorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesViewCellDecorator.h; sourceTree = "<group>"; };
+		F030C8331FACA8A9007F9C76 /* EmplesViewCellDecorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesViewCellDecorator.m; sourceTree = "<group>"; };
 		F0B886C11FAC57480016C1CD /* DataAreaGatewayProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataAreaGatewayProtocol.h; sourceTree = "<group>"; };
 		F0B886C51FAC5F880016C1CD /* EmplesRecreationArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesRecreationArea.h; sourceTree = "<group>"; };
 		F0B886C61FAC5F880016C1CD /* EmplesRecreationArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesRecreationArea.m; sourceTree = "<group>"; };
@@ -297,6 +300,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F030C8311FACA840007F9C76 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F0E0E7371FABA48C004991D2 /* ViewCellModelProtocol.h */,
+				F0E0E7381FABA48C004991D2 /* ViewCellProtocol.h */,
+				F030C8321FACA8A9007F9C76 /* EmplesViewCellDecorator.h */,
+				F030C8331FACA8A9007F9C76 /* EmplesViewCellDecorator.m */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
 		F0B886C21FAC581D0016C1CD /* FilePersistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,14 +492,13 @@
 		F0E0E71B1FABA48C004991D2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F030C8311FACA840007F9C76 /* ViewCell */,
 				F0E0E71C1FABA48C004991D2 /* BaseRouter */,
-				F0E0E71F1FABA48C004991D2 /* SourceBuilderProtocol.h */,
 				F0E0E7201FABA48C004991D2 /* Extensions */,
 				F0E0E7281FABA48C004991D2 /* GenericCollectionSource */,
 				F0E0E72D1FABA48C004991D2 /* GenericTableSource */,
 				F0E0E7341FABA48C004991D2 /* ProgressView */,
-				F0E0E7371FABA48C004991D2 /* ViewCellModelProtocol.h */,
-				F0E0E7381FABA48C004991D2 /* ViewCellProtocol.h */,
+				F0E0E71F1FABA48C004991D2 /* SourceBuilderProtocol.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1067,6 +1080,7 @@
 				F0E0E7DE1FABA48C004991D2 /* DataGridSourceItem.m in Sources */,
 				F0E0E7E11FABA48C004991D2 /* GenericTableViewManager.m in Sources */,
 				F0E0E7F31FABA48C004991D2 /* EmplesDetailDescriptionCellModel.m in Sources */,
+				F030C8341FACA8A9007F9C76 /* EmplesViewCellDecorator.m in Sources */,
 				F0E0E8021FABA48C004991D2 /* EmplesGridCellModel.m in Sources */,
 				F0E0E7F61FABA48C004991D2 /* EmplesDetailDirectionsCellModel.m in Sources */,
 				F0E0E7FE1FABA48C004991D2 /* EmplesDetailTableViewManager.m in Sources */,

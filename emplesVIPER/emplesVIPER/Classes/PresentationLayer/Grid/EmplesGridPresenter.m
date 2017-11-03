@@ -9,6 +9,7 @@
 #import "EmplesGridPresenter.h"
 #import "EmplesGridSourceBuilder.h"
 #import "DataGridSourceItem.h"
+#import "EmplesViewCellDecorator.h"
 
 @interface EmplesGridPresenter ()
 
@@ -31,7 +32,7 @@
             __strong typeof(self) strongSelf = weakSelf;
             if(strongSelf)
             {
-                //[strongSelf selectedItem:cellModel.ponsoModel];
+                [strongSelf selectedItem:((EmplesViewCellDecorator*)cellModel).ponsoModel];
             }
         };
         [sourceArray addObject:row];

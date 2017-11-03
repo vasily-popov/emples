@@ -10,8 +10,6 @@
 
 @protocol ViewCellModelProtocol <NSObject>
 
-//@property (strong, nonatomic) id ponsoModel;
-
 - (id)getModelValue;
 - (NSString*)cellClassName;
 

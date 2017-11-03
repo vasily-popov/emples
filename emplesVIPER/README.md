@@ -22,7 +22,7 @@
 * It manipulates `Entities` and communicates with `Gateways` to retrieve / persist the entities
 * The `Gateway` protocols should be defined in the `Application Logic` layers and implemented by the `Gateways & Framework Logic`
 * The separation described above ensures that the `Application Logic` depends on abstractions and not on actual frameworks / implementations
-* `Entity` - plain ``Objective-C` classes / structs
+* `Entity` - plain ``Objective-C` classes 
 * Models objects used by your application such as `Order`, `Product`, `Shopping Cart`, etc
 
 ##### Gateways & Framework Logic

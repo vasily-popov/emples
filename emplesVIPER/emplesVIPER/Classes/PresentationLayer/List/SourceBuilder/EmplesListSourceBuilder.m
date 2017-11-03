@@ -9,6 +9,7 @@
 #import "EmplesListSourceBuilder.h"
 #import "EmplesRecreationArea.h"
 #import "EmplesListCellModel.h"
+#import "EmplesViewCellDecorator.h"
 
 @implementation EmplesListSourceBuilder
 
@@ -22,8 +23,9 @@
         model.text = item.areaName;
         model.phone = item.areaPhone;
         model.imageURL = item.imageURL;
-        //model.ponsoModel = item;
-        [sourseItems addObject:model];
+        EmplesViewCellDecorator *decorator = [EmplesViewCellDecorator decoratedInstanceOf:model];
+        decorator.ponsoModel = item;
+        [sourseItems addObject:decorator];
     }
     return sourseItems;
 }

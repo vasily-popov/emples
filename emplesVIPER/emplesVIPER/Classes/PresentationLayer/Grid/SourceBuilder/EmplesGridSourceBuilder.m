@@ -9,6 +9,7 @@
 #import "EmplesGridSourceBuilder.h"
 #import "EmplesRecreationArea.h"
 #import "EmplesGridCellModel.h"
+#import "EmplesViewCellDecorator.h"
 
 @implementation EmplesGridSourceBuilder
 
@@ -21,8 +22,9 @@
         EmplesGridCellModel *model = [EmplesGridCellModel new];
         model.text = item.areaName;
         model.imageURL = item.imageURL;
-        //model.ponsoModel = item;
-        [sourseItems addObject:model];
+        EmplesViewCellDecorator *decorator = [EmplesViewCellDecorator decoratedInstanceOf:model];
+        decorator.ponsoModel = item;
+        [sourseItems addObject:decorator];
     }
     return sourseItems;
 }
