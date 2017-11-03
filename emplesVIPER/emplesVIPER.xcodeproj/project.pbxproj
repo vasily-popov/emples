@@ -90,8 +90,8 @@
 		F0E0E81C1FABA48D004991D2 /* EmplesStackedViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7C51FABA48C004991D2 /* EmplesStackedViewManager.m */; };
 		F0E0E81D1FABA48D004991D2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7C71FABA48C004991D2 /* background.png */; };
 		F0E0E81E1FABA48D004991D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7C81FABA48C004991D2 /* LaunchScreen.storyboard */; };
-		F0E0E81F1FABA48D004991D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E7CA1FABA48C004991D2 /* Info.plist */; };
 		F0E0E8201FABA48D004991D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7CB1FABA48C004991D2 /* main.m */; };
+		F0E0E8221FAC4783004991D2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E8211FAC4783004991D2 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -263,6 +263,7 @@
 		F0E0E7CA1FABA48C004991D2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E0E7CB1FABA48C004991D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0E0E7CC1FABA48C004991D2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F0E0E8211FAC4783004991D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +298,7 @@
 		F0E0E6D11FAB99C0004991D2 = {
 			isa = PBXGroup;
 			children = (
+				F0E0E8211FAC4783004991D2 /* README.md */,
 				F0E0E6DC1FAB99C0004991D2 /* emplesVIPER */,
 				F0E0E6DB1FAB99C0004991D2 /* Products */,
 				47A2D909AF4DFC57C2A3E79B /* Pods */,
@@ -353,11 +355,11 @@
 			isa = PBXGroup;
 			children = (
 				F0E0E6FE1FABA48C004991D2 /* ApplicationLayer */,
+				F0E0E7451FABA48C004991D2 /* PresentationLayer */,
 				F0E0E70C1FABA48C004991D2 /* BusinessLogicLayer */,
 				F0E0E71B1FABA48C004991D2 /* Common */,
 				F0E0E7391FABA48C004991D2 /* Constants */,
 				F0E0E7401FABA48C004991D2 /* Extensions */,
-				F0E0E7451FABA48C004991D2 /* PresentationLayer */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -365,8 +367,8 @@
 		F0E0E6FE1FABA48C004991D2 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				F0E0E6FF1FABA48C004991D2 /* AppDelegate */,
 				F0E0E7061FABA48C004991D2 /* Assembly */,
+				F0E0E6FF1FABA48C004991D2 /* AppDelegate */,
 				F0E0E7091FABA48C004991D2 /* UINavigationController */,
 			);
 			path = ApplicationLayer;
@@ -409,11 +411,9 @@
 				F0E0E70D1FABA48C004991D2 /* Assembly */,
 				F0E0E7101FABA48C004991D2 /* DataAreaRequestClient.h */,
 				F0E0E7111FABA48C004991D2 /* DataAreaRequestClient.m */,
-				F0E0E7121FABA48C004991D2 /* DataBase */,
 				F0E0E7131FABA48C004991D2 /* DataRequestProtocol.h */,
 				F0E0E7141FABA48C004991D2 /* Filesystem */,
 				F0E0E7171FABA48C004991D2 /* JSONModel */,
-				F0E0E71A1FABA48C004991D2 /* Network */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -425,13 +425,6 @@
 				F0E0E70F1FABA48C004991D2 /* DataLayerAssembly.m */,
 			);
 			path = Assembly;
-			sourceTree = "<group>";
-		};
-		F0E0E7121FABA48C004991D2 /* DataBase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataBase;
 			sourceTree = "<group>";
 		};
 		F0E0E7141FABA48C004991D2 /* Filesystem */ = {
@@ -450,13 +443,6 @@
 				F0E0E7191FABA48C004991D2 /* EmplesRecAreaJSONModel.m */,
 			);
 			path = JSONModel;
-			sourceTree = "<group>";
-		};
-		F0E0E71A1FABA48C004991D2 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		F0E0E71B1FABA48C004991D2 /* Common */ = {
@@ -558,8 +544,8 @@
 			isa = PBXGroup;
 			children = (
 				F0E0E7461FABA48C004991D2 /* Assembly */,
+				F0E0E7571FABA48C004991D2 /* Base */,
 				F0E0E74B1FABA48C004991D2 /* Carousel */,
-				F0E0E7571FABA48C004991D2 /* Common */,
 				F0E0E75F1FABA48C004991D2 /* Detail */,
 				F0E0E77B1FABA48C004991D2 /* Gallery */,
 				F0E0E7831FABA48C004991D2 /* Grid */,
@@ -613,7 +599,7 @@
 			path = ItemView;
 			sourceTree = "<group>";
 		};
-		F0E0E7571FABA48C004991D2 /* Common */ = {
+		F0E0E7571FABA48C004991D2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				F0E0E7581FABA48C004991D2 /* EmplesAreasModel.h */,
@@ -624,7 +610,7 @@
 				F0E0E75D1FABA48C004991D2 /* EmplesItemRouter.h */,
 				F0E0E75E1FABA48C004991D2 /* EmplesItemRouter.m */,
 			);
-			path = Common;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		F0E0E75F1FABA48C004991D2 /* Detail */ = {
@@ -964,6 +950,7 @@
 				F0E0E7D01FABA48C004991D2 /* Localizable.strings in Resources */,
 				F0E0E7CF1FABA48C004991D2 /* RecAreaAddress.json in Resources */,
 				F0E0E7F51FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.xib in Resources */,
+				F0E0E8221FAC4783004991D2 /* README.md in Resources */,
 				F0E0E80B1FABA48C004991D2 /* EmplesListCellView.xib in Resources */,
 				F0E0E8121FABA48C004991D2 /* EmplesMenuViewCell.xib in Resources */,
 				F0E0E7F81FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib in Resources */,
@@ -972,7 +959,6 @@
 				F0E0E81E1FABA48D004991D2 /* LaunchScreen.storyboard in Resources */,
 				F0E0E81D1FABA48D004991D2 /* background.png in Resources */,
 				F0E0E7EF1FABA48C004991D2 /* EmplesItemView.xib in Resources */,
-				F0E0E81F1FABA48D004991D2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
