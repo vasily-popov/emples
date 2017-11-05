@@ -1,5 +1,5 @@
 # emples
-Demo iOS applications built to highlight MVC/MVP and Clean Architecture (VIPER) concepts
+Demo iOS applications built to highlight MVC/MVP/MVVM (ReactiveCocoa) and Clean Architecture (VIPER) concepts using Objective-C
 
 ##### Structure
 * `emplesMVC` - mvc demo project, use classic mvc concept (not apple), UIViewcontroller is `View` component. 
