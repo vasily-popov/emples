@@ -6,9 +6,12 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "EmplesCollectionViewProtocol.h"
+#import "EmplesUIBaseView.h"
+#import "EmplesGridViewModel.h"
 
-@interface EmplesGridView : UIViewController<EmplesCollectionViewProtocol>
+@interface EmplesGridView : EmplesUIBaseView
+
+@property (nonatomic, strong) EmplesGridViewModel *viewModel;
 
 @end
+

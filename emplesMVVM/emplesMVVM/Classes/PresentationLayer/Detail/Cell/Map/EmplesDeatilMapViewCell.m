@@ -7,14 +7,14 @@
 //
 
 #import "EmplesDeatilMapViewCell.h"
-#import "EmplesDetailMapCellModel.h"
+#import "EmplesDetailMapCellViewModel.h"
 #import <GoogleMaps/GoogleMaps.h>
 #define ZOOM_DISTANCE 11
 
 @interface EmplesDeatilMapViewCell()<GMSMapViewDelegate>
 
 @property (strong, nonatomic) GMSMapView *map;
-@property (strong, nonatomic) EmplesDetailMapCellModel *model;
+@property (strong, nonatomic) EmplesDetailMapCellViewModel *viewModel;
 
 @end
 
@@ -44,14 +44,14 @@
     [self.map.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:0].active = YES;
 }
 
-- (void)configureWithModel:(id<ViewCellModelProtocol>)model
+- (void)configureWithModel:(id<ViewCellModelProtocol>)viewModel
 {
-    if ([model isKindOfClass:[EmplesDetailMapCellModel class]])
+    if ([viewModel isKindOfClass:[EmplesDetailMapCellViewModel class]])
     {
-        if(!self.model)
+        if(!self.viewModel)
         {
-            self.model = (EmplesDetailMapCellModel *)model;
-            [self updateMap:self.model.coordinate];
+            self.viewModel = (EmplesDetailMapCellViewModel *)viewModel;
+            [self updateMap:self.viewModel.coordinate];
         }
     }
 }

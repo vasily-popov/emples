@@ -6,9 +6,11 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "EmplesCollectionViewProtocol.h"
+#import "EmplesUIBaseView.h"
+#import "EmplesCarouselViewModel.h"
 
-@interface EmplesCarouselView : UIViewController<EmplesCollectionViewProtocol>
+@interface EmplesCarouselView : EmplesUIBaseView
+
+@property (nonatomic, strong) EmplesCarouselViewModel *viewModel;
 
 @end

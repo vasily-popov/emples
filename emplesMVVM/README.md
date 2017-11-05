@@ -1,4 +1,6 @@
-#  MVVM Example
+#  MVVM Example (ReactiveCocoa)
+
+
 
 ##### Presentation Logic
 * The `Model` is a representation of the actual data we’ll be dealing with. Your `Model` has no knowledge of the application it is being used in, and contains no logic.
@@ -10,4 +12,5 @@
 * The `ViewModel` must tell its delegate to reload its views when it modifies the state of an exposed property.
 * The `ViewModel` must only call methods on its delegate on the main thread (for safety)
 * The properties of the `ViewModel` must be of the same type as what they will be used for.
+
 

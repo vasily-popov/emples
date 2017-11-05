@@ -7,18 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GenericCollectionViewSourceProtocol.h"
 
-@protocol GenericGridViewSourceProtocol
-
-@property (nonatomic, strong, readonly) NSArray *source;
-
-@end
-
-@interface GenericGridViewSource : NSObject <GenericGridViewSourceProtocol,UICollectionViewDataSource>
-
--(instancetype)initWithSource:(NSArray*)source;
--(void)setDataSource:(NSArray*)source;
--(void)appendItems:(NSArray*)items;
-
+@interface GenericGridViewSource : NSObject <GenericCollectionViewSourceProtocol,
+                                             UICollectionViewDataSource>
 
 @end

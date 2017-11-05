@@ -8,16 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class EmplesDetailPresenter;
+@protocol EmplesDetailViewModelProtocol;
 
-@protocol EmplesDetailViewProtocol
+@interface EmplesDetailView : UIViewController
 
--(void)setViewTitle:(NSString*)title;
--(void)setSourceArray:(NSArray*)array;
-@end
-
-@interface EmplesDetailView : UIViewController <EmplesDetailViewProtocol>
-
-@property (nonatomic, strong) EmplesDetailPresenter *presenter;
+@property (nonatomic, strong) id<EmplesDetailViewModelProtocol> viewModel;
 
 @end

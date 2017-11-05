@@ -11,6 +11,7 @@
 #import "EmplesNavigationController.h"
 #import "EmplesMenuAssembly.h"
 #import "EmplesAppearanceService.h"
+#import "EmplesGoogleMapService.h"
 
 @implementation ApplicationAssembly
 
@@ -19,9 +20,11 @@
     return [TyphoonDefinition withClass:[AppDelegate class] configuration:^(TyphoonDefinition *definition)
             {
                 [definition injectProperty:@selector(window) with:[self window]];
-                [definition injectProperty:@selector(services) with:@[
-                                                                      [EmplesAppearanceService new]
-                                                                     ]];
+                [definition injectProperty:@selector(services)
+                                      with:@[
+                                             [EmplesAppearanceService new],
+                                             [EmplesGoogleMapService new]
+                                             ]];
             }];
 }
 

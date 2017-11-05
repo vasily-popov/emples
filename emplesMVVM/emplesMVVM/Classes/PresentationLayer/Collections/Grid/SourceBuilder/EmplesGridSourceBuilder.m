@@ -8,7 +8,7 @@
 
 #import "EmplesGridSourceBuilder.h"
 #import "EmplesRecreationAreaModel.h"
-#import "EmplesGridCellModel.h"
+#import "EmplesGridCellViewModel.h"
 #import "EmplesViewCellDecorator.h"
 
 @implementation EmplesGridSourceBuilder
@@ -19,7 +19,7 @@
     for (int index = 0; index < items.count; index ++)
     {
         EmplesRecreationAreaModel *item = items[index];
-        EmplesGridCellModel *model = [EmplesGridCellModel new];
+        EmplesGridCellViewModel *model = [EmplesGridCellViewModel new];
         model.text = item.areaName;
         model.imageURL = item.imageURL;
         EmplesViewCellDecorator *decorator = [EmplesViewCellDecorator decoratedInstanceOf:model];

@@ -14,7 +14,7 @@
 @property (strong, nonatomic) id<ViewCellModelProtocol> cellModel;
 @property (strong, nonatomic, readonly) id value;
 @property (assign, nonatomic) CGSize itemSize;
-@property (nonatomic, copy) void (^selectAction)(id<ViewCellModelProtocol> cellModel);
+@property (strong, nonatomic) RACCommand *command;
 
 - (instancetype)initWithCellModel:(id<ViewCellModelProtocol>)cellModel;
 

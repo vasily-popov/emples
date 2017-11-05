@@ -7,7 +7,7 @@
 //
 
 #import "EmplesDetailTextViewWithImageViewCell.h"
-#import "EmplesDetailDescriptionCellModel.h"
+#import "EmplesDetailDescriptionCellViewModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface EmplesDetailTextViewWithImageViewCell()
@@ -15,42 +15,39 @@
 @property(nonatomic, weak) IBOutlet UITextView *textView;
 @property(nonatomic, weak) IBOutlet UIImageView *iconView;
 
-@property (strong, nonatomic) EmplesDetailDescriptionCellModel *model;
+@property (strong, nonatomic) EmplesDetailDescriptionCellViewModel *viewModel;
 
 @end
 
 @implementation EmplesDetailTextViewWithImageViewCell
 
-- (void)configureWithModel:(id<ViewCellModelProtocol>)model
+- (void)configureWithModel:(id<ViewCellModelProtocol>)viewModel
 {
-    if ([model isKindOfClass:[EmplesDetailDescriptionCellModel class]])
+    if ([viewModel isKindOfClass:[EmplesDetailDescriptionCellViewModel class]])
     {
-        self.model = (EmplesDetailDescriptionCellModel *)model;
-        self.textView.text = self.model.descriptionText;
-        self.textView.font = self.model.font;
-        self.textView.textColor = self.model.textColor;
-        self.contentView.backgroundColor = self.model.bgColor;
-        if (self.model.imageURL.length > 0)
-        {
-            [self.iconView sd_setImageWithURL:[NSURL URLWithString:self.model.imageURL]];
-        }
+        self.viewModel = (EmplesDetailDescriptionCellViewModel *)viewModel;
     }
 }
 
-- (id<ViewCellModelProtocol>)activeModel
+-(void)dealloc
 {
-    return self.model;
+    
 }
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    RAC(self.textView, text) = RACObserve(self, viewModel.descriptionText);
+    RAC(self.textView, font) = [RACObserve(self, viewModel.font) ignore:nil];
+    RAC(self.textView, textColor) = [RACObserve(self, viewModel.textColor) ignore:nil];
+    RAC(self.contentView, backgroundColor) = [RACObserve(self, viewModel.bgColor) ignore:nil];
+    @weakify(self);
+    [[[RACObserve(self, viewModel.imageURL) ignore:nil] distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.iconView sd_setImageWithURL:[NSURL URLWithString:self.viewModel.imageURL]];
+     }];
 }
 
 @end

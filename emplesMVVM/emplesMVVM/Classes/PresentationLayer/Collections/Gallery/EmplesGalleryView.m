@@ -7,76 +7,69 @@
 //
 
 #import "EmplesGalleryView.h"
-#import "EmplesGridCollectionViewManager.h"
-#import "EmplesCollectionPresenter.h"
-#import "EmplesProgressView.h"
+#import "EmplesCollectionViewModel.h"
 #import "ColorStrings.h"
 #import "EmplesGalleryCollectionFlowLayout.h"
+#import "EmplesGridViewCell.h"
+#import "UICollectionView+Reusable.h"
 
 @interface EmplesGalleryView ()
 
 @property (strong, nonatomic) UICollectionView *collection;
-@property (strong, nonatomic) EmplesGridCollectionViewManager *sourceManager;
-@property (strong, nonatomic) EmplesProgressView *progressView;
 
 @end
 
 @implementation EmplesGalleryView
 
-@synthesize presenter;
+@synthesize viewModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = [@"Gallery" uppercaseString];
-    [self createCollectionView];
-    self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
-    [self.navigationController.view addSubview:self.progressView];
-    [self setupConstraints];
-    [self.presenter viewDidLoad];
+    [self bindViewModel];
+    [self.viewModel viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)setupConstraints
+-(void)bindViewModel
 {
-    self.progressView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.progressView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor constant:0].active = YES;
-    [self.progressView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor constant:0].active = YES;
-    [self.progressView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:0].active = YES;
-    [self.progressView.bottomAnchor constraintEqualToAnchor:self.navigationController.view.bottomAnchor constant:0].active = YES;
+    RAC(self, title) = RACObserve(self, viewModel.title);
+    RAC(self.collection, dataSource) = RACObserve(self, viewModel.dataSource);
+    RAC(self.collection, delegate) = RACObserve(self, viewModel.delegate);
+    
+    @weakify(self);
+    [[[RACObserve(self.viewModel.dataSource, source) ignore:nil] distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.collection reloadData];
+     }];
+    
+    [[[self.viewModel.loadItemsAction.executing skipWhileBlock:^ BOOL (NSNumber *loading) {
+        // Skip until we start loading.
+        return !loading.boolValue;
+    }] distinctUntilChanged]
+     subscribeNext:^(NSNumber *loading) {
+         @strongify(self);
+         if (loading.boolValue) {
+             [self showProgressView];
+         } else {
+             [self hideProgressView];
+         }
+     }];
 }
 
--(void)createCollectionView
+-(UICollectionView*)collection
 {
-    EmplesGalleryCollectionFlowLayout *layout = [[EmplesGalleryCollectionFlowLayout alloc] init];
-    self.collection = [[UICollectionView alloc] initWithFrame:self.view.bounds
-                                         collectionViewLayout:layout];
-    self.collection.dragInteractionEnabled = NO;
-    self.collection.backgroundColor = [UIColor colorNamed:emplesGreenColor];
-    [self.collection setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    [self.view addSubview:self.collection];
-    self.sourceManager = [[EmplesGridCollectionViewManager alloc] init];
-    self.collection.dataSource = [self.sourceManager dataSourceForCollectionView:self.collection];
-    self.collection.delegate = [self.sourceManager delegateForCollectionView:self.collection];
-}
-
--(void)showProgressView
-{
-    [self.progressView show];
-}
-
--(void)hideProgressView
-{
-    [self.progressView hide];
-}
-
--(void)updateCollectionItems:(NSArray *)array
-{
-    [self.sourceManager updateDataSource:array];
-    [self.collection reloadData];
+    if(!_collection)
+    {
+        EmplesGalleryCollectionFlowLayout *layout = [[EmplesGalleryCollectionFlowLayout alloc] init];
+        _collection = [[UICollectionView alloc] initWithFrame:self.view.bounds
+                                             collectionViewLayout:layout];
+        _collection.backgroundColor = [UIColor colorNamed:emplesGreenColor];
+        [_collection setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+        [self.view addSubview:_collection];
+        [_collection registerCellNib:EmplesGridViewCell.class];
+    }
+    return _collection;
 }
 
 @end

@@ -9,7 +9,7 @@
 #import "EmplesMenuAssembly.h"
 #import "EmplesMenuModel.h"
 #import "EmplesMenuRouter.h"
-#import "EmplesMenuPresenter.h"
+#import "EmplesMenuViewModel.h"
 #import "DataLayerAssembly.h"
 #import "EmplesCollectionsAssembly.h"
 
@@ -27,20 +27,18 @@
     return [TyphoonDefinition withClass:[EmplesMenuModel class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition injectProperty:@selector(delegate) with:[self menuPresenter]];
             }];
 }
 
-- (EmplesMenuPresenter*)menuPresenter
+- (EmplesMenuViewModel*)menuViewModel
 {
-    return [TyphoonDefinition withClass:[EmplesMenuPresenter class]
+    return [TyphoonDefinition withClass:[EmplesMenuViewModel class]
                           configuration:^(TyphoonDefinition* definition)
             {
                 [definition useInitializer:@selector(initWithModel:) parameters:^(TyphoonMethod *initializer)
                  {
                      [initializer injectParameterWith:[self menuModel]];
                  }];
-                [definition injectProperty:@selector(view) with:[self menuView]];
                 [definition injectProperty:@selector(router) with:[self menuRouter]];
             }];
 }
@@ -50,7 +48,7 @@
     return [TyphoonDefinition withClass:[EmplesMenuView class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition injectProperty:@selector(presenter) with:[self menuPresenter]];
+                [definition injectProperty:@selector(viewModel) with:[self menuViewModel]];
             }];
 }
 

@@ -6,9 +6,11 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "EmplesCollectionViewProtocol.h"
+#import "EmplesUIBaseView.h"
+#import "EmplesStackedViewModel.h"
 
-@interface EmplesStackedView : UIViewController<EmplesCollectionViewProtocol>
+@interface EmplesStackedView : EmplesUIBaseView
+
+@property (nonatomic, strong) EmplesStackedViewModel *viewModel;
 
 @end

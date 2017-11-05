@@ -7,32 +7,53 @@
 //
 
 #import "EmplesListView.h"
-#import "EmplesListTableViewManager.h"
-#import "EmplesProgressView.h"
-#import "EmplesListPresenter.h"
+#import "EmplesCollectionViewModel.h"
 #import "ColorStrings.h"
+#import "EmplesListCellView.h"
 
 @interface EmplesListView ()
 
 @property (strong, nonatomic) UITableView *table;
-@property (strong, nonatomic) EmplesListTableViewManager *sourceManager;
-@property (strong, nonatomic) EmplesProgressView *progressView;
 
 @end
 
 @implementation EmplesListView
 
-@synthesize presenter;
+@synthesize viewModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = [@"List" uppercaseString];
-    [self createTableView];
-    self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
-    [self.navigationController.view addSubview:self.progressView];
-    [self setupConstraints];
-    [self.presenter viewDidLoad];
+    [self bindViewModel];
+    [self.viewModel viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+-(void)bindViewModel
+{
+    RAC(self, title) = RACObserve(self, viewModel.title);
+    RAC(self.table, dataSource) = RACObserve(self, viewModel.dataSource);
+    RAC(self.table, delegate) = RACObserve(self, viewModel.delegate);
+    
+    @weakify(self);
+    [[[RACObserve(self.viewModel.dataSource, source) ignore:nil] distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.table reloadData];
+     }];
+    
+    [[[self.viewModel.loadItemsAction.executing skipWhileBlock:^ BOOL (NSNumber *loading) {
+        // Skip until we start loading.
+        return !loading.boolValue;
+    }] distinctUntilChanged]
+     subscribeNext:^(NSNumber *loading) {
+         @strongify(self);
+         if (loading.boolValue) {
+             [self showProgressView];
+         } else {
+             [self hideProgressView];
+         }
+     }];
 }
 
 -(void)dealloc
@@ -40,46 +61,19 @@
     
 }
 
--(void)setupConstraints
+-(UITableView*)table
 {
-    self.progressView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.progressView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor constant:0].active = YES;
-    [self.progressView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor constant:0].active = YES;
-    [self.progressView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:0].active = YES;
-    [self.progressView.bottomAnchor constraintEqualToAnchor:self.navigationController.view.bottomAnchor constant:0].active = YES;
-}
-
--(void)createTableView
-{
-    self.table = [[UITableView alloc] initWithFrame:self.view.bounds
+    if(!_table)
+    {
+        _table = [[UITableView alloc] initWithFrame:self.view.bounds
                                               style:UITableViewStylePlain];
-    self.table.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.table.backgroundColor = [UIColor colorNamed:emplesGreenColor];
-    [self.table setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    [self.view addSubview:self.table];
-    self.sourceManager = [[EmplesListTableViewManager alloc] init];
-    self.table.dataSource = [self.sourceManager dataSourceForTableView:self.table];
-    self.table.delegate = [self.sourceManager delegateForTableView:self.table];
+        _table.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _table.backgroundColor = [UIColor colorNamed:emplesGreenColor];
+        [_table setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+        [self.view addSubview:_table];
+        [_table registerCellNib:EmplesListCellView.class];
+    }
+    return _table;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)showProgressView
-{
-    [self.progressView show];
-}
-
--(void)hideProgressView
-{
-    [self.progressView hide];
-}
-
--(void)updateCollectionItems:(NSArray*)array
-{
-    [self.sourceManager updateDataSource:array];
-    [self.table reloadData];
-}
 @end

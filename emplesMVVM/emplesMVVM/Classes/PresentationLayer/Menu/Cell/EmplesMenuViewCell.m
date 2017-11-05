@@ -7,38 +7,31 @@
 //
 
 #import "EmplesMenuViewCell.h"
-#import "EmplesMenuCellModel.h"
+#import "EmplesMenuCellViewModel.h"
 
 @interface EmplesMenuViewCell()
 
 @property(nonatomic, weak) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) EmplesMenuCellModel *model;
+@property (strong, nonatomic) EmplesMenuCellViewModel *viewModel;
 
 @end
 
 @implementation EmplesMenuViewCell
 
-- (void)configureWithModel:(id<ViewCellModelProtocol>)model
+- (void)configureWithModel:(id<ViewCellModelProtocol>)viewModel
 {
-    if ([model isKindOfClass:[EmplesMenuCellModel class]])
+    if ([viewModel isKindOfClass:[EmplesMenuCellViewModel class]])
     {
-        self.model = (EmplesMenuCellModel *)model;
-        self.titleLabel.text = self.model.text;
-        self.titleLabel.font = self.model.font;
-        self.titleLabel.textColor = self.model.textColor;
-        self.contentView.backgroundColor = self.model.bgColor;
+        self.viewModel = (EmplesMenuCellViewModel *)viewModel;
     }
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    RAC(self.titleLabel, text) = RACObserve(self, viewModel.text);
+    RAC(self.titleLabel, font) = RACObserve(self, viewModel.font);
+    RAC(self.titleLabel, textColor) = RACObserve(self, viewModel.textColor);
+    RAC(self.contentView, backgroundColor) = RACObserve(self, viewModel.bgColor);
 }
 
 @end

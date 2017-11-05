@@ -7,39 +7,38 @@
 //
 
 #import "EmplesDetailDirectionTextViewCell.h"
-#import "EmplesDetailDirectionsCellModel.h"
+#import "EmplesDetailDirectionsCellViewModel.h"
 
 @interface EmplesDetailDirectionTextViewCell()
 
 @property(nonatomic, weak) IBOutlet UITextView *textView;
 
-@property (strong, nonatomic) EmplesDetailDirectionsCellModel *model;
+@property (strong, nonatomic) EmplesDetailDirectionsCellViewModel *viewModel;
 
 @end
 
 @implementation EmplesDetailDirectionTextViewCell
 
-- (void)configureWithModel:(id<ViewCellModelProtocol>)model
+- (void)configureWithModel:(id<ViewCellModelProtocol>)viewModel
 {
-    if ([model isKindOfClass:[EmplesDetailDirectionsCellModel class]])
+    if ([viewModel isKindOfClass:[EmplesDetailDirectionsCellViewModel class]])
     {
-        self.model = (EmplesDetailDirectionsCellModel *)model;
-        self.textView.text = self.model.directionText;
-        self.textView.font = self.model.font;
-        self.textView.textColor = self.model.textColor;
-        self.contentView.backgroundColor = self.model.bgColor;
+        self.viewModel = (EmplesDetailDirectionsCellViewModel *)viewModel;
     }
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+-(void)dealloc
+{
+    
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    
-    // Configure the view for the selected state
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    RAC(self.textView, text) = RACObserve(self, viewModel.directionText);
+    RAC(self.textView, font) = [RACObserve(self, viewModel.font) ignore:nil];
+    RAC(self.textView, textColor) = [RACObserve(self, viewModel.textColor) ignore:nil];
+    RAC(self.contentView, backgroundColor) = [RACObserve(self, viewModel.bgColor) ignore:nil];
 }
 
 @end

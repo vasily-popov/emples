@@ -11,10 +11,9 @@
 @class EmplesRecreationAreaModel;
 @interface EmplesDetailAreaModel : NSObject
 
+@property (nonatomic, strong, readonly) EmplesRecreationAreaModel* area;
+
 - (instancetype)init __unavailable;
 - (instancetype)initWithItem:(EmplesRecreationAreaModel*)area NS_DESIGNATED_INITIALIZER;
-
-- (NSString*)titleName;
-- (NSArray*)dataSource;
 
 @end

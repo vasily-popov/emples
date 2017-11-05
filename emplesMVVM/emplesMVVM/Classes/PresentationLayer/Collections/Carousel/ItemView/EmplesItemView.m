@@ -7,7 +7,7 @@
 //
 
 #import "EmplesItemView.h"
-#import "EmplesListCellModel.h"
+#import "EmplesListCellViewModel.h"
 
 #import <SDWebImage/UIImageView+WebCache.h>
 @interface EmplesItemView()
@@ -15,25 +15,17 @@
 @property(nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property(nonatomic, weak) IBOutlet UIImageView *iconView;
 
-@property (strong, nonatomic) EmplesListCellModel *model;
+@property (strong, nonatomic) EmplesListCellViewModel *viewModel;
 
 @end
 
 @implementation EmplesItemView
 
-- (void)configureWithModel:(id<ViewCellModelProtocol>)model
+- (void)configureWithModel:(id<ViewCellModelProtocol>)viewModel
 {
-    if ([model isKindOfClass:[EmplesListCellModel class]])
+    if ([viewModel isKindOfClass:[EmplesListCellViewModel class]])
     {
-        self.model = (EmplesListCellModel *)model;
-        self.titleLabel.text = self.model.text;
-        self.titleLabel.font = self.model.font;
-        self.titleLabel.textColor = self.model.textColor;
-        self.backgroundColor = self.model.bgColor;
-        if (self.model.imageURL.length > 0)
-        {
-            [self.iconView sd_setImageWithURL:[NSURL URLWithString:self.model.imageURL]];
-        }
+        self.viewModel = (EmplesListCellViewModel *)viewModel;
     }
 }
 
@@ -43,6 +35,17 @@
     self.layer.borderColor = [UIColor brownColor].CGColor;
     self.layer.borderWidth = 2;
     self.layer.cornerRadius = 10;
+    RAC(self.titleLabel, text) = RACObserve(self, viewModel.text);
+    RAC(self.titleLabel, font) = RACObserve(self, viewModel.font);
+    RAC(self.titleLabel, textColor) = RACObserve(self, viewModel.textColor);
+    RAC(self, backgroundColor) = RACObserve(self, viewModel.bgColor);
+    @weakify(self);
+    [[[RACObserve(self, viewModel.imageURL) ignore:nil] distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.iconView sd_setImageWithURL:[NSURL URLWithString:self.viewModel.imageURL]];
+     }];
 }
 
 @end

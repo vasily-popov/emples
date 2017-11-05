@@ -10,7 +10,6 @@
 #import "ApplicationAssembly.h"
 #import "EmplesMenuView.h"
 
-
 @interface EmplesMenuAssembly : TyphoonAssembly
 
 @property (nonatomic, strong, readonly) ApplicationAssembly *appAssembly;

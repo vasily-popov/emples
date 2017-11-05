@@ -6,9 +6,11 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "EmplesCollectionViewProtocol.h"
+#import "EmplesUIBaseView.h"
+#import "EmplesGalleryViewModel.h"
 
-@interface EmplesGalleryView : UIViewController<EmplesCollectionViewProtocol>
+@interface EmplesGalleryView : EmplesUIBaseView
+
+@property (nonatomic, strong) EmplesGalleryViewModel *viewModel;
 
 @end

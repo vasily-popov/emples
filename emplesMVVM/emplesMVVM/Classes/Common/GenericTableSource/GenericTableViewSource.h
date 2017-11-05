@@ -7,19 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GenericCollectionViewSourceProtocol.h"
 
-@protocol GenericTableViewSourceProtocol
-
-@property (nonatomic, strong, readonly) NSArray *source;
-
-@end
-
-@interface GenericTableViewSource : NSObject <GenericTableViewSourceProtocol,UITableViewDataSource>
-
--(instancetype)initWithSource:(NSArray*)source;
--(void)setDataSource:(NSArray*)source;
--(void)appendItems:(NSArray*)items;
-
+@interface GenericTableViewSource : NSObject <GenericCollectionViewSourceProtocol,UITableViewDataSource>
 
 @end
 

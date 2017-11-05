@@ -8,16 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class EmplesMenuPresenter;
+@protocol EmplesMenuViewModelProtocol;
 
-@protocol EmplesMenuViewProtocol
+@interface EmplesMenuView : UIViewController
 
--(void) setTableDataSource:(NSArray*)array;
-
-@end
-
-@interface EmplesMenuView : UIViewController <EmplesMenuViewProtocol>
-
-@property (nonatomic, strong) EmplesMenuPresenter *presenter;
+@property (nonatomic, strong) id<EmplesMenuViewModelProtocol> viewModel;
 
 @end

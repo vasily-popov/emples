@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2332C0E12ECE9A179A87B5A0 /* libPods-emplesMVVM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF51C4227F1E24927FB4BE02 /* libPods-emplesMVVM.a */; };
+		F0284DBB1FAF94DF000BC755 /* EmplesCarouselDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F0284DBA1FAF94DF000BC755 /* EmplesCarouselDataSource.m */; };
+		F0284DBF1FAF94FE000BC755 /* EmplesCarouselDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0284DBE1FAF94FE000BC755 /* EmplesCarouselDelegate.m */; };
 		F030C9381FACE0BA007F9C76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C85B1FACE0BA007F9C76 /* AppDelegate.m */; };
 		F030C9391FACE0BA007F9C76 /* BaseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C85D1FACE0BA007F9C76 /* BaseAppDelegate.m */; };
 		F030C93A1FACE0BA007F9C76 /* EmplesAppearanceService.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C85F1FACE0BA007F9C76 /* EmplesAppearanceService.m */; };
@@ -26,7 +28,6 @@
 		F030C9471FACE0BA007F9C76 /* DataGridSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C88C1FACE0BA007F9C76 /* DataGridSourceItem.m */; };
 		F030C9481FACE0BA007F9C76 /* GenericGridViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C88E1FACE0BA007F9C76 /* GenericGridViewSource.m */; };
 		F030C9491FACE0BA007F9C76 /* DataSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8911FACE0BA007F9C76 /* DataSourceItem.m */; };
-		F030C94A1FACE0BA007F9C76 /* GenericTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8931FACE0BA007F9C76 /* GenericTableViewManager.m */; };
 		F030C94B1FACE0BA007F9C76 /* GenericTableViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8951FACE0BA007F9C76 /* GenericTableViewSource.m */; };
 		F030C94C1FACE0BA007F9C76 /* EmplesProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8981FACE0BA007F9C76 /* EmplesProgressView.m */; };
 		F030C94D1FACE0BA007F9C76 /* EmplesViewCellDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C89C1FACE0BA007F9C76 /* EmplesViewCellDecorator.m */; };
@@ -37,54 +38,46 @@
 		F030C9521FACE0BA007F9C76 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8AA1FACE0BA007F9C76 /* UIColor+Hex.m */; };
 		F030C9531FACE0BA007F9C76 /* EmplesCollectionsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8AE1FACE0BA007F9C76 /* EmplesCollectionsAssembly.m */; };
 		F030C9541FACE0BA007F9C76 /* EmplesMenuAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8B01FACE0BA007F9C76 /* EmplesMenuAssembly.m */; };
-		F030C9551FACE0BA007F9C76 /* EmplesCollectionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8B31FACE0BA007F9C76 /* EmplesCollectionPresenter.m */; };
+		F030C9551FACE0BA007F9C76 /* EmplesCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8B31FACE0BA007F9C76 /* EmplesCollectionViewModel.m */; };
 		F030C9561FACE0BA007F9C76 /* EmplesItemRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8B61FACE0BA007F9C76 /* EmplesItemRouter.m */; };
-		F030C9571FACE0BA007F9C76 /* EmplesCarouselViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8BA1FACE0BA007F9C76 /* EmplesCarouselViewManager.m */; };
-		F030C9581FACE0BA007F9C76 /* EmplesCarouselPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8BC1FACE0BA007F9C76 /* EmplesCarouselPresenter.m */; };
+		F030C9581FACE0BA007F9C76 /* EmplesCarouselViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8BC1FACE0BA007F9C76 /* EmplesCarouselViewModel.m */; };
 		F030C9591FACE0BA007F9C76 /* EmplesCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8BE1FACE0BA007F9C76 /* EmplesCarouselView.m */; };
 		F030C95A1FACE0BA007F9C76 /* EmplesItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8C11FACE0BA007F9C76 /* EmplesItemView.m */; };
 		F030C95B1FACE0BA007F9C76 /* EmplesItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030C8C21FACE0BA007F9C76 /* EmplesItemView.xib */; };
-		F030C95C1FACE0BA007F9C76 /* EmplesDetailDescriptionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8C71FACE0BA007F9C76 /* EmplesDetailDescriptionCellModel.m */; };
+		F030C95C1FACE0BA007F9C76 /* EmplesDetailDescriptionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8C71FACE0BA007F9C76 /* EmplesDetailDescriptionCellViewModel.m */; };
 		F030C95D1FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8C91FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.m */; };
 		F030C95E1FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030C8CA1FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.xib */; };
-		F030C95F1FACE0BA007F9C76 /* EmplesDetailDirectionsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8CD1FACE0BA007F9C76 /* EmplesDetailDirectionsCellModel.m */; };
+		F030C95F1FACE0BA007F9C76 /* EmplesDetailDirectionsCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8CD1FACE0BA007F9C76 /* EmplesDetailDirectionsCellViewModel.m */; };
 		F030C9601FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8CF1FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.m */; };
 		F030C9611FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030C8D01FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.xib */; };
 		F030C9621FACE0BA007F9C76 /* EmplesDeatilMapViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8D31FACE0BA007F9C76 /* EmplesDeatilMapViewCell.m */; };
-		F030C9631FACE0BA007F9C76 /* EmplesDetailMapCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8D51FACE0BA007F9C76 /* EmplesDetailMapCellModel.m */; };
-		F030C9641FACE0BA007F9C76 /* EmplesDetailAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8D71FACE0BA007F9C76 /* EmplesDetailAreaModel.m */; };
-		F030C9651FACE0BA007F9C76 /* EmplesDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8D91FACE0BA007F9C76 /* EmplesDetailPresenter.m */; };
+		F030C9631FACE0BA007F9C76 /* EmplesDetailMapCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8D51FACE0BA007F9C76 /* EmplesDetailMapCellViewModel.m */; };
+		F030C9651FACE0BA007F9C76 /* EmplesDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8D91FACE0BA007F9C76 /* EmplesDetailViewModel.m */; };
 		F030C9661FACE0BA007F9C76 /* EmplesDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8DB1FACE0BA007F9C76 /* EmplesDetailView.m */; };
-		F030C9671FACE0BA007F9C76 /* EmplesDetailTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8DE1FACE0BA007F9C76 /* EmplesDetailTableViewManager.m */; };
-		F030C9681FACE0BA007F9C76 /* EmplesGalleryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8E11FACE0BA007F9C76 /* EmplesGalleryPresenter.m */; };
+		F030C9681FACE0BA007F9C76 /* EmplesGalleryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8E11FACE0BA007F9C76 /* EmplesGalleryViewModel.m */; };
 		F030C9691FACE0BA007F9C76 /* EmplesGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8E31FACE0BA007F9C76 /* EmplesGalleryView.m */; };
 		F030C96A1FACE0BB007F9C76 /* EmplesGalleryCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8E61FACE0BA007F9C76 /* EmplesGalleryCollectionFlowLayout.m */; };
-		F030C96B1FACE0BB007F9C76 /* EmplesGridCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8EA1FACE0BA007F9C76 /* EmplesGridCellModel.m */; };
+		F030C96B1FACE0BB007F9C76 /* EmplesGridCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8EA1FACE0BA007F9C76 /* EmplesGridCellViewModel.m */; };
 		F030C96C1FACE0BB007F9C76 /* EmplesGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8EC1FACE0BA007F9C76 /* EmplesGridViewCell.m */; };
 		F030C96D1FACE0BB007F9C76 /* EmplesGridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030C8ED1FACE0BA007F9C76 /* EmplesGridViewCell.xib */; };
-		F030C96E1FACE0BB007F9C76 /* EmplesGridPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8EF1FACE0BA007F9C76 /* EmplesGridPresenter.m */; };
+		F030C96E1FACE0BB007F9C76 /* EmplesGridViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8EF1FACE0BA007F9C76 /* EmplesGridViewModel.m */; };
 		F030C96F1FACE0BB007F9C76 /* EmplesGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8F11FACE0BA007F9C76 /* EmplesGridView.m */; };
-		F030C9701FACE0BB007F9C76 /* EmplesGridCollectionViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8F41FACE0BA007F9C76 /* EmplesGridCollectionViewManager.m */; };
 		F030C9711FACE0BB007F9C76 /* EmplesGridSourceBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8F71FACE0BA007F9C76 /* EmplesGridSourceBuilder.m */; };
-		F030C9721FACE0BB007F9C76 /* EmplesListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8FB1FACE0BA007F9C76 /* EmplesListCellModel.m */; };
+		F030C9721FACE0BB007F9C76 /* EmplesListCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8FB1FACE0BA007F9C76 /* EmplesListCellViewModel.m */; };
 		F030C9731FACE0BB007F9C76 /* EmplesListCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8FD1FACE0BA007F9C76 /* EmplesListCellView.m */; };
 		F030C9741FACE0BB007F9C76 /* EmplesListCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030C8FE1FACE0BA007F9C76 /* EmplesListCellView.xib */; };
-		F030C9751FACE0BB007F9C76 /* EmplesListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9001FACE0BA007F9C76 /* EmplesListPresenter.m */; };
+		F030C9751FACE0BB007F9C76 /* EmplesListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9001FACE0BA007F9C76 /* EmplesListViewModel.m */; };
 		F030C9761FACE0BB007F9C76 /* EmplesListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9021FACE0BA007F9C76 /* EmplesListView.m */; };
 		F030C9771FACE0BB007F9C76 /* EmplesListSourceBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9051FACE0BA007F9C76 /* EmplesListSourceBuilder.m */; };
-		F030C9781FACE0BB007F9C76 /* EmplesListTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9081FACE0BA007F9C76 /* EmplesListTableViewManager.m */; };
-		F030C9791FACE0BB007F9C76 /* EmplesMenuCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C90C1FACE0BA007F9C76 /* EmplesMenuCellModel.m */; };
+		F030C9791FACE0BB007F9C76 /* EmplesMenuCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C90C1FACE0BA007F9C76 /* EmplesMenuCellViewModel.m */; };
 		F030C97A1FACE0BB007F9C76 /* EmplesMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C90E1FACE0BA007F9C76 /* EmplesMenuViewCell.m */; };
 		F030C97B1FACE0BB007F9C76 /* EmplesMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030C90F1FACE0BA007F9C76 /* EmplesMenuViewCell.xib */; };
 		F030C97C1FACE0BB007F9C76 /* EmplesMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9111FACE0BA007F9C76 /* EmplesMenuModel.m */; };
-		F030C97D1FACE0BB007F9C76 /* EmplesMenuPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9131FACE0BA007F9C76 /* EmplesMenuPresenter.m */; };
 		F030C97E1FACE0BB007F9C76 /* EmplesMenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9151FACE0BA007F9C76 /* EmplesMenuRouter.m */; };
 		F030C97F1FACE0BB007F9C76 /* EmplesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9171FACE0BA007F9C76 /* EmplesMenuView.m */; };
-		F030C9801FACE0BB007F9C76 /* EmplesMenuTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C91B1FACE0BA007F9C76 /* EmplesMenuTableViewManager.m */; };
 		F030C9811FACE0BB007F9C76 /* EmplesStackedViewAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C91F1FACE0BA007F9C76 /* EmplesStackedViewAnimator.m */; };
-		F030C9821FACE0BB007F9C76 /* EmplesStackedPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9211FACE0BA007F9C76 /* EmplesStackedPresenter.m */; };
+		F030C9821FACE0BB007F9C76 /* EmplesStackedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9211FACE0BA007F9C76 /* EmplesStackedViewModel.m */; };
 		F030C9831FACE0BB007F9C76 /* EmplesStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9231FACE0BA007F9C76 /* EmplesStackedView.m */; };
-		F030C9841FACE0BB007F9C76 /* EmplesStackedViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9261FACE0BA007F9C76 /* EmplesStackedViewManager.m */; };
 		F030C9851FACE0BB007F9C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F030C9281FACE0BA007F9C76 /* Assets.xcassets */; };
 		F030C9861FACE0BB007F9C76 /* RecArea.json in Resources */ = {isa = PBXBuildFile; fileRef = F030C92A1FACE0BA007F9C76 /* RecArea.json */; };
 		F030C9871FACE0BB007F9C76 /* RecAreaAddress.json in Resources */ = {isa = PBXBuildFile; fileRef = F030C92B1FACE0BA007F9C76 /* RecAreaAddress.json */; };
@@ -92,12 +85,23 @@
 		F030C9891FACE0BB007F9C76 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F030C9321FACE0BA007F9C76 /* background.png */; };
 		F030C98A1FACE0BB007F9C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F030C9331FACE0BA007F9C76 /* LaunchScreen.storyboard */; };
 		F030C98C1FACE0BB007F9C76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C9361FACE0BA007F9C76 /* main.m */; };
+		F03E867F1FAF327900D8E8A9 /* GenericTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03E867E1FAF327900D8E8A9 /* GenericTableViewDelegate.m */; };
+		F03E86831FAF7C5000D8E8A9 /* EmplesUIBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F03E86821FAF7C5000D8E8A9 /* EmplesUIBaseView.m */; };
+		F03E86861FAF85AC00D8E8A9 /* EmplesSwipeableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F03E86851FAF85AC00D8E8A9 /* EmplesSwipeableViewDataSource.m */; };
+		F0B500491FACE646003FD05C /* EmplesMenuViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B500481FACE646003FD05C /* EmplesMenuViewModel.m */; };
+		F0B5004B1FACE8BF003FD05C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0B5004A1FACE8BE003FD05C /* README.md */; };
+		F0B500591FAE6E89003FD05C /* EmplesGoogleMapService.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B500581FAE6E89003FD05C /* EmplesGoogleMapService.m */; };
+		F0FE29D81FAF9B7100B6F00B /* GenericCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FE29D71FAF9B7100B6F00B /* GenericCollectionViewDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A3996CDC4C7C51EE8F187616 /* Pods-emplesMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesMVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-emplesMVVM/Pods-emplesMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		BF51C4227F1E24927FB4BE02 /* libPods-emplesMVVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emplesMVVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8A115757F5B58926C3D630 /* Pods-emplesMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesMVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emplesMVVM/Pods-emplesMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		F0284DB91FAF94DF000BC755 /* EmplesCarouselDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselDataSource.h; sourceTree = "<group>"; };
+		F0284DBA1FAF94DF000BC755 /* EmplesCarouselDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselDataSource.m; sourceTree = "<group>"; };
+		F0284DBD1FAF94FE000BC755 /* EmplesCarouselDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselDelegate.h; sourceTree = "<group>"; };
+		F0284DBE1FAF94FE000BC755 /* EmplesCarouselDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselDelegate.m; sourceTree = "<group>"; };
 		F030C83E1FACC925007F9C76 /* emplesMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emplesMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F030C85A1FACE0BA007F9C76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F030C85B1FACE0BA007F9C76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,8 +143,6 @@
 		F030C88E1FACE0BA007F9C76 /* GenericGridViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericGridViewSource.m; sourceTree = "<group>"; };
 		F030C8901FACE0BA007F9C76 /* DataSourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceItem.h; sourceTree = "<group>"; };
 		F030C8911FACE0BA007F9C76 /* DataSourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceItem.m; sourceTree = "<group>"; };
-		F030C8921FACE0BA007F9C76 /* GenericTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericTableViewManager.h; sourceTree = "<group>"; };
-		F030C8931FACE0BA007F9C76 /* GenericTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericTableViewManager.m; sourceTree = "<group>"; };
 		F030C8941FACE0BA007F9C76 /* GenericTableViewSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericTableViewSource.h; sourceTree = "<group>"; };
 		F030C8951FACE0BA007F9C76 /* GenericTableViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericTableViewSource.m; sourceTree = "<group>"; };
 		F030C8971FACE0BA007F9C76 /* EmplesProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesProgressView.h; sourceTree = "<group>"; };
@@ -164,98 +166,81 @@
 		F030C8AE1FACE0BA007F9C76 /* EmplesCollectionsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCollectionsAssembly.m; sourceTree = "<group>"; };
 		F030C8AF1FACE0BA007F9C76 /* EmplesMenuAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuAssembly.h; sourceTree = "<group>"; };
 		F030C8B01FACE0BA007F9C76 /* EmplesMenuAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuAssembly.m; sourceTree = "<group>"; };
-		F030C8B21FACE0BA007F9C76 /* EmplesCollectionPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionPresenter.h; sourceTree = "<group>"; };
-		F030C8B31FACE0BA007F9C76 /* EmplesCollectionPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCollectionPresenter.m; sourceTree = "<group>"; };
-		F030C8B41FACE0BA007F9C76 /* EmplesCollectionViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionViewProtocol.h; sourceTree = "<group>"; };
+		F030C8B21FACE0BA007F9C76 /* EmplesCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCollectionViewModel.h; sourceTree = "<group>"; };
+		F030C8B31FACE0BA007F9C76 /* EmplesCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCollectionViewModel.m; sourceTree = "<group>"; };
 		F030C8B51FACE0BA007F9C76 /* EmplesItemRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesItemRouter.h; sourceTree = "<group>"; };
 		F030C8B61FACE0BA007F9C76 /* EmplesItemRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesItemRouter.m; sourceTree = "<group>"; };
-		F030C8B91FACE0BA007F9C76 /* EmplesCarouselViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselViewManager.h; sourceTree = "<group>"; };
-		F030C8BA1FACE0BA007F9C76 /* EmplesCarouselViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselViewManager.m; sourceTree = "<group>"; };
-		F030C8BB1FACE0BA007F9C76 /* EmplesCarouselPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselPresenter.h; sourceTree = "<group>"; };
-		F030C8BC1FACE0BA007F9C76 /* EmplesCarouselPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselPresenter.m; sourceTree = "<group>"; };
+		F030C8BB1FACE0BA007F9C76 /* EmplesCarouselViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselViewModel.h; sourceTree = "<group>"; };
+		F030C8BC1FACE0BA007F9C76 /* EmplesCarouselViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselViewModel.m; sourceTree = "<group>"; };
 		F030C8BD1FACE0BA007F9C76 /* EmplesCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesCarouselView.h; sourceTree = "<group>"; };
 		F030C8BE1FACE0BA007F9C76 /* EmplesCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesCarouselView.m; sourceTree = "<group>"; };
 		F030C8C01FACE0BA007F9C76 /* EmplesItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesItemView.h; sourceTree = "<group>"; };
 		F030C8C11FACE0BA007F9C76 /* EmplesItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesItemView.m; sourceTree = "<group>"; };
 		F030C8C21FACE0BA007F9C76 /* EmplesItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesItemView.xib; sourceTree = "<group>"; };
-		F030C8C61FACE0BA007F9C76 /* EmplesDetailDescriptionCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDescriptionCellModel.h; sourceTree = "<group>"; };
-		F030C8C71FACE0BA007F9C76 /* EmplesDetailDescriptionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDescriptionCellModel.m; sourceTree = "<group>"; };
+		F030C8C61FACE0BA007F9C76 /* EmplesDetailDescriptionCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDescriptionCellViewModel.h; sourceTree = "<group>"; };
+		F030C8C71FACE0BA007F9C76 /* EmplesDetailDescriptionCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDescriptionCellViewModel.m; sourceTree = "<group>"; };
 		F030C8C81FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailTextViewWithImageViewCell.h; sourceTree = "<group>"; };
 		F030C8C91FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailTextViewWithImageViewCell.m; sourceTree = "<group>"; };
 		F030C8CA1FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesDetailTextViewWithImageViewCell.xib; sourceTree = "<group>"; };
-		F030C8CC1FACE0BA007F9C76 /* EmplesDetailDirectionsCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDirectionsCellModel.h; sourceTree = "<group>"; };
-		F030C8CD1FACE0BA007F9C76 /* EmplesDetailDirectionsCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDirectionsCellModel.m; sourceTree = "<group>"; };
+		F030C8CC1FACE0BA007F9C76 /* EmplesDetailDirectionsCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDirectionsCellViewModel.h; sourceTree = "<group>"; };
+		F030C8CD1FACE0BA007F9C76 /* EmplesDetailDirectionsCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDirectionsCellViewModel.m; sourceTree = "<group>"; };
 		F030C8CE1FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDirectionTextViewCell.h; sourceTree = "<group>"; };
 		F030C8CF1FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDirectionTextViewCell.m; sourceTree = "<group>"; };
 		F030C8D01FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesDetailDirectionTextViewCell.xib; sourceTree = "<group>"; };
 		F030C8D21FACE0BA007F9C76 /* EmplesDeatilMapViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDeatilMapViewCell.h; sourceTree = "<group>"; };
 		F030C8D31FACE0BA007F9C76 /* EmplesDeatilMapViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDeatilMapViewCell.m; sourceTree = "<group>"; };
-		F030C8D41FACE0BA007F9C76 /* EmplesDetailMapCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailMapCellModel.h; sourceTree = "<group>"; };
-		F030C8D51FACE0BA007F9C76 /* EmplesDetailMapCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailMapCellModel.m; sourceTree = "<group>"; };
-		F030C8D61FACE0BA007F9C76 /* EmplesDetailAreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailAreaModel.h; sourceTree = "<group>"; };
-		F030C8D71FACE0BA007F9C76 /* EmplesDetailAreaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailAreaModel.m; sourceTree = "<group>"; };
-		F030C8D81FACE0BA007F9C76 /* EmplesDetailPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailPresenter.h; sourceTree = "<group>"; };
-		F030C8D91FACE0BA007F9C76 /* EmplesDetailPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailPresenter.m; sourceTree = "<group>"; };
+		F030C8D41FACE0BA007F9C76 /* EmplesDetailMapCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailMapCellViewModel.h; sourceTree = "<group>"; };
+		F030C8D51FACE0BA007F9C76 /* EmplesDetailMapCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailMapCellViewModel.m; sourceTree = "<group>"; };
+		F030C8D81FACE0BA007F9C76 /* EmplesDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailViewModel.h; sourceTree = "<group>"; };
+		F030C8D91FACE0BA007F9C76 /* EmplesDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailViewModel.m; sourceTree = "<group>"; };
 		F030C8DA1FACE0BA007F9C76 /* EmplesDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailView.h; sourceTree = "<group>"; };
 		F030C8DB1FACE0BA007F9C76 /* EmplesDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailView.m; sourceTree = "<group>"; };
-		F030C8DD1FACE0BA007F9C76 /* EmplesDetailTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailTableViewManager.h; sourceTree = "<group>"; };
-		F030C8DE1FACE0BA007F9C76 /* EmplesDetailTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailTableViewManager.m; sourceTree = "<group>"; };
-		F030C8E01FACE0BA007F9C76 /* EmplesGalleryPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryPresenter.h; sourceTree = "<group>"; };
-		F030C8E11FACE0BA007F9C76 /* EmplesGalleryPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryPresenter.m; sourceTree = "<group>"; };
+		F030C8E01FACE0BA007F9C76 /* EmplesGalleryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryViewModel.h; sourceTree = "<group>"; };
+		F030C8E11FACE0BA007F9C76 /* EmplesGalleryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryViewModel.m; sourceTree = "<group>"; };
 		F030C8E21FACE0BA007F9C76 /* EmplesGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryView.h; sourceTree = "<group>"; };
 		F030C8E31FACE0BA007F9C76 /* EmplesGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryView.m; sourceTree = "<group>"; };
 		F030C8E51FACE0BA007F9C76 /* EmplesGalleryCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGalleryCollectionFlowLayout.h; sourceTree = "<group>"; };
 		F030C8E61FACE0BA007F9C76 /* EmplesGalleryCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGalleryCollectionFlowLayout.m; sourceTree = "<group>"; };
-		F030C8E91FACE0BA007F9C76 /* EmplesGridCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridCellModel.h; sourceTree = "<group>"; };
-		F030C8EA1FACE0BA007F9C76 /* EmplesGridCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridCellModel.m; sourceTree = "<group>"; };
+		F030C8E91FACE0BA007F9C76 /* EmplesGridCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridCellViewModel.h; sourceTree = "<group>"; };
+		F030C8EA1FACE0BA007F9C76 /* EmplesGridCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridCellViewModel.m; sourceTree = "<group>"; };
 		F030C8EB1FACE0BA007F9C76 /* EmplesGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridViewCell.h; sourceTree = "<group>"; };
 		F030C8EC1FACE0BA007F9C76 /* EmplesGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridViewCell.m; sourceTree = "<group>"; };
 		F030C8ED1FACE0BA007F9C76 /* EmplesGridViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesGridViewCell.xib; sourceTree = "<group>"; };
-		F030C8EE1FACE0BA007F9C76 /* EmplesGridPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridPresenter.h; sourceTree = "<group>"; };
-		F030C8EF1FACE0BA007F9C76 /* EmplesGridPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridPresenter.m; sourceTree = "<group>"; };
+		F030C8EE1FACE0BA007F9C76 /* EmplesGridViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridViewModel.h; sourceTree = "<group>"; };
+		F030C8EF1FACE0BA007F9C76 /* EmplesGridViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridViewModel.m; sourceTree = "<group>"; };
 		F030C8F01FACE0BA007F9C76 /* EmplesGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridView.h; sourceTree = "<group>"; };
 		F030C8F11FACE0BA007F9C76 /* EmplesGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridView.m; sourceTree = "<group>"; };
-		F030C8F31FACE0BA007F9C76 /* EmplesGridCollectionViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridCollectionViewManager.h; sourceTree = "<group>"; };
-		F030C8F41FACE0BA007F9C76 /* EmplesGridCollectionViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridCollectionViewManager.m; sourceTree = "<group>"; };
 		F030C8F61FACE0BA007F9C76 /* EmplesGridSourceBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesGridSourceBuilder.h; sourceTree = "<group>"; };
 		F030C8F71FACE0BA007F9C76 /* EmplesGridSourceBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesGridSourceBuilder.m; sourceTree = "<group>"; };
-		F030C8FA1FACE0BA007F9C76 /* EmplesListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListCellModel.h; sourceTree = "<group>"; };
-		F030C8FB1FACE0BA007F9C76 /* EmplesListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListCellModel.m; sourceTree = "<group>"; };
+		F030C8FA1FACE0BA007F9C76 /* EmplesListCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListCellViewModel.h; sourceTree = "<group>"; };
+		F030C8FB1FACE0BA007F9C76 /* EmplesListCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListCellViewModel.m; sourceTree = "<group>"; };
 		F030C8FC1FACE0BA007F9C76 /* EmplesListCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListCellView.h; sourceTree = "<group>"; };
 		F030C8FD1FACE0BA007F9C76 /* EmplesListCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListCellView.m; sourceTree = "<group>"; };
 		F030C8FE1FACE0BA007F9C76 /* EmplesListCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesListCellView.xib; sourceTree = "<group>"; };
-		F030C8FF1FACE0BA007F9C76 /* EmplesListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListPresenter.h; sourceTree = "<group>"; };
-		F030C9001FACE0BA007F9C76 /* EmplesListPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListPresenter.m; sourceTree = "<group>"; };
+		F030C8FF1FACE0BA007F9C76 /* EmplesListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListViewModel.h; sourceTree = "<group>"; };
+		F030C9001FACE0BA007F9C76 /* EmplesListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListViewModel.m; sourceTree = "<group>"; };
 		F030C9011FACE0BA007F9C76 /* EmplesListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListView.h; sourceTree = "<group>"; };
 		F030C9021FACE0BA007F9C76 /* EmplesListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListView.m; sourceTree = "<group>"; };
 		F030C9041FACE0BA007F9C76 /* EmplesListSourceBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListSourceBuilder.h; sourceTree = "<group>"; };
 		F030C9051FACE0BA007F9C76 /* EmplesListSourceBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListSourceBuilder.m; sourceTree = "<group>"; };
-		F030C9071FACE0BA007F9C76 /* EmplesListTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesListTableViewManager.h; sourceTree = "<group>"; };
-		F030C9081FACE0BA007F9C76 /* EmplesListTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesListTableViewManager.m; sourceTree = "<group>"; };
-		F030C90B1FACE0BA007F9C76 /* EmplesMenuCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuCellModel.h; sourceTree = "<group>"; };
-		F030C90C1FACE0BA007F9C76 /* EmplesMenuCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuCellModel.m; sourceTree = "<group>"; };
+		F030C90B1FACE0BA007F9C76 /* EmplesMenuCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuCellViewModel.h; sourceTree = "<group>"; };
+		F030C90C1FACE0BA007F9C76 /* EmplesMenuCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuCellViewModel.m; sourceTree = "<group>"; };
 		F030C90D1FACE0BA007F9C76 /* EmplesMenuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuViewCell.h; sourceTree = "<group>"; };
 		F030C90E1FACE0BA007F9C76 /* EmplesMenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuViewCell.m; sourceTree = "<group>"; };
 		F030C90F1FACE0BA007F9C76 /* EmplesMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesMenuViewCell.xib; sourceTree = "<group>"; };
 		F030C9101FACE0BA007F9C76 /* EmplesMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuModel.h; sourceTree = "<group>"; };
 		F030C9111FACE0BA007F9C76 /* EmplesMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuModel.m; sourceTree = "<group>"; };
-		F030C9121FACE0BA007F9C76 /* EmplesMenuPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuPresenter.h; sourceTree = "<group>"; };
-		F030C9131FACE0BA007F9C76 /* EmplesMenuPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuPresenter.m; sourceTree = "<group>"; };
 		F030C9141FACE0BA007F9C76 /* EmplesMenuRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuRouter.h; sourceTree = "<group>"; };
 		F030C9151FACE0BA007F9C76 /* EmplesMenuRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuRouter.m; sourceTree = "<group>"; };
 		F030C9161FACE0BA007F9C76 /* EmplesMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuView.h; sourceTree = "<group>"; };
 		F030C9171FACE0BA007F9C76 /* EmplesMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuView.m; sourceTree = "<group>"; };
 		F030C9181FACE0BA007F9C76 /* EnumMenuSelectedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumMenuSelectedItem.h; sourceTree = "<group>"; };
-		F030C91A1FACE0BA007F9C76 /* EmplesMenuTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesMenuTableViewManager.h; sourceTree = "<group>"; };
-		F030C91B1FACE0BA007F9C76 /* EmplesMenuTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuTableViewManager.m; sourceTree = "<group>"; };
 		F030C91E1FACE0BA007F9C76 /* EmplesStackedViewAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesStackedViewAnimator.h; sourceTree = "<group>"; };
 		F030C91F1FACE0BA007F9C76 /* EmplesStackedViewAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedViewAnimator.m; sourceTree = "<group>"; };
-		F030C9201FACE0BA007F9C76 /* EmplesStackedPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesStackedPresenter.h; sourceTree = "<group>"; };
-		F030C9211FACE0BA007F9C76 /* EmplesStackedPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedPresenter.m; sourceTree = "<group>"; };
+		F030C9201FACE0BA007F9C76 /* EmplesStackedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesStackedViewModel.h; sourceTree = "<group>"; };
+		F030C9211FACE0BA007F9C76 /* EmplesStackedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedViewModel.m; sourceTree = "<group>"; };
 		F030C9221FACE0BA007F9C76 /* EmplesStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesStackedView.h; sourceTree = "<group>"; };
 		F030C9231FACE0BA007F9C76 /* EmplesStackedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedView.m; sourceTree = "<group>"; };
-		F030C9251FACE0BA007F9C76 /* EmplesStackedViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesStackedViewManager.h; sourceTree = "<group>"; };
-		F030C9261FACE0BA007F9C76 /* EmplesStackedViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesStackedViewManager.m; sourceTree = "<group>"; };
 		F030C9281FACE0BA007F9C76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F030C92A1FACE0BA007F9C76 /* RecArea.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecArea.json; sourceTree = "<group>"; };
 		F030C92B1FACE0BA007F9C76 /* RecAreaAddress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecAreaAddress.json; sourceTree = "<group>"; };
@@ -267,6 +252,20 @@
 		F030C9351FACE0BA007F9C76 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F030C9361FACE0BA007F9C76 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F030C9371FACE0BA007F9C76 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F03E867D1FAF327900D8E8A9 /* GenericTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericTableViewDelegate.h; sourceTree = "<group>"; };
+		F03E867E1FAF327900D8E8A9 /* GenericTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericTableViewDelegate.m; sourceTree = "<group>"; };
+		F03E86811FAF7C5000D8E8A9 /* EmplesUIBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesUIBaseView.h; sourceTree = "<group>"; };
+		F03E86821FAF7C5000D8E8A9 /* EmplesUIBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesUIBaseView.m; sourceTree = "<group>"; };
+		F03E86841FAF85AC00D8E8A9 /* EmplesSwipeableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesSwipeableViewDataSource.h; sourceTree = "<group>"; };
+		F03E86851FAF85AC00D8E8A9 /* EmplesSwipeableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesSwipeableViewDataSource.m; sourceTree = "<group>"; };
+		F03E868A1FAF8DBA00D8E8A9 /* GenericCollectionViewSourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericCollectionViewSourceProtocol.h; sourceTree = "<group>"; };
+		F0B500471FACE646003FD05C /* EmplesMenuViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesMenuViewModel.h; sourceTree = "<group>"; };
+		F0B500481FACE646003FD05C /* EmplesMenuViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesMenuViewModel.m; sourceTree = "<group>"; };
+		F0B5004A1FACE8BE003FD05C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0B500571FAE6E89003FD05C /* EmplesGoogleMapService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesGoogleMapService.h; sourceTree = "<group>"; };
+		F0B500581FAE6E89003FD05C /* EmplesGoogleMapService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesGoogleMapService.m; sourceTree = "<group>"; };
+		F0FE29D61FAF9B7100B6F00B /* GenericCollectionViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericCollectionViewDelegate.h; sourceTree = "<group>"; };
+		F0FE29D71FAF9B7100B6F00B /* GenericCollectionViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericCollectionViewDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,9 +297,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F0284DB81FAF9279000BC755 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F030C8961FACE0BA007F9C76 /* ProgressView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		F030C8351FACC925007F9C76 = {
 			isa = PBXGroup;
 			children = (
+				F0B5004A1FACE8BE003FD05C /* README.md */,
 				F030C8401FACC925007F9C76 /* emplesMVVM */,
 				F030C83F1FACC925007F9C76 /* Products */,
 				4E905D39B5D25E85021FAFFC /* Pods */,
@@ -333,6 +341,7 @@
 				F030C8661FACE0BA007F9C76 /* BusinessLogicLayer */,
 				F030C8AB1FACE0BA007F9C76 /* PresentationLayer */,
 				F030C87E1FACE0BA007F9C76 /* Common */,
+				F0284DB81FAF9279000BC755 /* CustomViews */,
 				F030C89F1FACE0BA007F9C76 /* Constants */,
 				F030C8A61FACE0BA007F9C76 /* Extensions */,
 			);
@@ -358,6 +367,8 @@
 				F030C85D1FACE0BA007F9C76 /* BaseAppDelegate.m */,
 				F030C85E1FACE0BA007F9C76 /* EmplesAppearanceService.h */,
 				F030C85F1FACE0BA007F9C76 /* EmplesAppearanceService.m */,
+				F0B500571FAE6E89003FD05C /* EmplesGoogleMapService.h */,
+				F0B500581FAE6E89003FD05C /* EmplesGoogleMapService.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -460,11 +471,13 @@
 			isa = PBXGroup;
 			children = (
 				F030C87F1FACE0BA007F9C76 /* BaseRouter */,
-				F030C8821FACE0BA007F9C76 /* Extensions */,
+				F03E868A1FAF8DBA00D8E8A9 /* GenericCollectionViewSourceProtocol.h */,
 				F030C88A1FACE0BA007F9C76 /* GenericCollectionSource */,
+				F0FE29D51FAF9B4F00B6F00B /* GenericCollectionViewDelegate */,
 				F030C88F1FACE0BA007F9C76 /* GenericTableSource */,
-				F030C8961FACE0BA007F9C76 /* ProgressView */,
+				F03E867C1FAF325F00D8E8A9 /* GenericTableViewDelegate */,
 				F030C8991FACE0BA007F9C76 /* SourceBuilderProtocol.h */,
+				F030C8821FACE0BA007F9C76 /* ReusableExtensions */,
 				F030C89A1FACE0BA007F9C76 /* ViewCell */,
 			);
 			path = Common;
@@ -479,7 +492,7 @@
 			path = BaseRouter;
 			sourceTree = "<group>";
 		};
-		F030C8821FACE0BA007F9C76 /* Extensions */ = {
+		F030C8821FACE0BA007F9C76 /* ReusableExtensions */ = {
 			isa = PBXGroup;
 			children = (
 				F030C8831FACE0BA007F9C76 /* ReusableViewProtocol.h */,
@@ -490,7 +503,7 @@
 				F030C8881FACE0BA007F9C76 /* UIView+Reusable.h */,
 				F030C8891FACE0BA007F9C76 /* UIView+Reusable.m */,
 			);
-			path = Extensions;
+			path = ReusableExtensions;
 			sourceTree = "<group>";
 		};
 		F030C88A1FACE0BA007F9C76 /* GenericCollectionSource */ = {
@@ -509,8 +522,6 @@
 			children = (
 				F030C8901FACE0BA007F9C76 /* DataSourceItem.h */,
 				F030C8911FACE0BA007F9C76 /* DataSourceItem.m */,
-				F030C8921FACE0BA007F9C76 /* GenericTableViewManager.h */,
-				F030C8931FACE0BA007F9C76 /* GenericTableViewManager.m */,
 				F030C8941FACE0BA007F9C76 /* GenericTableViewSource.h */,
 				F030C8951FACE0BA007F9C76 /* GenericTableViewSource.m */,
 			);
@@ -565,14 +576,9 @@
 			isa = PBXGroup;
 			children = (
 				F030C8AC1FACE0BA007F9C76 /* Assembly */,
-				F030C8B11FACE0BA007F9C76 /* CollectionBase */,
-				F030C8B71FACE0BA007F9C76 /* Carousel */,
+				F0B500461FACE592003FD05C /* Collections */,
 				F030C8C31FACE0BA007F9C76 /* Detail */,
-				F030C8DF1FACE0BA007F9C76 /* Gallery */,
-				F030C8E71FACE0BA007F9C76 /* Grid */,
-				F030C8F81FACE0BA007F9C76 /* List */,
 				F030C9091FACE0BA007F9C76 /* Menu */,
-				F030C91C1FACE0BA007F9C76 /* Stack */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -593,11 +599,12 @@
 			children = (
 				F030C86B1FACE0BA007F9C76 /* EmplesRecreationAreaModel.h */,
 				F030C86C1FACE0BA007F9C76 /* EmplesRecreationAreaModel.m */,
-				F030C8B21FACE0BA007F9C76 /* EmplesCollectionPresenter.h */,
-				F030C8B31FACE0BA007F9C76 /* EmplesCollectionPresenter.m */,
-				F030C8B41FACE0BA007F9C76 /* EmplesCollectionViewProtocol.h */,
+				F030C8B21FACE0BA007F9C76 /* EmplesCollectionViewModel.h */,
+				F030C8B31FACE0BA007F9C76 /* EmplesCollectionViewModel.m */,
 				F030C8B51FACE0BA007F9C76 /* EmplesItemRouter.h */,
 				F030C8B61FACE0BA007F9C76 /* EmplesItemRouter.m */,
+				F03E86811FAF7C5000D8E8A9 /* EmplesUIBaseView.h */,
+				F03E86821FAF7C5000D8E8A9 /* EmplesUIBaseView.m */,
 			);
 			path = CollectionBase;
 			sourceTree = "<group>";
@@ -605,9 +612,9 @@
 		F030C8B71FACE0BA007F9C76 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				F030C8B81FACE0BA007F9C76 /* CarouselManager */,
-				F030C8BB1FACE0BA007F9C76 /* EmplesCarouselPresenter.h */,
-				F030C8BC1FACE0BA007F9C76 /* EmplesCarouselPresenter.m */,
+				F030C8B81FACE0BA007F9C76 /* DataSource */,
+				F030C8BB1FACE0BA007F9C76 /* EmplesCarouselViewModel.h */,
+				F030C8BC1FACE0BA007F9C76 /* EmplesCarouselViewModel.m */,
 				F030C8BD1FACE0BA007F9C76 /* EmplesCarouselView.h */,
 				F030C8BE1FACE0BA007F9C76 /* EmplesCarouselView.m */,
 				F030C8BF1FACE0BA007F9C76 /* ItemView */,
@@ -615,13 +622,15 @@
 			path = Carousel;
 			sourceTree = "<group>";
 		};
-		F030C8B81FACE0BA007F9C76 /* CarouselManager */ = {
+		F030C8B81FACE0BA007F9C76 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				F030C8B91FACE0BA007F9C76 /* EmplesCarouselViewManager.h */,
-				F030C8BA1FACE0BA007F9C76 /* EmplesCarouselViewManager.m */,
+				F0284DB91FAF94DF000BC755 /* EmplesCarouselDataSource.h */,
+				F0284DBA1FAF94DF000BC755 /* EmplesCarouselDataSource.m */,
+				F0284DBD1FAF94FE000BC755 /* EmplesCarouselDelegate.h */,
+				F0284DBE1FAF94FE000BC755 /* EmplesCarouselDelegate.m */,
 			);
-			path = CarouselManager;
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		F030C8BF1FACE0BA007F9C76 /* ItemView */ = {
@@ -638,13 +647,10 @@
 			isa = PBXGroup;
 			children = (
 				F030C8C41FACE0BA007F9C76 /* Cell */,
-				F030C8D61FACE0BA007F9C76 /* EmplesDetailAreaModel.h */,
-				F030C8D71FACE0BA007F9C76 /* EmplesDetailAreaModel.m */,
-				F030C8D81FACE0BA007F9C76 /* EmplesDetailPresenter.h */,
-				F030C8D91FACE0BA007F9C76 /* EmplesDetailPresenter.m */,
+				F030C8D81FACE0BA007F9C76 /* EmplesDetailViewModel.h */,
+				F030C8D91FACE0BA007F9C76 /* EmplesDetailViewModel.m */,
 				F030C8DA1FACE0BA007F9C76 /* EmplesDetailView.h */,
 				F030C8DB1FACE0BA007F9C76 /* EmplesDetailView.m */,
-				F030C8DC1FACE0BA007F9C76 /* TableManager */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -662,8 +668,8 @@
 		F030C8C51FACE0BA007F9C76 /* Description */ = {
 			isa = PBXGroup;
 			children = (
-				F030C8C61FACE0BA007F9C76 /* EmplesDetailDescriptionCellModel.h */,
-				F030C8C71FACE0BA007F9C76 /* EmplesDetailDescriptionCellModel.m */,
+				F030C8C61FACE0BA007F9C76 /* EmplesDetailDescriptionCellViewModel.h */,
+				F030C8C71FACE0BA007F9C76 /* EmplesDetailDescriptionCellViewModel.m */,
 				F030C8C81FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.h */,
 				F030C8C91FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.m */,
 				F030C8CA1FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.xib */,
@@ -674,8 +680,8 @@
 		F030C8CB1FACE0BA007F9C76 /* Directions */ = {
 			isa = PBXGroup;
 			children = (
-				F030C8CC1FACE0BA007F9C76 /* EmplesDetailDirectionsCellModel.h */,
-				F030C8CD1FACE0BA007F9C76 /* EmplesDetailDirectionsCellModel.m */,
+				F030C8CC1FACE0BA007F9C76 /* EmplesDetailDirectionsCellViewModel.h */,
+				F030C8CD1FACE0BA007F9C76 /* EmplesDetailDirectionsCellViewModel.m */,
 				F030C8CE1FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.h */,
 				F030C8CF1FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.m */,
 				F030C8D01FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.xib */,
@@ -688,26 +694,17 @@
 			children = (
 				F030C8D21FACE0BA007F9C76 /* EmplesDeatilMapViewCell.h */,
 				F030C8D31FACE0BA007F9C76 /* EmplesDeatilMapViewCell.m */,
-				F030C8D41FACE0BA007F9C76 /* EmplesDetailMapCellModel.h */,
-				F030C8D51FACE0BA007F9C76 /* EmplesDetailMapCellModel.m */,
+				F030C8D41FACE0BA007F9C76 /* EmplesDetailMapCellViewModel.h */,
+				F030C8D51FACE0BA007F9C76 /* EmplesDetailMapCellViewModel.m */,
 			);
 			path = Map;
-			sourceTree = "<group>";
-		};
-		F030C8DC1FACE0BA007F9C76 /* TableManager */ = {
-			isa = PBXGroup;
-			children = (
-				F030C8DD1FACE0BA007F9C76 /* EmplesDetailTableViewManager.h */,
-				F030C8DE1FACE0BA007F9C76 /* EmplesDetailTableViewManager.m */,
-			);
-			path = TableManager;
 			sourceTree = "<group>";
 		};
 		F030C8DF1FACE0BA007F9C76 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				F030C8E01FACE0BA007F9C76 /* EmplesGalleryPresenter.h */,
-				F030C8E11FACE0BA007F9C76 /* EmplesGalleryPresenter.m */,
+				F030C8E01FACE0BA007F9C76 /* EmplesGalleryViewModel.h */,
+				F030C8E11FACE0BA007F9C76 /* EmplesGalleryViewModel.m */,
 				F030C8E21FACE0BA007F9C76 /* EmplesGalleryView.h */,
 				F030C8E31FACE0BA007F9C76 /* EmplesGalleryView.m */,
 				F030C8E41FACE0BA007F9C76 /* FlowLayout */,
@@ -728,11 +725,10 @@
 			isa = PBXGroup;
 			children = (
 				F030C8E81FACE0BA007F9C76 /* Cell */,
-				F030C8EE1FACE0BA007F9C76 /* EmplesGridPresenter.h */,
-				F030C8EF1FACE0BA007F9C76 /* EmplesGridPresenter.m */,
+				F030C8EE1FACE0BA007F9C76 /* EmplesGridViewModel.h */,
+				F030C8EF1FACE0BA007F9C76 /* EmplesGridViewModel.m */,
 				F030C8F01FACE0BA007F9C76 /* EmplesGridView.h */,
 				F030C8F11FACE0BA007F9C76 /* EmplesGridView.m */,
-				F030C8F21FACE0BA007F9C76 /* GridManager */,
 				F030C8F51FACE0BA007F9C76 /* SourceBuilder */,
 			);
 			path = Grid;
@@ -741,22 +737,13 @@
 		F030C8E81FACE0BA007F9C76 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F030C8E91FACE0BA007F9C76 /* EmplesGridCellModel.h */,
-				F030C8EA1FACE0BA007F9C76 /* EmplesGridCellModel.m */,
+				F030C8E91FACE0BA007F9C76 /* EmplesGridCellViewModel.h */,
+				F030C8EA1FACE0BA007F9C76 /* EmplesGridCellViewModel.m */,
 				F030C8EB1FACE0BA007F9C76 /* EmplesGridViewCell.h */,
 				F030C8EC1FACE0BA007F9C76 /* EmplesGridViewCell.m */,
 				F030C8ED1FACE0BA007F9C76 /* EmplesGridViewCell.xib */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		F030C8F21FACE0BA007F9C76 /* GridManager */ = {
-			isa = PBXGroup;
-			children = (
-				F030C8F31FACE0BA007F9C76 /* EmplesGridCollectionViewManager.h */,
-				F030C8F41FACE0BA007F9C76 /* EmplesGridCollectionViewManager.m */,
-			);
-			path = GridManager;
 			sourceTree = "<group>";
 		};
 		F030C8F51FACE0BA007F9C76 /* SourceBuilder */ = {
@@ -772,12 +759,11 @@
 			isa = PBXGroup;
 			children = (
 				F030C8F91FACE0BA007F9C76 /* Cell */,
-				F030C8FF1FACE0BA007F9C76 /* EmplesListPresenter.h */,
-				F030C9001FACE0BA007F9C76 /* EmplesListPresenter.m */,
+				F030C8FF1FACE0BA007F9C76 /* EmplesListViewModel.h */,
+				F030C9001FACE0BA007F9C76 /* EmplesListViewModel.m */,
 				F030C9011FACE0BA007F9C76 /* EmplesListView.h */,
 				F030C9021FACE0BA007F9C76 /* EmplesListView.m */,
 				F030C9031FACE0BA007F9C76 /* SourceBuilder */,
-				F030C9061FACE0BA007F9C76 /* TableManager */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -785,8 +771,8 @@
 		F030C8F91FACE0BA007F9C76 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F030C8FA1FACE0BA007F9C76 /* EmplesListCellModel.h */,
-				F030C8FB1FACE0BA007F9C76 /* EmplesListCellModel.m */,
+				F030C8FA1FACE0BA007F9C76 /* EmplesListCellViewModel.h */,
+				F030C8FB1FACE0BA007F9C76 /* EmplesListCellViewModel.m */,
 				F030C8FC1FACE0BA007F9C76 /* EmplesListCellView.h */,
 				F030C8FD1FACE0BA007F9C76 /* EmplesListCellView.m */,
 				F030C8FE1FACE0BA007F9C76 /* EmplesListCellView.xib */,
@@ -803,29 +789,19 @@
 			path = SourceBuilder;
 			sourceTree = "<group>";
 		};
-		F030C9061FACE0BA007F9C76 /* TableManager */ = {
-			isa = PBXGroup;
-			children = (
-				F030C9071FACE0BA007F9C76 /* EmplesListTableViewManager.h */,
-				F030C9081FACE0BA007F9C76 /* EmplesListTableViewManager.m */,
-			);
-			path = TableManager;
-			sourceTree = "<group>";
-		};
 		F030C9091FACE0BA007F9C76 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 				F030C90A1FACE0BA007F9C76 /* Cell */,
 				F030C9101FACE0BA007F9C76 /* EmplesMenuModel.h */,
 				F030C9111FACE0BA007F9C76 /* EmplesMenuModel.m */,
-				F030C9121FACE0BA007F9C76 /* EmplesMenuPresenter.h */,
-				F030C9131FACE0BA007F9C76 /* EmplesMenuPresenter.m */,
-				F030C9141FACE0BA007F9C76 /* EmplesMenuRouter.h */,
-				F030C9151FACE0BA007F9C76 /* EmplesMenuRouter.m */,
 				F030C9161FACE0BA007F9C76 /* EmplesMenuView.h */,
 				F030C9171FACE0BA007F9C76 /* EmplesMenuView.m */,
+				F0B500471FACE646003FD05C /* EmplesMenuViewModel.h */,
+				F0B500481FACE646003FD05C /* EmplesMenuViewModel.m */,
+				F030C9141FACE0BA007F9C76 /* EmplesMenuRouter.h */,
+				F030C9151FACE0BA007F9C76 /* EmplesMenuRouter.m */,
 				F030C9181FACE0BA007F9C76 /* EnumMenuSelectedItem.h */,
-				F030C9191FACE0BA007F9C76 /* TableManager */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -833,8 +809,8 @@
 		F030C90A1FACE0BA007F9C76 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F030C90B1FACE0BA007F9C76 /* EmplesMenuCellModel.h */,
-				F030C90C1FACE0BA007F9C76 /* EmplesMenuCellModel.m */,
+				F030C90B1FACE0BA007F9C76 /* EmplesMenuCellViewModel.h */,
+				F030C90C1FACE0BA007F9C76 /* EmplesMenuCellViewModel.m */,
 				F030C90D1FACE0BA007F9C76 /* EmplesMenuViewCell.h */,
 				F030C90E1FACE0BA007F9C76 /* EmplesMenuViewCell.m */,
 				F030C90F1FACE0BA007F9C76 /* EmplesMenuViewCell.xib */,
@@ -842,24 +818,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		F030C9191FACE0BA007F9C76 /* TableManager */ = {
-			isa = PBXGroup;
-			children = (
-				F030C91A1FACE0BA007F9C76 /* EmplesMenuTableViewManager.h */,
-				F030C91B1FACE0BA007F9C76 /* EmplesMenuTableViewManager.m */,
-			);
-			path = TableManager;
-			sourceTree = "<group>";
-		};
 		F030C91C1FACE0BA007F9C76 /* Stack */ = {
 			isa = PBXGroup;
 			children = (
 				F030C91D1FACE0BA007F9C76 /* Animator */,
-				F030C9201FACE0BA007F9C76 /* EmplesStackedPresenter.h */,
-				F030C9211FACE0BA007F9C76 /* EmplesStackedPresenter.m */,
+				F030C9241FACE0BA007F9C76 /* DataSource */,
+				F030C9201FACE0BA007F9C76 /* EmplesStackedViewModel.h */,
+				F030C9211FACE0BA007F9C76 /* EmplesStackedViewModel.m */,
 				F030C9221FACE0BA007F9C76 /* EmplesStackedView.h */,
 				F030C9231FACE0BA007F9C76 /* EmplesStackedView.m */,
-				F030C9241FACE0BA007F9C76 /* StackedManager */,
 			);
 			path = Stack;
 			sourceTree = "<group>";
@@ -873,13 +840,13 @@
 			path = Animator;
 			sourceTree = "<group>";
 		};
-		F030C9241FACE0BA007F9C76 /* StackedManager */ = {
+		F030C9241FACE0BA007F9C76 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				F030C9251FACE0BA007F9C76 /* EmplesStackedViewManager.h */,
-				F030C9261FACE0BA007F9C76 /* EmplesStackedViewManager.m */,
+				F03E86841FAF85AC00D8E8A9 /* EmplesSwipeableViewDataSource.h */,
+				F03E86851FAF85AC00D8E8A9 /* EmplesSwipeableViewDataSource.m */,
 			);
-			path = StackedManager;
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		F030C9271FACE0BA007F9C76 /* Resources */ = {
@@ -919,6 +886,37 @@
 				F030C9371FACE0BA007F9C76 /* PrefixHeader.pch */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		F03E867C1FAF325F00D8E8A9 /* GenericTableViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F03E867D1FAF327900D8E8A9 /* GenericTableViewDelegate.h */,
+				F03E867E1FAF327900D8E8A9 /* GenericTableViewDelegate.m */,
+			);
+			path = GenericTableViewDelegate;
+			sourceTree = "<group>";
+		};
+		F0B500461FACE592003FD05C /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				F030C8B11FACE0BA007F9C76 /* CollectionBase */,
+				F030C8B71FACE0BA007F9C76 /* Carousel */,
+				F030C8DF1FACE0BA007F9C76 /* Gallery */,
+				F030C8E71FACE0BA007F9C76 /* Grid */,
+				F030C8F81FACE0BA007F9C76 /* List */,
+				F030C91C1FACE0BA007F9C76 /* Stack */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		F0FE29D51FAF9B4F00B6F00B /* GenericCollectionViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F0FE29D61FAF9B7100B6F00B /* GenericCollectionViewDelegate.h */,
+				F0FE29D71FAF9B7100B6F00B /* GenericCollectionViewDelegate.m */,
+			);
+			path = GenericCollectionViewDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -988,6 +986,7 @@
 				F030C9611FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.xib in Resources */,
 				F030C95B1FACE0BA007F9C76 /* EmplesItemView.xib in Resources */,
 				F030C96D1FACE0BB007F9C76 /* EmplesGridViewCell.xib in Resources */,
+				F0B5004B1FACE8BF003FD05C /* README.md in Resources */,
 				F030C9871FACE0BB007F9C76 /* RecAreaAddress.json in Resources */,
 				F030C9881FACE0BB007F9C76 /* Localizable.strings in Resources */,
 				F030C9851FACE0BB007F9C76 /* Assets.xcassets in Resources */,
@@ -1067,71 +1066,70 @@
 				F030C9731FACE0BB007F9C76 /* EmplesListCellView.m in Sources */,
 				F030C9461FACE0BA007F9C76 /* UIView+Reusable.m in Sources */,
 				F030C94D1FACE0BA007F9C76 /* EmplesViewCellDecorator.m in Sources */,
-				F030C9551FACE0BA007F9C76 /* EmplesCollectionPresenter.m in Sources */,
+				F0B500591FAE6E89003FD05C /* EmplesGoogleMapService.m in Sources */,
+				F030C9551FACE0BA007F9C76 /* EmplesCollectionViewModel.m in Sources */,
 				F030C94C1FACE0BA007F9C76 /* EmplesProgressView.m in Sources */,
 				F030C9561FACE0BA007F9C76 /* EmplesItemRouter.m in Sources */,
-				F030C9671FACE0BA007F9C76 /* EmplesDetailTableViewManager.m in Sources */,
 				F030C97E1FACE0BB007F9C76 /* EmplesMenuRouter.m in Sources */,
+				F0284DBB1FAF94DF000BC755 /* EmplesCarouselDataSource.m in Sources */,
 				F030C94F1FACE0BA007F9C76 /* EmplesFileNames.m in Sources */,
 				F030C9771FACE0BB007F9C76 /* EmplesListSourceBuilder.m in Sources */,
 				F030C9761FACE0BB007F9C76 /* EmplesListView.m in Sources */,
 				F030C9601FACE0BA007F9C76 /* EmplesDetailDirectionTextViewCell.m in Sources */,
-				F030C9651FACE0BA007F9C76 /* EmplesDetailPresenter.m in Sources */,
+				F030C9651FACE0BA007F9C76 /* EmplesDetailViewModel.m in Sources */,
 				F030C93B1FACE0BA007F9C76 /* ApplicationAssembly.m in Sources */,
-				F030C9701FACE0BB007F9C76 /* EmplesGridCollectionViewManager.m in Sources */,
 				F030C9511FACE0BA007F9C76 /* NSString+Localizable.m in Sources */,
+				F03E86831FAF7C5000D8E8A9 /* EmplesUIBaseView.m in Sources */,
 				F030C9441FACE0BA007F9C76 /* UICollectionView+Reusable.m in Sources */,
 				F030C9811FACE0BB007F9C76 /* EmplesStackedViewAnimator.m in Sources */,
 				F030C97F1FACE0BB007F9C76 /* EmplesMenuView.m in Sources */,
 				F030C9621FACE0BA007F9C76 /* EmplesDeatilMapViewCell.m in Sources */,
 				F030C9831FACE0BB007F9C76 /* EmplesStackedView.m in Sources */,
-				F030C9641FACE0BA007F9C76 /* EmplesDetailAreaModel.m in Sources */,
-				F030C9801FACE0BB007F9C76 /* EmplesMenuTableViewManager.m in Sources */,
 				F030C9421FACE0BA007F9C76 /* DisplayAreaCollectionUseCaseImplementation.m in Sources */,
-				F030C9791FACE0BB007F9C76 /* EmplesMenuCellModel.m in Sources */,
-				F030C94A1FACE0BA007F9C76 /* GenericTableViewManager.m in Sources */,
+				F030C9791FACE0BB007F9C76 /* EmplesMenuCellViewModel.m in Sources */,
+				F03E867F1FAF327900D8E8A9 /* GenericTableViewDelegate.m in Sources */,
 				F030C96C1FACE0BB007F9C76 /* EmplesGridViewCell.m in Sources */,
-				F030C9821FACE0BB007F9C76 /* EmplesStackedPresenter.m in Sources */,
-				F030C9751FACE0BB007F9C76 /* EmplesListPresenter.m in Sources */,
+				F030C9821FACE0BB007F9C76 /* EmplesStackedViewModel.m in Sources */,
+				F030C9751FACE0BB007F9C76 /* EmplesListViewModel.m in Sources */,
 				F030C94B1FACE0BA007F9C76 /* GenericTableViewSource.m in Sources */,
-				F030C9571FACE0BA007F9C76 /* EmplesCarouselViewManager.m in Sources */,
 				F030C9521FACE0BA007F9C76 /* UIColor+Hex.m in Sources */,
 				F030C97C1FACE0BB007F9C76 /* EmplesMenuModel.m in Sources */,
 				F030C9381FACE0BA007F9C76 /* AppDelegate.m in Sources */,
 				F030C94E1FACE0BA007F9C76 /* ColorStrings.m in Sources */,
-				F030C9841FACE0BB007F9C76 /* EmplesStackedViewManager.m in Sources */,
 				F030C9401FACE0BA007F9C76 /* JsonFileReader.m in Sources */,
 				F030C9711FACE0BB007F9C76 /* EmplesGridSourceBuilder.m in Sources */,
-				F030C97D1FACE0BB007F9C76 /* EmplesMenuPresenter.m in Sources */,
-				F030C96E1FACE0BB007F9C76 /* EmplesGridPresenter.m in Sources */,
+				F03E86861FAF85AC00D8E8A9 /* EmplesSwipeableViewDataSource.m in Sources */,
+				F030C96E1FACE0BB007F9C76 /* EmplesGridViewModel.m in Sources */,
 				F030C9541FACE0BA007F9C76 /* EmplesMenuAssembly.m in Sources */,
 				F030C9591FACE0BA007F9C76 /* EmplesCarouselView.m in Sources */,
 				F030C9481FACE0BA007F9C76 /* GenericGridViewSource.m in Sources */,
 				F030C95D1FACE0BA007F9C76 /* EmplesDetailTextViewWithImageViewCell.m in Sources */,
 				F030C93D1FACE0BA007F9C76 /* DataLayerAssembly.m in Sources */,
 				F030C9431FACE0BA007F9C76 /* BaseRouter.m in Sources */,
-				F030C9581FACE0BA007F9C76 /* EmplesCarouselPresenter.m in Sources */,
-				F030C95F1FACE0BA007F9C76 /* EmplesDetailDirectionsCellModel.m in Sources */,
+				F030C9581FACE0BA007F9C76 /* EmplesCarouselViewModel.m in Sources */,
+				F030C95F1FACE0BA007F9C76 /* EmplesDetailDirectionsCellViewModel.m in Sources */,
 				F030C97A1FACE0BB007F9C76 /* EmplesMenuViewCell.m in Sources */,
 				F030C9661FACE0BA007F9C76 /* EmplesDetailView.m in Sources */,
-				F030C9721FACE0BB007F9C76 /* EmplesListCellModel.m in Sources */,
+				F030C9721FACE0BB007F9C76 /* EmplesListCellViewModel.m in Sources */,
 				F030C95A1FACE0BA007F9C76 /* EmplesItemView.m in Sources */,
 				F030C93A1FACE0BA007F9C76 /* EmplesAppearanceService.m in Sources */,
 				F030C9451FACE0BA007F9C76 /* UITableView+Reusable.m in Sources */,
-				F030C9781FACE0BB007F9C76 /* EmplesListTableViewManager.m in Sources */,
 				F030C96A1FACE0BB007F9C76 /* EmplesGalleryCollectionFlowLayout.m in Sources */,
+				F0FE29D81FAF9B7100B6F00B /* GenericCollectionViewDelegate.m in Sources */,
 				F030C9501FACE0BA007F9C76 /* LocalizedStrings.m in Sources */,
-				F030C9681FACE0BA007F9C76 /* EmplesGalleryPresenter.m in Sources */,
-				F030C9631FACE0BA007F9C76 /* EmplesDetailMapCellModel.m in Sources */,
-				F030C96B1FACE0BB007F9C76 /* EmplesGridCellModel.m in Sources */,
+				F030C9681FACE0BA007F9C76 /* EmplesGalleryViewModel.m in Sources */,
+				F030C9631FACE0BA007F9C76 /* EmplesDetailMapCellViewModel.m in Sources */,
+				F030C96B1FACE0BB007F9C76 /* EmplesGridCellViewModel.m in Sources */,
+				F0B500491FACE646003FD05C /* EmplesMenuViewModel.m in Sources */,
 				F030C9391FACE0BA007F9C76 /* BaseAppDelegate.m in Sources */,
 				F030C93E1FACE0BA007F9C76 /* EmplesRecreationAreaModel.m in Sources */,
 				F030C9411FACE0BA007F9C76 /* EmplesRecAreaJSONModel.m in Sources */,
+				F0284DBF1FAF94FE000BC755 /* EmplesCarouselDelegate.m in Sources */,
 				F030C9471FACE0BA007F9C76 /* DataGridSourceItem.m in Sources */,
 				F030C9691FACE0BA007F9C76 /* EmplesGalleryView.m in Sources */,
 				F030C96F1FACE0BB007F9C76 /* EmplesGridView.m in Sources */,
 				F030C98C1FACE0BB007F9C76 /* main.m in Sources */,
-				F030C95C1FACE0BA007F9C76 /* EmplesDetailDescriptionCellModel.m in Sources */,
+				F030C95C1FACE0BA007F9C76 /* EmplesDetailDescriptionCellViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,38 +7,40 @@
 //
 
 #import "EmplesGridViewCell.h"
-#import "EmplesGridCellModel.h"
+#import "EmplesGridCellViewModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 @interface EmplesGridViewCell()
 
 @property(nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property(nonatomic, weak) IBOutlet UIImageView *iconView;
 
-@property (strong, nonatomic) EmplesGridCellModel *model;
+@property (strong, nonatomic) EmplesGridCellViewModel *viewModel;
 
 @end
 
 @implementation EmplesGridViewCell
 
-- (void)configureWithModel:(id<ViewCellModelProtocol>)model
+- (void)configureWithModel:(id<ViewCellModelProtocol>)viewModel
 {
-    if ([model isKindOfClass:[EmplesGridCellModel class]])
+    if ([viewModel isKindOfClass:[EmplesGridCellViewModel class]])
     {
-        self.model = (EmplesGridCellModel *)model;
-        self.titleLabel.text = self.model.text;
-        self.titleLabel.font = self.model.font;
-        self.titleLabel.textColor = self.model.textColor;
-        self.contentView.backgroundColor = self.model.bgColor;
-        if (self.model.imageURL.length > 0)
-        {
-            [self.iconView sd_setImageWithURL:[NSURL URLWithString:self.model.imageURL]];
-        }
+        self.viewModel = (EmplesGridCellViewModel *)viewModel;
     }
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    RAC(self.titleLabel, text) = RACObserve(self, viewModel.text);
+    RAC(self.titleLabel, font) = RACObserve(self, viewModel.font);
+    RAC(self.titleLabel, textColor) = RACObserve(self, viewModel.textColor);
+    RAC(self.contentView, backgroundColor) = RACObserve(self, viewModel.bgColor);
+    @weakify(self);
+    [[[RACObserve(self, viewModel.imageURL) ignore:nil] distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.iconView sd_setImageWithURL:[NSURL URLWithString:self.viewModel.imageURL]];
+     }];
 }
 
 @end

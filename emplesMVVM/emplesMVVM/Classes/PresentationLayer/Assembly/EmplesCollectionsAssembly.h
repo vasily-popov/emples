@@ -8,7 +8,6 @@
 
 #import <Typhoon/Typhoon.h>
 #import "EnumMenuSelectedItem.h"
-#import "EmplesCollectionViewProtocol.h"
 
 @class ApplicationAssembly;
 @class DataLayerAssembly;
@@ -20,7 +19,7 @@
 @property (nonatomic, strong, readonly) ApplicationAssembly *appAssembly;
 @property (nonatomic, strong, readonly) DataLayerAssembly *datalayerAssembly;
 
-- (UIViewController<EmplesCollectionViewProtocol> *)collectionViewFor:(NSNumber *)item;
+- (UIViewController *)collectionViewFor:(NSNumber *)item;
 - (EmplesDetailView*)detailViewArea:(EmplesRecreationAreaModel*)area;
 
 @end

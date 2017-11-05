@@ -9,6 +9,8 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import "UITableView+Reusable.h"
 #endif
 
 typedef void(^ContentResponseBlock)(id response, NSError *error);

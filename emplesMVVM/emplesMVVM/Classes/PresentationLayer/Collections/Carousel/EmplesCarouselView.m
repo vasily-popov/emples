@@ -7,77 +7,66 @@
 //
 
 #import "EmplesCarouselView.h"
-#import "EmplesProgressView.h"
 #import "ColorStrings.h"
-
-#import "EmplesCollectionPresenter.h"
-#import "EmplesCarouselViewManager.h"
 #import <iCarousel/iCarousel.h>
 
 @interface EmplesCarouselView ()
 
 @property (strong, nonatomic) iCarousel *carousel;
-@property (strong, nonatomic) EmplesCarouselViewManager *sourceManager;
-@property (strong, nonatomic) EmplesProgressView *progressView;
 
 @end
 
 @implementation EmplesCarouselView
 
-@synthesize presenter;
+@synthesize viewModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = [@"Carousel" uppercaseString];
-    [self createCarusel];
-    self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
-    [self.navigationController.view addSubview:self.progressView];
-    [self setupConstraints];
-    [self.presenter viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)setupConstraints
-{
-    self.progressView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.progressView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor constant:0].active = YES;
-    [self.progressView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor constant:0].active = YES;
-    [self.progressView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:0].active = YES;
-    [self.progressView.bottomAnchor constraintEqualToAnchor:self.navigationController.view.bottomAnchor constant:0].active = YES;
-}
-
--(void)createCarusel
-{
     [self.view setBackgroundColor: [UIColor colorNamed:emplesGreenColor]];
-    self.carousel = [[iCarousel alloc] initWithFrame:self.view.bounds];
-    self.carousel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.carousel.type = iCarouselTypeCoverFlow2;
-    self.sourceManager = [[EmplesCarouselViewManager alloc] init];
-    self.carousel.dataSource = [self.sourceManager dataSourceForCarouselView:self.carousel];
-    self.carousel.delegate = [self.sourceManager delegateForCarouselView:self.carousel];
+    [self bindViewModel];
+    [self.viewModel viewDidLoad];
+}
+
+-(void)bindViewModel
+{
+    RAC(self, title) = RACObserve(self, viewModel.title);
+    RAC(self.carousel, dataSource) = RACObserve(self, viewModel.dataSource);
+    RAC(self.carousel, delegate) = RACObserve(self, viewModel.delegate);
     
-    //add carousel to view
-    [self.view addSubview:self.carousel];
+    @weakify(self);
+    [[[RACObserve(self.viewModel.dataSource, source) ignore:nil] distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.carousel reloadData];
+     }];
+    
+    [[[self.viewModel.loadItemsAction.executing skipWhileBlock:^ BOOL (NSNumber *loading)
+    {
+        // Skip until we start loading.
+        return !loading.boolValue;
+    }] distinctUntilChanged]
+     subscribeNext:^(NSNumber *loading) {
+         @strongify(self);
+         if (loading.boolValue) {
+             [self showProgressView];
+         } else {
+             [self hideProgressView];
+         }
+     }];
 }
 
--(void)showProgressView
+-(iCarousel*)carousel
 {
-    [self.progressView show];
-}
-
--(void)hideProgressView
-{
-    [self.progressView hide];
-}
-
--(void)updateCollectionItems:(NSArray *)array
-{
-    [self.sourceManager updateDataSource:array];
-    [self.carousel reloadData];
+    if(!_carousel)
+    {
+        _carousel = [[iCarousel alloc] initWithFrame:self.view.bounds];
+        _carousel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _carousel.type = iCarouselTypeCoverFlow2;
+        //add carousel to view
+        [self.view addSubview:_carousel];
+    }
+    return _carousel;
 }
 
 @end

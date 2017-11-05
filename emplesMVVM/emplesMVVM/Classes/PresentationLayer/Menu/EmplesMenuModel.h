@@ -7,18 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EnumMenuSelectedItem.h"
-
-@protocol EmplesMenuSelectProtocol
-
--(void)selectedItem:(EnumMenuSelectedItem)item;
-
-@end
 
 @interface EmplesMenuModel : NSObject
 
-@property (nonatomic, weak) id<EmplesMenuSelectProtocol> delegate;
-
--(NSArray*)buildSourceModel;
+@property (nonatomic, strong, readonly) NSArray *items;
 
 @end

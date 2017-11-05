@@ -7,14 +7,13 @@
 //
 
 #import "EmplesMenuView.h"
-#import "EmplesMenuTableViewManager.h"
-#import "EmplesMenuPresenter.h"
+#import "EmplesMenuViewModel.h"
 #import "ColorStrings.h"
+#import "EmplesMenuViewCell.h"
 
 @interface EmplesMenuView ()
 
 @property (strong, nonatomic) UITableView *table;
-@property (strong, nonatomic) EmplesMenuTableViewManager *sourceManager;
 
 @end
 
@@ -22,35 +21,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = [@"Menu" uppercaseString];
-    [self createTableView];
-    [self.presenter viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self bindViewModel];
+    [self.viewModel viewDidLoad];
 }
 
--(void)createTableView
+-(void)bindViewModel
 {
-    self.table = [[UITableView alloc] initWithFrame:self.view.bounds
+    RAC(self, title) = RACObserve(self, viewModel.title);
+    RAC(self.table, dataSource) = RACObserve(self, viewModel.dataSource);
+    RAC(self.table, delegate) = RACObserve(self, viewModel.delegate);
+    
+    @weakify(self);
+    [[RACObserve(self.viewModel, dataSource) distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.table reloadData];
+     }];
+}
+
+-(UITableView*)table
+{
+    if(!_table)
+    {
+        _table = [[UITableView alloc] initWithFrame:self.view.bounds
                                               style:UITableViewStylePlain];
-    self.table.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.table.backgroundColor = [UIColor colorNamed:lightWhiteColor];
-    [self.table setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    [self.view addSubview:self.table];
-    self.sourceManager = [[EmplesMenuTableViewManager alloc] init];
-    self.table.dataSource = [self.sourceManager dataSourceForTableView:self.table];
-    self.table.delegate = [self.sourceManager delegateForTableView:self.table];
+        _table.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _table.backgroundColor = [UIColor colorNamed:lightWhiteColor];
+        [_table setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+        [self.view addSubview:_table];
+        [_table registerCellNib:EmplesMenuViewCell.class];
+    }
+    return _table;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - EmplesMenuViewProtocol
-
--(void) setTableDataSource:(NSArray*)array
-{
-    [self.sourceManager updateDataSource:array];
-    [self.table reloadData];
-}
 @end

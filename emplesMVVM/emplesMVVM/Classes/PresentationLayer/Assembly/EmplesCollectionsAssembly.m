@@ -17,20 +17,18 @@
 #import "EmplesGalleryView.h"
 #import "EmplesCarouselView.h"
 
-#import "EmplesStackedPresenter.h"
-#import "EmplesGridPresenter.h"
-#import "EmplesGalleryPresenter.h"
-#import "EmplesCarouselPresenter.h"
-
+#import "EmplesStackedViewModel.h"
+#import "EmplesGridViewModel.h"
+#import "EmplesGalleryViewModel.h"
+#import "EmplesCarouselViewModel.h"
 
 #import "EmplesRecAreaJSONModel.h"
 #import "EmplesDetailView.h"
-#import "EmplesDetailPresenter.h"
-#import "EmplesDetailAreaModel.h"
+#import "EmplesDetailViewModel.h"
 
 @implementation EmplesCollectionsAssembly
 
-- (UIViewController<EmplesCollectionViewProtocol> *)collectionViewFor:(NSNumber *)item
+- (UIViewController*)collectionViewFor:(NSNumber *)item
 {
     return [TyphoonDefinition withOption:item matcher:^(TyphoonOptionMatcher *matcher)
             {
@@ -47,18 +45,17 @@
     return [TyphoonDefinition withClass:[EmplesGridView class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition injectProperty:@selector(presenter)
-                                      with:[self gridPresenter]];
+                [definition injectProperty:@selector(viewModel)
+                                      with:[self gridViewModel]];
             }];
 }
 
-- (EmplesGridPresenter*)gridPresenter
+- (EmplesGridViewModel*)gridViewModel
 {
-    return [TyphoonDefinition withClass:[EmplesGridPresenter class]
+    return [TyphoonDefinition withClass:[EmplesGridViewModel class]
                           configuration:^(TyphoonDefinition* definition)
             {
                 [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
-                [definition injectProperty:@selector(view) with:[self gridView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
             }];
 }
@@ -68,18 +65,17 @@
     return [TyphoonDefinition withClass:[EmplesStackedView class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition injectProperty:@selector(presenter)
-                                      with:[self stackedPresenter]];
+                [definition injectProperty:@selector(viewModel)
+                                      with:[self stackedViewModel]];
             }];
 }
 
-- (EmplesStackedPresenter*)stackedPresenter
+- (EmplesStackedViewModel*)stackedViewModel
 {
-    return [TyphoonDefinition withClass:[EmplesStackedPresenter class]
+    return [TyphoonDefinition withClass:[EmplesStackedViewModel class]
                           configuration:^(TyphoonDefinition* definition)
             {
                 [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
-                [definition injectProperty:@selector(view) with:[self stackedView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
             }];
 }
@@ -89,18 +85,17 @@
     return [TyphoonDefinition withClass:[EmplesGalleryView class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition injectProperty:@selector(presenter)
-                                      with:[self galleryPresenter]];
+                [definition injectProperty:@selector(viewModel)
+                                      with:[self galleryViewModel]];
             }];
 }
 
-- (EmplesGalleryPresenter*)galleryPresenter
+- (EmplesGalleryViewModel*)galleryViewModel
 {
-    return [TyphoonDefinition withClass:[EmplesGalleryPresenter class]
+    return [TyphoonDefinition withClass:[EmplesGalleryViewModel class]
                           configuration:^(TyphoonDefinition* definition)
             {
                 [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
-                [definition injectProperty:@selector(view) with:[self galleryView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
             }];
 }
@@ -110,18 +105,17 @@
     return [TyphoonDefinition withClass:[EmplesCarouselView class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition injectProperty:@selector(presenter)
-                                      with:[self carouselPresenter]];
+                [definition injectProperty:@selector(viewModel)
+                                      with:[self carouselViewModel]];
             }];
 }
 
-- (EmplesCarouselPresenter*)carouselPresenter
+- (EmplesCarouselViewModel*)carouselViewModel
 {
-    return [TyphoonDefinition withClass:[EmplesCarouselPresenter class]
+    return [TyphoonDefinition withClass:[EmplesCarouselViewModel class]
                           configuration:^(TyphoonDefinition* definition)
             {
                 [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
-                [definition injectProperty:@selector(view) with:[self carouselView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
             }];
 }
@@ -131,18 +125,17 @@
     return [TyphoonDefinition withClass:[EmplesListView class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition injectProperty:@selector(presenter)
-                                      with:[self listPresenter]];
+                [definition injectProperty:@selector(viewModel)
+                                      with:[self listViewModel]];
             }];
 }
 
-- (EmplesListPresenter*)listPresenter
+- (EmplesListViewModel*)listViewModel
 {
-    return [TyphoonDefinition withClass:[EmplesListPresenter class]
+    return [TyphoonDefinition withClass:[EmplesListViewModel class]
                           configuration:^(TyphoonDefinition* definition)
             {
                 [definition injectProperty:@selector(displayCollectionUseCase) with:[self.datalayerAssembly displayAreaCollectionUseCase]];
-                [definition injectProperty:@selector(view) with:[self listView]];
                 [definition injectProperty:@selector(router) with:[self itemRouter]];
             }];
 }
@@ -168,38 +161,22 @@
     return [TyphoonDefinition withClass:[EmplesDetailView class]
                           configuration:^(TyphoonDefinition* definition)
             {
-                [definition injectProperty:@selector(presenter)
-                                      with:[self detailPresenterWithArea:area]];
+                [definition injectProperty:@selector(viewModel)
+                                      with:[self detailViewModelWithArea:area]];
             }];
 }
 
--(EmplesDetailPresenter*)detailPresenterWithArea:(EmplesRecreationAreaModel*)area
+-(EmplesDetailViewModel*)detailViewModelWithArea:(EmplesRecreationAreaModel*)area
 {
-    return [TyphoonDefinition withClass:[EmplesDetailPresenter class]
+    return [TyphoonDefinition withClass:[EmplesDetailViewModel class]
                           configuration:^(TyphoonDefinition* definition)
             {
                 [definition useInitializer:@selector(initWithModel:)
-                                parameters:^(TyphoonMethod *initializer)
-                 {
-                     [initializer injectParameterWith:[self detailModelWith:area]];
-                 }];
-                [definition injectProperty:@selector(view)
-                                      with:[self detailViewArea:area]];
-            }];
-}
-
--(EmplesDetailAreaModel*)detailModelWith:(EmplesRecreationAreaModel*)area
-{
-    return [TyphoonDefinition withClass:[EmplesDetailAreaModel class]
-                          configuration:^(TyphoonDefinition* definition)
-            {
-                [definition useInitializer:@selector(initWithItem:)
                                 parameters:^(TyphoonMethod *initializer)
                  {
                      [initializer injectParameterWith:area];
                  }];
             }];
 }
-
 
 @end

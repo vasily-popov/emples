@@ -8,7 +8,7 @@
 
 #import "EmplesListSourceBuilder.h"
 #import "EmplesRecreationAreaModel.h"
-#import "EmplesListCellModel.h"
+#import "EmplesListCellViewModel.h"
 #import "EmplesViewCellDecorator.h"
 
 @implementation EmplesListSourceBuilder
@@ -19,7 +19,7 @@
     for (int index = 0; index < items.count; index ++)
     {
         EmplesRecreationAreaModel *item = items[index];
-        EmplesListCellModel *model = [EmplesListCellModel new];
+        EmplesListCellViewModel *model = [EmplesListCellViewModel new];
         model.text = item.areaName;
         model.phone = item.areaPhone;
         model.imageURL = item.imageURL;

@@ -7,7 +7,7 @@
 //
 
 #import "EmplesListCellView.h"
-#import "EmplesListCellModel.h"
+#import "EmplesListCellViewModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface EmplesListCellView()
@@ -16,40 +16,37 @@
 @property(nonatomic, weak) IBOutlet UILabel *phoneLabel;
 @property(nonatomic, weak) IBOutlet UIImageView *iconView;
 
-@property (strong, nonatomic) EmplesListCellModel *model;
+@property (strong, nonatomic) EmplesListCellViewModel *viewModel;
 
 @end
 
 @implementation EmplesListCellView
 
-- (void)configureWithModel:(id<ViewCellModelProtocol>)model
+- (void)configureWithModel:(id<ViewCellModelProtocol>)viewModel
 {
-    if ([model isKindOfClass:[EmplesListCellModel class]])
+    if ([viewModel isKindOfClass:[EmplesListCellViewModel class]])
     {
-        self.model = (EmplesListCellModel *)model;
-        self.titleLabel.text = self.model.text;
-        self.titleLabel.font = self.model.font;
-        self.titleLabel.textColor = self.model.textColor;
-        self.phoneLabel.text = self.model.phone;
-        self.phoneLabel.font = self.model.secondFont;
-        self.phoneLabel.textColor = self.model.secondColor;
-        self.contentView.backgroundColor = self.model.bgColor;
-        if (self.model.imageURL.length > 0)
-        {
-            [self.iconView sd_setImageWithURL:[NSURL URLWithString:self.model.imageURL]];
-        }
+        self.viewModel = (EmplesListCellViewModel *)viewModel;
     }
 }
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    RAC(self.titleLabel, text) = RACObserve(self, viewModel.text);
+    RAC(self.titleLabel, font) = RACObserve(self, viewModel.font);
+    RAC(self.titleLabel, textColor) = RACObserve(self, viewModel.textColor);
+    RAC(self.phoneLabel, text) = RACObserve(self, viewModel.phone);
+    RAC(self.phoneLabel, font) = RACObserve(self, viewModel.secondFont);
+    RAC(self.phoneLabel, textColor) = RACObserve(self, viewModel.secondColor);
+    RAC(self.contentView, backgroundColor) = RACObserve(self, viewModel.bgColor);
+    @weakify(self);
+    [[[RACObserve(self, viewModel.imageURL) ignore:nil] distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.iconView sd_setImageWithURL:[NSURL URLWithString:self.viewModel.imageURL]];
+     }];
 }
 
 @end

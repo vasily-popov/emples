@@ -12,7 +12,7 @@
 
 -(void)navigateToSelectedItem:(EnumMenuSelectedItem)item
 {
-    UIViewController<EmplesCollectionViewProtocol> *vc = [self.collectionsAssembly collectionViewFor:@(item)];
+    UIViewController *vc = [self.collectionsAssembly collectionViewFor:@(item)];
     [self.viewController pushViewController:vc animated:YES];
 }
 

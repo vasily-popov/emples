@@ -7,14 +7,16 @@
 //
 
 #import "EmplesDetailView.h"
-#import "EmplesDetailPresenter.h"
-#import "EmplesDetailTableViewManager.h"
+#import "EmplesDetailViewModel.h"
 #import "ColorStrings.h"
+
+#import "EmplesDetailDirectionTextViewCell.h"
+#import "EmplesDetailTextViewWithImageViewCell.h"
+#import "EmplesDeatilMapViewCell.h"
 
 @interface EmplesDetailView ()
 
 @property (strong, nonatomic) UITableView *table;
-@property (strong, nonatomic) EmplesDetailTableViewManager *sourceManager;
 
 @end
 
@@ -22,38 +24,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createTableView];
-    [self.presenter viewDidLoad];
+    [self bindViewModel];
+    [self.viewModel viewDidLoad];
 }
 
--(void)setViewTitle:(NSString*)title
+-(void)bindViewModel
 {
-    self.title = title;
-}
-
--(void)setSourceArray:(NSArray*)array
-{
-    [self.sourceManager updateDataSource:array];
-    [self.table reloadData];
-}
-
--(void)createTableView
-{
-    self.table = [[UITableView alloc] initWithFrame:self.view.bounds
-                                              style:UITableViewStylePlain];
-    self.table.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.table.backgroundColor = [UIColor colorNamed:emplesGreenColor];
-    [self.table setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    [self.view addSubview:self.table];
-    self.sourceManager = [[EmplesDetailTableViewManager alloc] init];
-    self.table.dataSource = [self.sourceManager dataSourceForTableView:self.table];
-    self.table.delegate = [self.sourceManager delegateForTableView:self.table];
+    RAC(self, title) = RACObserve(self.viewModel, title);
+    RAC(self.table, dataSource) = RACObserve(self, viewModel.dataSource);
+    RAC(self.table, delegate) = RACObserve(self, viewModel.delegate);
     
+    @weakify(self);
+    [[RACObserve(self.viewModel, dataSource) distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.table reloadData];
+     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(UITableView*)table
+{
+    if(!_table)
+    {
+        _table = [[UITableView alloc] initWithFrame:self.view.bounds
+                                              style:UITableViewStylePlain];
+        _table.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _table.backgroundColor = [UIColor colorNamed:lightWhiteColor];
+        [_table setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+        [self.view addSubview:_table];
+        [_table registerCellNib:EmplesDetailDirectionTextViewCell.class];
+        [_table registerCellNib:EmplesDetailTextViewWithImageViewCell.class];
+        [_table registerCell:EmplesDeatilMapViewCell.class];
+    }
+    return _table;
 }
 
 

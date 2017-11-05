@@ -7,9 +7,6 @@
 //
 
 #import "EmplesStackedView.h"
-#import "EmplesStackedViewManager.h"
-#import "EmplesCollectionPresenter.h"
-#import "EmplesProgressView.h"
 #import "ColorStrings.h"
 #import "EmplesStackedViewAnimator.h"
 #import <ZLSwipeableView/ZLSwipeableView.h>
@@ -17,26 +14,45 @@
 @interface EmplesStackedView ()
 
 @property (strong, nonatomic) ZLSwipeableView *swipeableView;
-@property (strong, nonatomic) EmplesStackedViewManager *sourceManager;
-@property (strong, nonatomic) EmplesProgressView *progressView;
 
 
 @end
 
 @implementation EmplesStackedView
 
-@synthesize presenter;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = [@"Stack" uppercaseString];
     self.view.backgroundColor = [UIColor colorNamed:emplesGreenColor];
-    [self createStackedView];
-    self.progressView = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
-    [self.navigationController.view addSubview:self.progressView];
-    [self setupConstraints];
-    [self.presenter viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self bindViewModel];
+    [self.viewModel viewDidLoad];
+}
+
+-(void)bindViewModel
+{
+    RAC(self, title) = RACObserve(self, viewModel.title);
+    RAC(self.swipeableView, dataSource) = RACObserve(self, viewModel.dataSource);
+    
+    @weakify(self);
+    [[[RACObserve(self.viewModel.dataSource, source) ignore:nil] distinctUntilChanged]
+     subscribeNext:^(id _)
+     {
+         @strongify(self);
+         [self.swipeableView loadViewsIfNeeded];
+     }];
+    
+    [[[self.viewModel.loadItemsAction.executing skipWhileBlock:^BOOL(NSNumber *loading) {
+        return !loading.boolValue;
+    }] distinctUntilChanged] subscribeNext:^(NSNumber *loading) {
+        @strongify(self);
+        if (loading.boolValue)
+        {
+            [self showProgressView];
+        }
+        else
+        {
+            [self hideProgressView];
+        }
+    }];
 }
 
 -(void)dealloc
@@ -55,46 +71,17 @@
     }];
 }
 
--(void)setupConstraints
+-(ZLSwipeableView*)swipeableView
 {
-    self.progressView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.progressView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor constant:0].active = YES;
-    [self.progressView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor constant:0].active = YES;
-    [self.progressView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:0].active = YES;
-    [self.progressView.bottomAnchor constraintEqualToAnchor:self.navigationController.view.bottomAnchor constant:0].active = YES;
-}
-
--(void)createStackedView
-{
-    self.swipeableView = [[ZLSwipeableView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.swipeableView];
-    [self.swipeableView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    self.swipeableView.numberOfActiveViews = 4;
-    self.sourceManager = [[EmplesStackedViewManager alloc] init];
-    self.swipeableView.dataSource = [self.sourceManager dataSourceForStackedView:self.swipeableView];
-    self.swipeableView.delegate = [self.sourceManager delegateForStackedView:self.swipeableView];
-    self.swipeableView.viewAnimator = [EmplesStackedViewAnimator new];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)showProgressView
-{
-    [self.progressView show];
-}
-
--(void)hideProgressView
-{
-    [self.progressView hide];
-}
-
--(void)updateCollectionItems:(NSArray *)array
-{
-    [self.sourceManager updateDataSource:array];
-    [self.swipeableView loadViewsIfNeeded];
+    if(!_swipeableView)
+    {
+        _swipeableView = [[ZLSwipeableView alloc] initWithFrame:self.view.bounds];
+        [self.view addSubview:_swipeableView];
+        [_swipeableView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+        _swipeableView.numberOfActiveViews = 4;
+        _swipeableView.viewAnimator = [EmplesStackedViewAnimator new];
+    }
+    return _swipeableView;
 }
 
 @end
