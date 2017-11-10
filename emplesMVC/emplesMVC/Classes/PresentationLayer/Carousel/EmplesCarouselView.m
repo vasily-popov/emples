@@ -64,6 +64,16 @@
     [self.view addSubview:self.carousel];
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context)
+     {
+         [self.carousel reloadData];
+     } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+     }];
+}
+
 -(void)showProgressView
 {
     [self.progressView show];

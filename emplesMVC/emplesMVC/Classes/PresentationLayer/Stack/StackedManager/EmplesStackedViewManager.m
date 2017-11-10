@@ -71,7 +71,11 @@
         //return nil;
     }
     EmplesItemView *view = [[[NSBundle mainBundle] loadNibNamed:@"EmplesItemView" owner:self options:nil] firstObject];
-    CGRect size = CGRectMake(0, 0, swipeableView.frame.size.width *0.8, swipeableView.frame.size.height *0.8);
+    
+    CGRect size = CGRectMake(0, 0, swipeableView.frame.size.width *0.8, swipeableView.frame.size.height *0.6);
+    if(swipeableView.frame.size.width > swipeableView.frame.size.height) {
+        size = CGRectMake(0, 0, swipeableView.frame.size.width *0.6, swipeableView.frame.size.height *0.8);
+    }
     [view setFrame:size];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didItemTap:)];

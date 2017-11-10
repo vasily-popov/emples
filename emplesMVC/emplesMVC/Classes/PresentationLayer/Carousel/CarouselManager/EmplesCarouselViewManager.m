@@ -63,7 +63,10 @@
     {
         view = [[[NSBundle mainBundle] loadNibNamed:@"EmplesItemView" owner:self options:nil] firstObject];
         CGRect screenSize = [[UIScreen mainScreen] bounds];
-        CGRect size = CGRectMake(0, 0, screenSize.size.width *0.75, screenSize.size.height *0.75);
+        CGRect size = CGRectMake(0, 0, screenSize.size.width *0.8, screenSize.size.height *0.6);
+        if(screenSize.size.width > screenSize.size.height) {
+            size = CGRectMake(0, 0, screenSize.size.width *0.6, screenSize.size.height *0.8);
+        }
         [view setFrame:size];
     }
     if([view isKindOfClass:[EmplesItemView class]])
