@@ -11,5 +11,4 @@
 @protocol DataRequestProtocol <NSObject>
 
 -(void) doRequestToFetchAllAreaWithResponseBlock:(ContentResponseBlock)block;
--(void) doRequestToFetchAllAddressWithResponseBlock:(ContentResponseBlock)block;
 @end

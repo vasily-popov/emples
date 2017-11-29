@@ -48,27 +48,6 @@
     }];
 }
 
--(void) fetchAllAreaAddresses
-{
-    __weak typeof(self) weakSelf = self;
-    [self.factory doRequestToFetchAllAddressWithResponseBlock:^(id response, NSError *error)
-     {
-         __strong typeof(self) strongSelf = weakSelf;
-         if(strongSelf)
-         {
-             if(!error)
-             {
-                 //NSError *parseError = nil;
-             }
-             else
-             {
-                 
-             }
-         }
-     }];
-}
-
-
 -(NSArray* ) parseAreaResponse:(id)response error:(NSError**)error
 {
     NSArray<EmplesRecAreaJSONModel*>* model = nil;

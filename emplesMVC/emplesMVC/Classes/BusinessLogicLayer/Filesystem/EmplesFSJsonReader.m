@@ -15,19 +15,23 @@
 
 -(id) readFileWithName:(NSString*)name error:(NSError **)error
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"json"];
-    if(path != nil)
+    if(name.length > 0)
     {
-        NSString *content = [NSString stringWithContentsOfFile:path
-                                         encoding:NSUTF8StringEncoding
-                                            error:error];
-        NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
-        return  [NSJSONSerialization JSONObjectWithData:data options:0 error:error];
+        NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"json"];
+        if(path != nil)
+        {
+            NSString *content = [NSString stringWithContentsOfFile:path
+                                             encoding:NSUTF8StringEncoding
+                                                error:error];
+            NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+            return  [NSJSONSerialization JSONObjectWithData:data options:0 error:error];
+        }
     }
-    
-    *error = [NSError errorWithDomain:@"EmplesFSJsonReader"
-                                 code:0
-                             userInfo:@{NSLocalizedDescriptionKey:[kFileNotFoundString localizedString]}];
+    if(error != nil) {
+        *error = [NSError errorWithDomain:@"EmplesFSJsonReader"
+                                     code:0
+                                 userInfo:@{NSLocalizedDescriptionKey:[kFileNotFoundString localizedString]}];
+    }
     return nil;
 }
 
@@ -35,15 +39,6 @@
 {
     NSError *error = nil;
     id content = [self readFileWithName:kRecAreaFileName error:&error];
-    if(block)
-    {
-        block(content, error);
-    }
-}
--(void) doRequestToFetchAllAddressWithResponseBlock:(ContentResponseBlock)block
-{
-    NSError *error = nil;
-    id content = [self readFileWithName:kRecAreaAdressFileName error:&error];
     if(block)
     {
         block(content, error);

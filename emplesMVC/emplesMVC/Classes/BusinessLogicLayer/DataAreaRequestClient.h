@@ -10,9 +10,10 @@
 
 @interface DataAreaRequestClient : NSObject
 
+-(instancetype)init __unavailable;
+
 -(instancetype)initWithFactory:(id<DataRequestProtocol>)factory;
 
 -(void) fetchAllAreas:(ContentResponseBlock)block;
--(void) fetchAllAreaAddresses;
 
 @end

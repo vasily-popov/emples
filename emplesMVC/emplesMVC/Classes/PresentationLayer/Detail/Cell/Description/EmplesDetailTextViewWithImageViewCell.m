@@ -37,11 +37,6 @@
     }
 }
 
-- (id<ViewCellModelProtocol>)activeModel
-{
-    return self.model;
-}
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

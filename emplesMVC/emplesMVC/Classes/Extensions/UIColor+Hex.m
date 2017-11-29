@@ -30,14 +30,16 @@
         unsigned rgbValue = 0;
         NSScanner *scanner = [NSScanner scannerWithString:hexString];
         // skip # character
-        [scanner setScanLocation:1];
-        [scanner scanHexInt:&rgbValue];
-        return [UIColor colorWithRGBHex:rgbValue];
+        if ([hexString hasPrefix:@"#"])
+        {
+            [scanner setScanLocation:1];
+        }
+        BOOL successed = [scanner scanHexInt:&rgbValue];
+        if (successed) {
+            return [UIColor colorWithRGBHex:rgbValue];
+        }
     }
-    else
-    {
-        return nil;
-    }
+    return nil;
 }
 @end
 

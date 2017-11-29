@@ -18,3 +18,4 @@ fastlane/README.md
 fastlane/screenshots
 # scan temporary files
 fastlane/test_output
+*.xcbaseline/

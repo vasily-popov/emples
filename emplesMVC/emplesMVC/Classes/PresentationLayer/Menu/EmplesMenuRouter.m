@@ -90,7 +90,7 @@
             [self.viewController pushViewController:view animated:YES];
             break;
         }
-        case EnumMenuSelectedItemCarusel:
+        case EnumMenuSelectedItemCarousel:
         {
             EmplesListModelDecorator *decorator = [[EmplesListModelDecorator alloc] initWithModel:model];
             EmplesCarouselView *view = [EmplesCarouselView new];

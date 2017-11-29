@@ -17,5 +17,6 @@
 @property (nonatomic, copy) void (^selectAction)(id<ViewCellModelProtocol> cellModel);
 
 - (instancetype)initWithCellModel:(id<ViewCellModelProtocol>)cellModel;
+- (instancetype)init __unavailable;
 
 @end
