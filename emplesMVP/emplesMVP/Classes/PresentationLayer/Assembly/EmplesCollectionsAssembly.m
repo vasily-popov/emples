@@ -37,7 +37,7 @@
                 [matcher caseEqual:@(EnumMenuSelectedItemGrid) use:[self gridView]];
                 [matcher caseEqual:@(EnumMenuSelectedItemStack) use:[self stackedView]];
                 [matcher caseEqual:@(EnumMenuSelectedItemGallery) use:[self galleryView]];
-                [matcher caseEqual:@(EnumMenuSelectedItemCarusel) use:[self carouselView]];
+                [matcher caseEqual:@(EnumMenuSelectedItemCarousel) use:[self carouselView]];
                 [matcher caseEqual:@(EnumMenuSelectedItemList) use:[self listView]];
             }];
 }

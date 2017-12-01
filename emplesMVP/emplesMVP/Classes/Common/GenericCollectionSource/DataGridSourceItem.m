@@ -21,12 +21,6 @@
     
     return self;
 }
-
--(CGSize)getItemSize
-{
-    return self.itemSize;
-}
-
 - (id)value
 {
     return [self.cellModel getModelValue];

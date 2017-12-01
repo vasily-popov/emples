@@ -14,7 +14,7 @@ typedef enum : NSUInteger {
     EnumMenuSelectedItemGrid,
     EnumMenuSelectedItemStack,
     EnumMenuSelectedItemGallery,
-    EnumMenuSelectedItemCarusel
+    EnumMenuSelectedItemCarousel
 } EnumMenuSelectedItem;
 
 #endif /* EnumMenuSelectedItem_h */

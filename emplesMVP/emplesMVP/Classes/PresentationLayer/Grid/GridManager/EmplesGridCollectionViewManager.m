@@ -57,11 +57,6 @@
     }
 }
 
--(void)registerCellsForTable:(UITableView*)tableView
-{
-    
-}
-
 - (id<UICollectionViewDataSource>)dataSourceForCollectionView:(UICollectionView *)collectionView
 {
     [self registerCellsForCollection:collectionView];

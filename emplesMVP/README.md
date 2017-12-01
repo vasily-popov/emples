@@ -24,3 +24,8 @@
 * It communicates with network and sorage `API` to retrieve / persist the data
 * Models objects used by your application such as `Order`, `Product`, `Shopping Cart`, etc
 
+
+##### Test
+* XCTest used for Unit test
+* Specta used for integration/functional testing
+
