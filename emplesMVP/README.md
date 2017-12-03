@@ -26,6 +26,5 @@
 
 
 ##### Test
-* XCTest used for Unit test
-* Specta used for integration/functional testing
+* Specta used for Unit testing
 
