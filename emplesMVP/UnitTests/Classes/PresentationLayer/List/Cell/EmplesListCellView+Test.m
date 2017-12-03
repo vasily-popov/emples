@@ -6,33 +6,39 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesListCellView.h"
 #import "EmplesListCellModel.h"
 
-@interface EmplesListCellView_Test : XCTestCase
+SpecBegin(EmplesListCellView)
 
-@end
+describe(@"EmplesListCellView", ^{
+    
+    __block EmplesListCellView *cell = nil;
+    beforeEach(^{
+        cell = [[EmplesListCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"resuse"];
+        expect(cell).toNot.beNil();
+    });
+    
+    it(@"should be loaded", ^{
+        expect(^{
+            [cell awakeFromNib];
+        }).notTo.raiseAny();
+    });
+    
+    it(@"should configure", ^{
+        expect(^{
+            id mock = OCMClassMock([EmplesListCellModel class]);
+            [cell configureWithModel:mock];
+        }).notTo.raiseAny();
+    });
+    
+    afterEach(^{
+        cell = nil;
+    });
+});
 
-@implementation EmplesListCellView_Test
+SpecEnd
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testCell {
-    id mock = OCMClassMock([EmplesListCellModel class]);
-    EmplesListCellView *cell = [[EmplesListCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"resuse"];
-    XCTAssertNotNil(cell);
-    XCTAssertNoThrow([cell awakeFromNib]);
-    XCTAssertNoThrow([cell configureWithModel:mock]);
-}
-
-@end

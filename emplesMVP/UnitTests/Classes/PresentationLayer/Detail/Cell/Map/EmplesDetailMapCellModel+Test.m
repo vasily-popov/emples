@@ -6,30 +6,33 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "EmplesDetailMapCellModel.h"
 
-@interface EmplesDetailMapCellModel_Test : XCTestCase
+SpecBegin(EmplesDetailMapCellModel)
 
-@end
+describe(@"EmplesDetailMapCellModel", ^{
+    
+    __block EmplesDetailMapCellModel *model = nil;
+    beforeEach(^{
+        model = [EmplesDetailMapCellModel new];
+        expect(model).toNot.beNil();
+    });
+    
+    it(@"should have nil model", ^{
+        expect([model getModelValue]).to.beNil();
+    });
+    
+    it(@"should have cell class name", ^{
+        expect([model cellClassName]).to.equal(@"EmplesDeatilMapViewCell");
+    });
+    
+    afterEach(^{
+        model = nil;
+    });
+});
 
-@implementation EmplesDetailMapCellModel_Test
+SpecEnd
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testModel {
-    EmplesDetailMapCellModel *model = [EmplesDetailMapCellModel new];
-    XCTAssertNotNil(model);
-    XCTAssertNil([model getModelValue]);
-    XCTAssert([[model cellClassName] isEqualToString: @"EmplesDeatilMapViewCell"]);
-}
-
-@end

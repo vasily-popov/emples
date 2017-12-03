@@ -513,7 +513,6 @@
 		F05FEA6D1FCED0480072ED7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F05FEAA61FCED0480072ED7A /* EmplesAreasModel+Test.m */,
 				F05FEAEA1FCED4A30072ED7A /* ProgressView */,
 				F05FEA6E1FCED0480072ED7A /* BaseRouter */,
 				F05FEA701FCED0480072ED7A /* Extensions */,
@@ -611,6 +610,7 @@
 		F05FEA831FCED0480072ED7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F05FEAA61FCED0480072ED7A /* EmplesAreasModel+Test.m */,
 				F05FEA841FCED0480072ED7A /* EmplesCollectionPresenter+Test.m */,
 				F05FEA851FCED0480072ED7A /* EmplesItemRouter+Test.m */,
 			);
@@ -1433,7 +1433,6 @@
 			isa = PBXGroup;
 			children = (
 				F0F258D11FD1723E00B95D0C /* BusinessLayer */,
-				F0F258E91FD1723E00B95D0C /* PresentationLayer */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1444,21 +1443,6 @@
 				F0F258D31FD1723E00B95D0C /* DataAreaRequestClient+FTest.m */,
 			);
 			path = BusinessLayer;
-			sourceTree = "<group>";
-		};
-		F0F258E91FD1723E00B95D0C /* PresentationLayer */ = {
-			isa = PBXGroup;
-			children = (
-				F0F258F21FD1723E00B95D0C /* Common */,
-			);
-			path = PresentationLayer;
-			sourceTree = "<group>";
-		};
-		F0F258F21FD1723E00B95D0C /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -6,36 +6,44 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesItemRouter.h"
 #import "EmplesRecAreaJSONModel.h"
 
-@interface EmplesItemRouter_Test : XCTestCase
+SpecBegin(EmplesItemRouter)
 
-@end
+describe(@"EmplesItemRouter", ^{
+    
+    __block EmplesItemRouter *router = nil;
+    __block UINavigationController *vc = nil;
+    __block UIWindow *window = nil;
+    beforeAll(^{
+        vc = [UINavigationController new];
+        window = [UIWindow new];
+        router = [[EmplesItemRouter alloc] initWithNavigationVC:vc andWindow:window];
+    });
+    
+    it(@"should be exist", ^{
+        expect(router).notTo.beNil();
+        expect(router.window).to.equal(window);
+        expect(router.viewController).to.equal(vc);
+    });
+    
+    it(@"should navigate to detail", ^{
+        id mock = OCMClassMock([EmplesRecAreaJSONModel class]);
+        expect(^{
+            [router navigateToItemDetail:mock];
+        }).notTo.raiseAny();
+        [mock stopMocking];
+    });
+    
+    afterAll(^{
+        window = nil;
+        vc = nil;
+        router = nil;
+    });
+});
 
-@implementation EmplesItemRouter_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testItemRouter {
-    UINavigationController *vc = [UINavigationController new];
-    UIWindow *window = [UIWindow new];
-    EmplesItemRouter *router = [[EmplesItemRouter alloc] initWithNavigationVC:vc andWindow:window];
-    XCTAssertNotNil(router);
-    XCTAssertEqual(router.window, window);
-    XCTAssertEqual(router.viewController, vc);
-    id mock = OCMClassMock([EmplesRecAreaJSONModel class]);
-    XCTAssertNoThrow([router navigateToItemDetail:mock]);
-}
-
-@end
+SpecEnd

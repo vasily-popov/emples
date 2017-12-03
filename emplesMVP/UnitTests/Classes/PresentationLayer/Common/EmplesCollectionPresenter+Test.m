@@ -6,52 +6,56 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesCollectionPresenter.h"
 #import "EmplesAreasModel.h"
 
-@interface EmplesCollectionPresenter()
 
-@property (nonatomic, strong, readonly) EmplesAreasModel *model;
+SpecBegin(EmplesCollectionPresenter)
 
--(void)areasModel:(EmplesAreasModel*)model didFinishWithResponse:(id)response;
--(void)areasModel:(EmplesAreasModel*)model didFinishWithError:(NSError*)error;
--(void)selectedItem:(EmplesRecAreaJSONModel*)item;
 
-@end
+describe(@"EmplesCollectionPresenter", ^{
+    
+    __block id modelMock = OCMClassMock([EmplesAreasModel class]);
+    __block id routerMock = OCMClassMock([EmplesItemRouter class]);
+    __block id viewMock = OCMProtocolMock(@protocol(EmplesCollectionViewProtocol));
+    __block EmplesCollectionPresenter * presenter = nil;
+    beforeAll(^{
+        presenter = [[EmplesCollectionPresenter alloc] initWithModel:modelMock];
+        presenter.view = viewMock;
+        presenter.router = routerMock;
+    });
+    
+    it(@"should be exist", ^{
+        expect(presenter).notTo.beNil();
+        expect(presenter.view).notTo.beNil();
+        expect(presenter.router).notTo.beNil();
+    });
+    
+    it(@"should handle view did load", ^{
+        expect(^{
+            [presenter viewDidLoad];
+        }).notTo.raiseAny();
+        
+        OCMVerify([viewMock showProgressView]);
+        OCMVerify([modelMock fetchAreas]);
+    });
+    
+    it(@"should prepared collection array be nil", ^{
+        expect([presenter prepareCollectionArray]).to.beNil();
+    });
+    
+    afterAll(^{
+        [modelMock stopMocking];
+        [routerMock stopMocking];
+        [viewMock stopMocking];
+        modelMock = nil;
+        routerMock = nil;
+        viewMock = nil;
+        presenter = nil;
+    });
+});
 
-@interface EmplesCollectionPresenter_Test : XCTestCase
-
-@end
-
-@implementation EmplesCollectionPresenter_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testInitWithModel {
-    id modelMock = OCMClassMock([EmplesAreasModel class]);
-    id routerMock = OCMClassMock([EmplesItemRouter class]);
-    id viewMock = OCMProtocolMock(@protocol(EmplesCollectionViewProtocol));
-    EmplesCollectionPresenter * presenter = [[EmplesCollectionPresenter alloc] initWithModel:modelMock];
-    XCTAssertNotNil(presenter);
-    XCTAssertNotNil(presenter.model);
-    presenter.view = viewMock;
-    presenter.router = routerMock;
-    XCTAssertNoThrow([presenter viewDidLoad]);
-    OCMVerify([modelMock fetchAreas]);
-    XCTAssertNil([presenter prepareCollectionArray]);
-    XCTAssertNoThrow([presenter areasModel:modelMock didFinishWithError:nil]);
-    XCTAssertNoThrow([presenter areasModel:modelMock didFinishWithResponse:nil]);
-    XCTAssertNoThrow([presenter selectedItem:nil]);
-}
-
-@end
+SpecEnd

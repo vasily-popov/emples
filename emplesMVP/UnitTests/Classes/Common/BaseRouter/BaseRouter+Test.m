@@ -6,53 +6,69 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "BaseRouter.h"
 
-@interface BaseRouter_Test : XCTestCase
+SpecBegin(BaseRouter)
 
-@end
-
-@implementation BaseRouter_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testInit {
+describe(@"BaseRouter_init", ^{
     
-    BaseRouter *router = [[BaseRouter alloc] init];
-    XCTAssertNotNil(router);
-    XCTAssertNil(router.window);
-    XCTAssertNil(router.viewController);
-    XCTAssertNoThrow([router prepareForSegue:nil sender:nil]);
-    XCTAssertNoThrow([router setRootViewController:nil]);
-    XCTAssertNoThrow([router popViewControllerAnimated:NO]);
-    XCTAssertNoThrow([router popToRootViewControllerAnimated:NO]);
-    XCTAssertNoThrow([router dismissViewControllerAnimated:NO completion:nil]);
-    XCTAssertNoThrow([router showAlertWithTitle:nil message:nil]);
-}
-
-- (void)testInitWitCellProtocol {
-    UINavigationController *vc = [UINavigationController new];
-    UIWindow *window = [UIWindow new];
-    BaseRouter *router = [[BaseRouter alloc] initWithNavigationVC:vc andWindow:window];
-    XCTAssertNotNil(router);
-    XCTAssertEqual(router.window, window);
-    XCTAssertEqual(router.viewController, vc);
-    XCTAssertNoThrow([router prepareForSegue:nil sender:nil]);
-    XCTAssertNoThrow([router setRootViewController:nil]);
-    XCTAssertNoThrow([router popViewControllerAnimated:NO]);
-    XCTAssertNoThrow([router popToRootViewControllerAnimated:NO]);
-    XCTAssertNoThrow([router dismissViewControllerAnimated:NO completion:nil]);
-    XCTAssertNoThrow([router showAlertWithTitle:nil message:nil]);
+    __block BaseRouter *router = nil;
+    beforeAll(^{
+        router = [[BaseRouter alloc] init];
+    });
     
-}
+    it(@"should be exist", ^{
+        expect(router).notTo.beNil();
+        expect(router.window).to.beNil();
+        expect(router.viewController).to.beNil();
+    });
+    
+    it(@"should handle invalid inputs", ^{
+        expect(^{
+            [router prepareForSegue:nil sender:nil];
+            [router setRootViewController:nil];
+            [router popViewControllerAnimated:NO];
+            [router popToRootViewControllerAnimated:NO];
+            [router dismissViewControllerAnimated:NO completion:nil];
+            [router showAlertWithTitle:nil message:nil];
+        }).notTo.raiseAny();
+    });
+    
+    afterAll(^{
+        router = nil;
+    });
+});
 
-@end
+describe(@"BaseRouter init with window and navigation vc", ^{
+    
+    __block UINavigationController *vc = nil;
+    __block UIWindow *window = nil;
+    __block BaseRouter *router = nil;
+    beforeAll(^{
+        vc = [UINavigationController new];
+        window = [UIWindow new];
+        router = [[BaseRouter alloc] initWithNavigationVC:vc andWindow:window];
+    });
+    
+    it(@"should not rise any exception", ^{
+        expect(^{
+            [router prepareForSegue:nil sender:nil];
+            [router setRootViewController:nil];
+            [router popViewControllerAnimated:NO];
+            [router popToRootViewControllerAnimated:NO];
+            [router dismissViewControllerAnimated:NO completion:nil];
+            [router showAlertWithTitle:nil message:nil];
+        }).notTo.raiseAny();
+    });
+    
+    afterAll(^{
+        vc = nil;
+        window = nil;
+        router = nil;
+    });
+});
+
+SpecEnd
+

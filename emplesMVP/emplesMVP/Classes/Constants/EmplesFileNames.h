@@ -9,5 +9,4 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const kRecAreaFileName;
-extern NSString *const kRecAreaAdressFileName;
 

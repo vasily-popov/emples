@@ -6,37 +6,46 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import "NSString+Localizable.h"
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 
-@interface NSString_LocalizableTest : XCTestCase
+SpecBegin(Localizable)
 
-@end
-
-@implementation NSString_LocalizableTest
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testLocalizedString {
+describe(@"Localizable", ^{
     
-    NSString *localizedString = [@"test" localizedString];
-    XCTAssertNotNil(localizedString);
-    XCTAssertEqual(localizedString, @"test");
+    beforeAll(^{
+    });
     
-    NSString *emptyString = [@"" localizedString];
-    XCTAssertNotNil(emptyString);
+    it(@"should not change string if is not localized", ^{
+        NSString *localizedString = [@"test" localizedString];
+        expect(localizedString).notTo.beNil();
+        expect(localizedString).to.equal(@"test");
+    });
     
-    NSString *test = nil;
-    NSString *nilString = [test localizedString];
-    XCTAssertNil(nilString);
-}
+    it(@"should localize existing string", ^{
+        NSString *localizedString = [@"kFileNotFoundString" localizedString];
+        expect(localizedString).notTo.beNil();
+        expect(localizedString).to.equal(@"File not found");
+    });
+    
+    it(@"should not throw exception when localize empty string", ^{
+        expect(^{
+            NSString *localizedString = [@"" localizedString];
+            expect(localizedString).notTo.beNil();
+        }).notTo.raiseAny();
+    });
+    
+    it(@"should return nil for nil string", ^{
+        
+        NSString *test = nil;
+        NSString *nilString = [test localizedString];
+        expect(nilString).to.beNil();
+    });
+    
+    afterAll(^{
+    });
+});
 
-@end
+SpecEnd
+

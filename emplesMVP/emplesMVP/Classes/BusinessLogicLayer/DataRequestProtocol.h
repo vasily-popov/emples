@@ -10,5 +10,6 @@
 
 @protocol DataRequestProtocol <NSObject>
 
--(void) doRequestToFetchAllAreaWithResponseBlock:(ContentResponseBlock)block;
+-(void) requestToRead:(NSString *)fileName withResponseBlock:(ContentResponseBlock)block;
+    
 @end

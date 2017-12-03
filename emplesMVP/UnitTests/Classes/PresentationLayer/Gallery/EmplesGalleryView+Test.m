@@ -6,49 +6,73 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesGalleryView.h"
 #import "EmplesGridModelDecorator.h"
 #import "EmplesGridCollectionViewManager.h"
+#import "EmplesCollectionPresenter.h"
+
 
 @interface EmplesGalleryView(Test)
-
+    
 @property (strong, nonatomic, readonly) UICollectionView *collection;
 @property (strong, nonatomic, readonly) EmplesGridCollectionViewManager *sourceManager;
-
-@end
-@interface EmplesGalleryView_Test : XCTestCase
-
-@end
-
-@implementation EmplesGalleryView_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testGalleryView {
-    EmplesGalleryView *view = [EmplesGalleryView new];
-    XCTAssertNotNil(view);
-    UINavigationController *vc = [[UINavigationController alloc] initWithRootViewController:view];
-    XCTAssertNotNil(vc);
-    XCTAssertNoThrow([view viewDidLoad]);
-    XCTAssertNotNil(view.collection);
-    XCTAssertNotNil(view.sourceManager);
-    XCTAssertNoThrow([view showProgressView]);
-    NSArray *array = @[@1,@3];
-    XCTAssertNoThrow([view updateCollectionItems:array]);
-    XCTAssertNoThrow([view updateCollectionItems:nil]);
-    XCTAssertNoThrow([view hideProgressView]);
-    XCTAssertNoThrow([view didReceiveMemoryWarning]);
     
-}
-
 @end
+
+
+SpecBegin(EmplesGalleryView)
+
+
+describe(@"EmplesGalleryView", ^{
+    
+    __block EmplesGalleryView *view = nil;
+    __block id mock = nil;
+    beforeEach(^{
+        mock = OCMClassMock([EmplesCollectionPresenter class]);
+        view = [EmplesGalleryView new];
+        expect(view).notTo.beNil();
+        view.presenter = mock;
+        UINavigationController *vc = [[UINavigationController alloc] initWithRootViewController:view];
+        expect(vc).notTo.beNil();
+    });
+    
+    it(@"should call viewDidload", ^{
+        expect(^{
+            [view viewDidLoad];
+        }).notTo.raiseAny();
+        expect(view.collection).toNot.beNil();
+        expect(view.sourceManager).toNot.beNil();
+        OCMVerify([mock viewDidLoad]);
+    });
+    
+    it(@"should reload collection", ^{
+        expect(^{
+            [view viewDidLoad];
+            [view showProgressView];
+            [view updateCollectionItems:@[@1,@3]];
+            [view hideProgressView];
+        }).notTo.raiseAny();
+        OCMVerify([view.collection reloadData]);
+    });
+    
+    it(@"should not crash", ^{
+        expect(^{
+            [view viewDidLoad];
+            [view didReceiveMemoryWarning];
+            [view showProgressView];
+            [view updateCollectionItems:nil];
+            [view hideProgressView];
+        }).notTo.raiseAny();
+    });
+    
+    afterEach(^{
+        mock = nil;
+        view = nil;
+    });
+});
+
+SpecEnd
+

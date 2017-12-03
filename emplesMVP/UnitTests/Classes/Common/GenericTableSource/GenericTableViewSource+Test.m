@@ -6,46 +6,63 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "GenericTableViewSource.h"
 
-@interface GenericTableViewSource_Test : XCTestCase
+SpecBegin(GenericTableViewSource)
 
-@end
-
-@implementation GenericTableViewSource_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testInit {
+describe(@"GenericTableViewSource", ^{
     
-    GenericTableViewSource *source = [[GenericTableViewSource alloc] init];
-    XCTAssertNotNil(source);
-    XCTAssert(source.source.count == 0);
-    [source appendItems:@[@1,@2,@3]];
-    XCTAssert(source.source.count == 3);
-    [source setDataSource:@[@1]];
-    XCTAssert(source.source.count == 1);
-}
-
-- (void)testInitWithSource {
+    context(@"should be created without source", ^{
+        __block GenericTableViewSource *dataSource;
+        
+        beforeEach(^{
+            dataSource = [[GenericTableViewSource alloc] init];
+            expect(dataSource).notTo.beNil();
+            expect(dataSource.source).to.beNil();
+        });
+        
+        it(@"should append items", ^{
+            [dataSource appendItems:@[@1,@2,@3]];
+            expect(dataSource.source).to.haveCount(3);
+        });
+        
+        it(@"should set source", ^{
+            [dataSource setDataSource:@[@1]];
+            expect(dataSource.source).to.haveCount(1);
+        });
+        
+        afterAll(^{
+            dataSource = nil;
+        });
+    });
     
-    GenericTableViewSource *source = [[GenericTableViewSource alloc] initWithSource:@[@9, @8]];
-    XCTAssertNotNil(source);
-    XCTAssert(source.source.count == 2);
-    [source appendItems:@[@1,@2,@3]];
-    XCTAssert(source.source.count == 5);
-    [source setDataSource:@[@1]];
-    XCTAssert(source.source.count == 1);
-    
-}
+    context(@"should be created with source", ^{
+        __block GenericTableViewSource *dataSource;
+        
+        beforeEach(^{
+            dataSource = [[GenericTableViewSource alloc] initWithSource:@[@9, @8]];
+            expect(dataSource).notTo.beNil();
+            expect(dataSource.source).to.haveCount(2);
+        });
+        
+        it(@"should append items", ^{
+            [dataSource appendItems:@[@1,@2,@3]];
+            expect(dataSource.source).to.haveCount(5);
+        });
+        
+        it(@"should set source", ^{
+            [dataSource setDataSource:@[@1]];
+            expect(dataSource.source).to.haveCount(1);
+        });
+        
+        afterAll(^{
+            dataSource = nil;
+        });
+    });
+});
 
-@end
+SpecEnd
+

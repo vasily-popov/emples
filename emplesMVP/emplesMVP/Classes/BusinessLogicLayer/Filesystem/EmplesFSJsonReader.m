@@ -7,7 +7,6 @@
 //
 
 #import "EmplesFSJsonReader.h"
-#import "EmplesFileNames.h"
 #import "NSString+Localizable.h"
 #import "LocalizedStrings.h"
 
@@ -34,10 +33,10 @@
     return nil;
 }
 
--(void) doRequestToFetchAllAreaWithResponseBlock:(ContentResponseBlock)block
+-(void) requestToRead:(NSString *)fileName withResponseBlock:(ContentResponseBlock)block;
 {
     NSError *error = nil;
-    id content = [self readFileWithName:kRecAreaFileName error:&error];
+    id content = [self readFileWithName:fileName error:&error];
     if(block)
     {
         block(content, error);

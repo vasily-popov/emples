@@ -6,31 +6,30 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "EmplesMenuModel.h"
 
-@interface EmplesMenuModel_Test : XCTestCase
 
-@end
+SpecBegin(EmplesMenuModel)
 
-@implementation EmplesMenuModel_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testModel {
+describe(@"EmplesMenuModel", ^{
     
-    EmplesMenuModel *view = [EmplesMenuModel new];
-    XCTAssertNotNil(view);
-    XCTAssertNotNil(view.dataSource);
-    XCTAssertEqual(view.dataSource.count, 5);
-}
+    __block EmplesMenuModel *model = nil;
+    beforeEach(^{
+        model = [EmplesMenuModel new];
+    });
+    
+    it(@"should be exist and have 5 elements", ^{
+        expect(model).notTo.beNil();
+        expect(model.dataSource).notTo.beNil();
+        expect(model.dataSource).to.haveCount(5);
+    });
+    
+    afterAll(^{
+        model = nil;
+    });
+});
 
-@end
+SpecEnd
+

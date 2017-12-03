@@ -6,41 +6,48 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesMenuModelDecorator.h"
 
 @interface EmplesMenuModelDecorator(Test)
-
+    
 @property (nonatomic, strong, readonly) EmplesMenuModel* model;
-
 -(NSArray*)dataSource;
-
+    
 @end
 
-@interface EmplesMenuModelDecorator_Test : XCTestCase
+SpecBegin(EmplesMenuModelDecorator)
 
-@end
+describe(@"EmplesMenuModelDecorator", ^{
+    
+    __block EmplesMenuModelDecorator *decorator = nil;
+    __block id modelMock = nil;
+    beforeEach(^{
+        modelMock = OCMClassMock([EmplesMenuModel class]);
+        decorator = [[EmplesMenuModelDecorator alloc] initWithModel:modelMock];
+    });
+    
+    it(@"should be exist", ^{
+        OCMStub([modelMock dataSource]).andReturn(@[]);
+        expect(decorator).notTo.beNil();
+        expect(decorator.model).notTo.beNil();
+        expect(decorator.dataSource).notTo.beNil();
+    });
+    
+    it(@"should have source", ^{
+        OCMStub([modelMock dataSource]).andReturn(@[@"test"]);
+        expect(decorator).notTo.beNil();
+        expect(decorator.model).notTo.beNil();
+        expect(decorator.dataSource).to.haveCount(1);
+    });
+    
+    afterAll(^{
+        [modelMock stopMocking];
+        modelMock = nil;
+        decorator = nil;
+    });
+});
 
-@implementation EmplesMenuModelDecorator_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testModel {
-    id modelMock = OCMClassMock([EmplesMenuModel class]);
-    OCMStub([modelMock dataSource]).andReturn(@[@"test"]);
-    EmplesMenuModelDecorator * decorator = [[EmplesMenuModelDecorator alloc] initWithModel:modelMock];
-    XCTAssertNotNil(decorator);
-    XCTAssertNotNil(decorator.model);
-    XCTAssertNotNil([decorator dataSource]);
-}
-
-@end
+SpecEnd

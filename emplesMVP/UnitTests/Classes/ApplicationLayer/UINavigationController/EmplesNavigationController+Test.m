@@ -6,39 +6,48 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "EmplesNavigationController.h"
 
-@interface EmplesNavigationController_Test : XCTestCase
+SpecBegin(EmplesNavigationController)
 
-@end
-
-@implementation EmplesNavigationController_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testInit {
+describe(@"EmplesNavigationController", ^{
     
-    EmplesNavigationController *nvc = [[EmplesNavigationController alloc] init];
-    XCTAssertNotNil(nvc);
+    __block EmplesNavigationController *vc = nil;
+    beforeAll(^{
+        vc = [[EmplesNavigationController alloc] init];
+    });
     
-}
-
-- (void)testInitWithRoot {
+    beforeEach(^{
+    });
     
-    EmplesNavigationController *nvc = [[EmplesNavigationController alloc]
-                                       initWithRootViewController:[UIViewController new]];
-    XCTAssertNotNil(nvc);
     
-}
+    it(@"exist", ^{
+        expect(vc).notTo.beNil();
+        expect(vc).to.beKindOf([UINavigationController class]);
+        expect(vc.viewControllers).to.haveCount(0);
+    });
+    
+    it(@"should allow to rotate", ^{
+        expect([vc shouldAutorotate]).to.beTruthy();
+    });
+    
+    it(@"should have root vc", ^{
+        EmplesNavigationController *nvc = [[EmplesNavigationController alloc]
+                                           initWithRootViewController:[UIViewController new]];
+        expect(nvc).notTo.beNil();
+        expect(nvc).to.beKindOf([UINavigationController class]);
+        expect(nvc.viewControllers).to.haveCount(1);
+    });
+    
+    afterEach(^{
+    });
+    
+    afterAll(^{
+        vc = nil;
+    });
+});
 
+SpecEnd
 
-@end

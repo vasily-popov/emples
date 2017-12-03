@@ -6,50 +6,73 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
+#import "EmplesCollectionPresenter.h"
 #import "EmplesCarouselView.h"
 #import "EmplesCarouselViewManager.h"
 #import <iCarousel/iCarousel.h>
 
-@interface EmplesCarouselView(Test)
 
+@interface EmplesCarouselView(Test)
+    
 @property (strong, nonatomic, readonly) iCarousel *carousel;
 @property (strong, nonatomic, readonly) EmplesCarouselViewManager *sourceManager;
-
-@end
-
-@interface EmplesCarouselView_Test : XCTestCase
-
-@end
-
-@implementation EmplesCarouselView_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testCarouselView {
-    EmplesCarouselView *view = [EmplesCarouselView new];
-    XCTAssertNotNil(view);
-    UINavigationController *vc = [[UINavigationController alloc] initWithRootViewController:view];
-    XCTAssertNotNil(vc);
-    XCTAssertNoThrow([view viewDidLoad]);
-    XCTAssertNotNil(view.carousel);
-    XCTAssertNotNil(view.sourceManager);
-    XCTAssertNoThrow([view showProgressView]);
-    NSArray *array = @[@1,@3];
-    XCTAssertNoThrow([view updateCollectionItems:array]);
-    XCTAssertNoThrow([view updateCollectionItems:nil]);
-    XCTAssertNoThrow([view hideProgressView]);
-    XCTAssertNoThrow([view didReceiveMemoryWarning]);
     
-}
-
 @end
+
+SpecBegin(EmplesCarouselView)
+
+
+describe(@"EmplesCarouselView", ^{
+    
+    __block EmplesCarouselView *view = nil;
+    __block id mock = nil;
+    beforeEach(^{
+        mock = OCMClassMock([EmplesCollectionPresenter class]);
+        view = [EmplesCarouselView new];
+        expect(view).notTo.beNil();
+        view.presenter = mock;
+        UINavigationController *vc = [[UINavigationController alloc] initWithRootViewController:view];
+        expect(vc).notTo.beNil();
+    });
+    
+    it(@"should call viewDidload", ^{
+        expect(^{
+            [view viewDidLoad];
+        }).notTo.raiseAny();
+        expect(view.carousel).toNot.beNil();
+        expect(view.sourceManager).toNot.beNil();
+        OCMVerify([mock viewDidLoad]);
+    });
+    
+    it(@"should reload carousel", ^{
+        expect(^{
+            [view viewDidLoad];
+            [view showProgressView];
+            [view updateCollectionItems:@[@1,@3]];
+            [view hideProgressView];
+        }).notTo.raiseAny();
+        OCMVerify([view.carousel reloadData]);
+    });
+    
+    it(@"should not crash", ^{
+        expect(^{
+            [view viewDidLoad];
+            [view didReceiveMemoryWarning];
+            [view showProgressView];
+            [view updateCollectionItems:nil];
+            [view hideProgressView];
+        }).notTo.raiseAny();
+    });
+    
+    afterEach(^{
+        [mock stopMocking];
+        mock = nil;
+        view = nil;
+    });
+});
+
+SpecEnd
+

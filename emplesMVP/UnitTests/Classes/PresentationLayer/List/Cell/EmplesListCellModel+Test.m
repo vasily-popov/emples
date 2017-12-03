@@ -6,31 +6,35 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "EmplesListCellModel.h"
 
-@interface EmplesListCellModel_Test : XCTestCase
+SpecBegin(EmplesListCellModel)
 
-@end
+describe(@"EmplesListCellModel", ^{
+    
+    __block EmplesListCellModel *model = nil;
+    beforeEach(^{
+        model = [EmplesListCellModel new];
+        expect(model).toNot.beNil();
+        
+    });
+    
+    it(@"should have model value", ^{
+        model.text = @"test";
+        expect([model getModelValue]).to.equal(@"test");
+        
+    });
+    
+    it(@"should have cell class name", ^{
+        expect([model cellClassName]).to.equal(@"EmplesListCellView");
+    });
+    
+    afterEach(^{
+        model = nil;
+    });
+});
 
-@implementation EmplesListCellModel_Test
+SpecEnd
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testModel {
-    EmplesListCellModel *model = [EmplesListCellModel new];
-    XCTAssertNotNil(model);
-    model.text = @"test";
-    XCTAssert([[model getModelValue] isEqualToString: @"test"]);
-    XCTAssert([[model cellClassName] isEqualToString: @"EmplesListCellView"]);
-}
-
-@end

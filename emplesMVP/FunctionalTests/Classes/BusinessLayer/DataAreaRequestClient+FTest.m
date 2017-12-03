@@ -6,79 +6,57 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-#import <OCMock/OCMock.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "DataAreaRequestClient.h"
 #import "EmplesFSJsonReader.h"
 
+SpecBegin(DataAreaRequestClient)
 
-@interface DataAreaRequestClient(Test)
-
--(NSArray* ) parseAreaResponse:(id)response error:(NSError**)error;
--(id<DataRequestProtocol>) factory;
-
-@end
-
-@interface DataAreaRequestClient_Test : XCTestCase
-
-@end
-
-@implementation DataAreaRequestClient_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testInit {
+describe(@"DataAreaRequestClient", ^{
     
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:nil];
-    XCTAssertNotNil(client);
-}
-
-- (void)testInit2 {
-    id mockProtocol = OCMProtocolMock(@protocol(DataRequestProtocol));
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:mockProtocol];
-    XCTAssertEqual(client.factory, mockProtocol);
-}
-
-- (void)testFetchAreas {
+    __block DataAreaRequestClient *client;
+    __block EmplesFSJsonReader *reader;
     
-    id mock = OCMClassMock([EmplesFSJsonReader class]);
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:mock];
-    XCTAssertNoThrow([client fetchAllAreas:nil]);
-}
-
-- (void)testParseNilResponse {
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:nil];
+    beforeAll(^{
+        // This is run once and only once before all of the examples
+        // in this group and before any beforeEach blocks.
+         reader = [[EmplesFSJsonReader alloc] init];
+    });
     
-    NSError *error = nil;
-    XCTAssertNoThrow([client parseAreaResponse:nil error:&error]);
-}
-
-- (void)testParseEmptyArratResponse {
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:nil];
+    beforeEach(^{
+        // This is run before each example.
+        client = [[DataAreaRequestClient alloc] initWithFactory:reader];
+    });
     
-    NSError *error = nil;
-    id res = [client parseAreaResponse:@[] error:&error];
-    XCTAssertNotNil(res);
-}
-
-
-- (void)testParseMissedKeyResponse {
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:nil];
     
-    NSError *error = nil;
-    id res = [client parseAreaResponse:@[@{@"id":@"1"}] error:&error];
-    XCTAssertNil(res);
-    XCTAssertNotNil(error);
-}
+    it(@"should get all areas", ^{
+        
+        waitUntil(^(DoneCallback done) {
+            [client fetchAllAreas:^(id response, NSError *error) {
+                if(error) {
+                    failure(@"This should not happen");
+                }
+                else {
+                    expect(response).to.beKindOf([NSArray class]);
+                }
+                done();
+            }];
+        });
+    });
+    
+    
+    
+    afterEach(^{
+        // This is run after each example.
+        client = nil;
+    });
+    
+    afterAll(^{
+        // This is run once and only once after all of the examples
+        // in this group and after any afterEach blocks.
+        reader = nil;
+    });
+});
 
-
-
-@end
+SpecEnd

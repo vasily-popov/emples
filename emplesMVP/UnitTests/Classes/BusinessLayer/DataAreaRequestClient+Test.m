@@ -6,79 +6,130 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "DataAreaRequestClient.h"
 #import "EmplesFSJsonReader.h"
 
-
 @interface DataAreaRequestClient(Test)
-
+    
 -(NSArray* ) parseAreaResponse:(id)response error:(NSError**)error;
--(id<DataRequestProtocol>) factory;
-
+    
 @end
 
-@interface DataAreaRequestClient_Test : XCTestCase
 
-@end
+SpecBegin(DataAreaRequestClient)
 
-@implementation DataAreaRequestClient_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testInit {
+describe(@"DataAreaRequestClient_nil_factory", ^{
     
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:nil];
-    XCTAssertNotNil(client);
-}
+    __block DataAreaRequestClient *client;
+    beforeAll(^{
+        client = [[DataAreaRequestClient alloc] initWithFactory:nil];
+        expect(client).notTo.beNil();
+    });
 
-- (void)testInit2 {
-    id mockProtocol = OCMProtocolMock(@protocol(DataRequestProtocol));
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:mockProtocol];
-    XCTAssertEqual(client.factory, mockProtocol);
-}
-
-- (void)testFetchAreas {
+    it(@"should parse nil response", ^{
+        
+        expect(^{
+            NSError *error = nil;
+            id response = [client parseAreaResponse:nil error:&error];
+            expect(response).beNil();
+        }).notTo.raiseAny();
+    });
     
-    id mock = OCMClassMock([EmplesFSJsonReader class]);
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:mock];
-    XCTAssertNoThrow([client fetchAllAreas:nil]);
-}
-
-- (void)testParseNilResponse {
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:nil];
+    it(@"should parse empty array", ^{
+        
+        expect(^{
+            NSError *error = nil;
+            id response = [client parseAreaResponse:@[] error:&error];
+            expect(error).to.beNil();
+            expect(response).toNot.beNil();
+            expect(response).to.beEmpty();
+        }).notTo.raiseAny();
+    });
     
-    NSError *error = nil;
-    XCTAssertNoThrow([client parseAreaResponse:nil error:&error]);
-}
-
-- (void)testParseEmptyArratResponse {
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:nil];
+    it(@"should parse valid response with invalid content", ^{
+        
+        expect(^{
+            NSError *error = nil;
+            id response = [client parseAreaResponse:@[@{@"id":@"1"}] error:&error]; //missed keys
+            expect(error).toNot.beNil();
+            expect(response).beNil();
+        }).notTo.raiseAny();
+    });
     
-    NSError *error = nil;
-    id res = [client parseAreaResponse:@[] error:&error];
-    XCTAssertNotNil(res);
-}
+    afterAll(^{
+        client = nil;
+    });
+});
 
 
-- (void)testParseMissedKeyResponse {
-    DataAreaRequestClient *client = [[DataAreaRequestClient alloc] initWithFactory:nil];
+describe(@"DataAreaRequestClient error case", ^{
     
-    NSError *error = nil;
-    id res = [client parseAreaResponse:@[@{@"id":@"1"}] error:&error];
-    XCTAssertNil(res);
-    XCTAssertNotNil(error);
-}
+    __block id mock = OCMProtocolMock(@protocol(DataRequestProtocol));
+    __block DataAreaRequestClient *client;
+    beforeAll(^{
+        client = [[DataAreaRequestClient alloc] initWithFactory:mock];
+        expect(client).notTo.beNil();
+        [[mock stub] requestToRead:@"RecArea"
+                 withResponseBlock:[OCMArg invokeBlockWithArgs:[NSNull null], [NSError errorWithDomain:@"" code:0 userInfo:nil], nil]];
+    });
+    
+    
+    it(@"should return error", ^{
+        waitUntil(^(DoneCallback done) {
+            [client fetchAllAreas:^(id response, NSError *error) {
+                expect(error).toNot.beNil();
+                expect(response).to.beNil();
+                done();
+            }];
+        });
+    });
+    
+    afterAll(^{
+        [mock stopMocking];
+        client = nil;
+    });
+});
 
+describe(@"DataAreaRequestClient success case", ^{
+    
+    __block id mock = OCMProtocolMock(@protocol(DataRequestProtocol));
+    __block DataAreaRequestClient *client;
+    beforeAll(^{
+        client = [[DataAreaRequestClient alloc] initWithFactory:mock];
+        expect(client).notTo.beNil();
+        
+        //use different approach
+        OCMStub([mock requestToRead:@"RecArea" withResponseBlock:[OCMArg any]])
+        .andDo(^(NSInvocation *invocation) {
+            void (^passedBlock)(id response, NSError *error);
+            [invocation getArgument: &passedBlock atIndex: 3];
+            passedBlock(@[], nil);
+        });
+        
+        //[[mock stub] requestToRead:@"RecArea"
+        //         withResponseBlock:[OCMArg invokeBlockWithArgs:@[], [NSNull null], nil]];
+    });
+    
+    it(@"should fetch areas", ^{
+        
+        waitUntil(^(DoneCallback done) {
+            [client fetchAllAreas:^(id response, NSError *error) {
+                expect(error).to.beNil();
+                expect(response).toNot.beNil();
+                expect(response).to.beKindOf([NSArray class]);
+                done();
+            }];
+        });
+    });
+    
+    afterAll(^{
+        [mock stopMocking];
+        client = nil;
+    });
+});
 
+SpecEnd
 
-@end

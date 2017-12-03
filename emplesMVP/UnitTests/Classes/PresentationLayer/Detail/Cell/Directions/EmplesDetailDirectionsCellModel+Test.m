@@ -6,31 +6,36 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "EmplesDetailDirectionsCellModel.h"
 
-@interface EmplesDetailDirectionsCellModel_Test : XCTestCase
+SpecBegin(EmplesDetailDirectionsCellModel)
 
-@end
+describe(@"EmplesDetailDirectionsCellModel", ^{
+    
+    __block EmplesDetailDirectionsCellModel *model = nil;
+    beforeEach(^{
+        model = [EmplesDetailDirectionsCellModel new];
+        expect(model).toNot.beNil();
+        
+    });
+    
+    it(@"should have model value", ^{
+        model.directionText = @"test";
+        expect([model getModelValue]).to.equal(@"test");
+        
+    });
+    
+    it(@"should have cell class name", ^{
+        expect([model cellClassName]).to.equal(@"EmplesDetailDirectionTextViewCell");
+    });
+    
+    afterEach(^{
+        model = nil;
+    });
+});
 
-@implementation EmplesDetailDirectionsCellModel_Test
+SpecEnd
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testModel {
-    EmplesDetailDirectionsCellModel *model = [EmplesDetailDirectionsCellModel new];
-    XCTAssertNotNil(model);
-    model.directionText = @"test";
-    XCTAssert([[model getModelValue] isEqualToString: @"test"]);
-    XCTAssert([[model cellClassName] isEqualToString: @"EmplesDetailDirectionTextViewCell"]);
-}
-
-@end

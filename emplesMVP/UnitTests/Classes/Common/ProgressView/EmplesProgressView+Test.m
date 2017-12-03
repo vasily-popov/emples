@@ -6,32 +6,36 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "EmplesProgressView.h"
 
-@interface EmplesProgressView_Test : XCTestCase
+SpecBegin(EmplesProgressView)
 
-@end
-
-@implementation EmplesProgressView_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testView {
+describe(@"EmplesProgressView", ^{
     
-    EmplesProgressView *view = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
-    XCTAssertNotNil(view);
-    XCTAssertNoThrow([view show]);
-    XCTAssertNoThrow([view hide]);
-}
+    __block EmplesProgressView *view = nil;
+    beforeAll(^{
+        view = [[EmplesProgressView alloc] initWithFrame:CGRectZero];
+    });
+    
+    it(@"should be exist", ^{
+        expect(view).notTo.beNil();
+    });
+    
+    it(@"should be shown", ^{
+        expect(^{[view show];}).notTo.raiseAny();
+        expect(view.isHidden).notTo.beTruthy();
+    });
+    
+    it(@"should be hidden", ^{
+        expect(^{[view hide];}).notTo.raiseAny();
+        expect(view.isHidden).to.beTruthy();
+    });
+    
+    afterAll(^{
+        view = nil;
+    });
+});
 
-
-@end
+SpecEnd

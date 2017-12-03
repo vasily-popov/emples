@@ -6,45 +6,48 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesDetailAreaModel.h"
 #import "EmplesRecAreaJSONModel.h"
 
 @interface EmplesDetailAreaModel(Test)
-
+    
 @property (nonatomic, strong, readonly) EmplesRecAreaJSONModel* model;
 @property (nonatomic, strong, readonly) NSArray* dataSource;
-
+    
 @end
 
-@interface EmplesDetailAreaModel_Test : XCTestCase
+SpecBegin(EmplesDetailAreaModel)
 
-@end
+describe(@"EmplesDetailAreaModel", ^{
+    
+    __block EmplesDetailAreaModel *area = nil;
+    beforeEach(^{
+        
+        id modelMock = OCMClassMock([EmplesRecAreaJSONModel class]);
+        OCMStub([modelMock RecAreaName]).andReturn(@"test");
+        OCMStub([modelMock RecAreaDescription]).andReturn(@"test");
+        OCMStub([modelMock RecAreaDirections]).andReturn(@"test");
+        area = [[EmplesDetailAreaModel alloc] initWithItem:modelMock];
+    });
+    
+    it(@"should be exist", ^{
+        expect(area).notTo.beNil();
+        expect(area.model).notTo.beNil();
+        expect(area.dataSource).notTo.beNil();
+        expect([area titleName]).notTo.beNil();
+    });
+    
+    it(@"should have test title", ^{
+        expect([area titleName]).to.equal(@"test");
+    });
+    
+    afterAll(^{
+        area = nil;
+    });
+});
 
-@implementation EmplesDetailAreaModel_Test
+SpecEnd
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testModel {
-    id modelMock = OCMClassMock([EmplesRecAreaJSONModel class]);
-    OCMStub([modelMock RecAreaName]).andReturn(@"test");
-    OCMStub([modelMock RecAreaDescription]).andReturn(@"test");
-    OCMStub([modelMock RecAreaDirections]).andReturn(@"test");
-    EmplesDetailAreaModel * area = [[EmplesDetailAreaModel alloc] initWithItem:modelMock];
-    XCTAssertNotNil(area);
-    XCTAssertNotNil(area.model);
-    XCTAssertNotNil(area.dataSource);
-    XCTAssertNotNil([area titleName]);
-    XCTAssert([[area titleName] isEqualToString:@"test"]);
-}
-
-@end

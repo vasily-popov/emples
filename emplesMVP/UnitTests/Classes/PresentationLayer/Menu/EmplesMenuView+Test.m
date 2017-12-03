@@ -6,44 +6,66 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
+#import <OCMock/OCMock.h>
 #import "EmplesMenuView.h"
 #import "EmplesDetailTableViewManager.h"
+#import "EmplesMenuPresenter.h"
+
 
 @interface EmplesMenuView(Test)
-
+    
 @property (strong, nonatomic, readonly) UITableView *table;
 @property (strong, nonatomic, readonly) EmplesDetailTableViewManager *sourceManager;
-
-@end
-
-@interface EmplesMenuView_Test : XCTestCase
-
-@end
-
-@implementation EmplesMenuView_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testMenuView {
     
-    EmplesMenuView *view = [EmplesMenuView new];
-    XCTAssertNotNil(view);
-    XCTAssertNoThrow([view viewDidLoad]);
-    XCTAssertNotNil(view.table);
-    XCTAssertNotNil(view.sourceManager);
-    XCTAssertNoThrow([view setTableDataSource:nil]);
-    NSArray *array = @[@1, @2];
-    XCTAssertNoThrow([view setTableDataSource:array]);
-    XCTAssertNoThrow([view didReceiveMemoryWarning]);
-}
-
 @end
+
+SpecBegin(EmplesMenuView)
+
+
+describe(@"EmplesMenuView", ^{
+    
+    __block EmplesMenuView *view = nil;
+    __block id mock = nil;
+    beforeEach(^{
+        mock = OCMClassMock([EmplesMenuPresenter class]);
+        view = [EmplesMenuView new];
+        expect(view).notTo.beNil();
+        view.presenter = mock;
+        UINavigationController *vc = [[UINavigationController alloc] initWithRootViewController:view];
+        expect(vc).notTo.beNil();
+    });
+    
+    it(@"should call viewDidload", ^{
+        expect(^{
+            [view viewDidLoad];
+        }).notTo.raiseAny();
+        expect(view.table).toNot.beNil();
+        expect(view.sourceManager).toNot.beNil();
+        OCMVerify([mock viewDidLoad]);
+    });
+    
+    it(@"should reload table", ^{
+        expect(^{
+            [view viewDidLoad];
+            [view setTableDataSource:@[@1,@3]];
+        }).notTo.raiseAny();
+        OCMVerify([view.table reloadData]);
+    });
+    
+    it(@"should not crash", ^{
+        expect(^{
+            [view viewDidLoad];
+            [view didReceiveMemoryWarning];
+            [view setTableDataSource:nil];
+        }).notTo.raiseAny();
+    });
+    
+    afterEach(^{
+        mock = nil;
+        view = nil;
+    });
+});
+
+SpecEnd

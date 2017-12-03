@@ -6,41 +6,33 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-#import <OCMock/OCMock.h>
 #import "DataSourceItem.h"
+#import <OCMock/OCMock.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 
-@interface DataSourceItem_Test : XCTestCase
+SpecBegin(DataSourceItem)
 
-@end
-
-@implementation DataSourceItem_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testInit {
+describe(@"DataSourceItem", ^{
     
-    DataSourceItem *item = [[DataSourceItem alloc] initWithCellModel:nil];
-    XCTAssertNotNil(item);
-    XCTAssertNil(item.value);
-    XCTAssertNil(item.cellModel);
-}
-
-- (void)testInitWitCellProtocol {
-    id mockProtocol = OCMProtocolMock(@protocol(ViewCellModelProtocol));
-    DataSourceItem *item = [[DataSourceItem alloc] initWithCellModel:mockProtocol];
-    XCTAssertNotNil(item);
-    XCTAssertNotNil(item.cellModel);
+    it(@"should be created with empty value and model", ^{
+        DataSourceItem *item = [[DataSourceItem alloc] initWithCellModel:nil];
+        expect(item).notTo.beNil();
+        expect(item.value).to.beNil();
+        expect(item.cellModel).to.beNil();
+    });
     
-}
+    it(@"should be created with valid value and model", ^{
+        id mockProtocol = OCMProtocolMock(@protocol(ViewCellModelProtocol));
+        OCMStub([mockProtocol getModelValue]).andReturn(@"test");
+        DataSourceItem *item = [[DataSourceItem alloc] initWithCellModel:mockProtocol];
+        expect(item).notTo.beNil();
+        expect(item.value).notTo.beNil();
+        expect(item.value).to.equal(@"test");
+        expect(item.cellModel).notTo.beNil();
+    });
+    
+});
 
+SpecEnd
 
-@end

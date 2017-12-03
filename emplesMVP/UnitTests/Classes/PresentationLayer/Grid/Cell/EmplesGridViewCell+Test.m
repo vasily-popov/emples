@@ -6,33 +6,39 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesGridViewCell.h"
 #import "EmplesGridCellModel.h"
 
-@interface EmplesGridViewCell_Test : XCTestCase
+SpecBegin(EmplesGridViewCell)
 
-@end
+describe(@"EmplesGridViewCell", ^{
+    
+    __block EmplesGridViewCell *cell = nil;
+    beforeEach(^{
+        cell = [[EmplesGridViewCell alloc] init];
+        expect(cell).toNot.beNil();
+    });
+    
+    it(@"should be loaded", ^{
+        expect(^{
+            [cell awakeFromNib];
+        }).notTo.raiseAny();
+    });
+    
+    it(@"should configure", ^{
+        expect(^{
+            id mock = OCMClassMock([EmplesGridCellModel class]);
+            [cell configureWithModel:mock];
+        }).notTo.raiseAny();
+    });
+    
+    afterEach(^{
+        cell = nil;
+    });
+});
 
-@implementation EmplesGridViewCell_Test
+SpecEnd
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testCell {
-    id mock = OCMClassMock([EmplesGridCellModel class]);
-    EmplesGridViewCell *cell = [[EmplesGridViewCell alloc] init];
-    XCTAssertNotNil(cell);
-    XCTAssertNoThrow([cell awakeFromNib]);
-    XCTAssertNoThrow([cell configureWithModel:mock]);
-}
-
-@end

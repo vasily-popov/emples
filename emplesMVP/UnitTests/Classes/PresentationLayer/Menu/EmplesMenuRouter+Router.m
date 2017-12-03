@@ -6,33 +6,43 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "EmplesMenuRouter.h"
 
-@interface EmplesMenuRouter_Router : XCTestCase
 
-@end
+SpecBegin(EmplesMenuRouter)
 
-@implementation EmplesMenuRouter_Router
+describe(@"EmplesMenuRouter", ^{
+    
+    __block UINavigationController *vc = nil;
+    __block UIWindow *window = nil;
+    __block EmplesMenuRouter *router = nil;
+    beforeEach(^{
+        vc = [UINavigationController new];
+        window = [UIWindow new];
+        router = [[EmplesMenuRouter alloc] initWithNavigationVC:vc andWindow:window];
+    });
+    
+    it(@"should be exist", ^{
+        expect(router).notTo.beNil();
+        expect(router.window).to.equal(window);
+        expect(router.viewController).to.equal(vc);
+    });
+    
+    it(@"should not crash", ^{
+        expect(^{
+            [router navigateToSelectedItem:EnumMenuSelectedItemList];
+        }).notTo.raiseAny();
+    });
+    
+    afterAll(^{
+        vc = nil;
+        window = nil;
+        router = nil;
+    });
+});
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+SpecEnd
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
 
-- (void)testMenuRouter {
-    UINavigationController *vc = [UINavigationController new];
-    UIWindow *window = [UIWindow new];
-    EmplesMenuRouter *router = [[EmplesMenuRouter alloc] initWithNavigationVC:vc andWindow:window];
-    XCTAssertNotNil(router);
-    XCTAssertEqual(router.window, window);
-    XCTAssertEqual(router.viewController, vc);
-    XCTAssertNoThrow([router navigateToSelectedItem:EnumMenuSelectedItemList]);
-}
-
-@end

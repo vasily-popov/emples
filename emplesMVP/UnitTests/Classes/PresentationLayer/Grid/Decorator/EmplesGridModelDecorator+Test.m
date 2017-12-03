@@ -6,43 +6,47 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesGridModelDecorator.h"
 #import "EmplesRecAreaJSONModel.h"
 
 @interface EmplesGridModelDecorator(Test)
-
-@property (nonatomic, strong, readonly) EmplesAreasModel* model;
-
-@end
-
-@interface EmplesGridModelDecorator_Test : XCTestCase
-
-@end
-
-@implementation EmplesGridModelDecorator_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testModel {
     
-    id modelMock = OCMClassMock([EmplesAreasModel class]);
-    id mockArea = OCMClassMock([EmplesRecAreaJSONModel class]);
-    OCMStub([modelMock dataSource]).andReturn(@[mockArea]);
-    EmplesGridModelDecorator * decorator = [[EmplesGridModelDecorator alloc] initWithModel:modelMock];
-    XCTAssertNotNil(decorator);
-    XCTAssertNotNil(decorator.model);
-    XCTAssertNotNil(decorator.dataSource);
-    XCTAssert(decorator.dataSource.count == 1);
-}
-
+@property (nonatomic, strong, readonly) EmplesAreasModel* model;
+    
 @end
+
+SpecBegin(EmplesGridModelDecorator)
+
+describe(@"EmplesGridModelDecorator", ^{
+    
+    __block EmplesGridModelDecorator *decorator = nil;
+    __block id mockArea = nil;
+    __block id modelMock = nil;
+    beforeAll(^{
+        modelMock = OCMClassMock([EmplesAreasModel class]);
+        mockArea = OCMClassMock([EmplesRecAreaJSONModel class]);
+        OCMStub([modelMock dataSource]).andReturn(@[mockArea]);
+        decorator = [[EmplesGridModelDecorator alloc] initWithModel:modelMock];
+    });
+    
+    it(@"should be exist", ^{
+        expect(decorator).notTo.beNil();
+        expect(decorator.model).notTo.beNil();
+        expect(decorator.dataSource).notTo.beNil();
+        expect(decorator.dataSource).to.haveCount(1);
+    });
+    
+    afterAll(^{
+        [mockArea stopMocking];
+        mockArea = nil;
+        [modelMock stopMocking];
+        modelMock = nil;
+        decorator = nil;
+    });
+});
+
+SpecEnd
+

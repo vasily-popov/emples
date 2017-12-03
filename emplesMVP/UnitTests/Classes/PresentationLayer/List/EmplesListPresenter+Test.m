@@ -6,41 +6,46 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesListPresenter.h"
 #import "EmplesListModelDecorator.h"
 
 @interface EmplesListPresenter (Test)
-
+    
 @property (nonatomic, strong) EmplesListModelDecorator *decorator;
-
+    
 -(NSArray*) prepareCollectionArray;
-
+    
 @end
 
-@interface EmplesListPresenter_Test : XCTestCase
+SpecBegin(EmplesListPresenter)
 
-@end
 
-@implementation EmplesListPresenter_Test
+describe(@"EmplesListPresenter", ^{
+    
+    __block EmplesListPresenter *presenter = nil;
+    __block id mock = nil;
+    beforeEach(^{
+        mock = OCMClassMock([EmplesAreasModel class]);
+        presenter = [[EmplesListPresenter alloc] initWithModel:mock];
+        expect(presenter).notTo.beNil();
+        expect(presenter.decorator).notTo.beNil();
+    });
+    
+    it(@"should not crash", ^{
+        expect(^{
+            [presenter prepareCollectionArray];
+        }).notTo.raiseAny();
+    });
+    
+    afterEach(^{
+        [mock stopMocking];
+        mock = nil;
+        presenter = nil;
+    });
+});
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+SpecEnd
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testListPresenter {
-    id modelMock = OCMClassMock([EmplesAreasModel class]);
-    EmplesListPresenter *presenter = [[EmplesListPresenter alloc] initWithModel:modelMock];
-    XCTAssertNotNil(presenter);
-    XCTAssertNotNil(presenter.decorator);
-    XCTAssertNoThrow([presenter prepareCollectionArray]);
-}
-
-@end

@@ -6,44 +6,41 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "EmplesDetailTableViewManager.h"
 
-@interface EmplesDetailTableViewManager(Test)
+SpecBegin(EmplesDetailTableViewManager)
 
--(void)registerCellsForTable:(UITableView*)tableView;
-
-@end
-
-@interface EmplesDetailTableViewManager_Test : XCTestCase
-
-@end
-
-@implementation EmplesDetailTableViewManager_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testInit {
+describe(@"EmplesDetailTableViewManager", ^{
     
-    id mock = OCMClassMock([UITableView class]);
-    EmplesDetailTableViewManager *manager = [[EmplesDetailTableViewManager alloc] initWithSource:@[@2]];
-    XCTAssertNotNil(manager);
-    id dataSource = [manager dataSourceForTableView:mock];
-    id delegate = [manager delegateForTableView:mock];
-    
-    XCTAssertNotNil(dataSource);
-    XCTAssertNotNil(delegate);
-    XCTAssert([dataSource conformsToProtocol:@protocol(UITableViewDataSource)]);
-    XCTAssert([delegate conformsToProtocol:@protocol(UITableViewDelegate)]);
-}
+    context(@"should be created without source", ^{
+        __block EmplesDetailTableViewManager *manager;
+        
+        beforeEach(^{
+            
+            manager = [[EmplesDetailTableViewManager alloc] initWithSource:@[@2]];
+            expect(manager).notTo.beNil();
+        });
+        
+        it(@"should have source and delegate", ^{
+            id mock = OCMClassMock([UITableView class]);
+            id dataSource = [manager dataSourceForTableView:mock];
+            id delegate = [manager delegateForTableView:mock];
+            expect(dataSource).notTo.beNil();
+            expect(delegate).notTo.beNil();
+            
+            expect(dataSource).conformTo(@protocol(UITableViewDataSource));
+            expect(delegate).conformTo(@protocol(UITableViewDelegate));
+            
+        });
+        
+        afterAll(^{
+            manager = nil;
+        });
+    });
+});
 
-@end
+SpecEnd
+

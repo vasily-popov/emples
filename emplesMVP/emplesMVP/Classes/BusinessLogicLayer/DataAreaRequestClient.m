@@ -8,6 +8,7 @@
 
 #import "DataAreaRequestClient.h"
 #import "EmplesRecAreaJSONModel.h"
+#import "EmplesFileNames.h"
 
 @interface DataAreaRequestClient()
 
@@ -29,7 +30,7 @@
 -(void) fetchAllAreas:(ContentResponseBlock)block
 {
     __weak typeof(self) weakSelf = self;
-    [self.factory doRequestToFetchAllAreaWithResponseBlock:^(id response, NSError *error)
+    [self.factory requestToRead:kRecAreaFileName withResponseBlock:^(id response, NSError *error)
     {
         __strong typeof(self) strongSelf = weakSelf;
         if(strongSelf)

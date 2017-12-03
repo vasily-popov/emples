@@ -9,5 +9,4 @@
 #import "EmplesFileNames.h"
 
 NSString *const kRecAreaFileName = @"RecArea";
-NSString *const kRecAreaAdressFileName = @"RecAreaAddress";
 

@@ -6,53 +6,45 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import "UIColor+Hex.h"
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 
-@interface UIColor_HexTest : XCTestCase
+SpecBegin(HexColor)
 
-@end
-
-@implementation UIColor_HexTest
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testColorNotNil {
+describe(@"HexColor", ^{
     
-    UIColor *color = [UIColor colorWithRGBHex:0xFFFFFF];
-    XCTAssertNotNil(color);
+    it(@"should exist", ^{
+        UIColor *color = [UIColor colorWithRGBHex:0xFFFFFF];
+        expect(color).notTo.beNil();
+    });
     
-    UIColor *colorWithAlfa = [UIColor colorWithRGBHex:0xFFFFFF alpha:.4];
-    XCTAssertNotNil(colorWithAlfa);
-}
-
-- (void)testColorFromHexStringValidValueNotNil {
-    UIColor *color = [UIColor colorFromHexString:@"#AABBCC"];
-    XCTAssertNotNil(color);
-}
-
-- (void)testColorFromHexStringInvalidValue {
-    UIColor *emptyContent = [UIColor colorFromHexString:@"#"];
-    XCTAssertNil(emptyContent);
+    it(@"should exist with alfa", ^{
+        UIColor *color = [UIColor colorWithRGBHex:0xFFFFFF alpha:.4];
+        expect(color).notTo.beNil();
+    });
     
-    UIColor *emtyString = [UIColor colorFromHexString:@""];
-    XCTAssertNil(emtyString);
+    it(@"should convert valid hex string to color", ^{
+        UIColor *color = [UIColor colorFromHexString:@"#AABBCC"];
+        expect(color).notTo.beNil();
+    });
     
-    UIColor *nilString = [UIColor colorFromHexString:nil];
-    XCTAssertNil(nilString);
-}
+    it(@"should convert valid hex string (without #) to color", ^{
+        UIColor *color = [UIColor colorFromHexString:@"AABBCC"];
+        expect(color).notTo.beNil();
+    });
+    
+    it(@"should not convert invalid hex string to color", ^{
+        UIColor *color = [UIColor colorFromHexString:@"#"];
+        expect(color).to.beNil();
+        
+        UIColor *color1 = [UIColor colorFromHexString:@""];
+        expect(color1).to.beNil();
+        
+        UIColor *color2 = [UIColor colorFromHexString:nil];
+        expect(color2).to.beNil();
+    });
+});
 
-- (void)testColorFromHexStringValidValueWithHashChar {
-    UIColor *color = [UIColor colorFromHexString:@"AABBCC"];
-    XCTAssertNotNil(color);
-}
+SpecEnd
 
-@end

@@ -6,32 +6,44 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import <OCMock/OCMock.h>
 #import "EmplesItemView.h"
 #import "EmplesListCellModel.h"
 
-@interface EmplesItemView_Test : XCTestCase
 
-@end
+SpecBegin(EmplesItemView)
 
-@implementation EmplesItemView_Test
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+describe(@"EmplesItemView", ^{
+    
+    __block EmplesItemView *view = nil;
+    __block id mock = nil;
+    beforeEach(^{
+        mock = OCMClassMock([EmplesListCellModel class]);
+        view = [[EmplesItemView alloc] init];
+        expect(view).toNot.beNil();
+    });
+    
+    it(@"should be loaded", ^{
+        expect(^{
+            [view awakeFromNib];
+        }).notTo.raiseAny();
+    });
+    
+    it(@"should configure", ^{
+        OCMStub([mock imageURL]).andReturn(@"/test/");
+        expect(^{
+            [view configureWithModel:mock];
+        }).notTo.raiseAny();
+    });
+    
+    afterEach(^{
+        [mock stopMocking];
+        mock = nil;
+        view = nil;
+    });
+});
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testView {
-    id mock = OCMClassMock([EmplesListCellModel class]);
-    EmplesItemView *view = [[EmplesItemView alloc] init];
-    XCTAssertNotNil(view);
-    XCTAssertNoThrow([view awakeFromNib]);
-    XCTAssertNoThrow([view configureWithModel:mock]);
-}
-@end
+SpecEnd

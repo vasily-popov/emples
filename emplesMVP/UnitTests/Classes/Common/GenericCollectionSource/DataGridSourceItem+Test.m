@@ -6,43 +6,32 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import "DataGridSourceItem.h"
 #import <OCMock/OCMock.h>
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 
-@interface DataGridSourceItem_Test : XCTestCase
+SpecBegin(DataGridSourceItem)
 
-@end
-
-@implementation DataGridSourceItem_Test
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testInit {
+describe(@"DataGridSourceItem", ^{
     
-    DataGridSourceItem *item = [[DataGridSourceItem alloc] initWithCellModel:nil];
-    XCTAssertNotNil(item);
-    CGSize size = item.itemSize;
-    XCTAssert(size.height != 0 && size.width != 0);
-    XCTAssertNil(item.value);
-    XCTAssertNil(item.cellModel);
-}
-
-- (void)testInitWitCellProtocol {
-    id mockProtocol = OCMProtocolMock(@protocol(ViewCellModelProtocol));
-    DataGridSourceItem *item = [[DataGridSourceItem alloc] initWithCellModel:mockProtocol];
-    XCTAssertNotNil(item);
-    XCTAssert(item.itemSize.height != 0 && item.itemSize.width != 0);
-    XCTAssertNotNil(item.cellModel);
+    it(@"should be created with empty value and model", ^{
+        DataGridSourceItem *item = [[DataGridSourceItem alloc] initWithCellModel:nil];
+        expect(item).notTo.beNil();
+        expect(item.value).to.beNil();
+        expect(item.cellModel).to.beNil();
+    });
     
-}
+    it(@"should be created with valid value and model", ^{
+        id mockProtocol = OCMProtocolMock(@protocol(ViewCellModelProtocol));
+        OCMStub([mockProtocol getModelValue]).andReturn(@"test");
+        DataGridSourceItem *item = [[DataGridSourceItem alloc] initWithCellModel:mockProtocol];
+        expect(item).notTo.beNil();
+        expect(item.value).notTo.beNil();
+        expect(item.value).to.equal(@"test");
+        expect(item.cellModel).notTo.beNil();
+    });
 
-@end
+});
+
+SpecEnd
