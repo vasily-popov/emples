@@ -7,12 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0715E551F5AEAD838FB1A9AE /* libPods-UnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B38E6977467F6F955984B1CD /* libPods-UnitTests.a */; };
 		DC0509DA0673E9DBCD21F8E6 /* libPods-emplesVIPER.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */; };
+		DDB82777FBC19F5994BDB099 /* libPods-FunctionalTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E11F4A36AAB0646C14F3A012 /* libPods-FunctionalTests.a */; };
 		F030C8341FACA8A9007F9C76 /* EmplesViewCellDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = F030C8331FACA8A9007F9C76 /* EmplesViewCellDecorator.m */; };
+		F04F074D1FD4193F001A2347 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F04F06EE1FD4193F001A2347 /* Info.plist */; };
+		F04F07821FD4193F001A2347 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F04F074B1FD4193F001A2347 /* Info.plist */; };
+		F04F07831FD4199E001A2347 /* TestingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F074A1FD4193F001A2347 /* TestingAppDelegate.m */; };
+		F04F07861FD419C5001A2347 /* NSString+LocalizableTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F06F51FD4193F001A2347 /* NSString+LocalizableTest.m */; };
+		F04F07871FD419C5001A2347 /* UIColor+HexTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F06F61FD4193F001A2347 /* UIColor+HexTest.m */; };
+		F04F07881FD419E5001A2347 /* EmplesNavigationController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07071FD4193F001A2347 /* EmplesNavigationController+Test.m */; };
+		F04F078A1FD419E5001A2347 /* EmplesCarouselViewManager+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F070D1FD4193F001A2347 /* EmplesCarouselViewManager+Test.m */; };
+		F04F078B1FD419E5001A2347 /* EmplesCarouselView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F070E1FD4193F001A2347 /* EmplesCarouselView+Test.m */; };
+		F04F078C1FD419E5001A2347 /* EmplesItemView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07101FD4193F001A2347 /* EmplesItemView+Test.m */; };
+		F04F078D1FD419E5001A2347 /* EmplesItemRouter+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07121FD4193F001A2347 /* EmplesItemRouter+Test.m */; };
+		F04F07901FD419E5001A2347 /* EmplesDetailPresenter+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07161FD4193F001A2347 /* EmplesDetailPresenter+Test.m */; };
+		F04F07911FD419E5001A2347 /* EmplesDetailTableViewManager+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07181FD4193F001A2347 /* EmplesDetailTableViewManager+Test.m */; };
+		F04F07921FD419E5001A2347 /* EmplesDetailAreaModel+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07191FD4193F001A2347 /* EmplesDetailAreaModel+Test.m */; };
+		F04F07931FD419E5001A2347 /* EmplesDetailView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07231FD4193F001A2347 /* EmplesDetailView+Test.m */; };
+		F04F07971FD41A07001A2347 /* EmplesListTableViewManager+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F072A1FD4193F001A2347 /* EmplesListTableViewManager+Test.m */; };
+		F04F07981FD41A07001A2347 /* EmplesListCellModel+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F072C1FD4193F001A2347 /* EmplesListCellModel+Test.m */; };
+		F04F07991FD41A07001A2347 /* EmplesListCellView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F072D1FD4193F001A2347 /* EmplesListCellView+Test.m */; };
+		F04F079B1FD41A07001A2347 /* EmplesMenuRouter+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07311FD4193F001A2347 /* EmplesMenuRouter+Router.m */; };
+		F04F079C1FD41A07001A2347 /* EmplesMenuTableViewManager+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07331FD4193F001A2347 /* EmplesMenuTableViewManager+Test.m */; };
+		F04F079D1FD41A07001A2347 /* EmplesMenuCellModel+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07351FD4193F001A2347 /* EmplesMenuCellModel+Test.m */; };
+		F04F079E1FD41A07001A2347 /* EmplesMenuViewCell+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07361FD4193F001A2347 /* EmplesMenuViewCell+Test.m */; };
+		F04F07A11FD41A07001A2347 /* EmplesMenuView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07391FD4193F001A2347 /* EmplesMenuView+Test.m */; };
+		F04F07A21FD41A07001A2347 /* EmplesStackedViewManager+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F073C1FD4193F001A2347 /* EmplesStackedViewManager+Test.m */; };
+		F04F07A51FD41A17001A2347 /* EmplesGridCollectionViewManager+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07421FD4193F001A2347 /* EmplesGridCollectionViewManager+Test.m */; };
+		F04F07A71FD41A17001A2347 /* EmplesGridViewCell+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07451FD4193F001A2347 /* EmplesGridViewCell+Test.m */; };
+		F04F07A81FD41A17001A2347 /* EmplesGridCellModel+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07461FD4193F001A2347 /* EmplesGridCellModel+Test.m */; };
+		F04F07A91FD41A17001A2347 /* EmplesGridView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07471FD4193F001A2347 /* EmplesGridView+Test.m */; };
+		F04F07AB1FD41A64001A2347 /* EmplesDetailDirectionTextViewCell+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F071C1FD4193F001A2347 /* EmplesDetailDirectionTextViewCell+Test.m */; };
+		F04F07AC1FD41A64001A2347 /* EmplesDetailDirectionsCellModel+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F071D1FD4193F001A2347 /* EmplesDetailDirectionsCellModel+Test.m */; };
+		F04F07AD1FD41A64001A2347 /* EmplesDetailMapCellModel+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F071F1FD4193F001A2347 /* EmplesDetailMapCellModel+Test.m */; };
+		F04F07AE1FD41A64001A2347 /* EmplesDetailTextViewWithImageViewCell+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07211FD4193F001A2347 /* EmplesDetailTextViewWithImageViewCell+Test.m */; };
+		F04F07AF1FD41A64001A2347 /* EmplesDetailDescriptionCellModel+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07221FD4193F001A2347 /* EmplesDetailDescriptionCellModel+Test.m */; };
+		F04F07E81FD41CA0001A2347 /* GenericGridViewSource+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F06FA1FD4193F001A2347 /* GenericGridViewSource+Test.m */; };
+		F04F07E91FD41CA5001A2347 /* EmplesProgressView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07041FD4193F001A2347 /* EmplesProgressView+Test.m */; };
+		F04F07EA1FD41CAE001A2347 /* DataGridSourceItem+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F06F91FD4193F001A2347 /* DataGridSourceItem+Test.m */; };
+		F04F07EB1FD41CB5001A2347 /* GenericTableViewSource+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07001FD4193F001A2347 /* GenericTableViewSource+Test.m */; };
+		F04F07EC1FD41CC1001A2347 /* GenericTableViewManager+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07011FD4193F001A2347 /* GenericTableViewManager+Test.m */; };
+		F04F07ED1FD41CF4001A2347 /* UIView+Reusable+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F06FE1FD4193F001A2347 /* UIView+Reusable+Test.m */; };
+		F04F07EE1FD41CF9001A2347 /* DataSourceItem+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07021FD4193F001A2347 /* DataSourceItem+Test.m */; };
+		F04F07EF1FD41CFC001A2347 /* BaseRouter+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F06FC1FD4193F001A2347 /* BaseRouter+Test.m */; };
+		F04F07F01FD4303C001A2347 /* EmplesMenuModel+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07371FD4193F001A2347 /* EmplesMenuModel+Test.m */; };
+		F04F07F11FD43815001A2347 /* EmplesListView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07251FD4193F001A2347 /* EmplesListView+Test.m */; };
+		F04F07F21FD43817001A2347 /* EmplesListPresenter+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07281FD4193F001A2347 /* EmplesListPresenter+Test.m */; };
+		F04F07F31FD43889001A2347 /* EmplesMenuPresenter+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07381FD4193F001A2347 /* EmplesMenuPresenter+Test.m */; };
+		F04F07F41FD43897001A2347 /* EmplesStackedView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F073D1FD4193F001A2347 /* EmplesStackedView+Test.m */; };
+		F04F07F51FD4389E001A2347 /* EmplesGridPresenter+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07431FD4193F001A2347 /* EmplesGridPresenter+Test.m */; };
+		F04F07F61FD438E6001A2347 /* EmplesCollectionPresenter+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07131FD4193F001A2347 /* EmplesCollectionPresenter+Test.m */; };
+		F04F07F81FD438FF001A2347 /* EmplesGalleryView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F070A1FD4193F001A2347 /* EmplesGalleryView+Test.m */; };
+		F04F07FC1FD44BA0001A2347 /* DisplayAreaCollectionUseCaseImplementation+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07FB1FD44BA0001A2347 /* DisplayAreaCollectionUseCaseImplementation+Test.m */; };
+		F04F08001FD4539E001A2347 /* EmplesRecAreaJSONModel+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F07FF1FD4539E001A2347 /* EmplesRecAreaJSONModel+Test.m */; };
+		F04F08031FD4546D001A2347 /* DataFilePersistenceGateway+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F08021FD4546D001A2347 /* DataFilePersistenceGateway+Test.m */; };
+		F04F08061FD456E0001A2347 /* JsonFileReader+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F08051FD456E0001A2347 /* JsonFileReader+Test.m */; };
+		F04F08081FD45B91001A2347 /* EmplesDetailMapViewCell+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F08071FD45B91001A2347 /* EmplesDetailMapViewCell+Test.m */; };
 		F0B886C71FAC5F880016C1CD /* EmplesRecreationArea.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B886C61FAC5F880016C1CD /* EmplesRecreationArea.m */; };
 		F0E0E7CD1FABA48C004991D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F41FABA48C004991D2 /* Assets.xcassets */; };
 		F0E0E7CE1FABA48C004991D2 /* RecArea.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F61FABA48C004991D2 /* RecArea.json */; };
-		F0E0E7CF1FABA48C004991D2 /* RecAreaAddress.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F71FABA48C004991D2 /* RecAreaAddress.json */; };
 		F0E0E7D01FABA48C004991D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E6F91FABA48C004991D2 /* Localizable.strings */; };
 		F0E0E7D11FABA48C004991D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7011FABA48C004991D2 /* AppDelegate.m */; };
 		F0E0E7D21FABA48C004991D2 /* BaseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7031FABA48C004991D2 /* BaseAppDelegate.m */; };
@@ -53,7 +107,7 @@
 		F0E0E7F61FABA48C004991D2 /* EmplesDetailDirectionsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7691FABA48C004991D2 /* EmplesDetailDirectionsCellModel.m */; };
 		F0E0E7F71FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E76B1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.m */; };
 		F0E0E7F81FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0E76C1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib */; };
-		F0E0E7F91FABA48C004991D2 /* EmplesDeatilMapViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E76F1FABA48C004991D2 /* EmplesDeatilMapViewCell.m */; };
+		F0E0E7F91FABA48C004991D2 /* EmplesDetailMapViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E76F1FABA48C004991D2 /* EmplesDetailMapViewCell.m */; };
 		F0E0E7FA1FABA48C004991D2 /* EmplesDetailMapCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7711FABA48C004991D2 /* EmplesDetailMapCellModel.m */; };
 		F0E0E7FB1FABA48C004991D2 /* EmplesDetailAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7731FABA48C004991D2 /* EmplesDetailAreaModel.m */; };
 		F0E0E7FC1FABA48C004991D2 /* EmplesDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E7751FABA48C004991D2 /* EmplesDetailPresenter.m */; };
@@ -95,12 +149,91 @@
 		F0E0E8261FAC4E2F004991D2 /* DisplayAreaCollectionUseCaseImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E0E8251FAC4E2F004991D2 /* DisplayAreaCollectionUseCaseImplementation.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F04F06E41FD41924001A2347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0E0E6D21FAB99C0004991D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0E0E6D91FAB99C0004991D2;
+			remoteInfo = emplesVIPER;
+		};
+		F04F07B21FD41BD4001A2347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0E0E6D21FAB99C0004991D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0E0E6D91FAB99C0004991D2;
+			remoteInfo = emplesVIPER;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		087E83EEC0E818CF81A0DA7A /* Pods-FunctionalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalTests/Pods-FunctionalTests.release.xcconfig"; sourceTree = "<group>"; };
 		438DF27F6427A3F31F872037 /* Pods-emplesVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emplesVIPER.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BADD8F666BF1C87AC94F961 /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		8CE159D9352D29CC15A1AB67 /* Pods-emplesVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER.release.xcconfig"; sourceTree = "<group>"; };
+		B38E6977467F6F955984B1CD /* libPods-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C652D84B01E8869AF5EE6892 /* Pods-FunctionalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalTests/Pods-FunctionalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E02FCC800CFD0F5EA2564F8B /* Pods-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E11F4A36AAB0646C14F3A012 /* libPods-FunctionalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunctionalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F030C8321FACA8A9007F9C76 /* EmplesViewCellDecorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesViewCellDecorator.h; sourceTree = "<group>"; };
 		F030C8331FACA8A9007F9C76 /* EmplesViewCellDecorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesViewCellDecorator.m; sourceTree = "<group>"; };
+		F04F06DF1FD41924001A2347 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F04F06EE1FD4193F001A2347 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F04F06F51FD4193F001A2347 /* NSString+LocalizableTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LocalizableTest.m"; sourceTree = "<group>"; };
+		F04F06F61FD4193F001A2347 /* UIColor+HexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexTest.m"; sourceTree = "<group>"; };
+		F04F06F91FD4193F001A2347 /* DataGridSourceItem+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DataGridSourceItem+Test.m"; sourceTree = "<group>"; };
+		F04F06FA1FD4193F001A2347 /* GenericGridViewSource+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GenericGridViewSource+Test.m"; sourceTree = "<group>"; };
+		F04F06FC1FD4193F001A2347 /* BaseRouter+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseRouter+Test.m"; sourceTree = "<group>"; };
+		F04F06FE1FD4193F001A2347 /* UIView+Reusable+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Reusable+Test.m"; sourceTree = "<group>"; };
+		F04F07001FD4193F001A2347 /* GenericTableViewSource+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GenericTableViewSource+Test.m"; sourceTree = "<group>"; };
+		F04F07011FD4193F001A2347 /* GenericTableViewManager+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GenericTableViewManager+Test.m"; sourceTree = "<group>"; };
+		F04F07021FD4193F001A2347 /* DataSourceItem+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DataSourceItem+Test.m"; sourceTree = "<group>"; };
+		F04F07041FD4193F001A2347 /* EmplesProgressView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesProgressView+Test.m"; sourceTree = "<group>"; };
+		F04F07071FD4193F001A2347 /* EmplesNavigationController+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesNavigationController+Test.m"; sourceTree = "<group>"; };
+		F04F070A1FD4193F001A2347 /* EmplesGalleryView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesGalleryView+Test.m"; sourceTree = "<group>"; };
+		F04F070D1FD4193F001A2347 /* EmplesCarouselViewManager+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesCarouselViewManager+Test.m"; sourceTree = "<group>"; };
+		F04F070E1FD4193F001A2347 /* EmplesCarouselView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesCarouselView+Test.m"; sourceTree = "<group>"; };
+		F04F07101FD4193F001A2347 /* EmplesItemView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesItemView+Test.m"; sourceTree = "<group>"; };
+		F04F07121FD4193F001A2347 /* EmplesItemRouter+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesItemRouter+Test.m"; sourceTree = "<group>"; };
+		F04F07131FD4193F001A2347 /* EmplesCollectionPresenter+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesCollectionPresenter+Test.m"; sourceTree = "<group>"; };
+		F04F07161FD4193F001A2347 /* EmplesDetailPresenter+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailPresenter+Test.m"; sourceTree = "<group>"; };
+		F04F07181FD4193F001A2347 /* EmplesDetailTableViewManager+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailTableViewManager+Test.m"; sourceTree = "<group>"; };
+		F04F07191FD4193F001A2347 /* EmplesDetailAreaModel+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailAreaModel+Test.m"; sourceTree = "<group>"; };
+		F04F071C1FD4193F001A2347 /* EmplesDetailDirectionTextViewCell+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailDirectionTextViewCell+Test.m"; sourceTree = "<group>"; };
+		F04F071D1FD4193F001A2347 /* EmplesDetailDirectionsCellModel+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailDirectionsCellModel+Test.m"; sourceTree = "<group>"; };
+		F04F071F1FD4193F001A2347 /* EmplesDetailMapCellModel+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailMapCellModel+Test.m"; sourceTree = "<group>"; };
+		F04F07211FD4193F001A2347 /* EmplesDetailTextViewWithImageViewCell+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailTextViewWithImageViewCell+Test.m"; sourceTree = "<group>"; };
+		F04F07221FD4193F001A2347 /* EmplesDetailDescriptionCellModel+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailDescriptionCellModel+Test.m"; sourceTree = "<group>"; };
+		F04F07231FD4193F001A2347 /* EmplesDetailView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailView+Test.m"; sourceTree = "<group>"; };
+		F04F07251FD4193F001A2347 /* EmplesListView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesListView+Test.m"; sourceTree = "<group>"; };
+		F04F07281FD4193F001A2347 /* EmplesListPresenter+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesListPresenter+Test.m"; sourceTree = "<group>"; };
+		F04F072A1FD4193F001A2347 /* EmplesListTableViewManager+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesListTableViewManager+Test.m"; sourceTree = "<group>"; };
+		F04F072C1FD4193F001A2347 /* EmplesListCellModel+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesListCellModel+Test.m"; sourceTree = "<group>"; };
+		F04F072D1FD4193F001A2347 /* EmplesListCellView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesListCellView+Test.m"; sourceTree = "<group>"; };
+		F04F07311FD4193F001A2347 /* EmplesMenuRouter+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesMenuRouter+Router.m"; sourceTree = "<group>"; };
+		F04F07331FD4193F001A2347 /* EmplesMenuTableViewManager+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesMenuTableViewManager+Test.m"; sourceTree = "<group>"; };
+		F04F07351FD4193F001A2347 /* EmplesMenuCellModel+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesMenuCellModel+Test.m"; sourceTree = "<group>"; };
+		F04F07361FD4193F001A2347 /* EmplesMenuViewCell+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesMenuViewCell+Test.m"; sourceTree = "<group>"; };
+		F04F07371FD4193F001A2347 /* EmplesMenuModel+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesMenuModel+Test.m"; sourceTree = "<group>"; };
+		F04F07381FD4193F001A2347 /* EmplesMenuPresenter+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesMenuPresenter+Test.m"; sourceTree = "<group>"; };
+		F04F07391FD4193F001A2347 /* EmplesMenuView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesMenuView+Test.m"; sourceTree = "<group>"; };
+		F04F073C1FD4193F001A2347 /* EmplesStackedViewManager+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesStackedViewManager+Test.m"; sourceTree = "<group>"; };
+		F04F073D1FD4193F001A2347 /* EmplesStackedView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesStackedView+Test.m"; sourceTree = "<group>"; };
+		F04F07421FD4193F001A2347 /* EmplesGridCollectionViewManager+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesGridCollectionViewManager+Test.m"; sourceTree = "<group>"; };
+		F04F07431FD4193F001A2347 /* EmplesGridPresenter+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesGridPresenter+Test.m"; sourceTree = "<group>"; };
+		F04F07451FD4193F001A2347 /* EmplesGridViewCell+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesGridViewCell+Test.m"; sourceTree = "<group>"; };
+		F04F07461FD4193F001A2347 /* EmplesGridCellModel+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesGridCellModel+Test.m"; sourceTree = "<group>"; };
+		F04F07471FD4193F001A2347 /* EmplesGridView+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EmplesGridView+Test.m"; sourceTree = "<group>"; };
+		F04F07491FD4193F001A2347 /* TestingAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingAppDelegate.h; sourceTree = "<group>"; };
+		F04F074A1FD4193F001A2347 /* TestingAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestingAppDelegate.m; sourceTree = "<group>"; };
+		F04F074B1FD4193F001A2347 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F04F07E61FD41BD4001A2347 /* FunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F04F07FB1FD44BA0001A2347 /* DisplayAreaCollectionUseCaseImplementation+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DisplayAreaCollectionUseCaseImplementation+Test.m"; sourceTree = "<group>"; };
+		F04F07FF1FD4539E001A2347 /* EmplesRecAreaJSONModel+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EmplesRecAreaJSONModel+Test.m"; sourceTree = "<group>"; };
+		F04F08021FD4546D001A2347 /* DataFilePersistenceGateway+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DataFilePersistenceGateway+Test.m"; sourceTree = "<group>"; };
+		F04F08051FD456E0001A2347 /* JsonFileReader+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JsonFileReader+Test.m"; sourceTree = "<group>"; };
+		F04F08071FD45B91001A2347 /* EmplesDetailMapViewCell+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EmplesDetailMapViewCell+Test.m"; sourceTree = "<group>"; };
 		F0B886C11FAC57480016C1CD /* DataAreaGatewayProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataAreaGatewayProtocol.h; sourceTree = "<group>"; };
 		F0B886C51FAC5F880016C1CD /* EmplesRecreationArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmplesRecreationArea.h; sourceTree = "<group>"; };
 		F0B886C61FAC5F880016C1CD /* EmplesRecreationArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmplesRecreationArea.m; sourceTree = "<group>"; };
@@ -108,7 +241,6 @@
 		F0E0E6DA1FAB99C0004991D2 /* emplesVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emplesVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E0E6F41FABA48C004991D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0E0E6F61FABA48C004991D2 /* RecArea.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecArea.json; sourceTree = "<group>"; };
-		F0E0E6F71FABA48C004991D2 /* RecAreaAddress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecAreaAddress.json; sourceTree = "<group>"; };
 		F0E0E6FA1FABA48C004991D2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F0E0E6FB1FABA48C004991D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F0E0E6FC1FABA48C004991D2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -193,8 +325,8 @@
 		F0E0E76A1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailDirectionTextViewCell.h; sourceTree = "<group>"; };
 		F0E0E76B1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailDirectionTextViewCell.m; sourceTree = "<group>"; };
 		F0E0E76C1FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesDetailDirectionTextViewCell.xib; sourceTree = "<group>"; };
-		F0E0E76E1FABA48C004991D2 /* EmplesDeatilMapViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDeatilMapViewCell.h; sourceTree = "<group>"; };
-		F0E0E76F1FABA48C004991D2 /* EmplesDeatilMapViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDeatilMapViewCell.m; sourceTree = "<group>"; };
+		F0E0E76E1FABA48C004991D2 /* EmplesDetailMapViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailMapViewCell.h; sourceTree = "<group>"; };
+		F0E0E76F1FABA48C004991D2 /* EmplesDetailMapViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailMapViewCell.m; sourceTree = "<group>"; };
 		F0E0E7701FABA48C004991D2 /* EmplesDetailMapCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailMapCellModel.h; sourceTree = "<group>"; };
 		F0E0E7711FABA48C004991D2 /* EmplesDetailMapCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmplesDetailMapCellModel.m; sourceTree = "<group>"; };
 		F0E0E7721FABA48C004991D2 /* EmplesDetailAreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmplesDetailAreaModel.h; sourceTree = "<group>"; };
@@ -272,6 +404,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F04F06DC1FD41924001A2347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0715E551F5AEAD838FB1A9AE /* libPods-UnitTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F04F07E11FD41BD4001A2347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB82777FBC19F5994BDB099 /* libPods-FunctionalTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0E0E6D71FAB99C0004991D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,6 +436,10 @@
 			children = (
 				438DF27F6427A3F31F872037 /* Pods-emplesVIPER.debug.xcconfig */,
 				8CE159D9352D29CC15A1AB67 /* Pods-emplesVIPER.release.xcconfig */,
+				C652D84B01E8869AF5EE6892 /* Pods-FunctionalTests.debug.xcconfig */,
+				087E83EEC0E818CF81A0DA7A /* Pods-FunctionalTests.release.xcconfig */,
+				E02FCC800CFD0F5EA2564F8B /* Pods-UnitTests.debug.xcconfig */,
+				6BADD8F666BF1C87AC94F961 /* Pods-UnitTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -296,6 +448,8 @@
 			isa = PBXGroup;
 			children = (
 				5D602F7BD39AF7B99930325F /* libPods-emplesVIPER.a */,
+				E11F4A36AAB0646C14F3A012 /* libPods-FunctionalTests.a */,
+				B38E6977467F6F955984B1CD /* libPods-UnitTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -309,6 +463,394 @@
 				F030C8331FACA8A9007F9C76 /* EmplesViewCellDecorator.m */,
 			);
 			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		F04F06E91FD4193F001A2347 /* FunctionalTests */ = {
+			isa = PBXGroup;
+			children = (
+				F04F06EE1FD4193F001A2347 /* Info.plist */,
+			);
+			path = FunctionalTests;
+			sourceTree = "<group>";
+		};
+		F04F06EF1FD4193F001A2347 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				F04F06F01FD4193F001A2347 /* Classes */,
+				F04F07481FD4193F001A2347 /* TestingAppDelegate */,
+				F04F074B1FD4193F001A2347 /* Info.plist */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		F04F06F01FD4193F001A2347 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F04F06F11FD4193F001A2347 /* BusinessLayer */,
+				F04F06F41FD4193F001A2347 /* Extensions */,
+				F04F06F71FD4193F001A2347 /* Common */,
+				F04F07051FD4193F001A2347 /* ApplicationLayer */,
+				F04F07081FD4193F001A2347 /* PresentationLayer */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F04F06F11FD4193F001A2347 /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07FD1FD45383001A2347 /* Gateways */,
+				F04F07FA1FD44B85001A2347 /* UseCase */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		F04F06F41FD4193F001A2347 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F04F06F51FD4193F001A2347 /* NSString+LocalizableTest.m */,
+				F04F06F61FD4193F001A2347 /* UIColor+HexTest.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F04F06F71FD4193F001A2347 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F04F06F81FD4193F001A2347 /* GenericCollectionSource */,
+				F04F06FB1FD4193F001A2347 /* BaseRouter */,
+				F04F06FD1FD4193F001A2347 /* Extensions */,
+				F04F06FF1FD4193F001A2347 /* GenericTableSource */,
+				F04F07031FD4193F001A2347 /* ProgressView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F04F06F81FD4193F001A2347 /* GenericCollectionSource */ = {
+			isa = PBXGroup;
+			children = (
+				F04F06F91FD4193F001A2347 /* DataGridSourceItem+Test.m */,
+				F04F06FA1FD4193F001A2347 /* GenericGridViewSource+Test.m */,
+			);
+			path = GenericCollectionSource;
+			sourceTree = "<group>";
+		};
+		F04F06FB1FD4193F001A2347 /* BaseRouter */ = {
+			isa = PBXGroup;
+			children = (
+				F04F06FC1FD4193F001A2347 /* BaseRouter+Test.m */,
+			);
+			path = BaseRouter;
+			sourceTree = "<group>";
+		};
+		F04F06FD1FD4193F001A2347 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F04F06FE1FD4193F001A2347 /* UIView+Reusable+Test.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F04F06FF1FD4193F001A2347 /* GenericTableSource */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07001FD4193F001A2347 /* GenericTableViewSource+Test.m */,
+				F04F07011FD4193F001A2347 /* GenericTableViewManager+Test.m */,
+				F04F07021FD4193F001A2347 /* DataSourceItem+Test.m */,
+			);
+			path = GenericTableSource;
+			sourceTree = "<group>";
+		};
+		F04F07031FD4193F001A2347 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07041FD4193F001A2347 /* EmplesProgressView+Test.m */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		F04F07051FD4193F001A2347 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07061FD4193F001A2347 /* UINavigationController */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		F04F07061FD4193F001A2347 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07071FD4193F001A2347 /* EmplesNavigationController+Test.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		F04F07081FD4193F001A2347 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07091FD4193F001A2347 /* Gallery */,
+				F04F070B1FD4193F001A2347 /* Carousel */,
+				F04F07111FD4193F001A2347 /* Base */,
+				F04F07151FD4193F001A2347 /* Detail */,
+				F04F07241FD4193F001A2347 /* List */,
+				F04F072E1FD4193F001A2347 /* Menu */,
+				F04F073A1FD4193F001A2347 /* Stack */,
+				F04F073E1FD4193F001A2347 /* Grid */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		F04F07091FD4193F001A2347 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				F04F070A1FD4193F001A2347 /* EmplesGalleryView+Test.m */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		F04F070B1FD4193F001A2347 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				F04F070C1FD4193F001A2347 /* CarouselManager */,
+				F04F070E1FD4193F001A2347 /* EmplesCarouselView+Test.m */,
+				F04F070F1FD4193F001A2347 /* EmplesItemView */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		F04F070C1FD4193F001A2347 /* CarouselManager */ = {
+			isa = PBXGroup;
+			children = (
+				F04F070D1FD4193F001A2347 /* EmplesCarouselViewManager+Test.m */,
+			);
+			path = CarouselManager;
+			sourceTree = "<group>";
+		};
+		F04F070F1FD4193F001A2347 /* EmplesItemView */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07101FD4193F001A2347 /* EmplesItemView+Test.m */,
+			);
+			path = EmplesItemView;
+			sourceTree = "<group>";
+		};
+		F04F07111FD4193F001A2347 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07121FD4193F001A2347 /* EmplesItemRouter+Test.m */,
+				F04F07131FD4193F001A2347 /* EmplesCollectionPresenter+Test.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F04F07151FD4193F001A2347 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07161FD4193F001A2347 /* EmplesDetailPresenter+Test.m */,
+				F04F07171FD4193F001A2347 /* TableManager */,
+				F04F07191FD4193F001A2347 /* EmplesDetailAreaModel+Test.m */,
+				F04F071A1FD4193F001A2347 /* Cell */,
+				F04F07231FD4193F001A2347 /* EmplesDetailView+Test.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F04F07171FD4193F001A2347 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07181FD4193F001A2347 /* EmplesDetailTableViewManager+Test.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F04F071A1FD4193F001A2347 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F04F071B1FD4193F001A2347 /* Directions */,
+				F04F071E1FD4193F001A2347 /* Map */,
+				F04F07201FD4193F001A2347 /* Description */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F04F071B1FD4193F001A2347 /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				F04F071C1FD4193F001A2347 /* EmplesDetailDirectionTextViewCell+Test.m */,
+				F04F071D1FD4193F001A2347 /* EmplesDetailDirectionsCellModel+Test.m */,
+			);
+			path = Directions;
+			sourceTree = "<group>";
+		};
+		F04F071E1FD4193F001A2347 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F04F071F1FD4193F001A2347 /* EmplesDetailMapCellModel+Test.m */,
+				F04F08071FD45B91001A2347 /* EmplesDetailMapViewCell+Test.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F04F07201FD4193F001A2347 /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07211FD4193F001A2347 /* EmplesDetailTextViewWithImageViewCell+Test.m */,
+				F04F07221FD4193F001A2347 /* EmplesDetailDescriptionCellModel+Test.m */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		F04F07241FD4193F001A2347 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07251FD4193F001A2347 /* EmplesListView+Test.m */,
+				F04F07281FD4193F001A2347 /* EmplesListPresenter+Test.m */,
+				F04F07291FD4193F001A2347 /* TableManager */,
+				F04F072B1FD4193F001A2347 /* Cell */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		F04F07291FD4193F001A2347 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F04F072A1FD4193F001A2347 /* EmplesListTableViewManager+Test.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F04F072B1FD4193F001A2347 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F04F072C1FD4193F001A2347 /* EmplesListCellModel+Test.m */,
+				F04F072D1FD4193F001A2347 /* EmplesListCellView+Test.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F04F072E1FD4193F001A2347 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07311FD4193F001A2347 /* EmplesMenuRouter+Router.m */,
+				F04F07321FD4193F001A2347 /* TableManager */,
+				F04F07341FD4193F001A2347 /* Cell */,
+				F04F07371FD4193F001A2347 /* EmplesMenuModel+Test.m */,
+				F04F07381FD4193F001A2347 /* EmplesMenuPresenter+Test.m */,
+				F04F07391FD4193F001A2347 /* EmplesMenuView+Test.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		F04F07321FD4193F001A2347 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07331FD4193F001A2347 /* EmplesMenuTableViewManager+Test.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F04F07341FD4193F001A2347 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07351FD4193F001A2347 /* EmplesMenuCellModel+Test.m */,
+				F04F07361FD4193F001A2347 /* EmplesMenuViewCell+Test.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F04F073A1FD4193F001A2347 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				F04F073B1FD4193F001A2347 /* StackedManager */,
+				F04F073D1FD4193F001A2347 /* EmplesStackedView+Test.m */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		F04F073B1FD4193F001A2347 /* StackedManager */ = {
+			isa = PBXGroup;
+			children = (
+				F04F073C1FD4193F001A2347 /* EmplesStackedViewManager+Test.m */,
+			);
+			path = StackedManager;
+			sourceTree = "<group>";
+		};
+		F04F073E1FD4193F001A2347 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07411FD4193F001A2347 /* GridManager */,
+				F04F07431FD4193F001A2347 /* EmplesGridPresenter+Test.m */,
+				F04F07441FD4193F001A2347 /* Cell */,
+				F04F07471FD4193F001A2347 /* EmplesGridView+Test.m */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		F04F07411FD4193F001A2347 /* GridManager */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07421FD4193F001A2347 /* EmplesGridCollectionViewManager+Test.m */,
+			);
+			path = GridManager;
+			sourceTree = "<group>";
+		};
+		F04F07441FD4193F001A2347 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07451FD4193F001A2347 /* EmplesGridViewCell+Test.m */,
+				F04F07461FD4193F001A2347 /* EmplesGridCellModel+Test.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F04F07481FD4193F001A2347 /* TestingAppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07491FD4193F001A2347 /* TestingAppDelegate.h */,
+				F04F074A1FD4193F001A2347 /* TestingAppDelegate.m */,
+			);
+			path = TestingAppDelegate;
+			sourceTree = "<group>";
+		};
+		F04F07FA1FD44B85001A2347 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07FB1FD44BA0001A2347 /* DisplayAreaCollectionUseCaseImplementation+Test.m */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F04F07FD1FD45383001A2347 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				F04F08011FD45454001A2347 /* FilePersistence */,
+				F04F07FE1FD4538B001A2347 /* JSONModel */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		F04F07FE1FD4538B001A2347 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				F04F07FF1FD4539E001A2347 /* EmplesRecAreaJSONModel+Test.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		F04F08011FD45454001A2347 /* FilePersistence */ = {
+			isa = PBXGroup;
+			children = (
+				F04F08041FD456CF001A2347 /* FileReader */,
+				F04F08021FD4546D001A2347 /* DataFilePersistenceGateway+Test.m */,
+			);
+			path = FilePersistence;
+			sourceTree = "<group>";
+		};
+		F04F08041FD456CF001A2347 /* FileReader */ = {
+			isa = PBXGroup;
+			children = (
+				F04F08051FD456E0001A2347 /* JsonFileReader+Test.m */,
+			);
+			path = FileReader;
 			sourceTree = "<group>";
 		};
 		F0B886C21FAC581D0016C1CD /* FilePersistence */ = {
@@ -345,6 +887,8 @@
 			children = (
 				F0E0E8211FAC4783004991D2 /* README.md */,
 				F0E0E6DC1FAB99C0004991D2 /* emplesVIPER */,
+				F04F06E91FD4193F001A2347 /* FunctionalTests */,
+				F04F06EF1FD4193F001A2347 /* UnitTests */,
 				F0E0E6DB1FAB99C0004991D2 /* Products */,
 				47A2D909AF4DFC57C2A3E79B /* Pods */,
 				6298A896DF69F22F7D812322 /* Frameworks */,
@@ -355,6 +899,8 @@
 			isa = PBXGroup;
 			children = (
 				F0E0E6DA1FAB99C0004991D2 /* emplesVIPER.app */,
+				F04F06DF1FD41924001A2347 /* UnitTests.xctest */,
+				F04F07E61FD41BD4001A2347 /* FunctionalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,7 +929,6 @@
 			isa = PBXGroup;
 			children = (
 				F0E0E6F61FABA48C004991D2 /* RecArea.json */,
-				F0E0E6F71FABA48C004991D2 /* RecAreaAddress.json */,
 			);
 			path = fakeJsons;
 			sourceTree = "<group>";
@@ -706,8 +1251,8 @@
 		F0E0E76D1FABA48C004991D2 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				F0E0E76E1FABA48C004991D2 /* EmplesDeatilMapViewCell.h */,
-				F0E0E76F1FABA48C004991D2 /* EmplesDeatilMapViewCell.m */,
+				F0E0E76E1FABA48C004991D2 /* EmplesDetailMapViewCell.h */,
+				F0E0E76F1FABA48C004991D2 /* EmplesDetailMapViewCell.m */,
 				F0E0E7701FABA48C004991D2 /* EmplesDetailMapCellModel.h */,
 				F0E0E7711FABA48C004991D2 /* EmplesDetailMapCellModel.m */,
 			);
@@ -935,6 +1480,48 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F04F06DE1FD41924001A2347 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F04F06E61FD41924001A2347 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				F9ED784B74A7C62042B53E1E /* [CP] Check Pods Manifest.lock */,
+				F04F06DB1FD41924001A2347 /* Sources */,
+				F04F06DC1FD41924001A2347 /* Frameworks */,
+				F04F06DD1FD41924001A2347 /* Resources */,
+				EB0EF3DB6B49FD56559A7159 /* [CP] Embed Pods Frameworks */,
+				B14325DDE2D2D936237F35E0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F04F06E51FD41924001A2347 /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = emplesVIPERTests;
+			productReference = F04F06DF1FD41924001A2347 /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F04F07B01FD41BD4001A2347 /* FunctionalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F04F07E31FD41BD4001A2347 /* Build configuration list for PBXNativeTarget "FunctionalTests" */;
+			buildPhases = (
+				70F2C1CADB68CDBB460EDF26 /* [CP] Check Pods Manifest.lock */,
+				F04F07B31FD41BD4001A2347 /* Sources */,
+				F04F07E11FD41BD4001A2347 /* Frameworks */,
+				F04F07E21FD41BD4001A2347 /* Resources */,
+				FAD3AF202382B54BD558B0F1 /* [CP] Embed Pods Frameworks */,
+				DC16A9596B8CC34031A08846 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F04F07B11FD41BD4001A2347 /* PBXTargetDependency */,
+			);
+			name = FunctionalTests;
+			productName = emplesVIPERTests;
+			productReference = F04F07E61FD41BD4001A2347 /* FunctionalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F0E0E6D91FAB99C0004991D2 /* emplesVIPER */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0E0E6F01FAB99C0004991D2 /* Build configuration list for PBXNativeTarget "emplesVIPER" */;
@@ -964,6 +1551,14 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Vasily Popov";
 				TargetAttributes = {
+					F04F06DE1FD41924001A2347 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F0E0E6D91FAB99C0004991D2;
+					};
+					F04F07B01FD41BD4001A2347 = {
+						ProvisioningStyle = Automatic;
+					};
 					F0E0E6D91FAB99C0004991D2 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -986,34 +1581,84 @@
 			projectRoot = "";
 			targets = (
 				F0E0E6D91FAB99C0004991D2 /* emplesVIPER */,
+				F04F06DE1FD41924001A2347 /* UnitTests */,
+				F04F07B01FD41BD4001A2347 /* FunctionalTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F04F06DD1FD41924001A2347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F04F07E21FD41BD4001A2347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0E0E6D81FAB99C0004991D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F0E0E7CD1FABA48C004991D2 /* Assets.xcassets in Resources */,
 				F0E0E7D01FABA48C004991D2 /* Localizable.strings in Resources */,
-				F0E0E7CF1FABA48C004991D2 /* RecAreaAddress.json in Resources */,
 				F0E0E7F51FABA48C004991D2 /* EmplesDetailTextViewWithImageViewCell.xib in Resources */,
 				F0E0E8221FAC4783004991D2 /* README.md in Resources */,
 				F0E0E80B1FABA48C004991D2 /* EmplesListCellView.xib in Resources */,
 				F0E0E8121FABA48C004991D2 /* EmplesMenuViewCell.xib in Resources */,
+				F04F07821FD4193F001A2347 /* Info.plist in Resources */,
 				F0E0E7F81FABA48C004991D2 /* EmplesDetailDirectionTextViewCell.xib in Resources */,
 				F0E0E7CE1FABA48C004991D2 /* RecArea.json in Resources */,
 				F0E0E8041FABA48C004991D2 /* EmplesGridViewCell.xib in Resources */,
 				F0E0E81E1FABA48D004991D2 /* LaunchScreen.storyboard in Resources */,
 				F0E0E81D1FABA48D004991D2 /* background.png in Resources */,
 				F0E0E7EF1FABA48C004991D2 /* EmplesItemView.xib in Resources */,
+				F04F074D1FD4193F001A2347 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		70F2C1CADB68CDBB460EDF26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FunctionalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B14325DDE2D2D936237F35E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CCC85E03C5E19D162F79E352 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1047,6 +1692,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DC16A9596B8CC34031A08846 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunctionalTests/Pods-FunctionalTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB0EF3DB6B49FD56559A7159 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F6719628A93682DC78C942F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1065,9 +1740,107 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F9ED784B74A7C62042B53E1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UnitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAD3AF202382B54BD558B0F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunctionalTests/Pods-FunctionalTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F04F06DB1FD41924001A2347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F04F07F11FD43815001A2347 /* EmplesListView+Test.m in Sources */,
+				F04F07A21FD41A07001A2347 /* EmplesStackedViewManager+Test.m in Sources */,
+				F04F07EE1FD41CF9001A2347 /* DataSourceItem+Test.m in Sources */,
+				F04F07931FD419E5001A2347 /* EmplesDetailView+Test.m in Sources */,
+				F04F07A71FD41A17001A2347 /* EmplesGridViewCell+Test.m in Sources */,
+				F04F07A81FD41A17001A2347 /* EmplesGridCellModel+Test.m in Sources */,
+				F04F07EB1FD41CB5001A2347 /* GenericTableViewSource+Test.m in Sources */,
+				F04F07AF1FD41A64001A2347 /* EmplesDetailDescriptionCellModel+Test.m in Sources */,
+				F04F07981FD41A07001A2347 /* EmplesListCellModel+Test.m in Sources */,
+				F04F079C1FD41A07001A2347 /* EmplesMenuTableViewManager+Test.m in Sources */,
+				F04F07991FD41A07001A2347 /* EmplesListCellView+Test.m in Sources */,
+				F04F08081FD45B91001A2347 /* EmplesDetailMapViewCell+Test.m in Sources */,
+				F04F078A1FD419E5001A2347 /* EmplesCarouselViewManager+Test.m in Sources */,
+				F04F08061FD456E0001A2347 /* JsonFileReader+Test.m in Sources */,
+				F04F078D1FD419E5001A2347 /* EmplesItemRouter+Test.m in Sources */,
+				F04F07AC1FD41A64001A2347 /* EmplesDetailDirectionsCellModel+Test.m in Sources */,
+				F04F07AB1FD41A64001A2347 /* EmplesDetailDirectionTextViewCell+Test.m in Sources */,
+				F04F07871FD419C5001A2347 /* UIColor+HexTest.m in Sources */,
+				F04F07F51FD4389E001A2347 /* EmplesGridPresenter+Test.m in Sources */,
+				F04F07AD1FD41A64001A2347 /* EmplesDetailMapCellModel+Test.m in Sources */,
+				F04F07F21FD43817001A2347 /* EmplesListPresenter+Test.m in Sources */,
+				F04F07AE1FD41A64001A2347 /* EmplesDetailTextViewWithImageViewCell+Test.m in Sources */,
+				F04F07E81FD41CA0001A2347 /* GenericGridViewSource+Test.m in Sources */,
+				F04F08031FD4546D001A2347 /* DataFilePersistenceGateway+Test.m in Sources */,
+				F04F07E91FD41CA5001A2347 /* EmplesProgressView+Test.m in Sources */,
+				F04F07F31FD43889001A2347 /* EmplesMenuPresenter+Test.m in Sources */,
+				F04F07A11FD41A07001A2347 /* EmplesMenuView+Test.m in Sources */,
+				F04F079D1FD41A07001A2347 /* EmplesMenuCellModel+Test.m in Sources */,
+				F04F07921FD419E5001A2347 /* EmplesDetailAreaModel+Test.m in Sources */,
+				F04F079E1FD41A07001A2347 /* EmplesMenuViewCell+Test.m in Sources */,
+				F04F07831FD4199E001A2347 /* TestingAppDelegate.m in Sources */,
+				F04F07ED1FD41CF4001A2347 /* UIView+Reusable+Test.m in Sources */,
+				F04F07F41FD43897001A2347 /* EmplesStackedView+Test.m in Sources */,
+				F04F079B1FD41A07001A2347 /* EmplesMenuRouter+Router.m in Sources */,
+				F04F07F81FD438FF001A2347 /* EmplesGalleryView+Test.m in Sources */,
+				F04F07FC1FD44BA0001A2347 /* DisplayAreaCollectionUseCaseImplementation+Test.m in Sources */,
+				F04F07F01FD4303C001A2347 /* EmplesMenuModel+Test.m in Sources */,
+				F04F07861FD419C5001A2347 /* NSString+LocalizableTest.m in Sources */,
+				F04F07F61FD438E6001A2347 /* EmplesCollectionPresenter+Test.m in Sources */,
+				F04F07A91FD41A17001A2347 /* EmplesGridView+Test.m in Sources */,
+				F04F07EA1FD41CAE001A2347 /* DataGridSourceItem+Test.m in Sources */,
+				F04F078B1FD419E5001A2347 /* EmplesCarouselView+Test.m in Sources */,
+				F04F08001FD4539E001A2347 /* EmplesRecAreaJSONModel+Test.m in Sources */,
+				F04F07EF1FD41CFC001A2347 /* BaseRouter+Test.m in Sources */,
+				F04F07911FD419E5001A2347 /* EmplesDetailTableViewManager+Test.m in Sources */,
+				F04F07971FD41A07001A2347 /* EmplesListTableViewManager+Test.m in Sources */,
+				F04F078C1FD419E5001A2347 /* EmplesItemView+Test.m in Sources */,
+				F04F07881FD419E5001A2347 /* EmplesNavigationController+Test.m in Sources */,
+				F04F07A51FD41A17001A2347 /* EmplesGridCollectionViewManager+Test.m in Sources */,
+				F04F07EC1FD41CC1001A2347 /* GenericTableViewManager+Test.m in Sources */,
+				F04F07901FD419E5001A2347 /* EmplesDetailPresenter+Test.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F04F07B31FD41BD4001A2347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0E0E6D61FAB99C0004991D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1131,7 +1904,7 @@
 				F0E0E8191FABA48D004991D2 /* EmplesStackedViewAnimator.m in Sources */,
 				F0E0E8071FABA48C004991D2 /* EmplesGridView.m in Sources */,
 				F0E0E7E91FABA48C004991D2 /* EmplesCollectionsAssembly.m in Sources */,
-				F0E0E7F91FABA48C004991D2 /* EmplesDeatilMapViewCell.m in Sources */,
+				F0E0E7F91FABA48C004991D2 /* EmplesDetailMapViewCell.m in Sources */,
 				F0E0E7FD1FABA48C004991D2 /* EmplesDetailView.m in Sources */,
 				F0E0E7FC1FABA48C004991D2 /* EmplesDetailPresenter.m in Sources */,
 				F0E0E7EA1FABA48C004991D2 /* EmplesMenuAssembly.m in Sources */,
@@ -1148,6 +1921,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F04F06E51FD41924001A2347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0E0E6D91FAB99C0004991D2 /* emplesVIPER */;
+			targetProxy = F04F06E41FD41924001A2347 /* PBXContainerItemProxy */;
+		};
+		F04F07B11FD41BD4001A2347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0E0E6D91FAB99C0004991D2 /* emplesVIPER */;
+			targetProxy = F04F07B21FD41BD4001A2347 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F0E0E6F91FABA48C004991D2 /* Localizable.strings */ = {
@@ -1171,6 +1957,78 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F04F06E71FD41924001A2347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E02FCC800CFD0F5EA2564F8B /* Pods-UnitTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EB863BHDM;
+				GCC_PREFIX_HEADER = "emplesVIPER/Supporting files/PrefixHeader.pch";
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascome.emplesVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/emplesVIPER.app/emplesVIPER";
+			};
+			name = Debug;
+		};
+		F04F06E81FD41924001A2347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BADD8F666BF1C87AC94F961 /* Pods-UnitTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EB863BHDM;
+				GCC_PREFIX_HEADER = "emplesVIPER/Supporting files/PrefixHeader.pch";
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascome.emplesVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/emplesVIPER.app/emplesVIPER";
+			};
+			name = Release;
+		};
+		F04F07E41FD41BD4001A2347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C652D84B01E8869AF5EE6892 /* Pods-FunctionalTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EB863BHDM;
+				GCC_PREFIX_HEADER = "emplesVIPER/Supporting files/PrefixHeader.pch";
+				INFOPLIST_FILE = FunctionalTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascome.emplesVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/emplesVIPER.app/emplesVIPER";
+			};
+			name = Debug;
+		};
+		F04F07E51FD41BD4001A2347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 087E83EEC0E818CF81A0DA7A /* Pods-FunctionalTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7EB863BHDM;
+				GCC_PREFIX_HEADER = "emplesVIPER/Supporting files/PrefixHeader.pch";
+				INFOPLIST_FILE = FunctionalTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascome.emplesVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/emplesVIPER.app/emplesVIPER";
+			};
+			name = Release;
+		};
 		F0E0E6EE1FAB99C0004991D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1310,6 +2168,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F04F06E61FD41924001A2347 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F04F06E71FD41924001A2347 /* Debug */,
+				F04F06E81FD41924001A2347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F04F07E31FD41BD4001A2347 /* Build configuration list for PBXNativeTarget "FunctionalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F04F07E41FD41BD4001A2347 /* Debug */,
+				F04F07E51FD41BD4001A2347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F0E0E6D51FAB99C0004991D2 /* Build configuration list for PBXProject "emplesVIPER" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

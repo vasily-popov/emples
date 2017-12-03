@@ -14,7 +14,7 @@
 
 @implementation EmplesListPresenter
 
--(NSArray*) prepareCollectionArrayFromArray:(NSArray *)areas;
+-(NSArray*) prepareCollectionArrayFromArray:(NSArray *)areas
 {
     NSArray *models = [EmplesListSourceBuilder buildSourceFromItems:areas];
     

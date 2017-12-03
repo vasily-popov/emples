@@ -9,8 +9,6 @@
 #import "EmplesMenuPresenter.h"
 #import "EnumMenuSelectedItem.h"
 #import "EmplesMenuModel.h"
-#import <GoogleMaps/GoogleMaps.h>
-#define GOOGLE_MAPS_APIKEY @"AIzaSyBq67F_e2PQEWtKgCDDkHBpnVH1r383nQo"
 
 @interface EmplesMenuPresenter () <EmplesMenuSelectProtocol>
 
@@ -26,7 +24,6 @@
     if (self) {
         self.model = model;
         self.model.delegate = self;
-        [GMSServices provideAPIKey:GOOGLE_MAPS_APIKEY];
     }
     return self;
 }

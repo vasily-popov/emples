@@ -9,7 +9,7 @@
 #import "EmplesDetailTableViewManager.h"
 #import "EmplesDetailDirectionTextViewCell.h"
 #import "EmplesDetailTextViewWithImageViewCell.h"
-#import "EmplesDeatilMapViewCell.h"
+#import "EmplesDetailMapViewCell.h"
 #import "UITableView+Reusable.h"
 
 @implementation EmplesDetailTableViewManager
@@ -18,7 +18,7 @@
 {
     [tableView registerCellNib:EmplesDetailDirectionTextViewCell.class];
     [tableView registerCellNib:EmplesDetailTextViewWithImageViewCell.class];
-    [tableView registerCell:EmplesDeatilMapViewCell.class];
+    [tableView registerCell:EmplesDetailMapViewCell.class];
 }
 
 @end

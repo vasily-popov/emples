@@ -6,19 +6,19 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-#import "EmplesDeatilMapViewCell.h"
+#import "EmplesDetailMapViewCell.h"
 #import "EmplesDetailMapCellModel.h"
 #import <GoogleMaps/GoogleMaps.h>
 #define ZOOM_DISTANCE 11
 
-@interface EmplesDeatilMapViewCell()<GMSMapViewDelegate>
+@interface EmplesDetailMapViewCell()<GMSMapViewDelegate>
 
 @property (strong, nonatomic) GMSMapView *map;
 @property (strong, nonatomic) EmplesDetailMapCellModel *model;
 
 @end
 
-@implementation EmplesDeatilMapViewCell
+@implementation EmplesDetailMapViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

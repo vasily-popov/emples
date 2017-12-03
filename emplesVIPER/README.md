@@ -33,3 +33,7 @@
 * We can implement for instance a `UserSettings` protocol using `UserDefaults`
 * `Persistence / API Entities` - contains framework specific representations
 * `Framework specific APIs` - contains implementations of `iOS` specific APIs such as sensors / bluetooth / camera
+
+##### Test
+
+* Specta used for Unit testing

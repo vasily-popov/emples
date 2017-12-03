@@ -11,4 +11,28 @@ target 'emplesVIPER' do
     pod 'iCarousel'
     pod 'ZLSwipeableView'
     pod 'Typhoon'
+    
+    target 'UnitTests' do
+        inherit! :search_paths
+        pod 'OCMock'
+        pod 'Specta', '~> 1.0'
+        pod 'Expecta', '~> 1.0'
+    end
+    
+    target 'FunctionalTests' do
+        inherit! :search_paths
+        pod 'OCMock'
+        pod 'Specta', '~> 1.0'
+        pod 'Expecta', '~> 1.0'
+    end
+    
+end
+
+#   Disable Code Coverage for objc Pod projects
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['CLANG_ENABLE_CODE_COVERAGE'] = 'NO'
+        end
+    end
 end

@@ -7,6 +7,8 @@
 //
 
 #import "EmplesAppearanceService.h"
+#import <GoogleMaps/GoogleMaps.h>
+#define GOOGLE_MAPS_APIKEY @"AIzaSyBq67F_e2PQEWtKgCDDkHBpnVH1r383nQo"
 
 @implementation EmplesAppearanceService
 
@@ -22,7 +24,7 @@
      @{NSForegroundColorAttributeName:[UIColor greenColor],
        NSFontAttributeName:[UIFont boldSystemFontOfSize:15.0] }forState:UIControlStateNormal];
     [UINavigationBar appearance].translucent = NO;
-    
+    [GMSServices provideAPIKey:GOOGLE_MAPS_APIKEY];
     return YES;
 }
 

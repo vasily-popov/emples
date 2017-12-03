@@ -18,7 +18,7 @@
 @implementation EmplesGridPresenter
 
 
--(NSArray*) prepareCollectionArrayFromArray:(NSArray *)areas;
+-(NSArray*) prepareCollectionArrayFromArray:(NSArray *)areas
 {
     NSArray *models = [EmplesGridSourceBuilder buildSourceFromItems:areas];
     

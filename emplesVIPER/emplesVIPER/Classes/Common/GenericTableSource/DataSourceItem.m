@@ -22,11 +22,6 @@
     return self;
 }
 
--(float)getRowHeight
-{
-    return self.rowHeight;
-}
-
 - (id)value
 {
     return [self.cellModel getModelValue];

@@ -65,6 +65,10 @@
 
 - (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView
 {
+    if(self.dataSource.count == 0) {
+        return nil;
+    }
+    
     numberOfActiveViews = (int)swipeableView.numberOfActiveViews;
     if (currentIndex >= self.dataSource.count) {
         currentIndex = 0;

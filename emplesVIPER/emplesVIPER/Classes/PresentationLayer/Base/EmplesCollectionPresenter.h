@@ -26,7 +26,6 @@
 
 @property (nonatomic, strong) id<DisplayAreaCollectionUseCase> displayCollectionUseCase;
 
--(instancetype)init __unavailable;
 -(void)viewDidLoad;
 
 @end

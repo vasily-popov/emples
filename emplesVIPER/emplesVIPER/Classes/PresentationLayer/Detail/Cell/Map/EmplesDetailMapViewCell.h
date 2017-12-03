@@ -1,5 +1,5 @@
 //
-//  EmplesDeatilMapViewCell.h
+//  EmplesDetailMapViewCell.h
 //  emplesMVC
 //
 //  Created by Vasily Popov on 10/30/17.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ViewCellProtocol.h"
 
-@interface EmplesDeatilMapViewCell : UITableViewCell<ViewCellProtocol>
+@interface EmplesDetailMapViewCell : UITableViewCell<ViewCellProtocol>
 
 @end

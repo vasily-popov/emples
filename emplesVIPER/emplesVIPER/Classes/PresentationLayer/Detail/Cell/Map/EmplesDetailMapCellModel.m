@@ -7,7 +7,7 @@
 //
 
 #import "EmplesDetailMapCellModel.h"
-#import "EmplesDeatilMapViewCell.h"
+#import "EmplesDetailMapViewCell.h"
 
 @implementation EmplesDetailMapCellModel
 
@@ -18,7 +18,7 @@
 
 - (NSString *)cellClassName
 {
-    return NSStringFromClass([EmplesDeatilMapViewCell class]);
+    return NSStringFromClass([EmplesDetailMapViewCell class]);
 }
 
 @end
